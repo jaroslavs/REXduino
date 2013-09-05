@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.08.0 rev. 3181, Date 2013-05-31"
+  #RexVersion             "2.08.0 rev. 3238, Date 2013-05-31"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -195,10 +195,10 @@ Model {
       MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
 "pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
 "nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
-      MaskValueString         "10|1: Not connected|1: Not connected|1: Not con"
-"nected|4: Digital input with internal pull-up|1: Not connected|1: Not connecte"
-"d|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not c"
-"onnected|1: Not connected|1: Not connected|1: Not connected"
+      MaskValueString         "10|8: Counter|1: Not connected|10: Counter DIR "
+"/ Encoder B|1: Not connected|1: Not connected|5: PWM (analog output)|7: 1-Wire"
+" temperature|7: 1-Wire temperature|1: Not connected|6: Analog input|1: Not con"
+"nected|1: Not connected|1: Not connected|1: Not connected"
       #GUID                   a5735a32-14c5-4f34-9bc5-25d731a100b9
       System {
         Name                    "Arduino_UNO"
