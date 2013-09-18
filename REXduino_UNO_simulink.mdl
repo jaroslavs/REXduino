@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.130"
+    ComputedModelVersion    "1.126"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -27,9 +27,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "jsobota"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Sep 16 13:01:19 2013"
-  RTWModifiedTimeStamp	  301237171
-  ModelVersionFormat	  "1.%<AutoIncrement:130>"
+  LastModifiedDate	  "Mon Sep 16 12:50:28 2013"
+  RTWModifiedTimeStamp	  301236622
+  ModelVersionFormat	  "1.%<AutoIncrement:126>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -590,7 +590,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 504, 193, 1416, 931 ] 
+      ConfigPrmDlgPosition     [ 508, 216, 1412, 927 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -630,6 +630,11 @@ Model {
     FontAngle		    "normal"
   }
   BlockParameterDefaults {
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+      Decimation	      "10"
+    }
     Block {
       BlockType		      Display
       Format		      "short"
@@ -732,7 +737,7 @@ Model {
   }
   System {
     Name		    "REXduino_UNO_simulink"
-    Location		    [55, 107, 924, 847]
+    Location		    [55, 107, 888, 922]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -752,7 +757,7 @@ Model {
       Name		      "Arduino clock"
       SID		      "221"
       Ports		      [1]
-      Position		      [415, 503, 555, 527]
+      Position		      [460, 513, 600, 537]
       Format		      "long"
       Decimation	      "1"
       Lockdown		      off
@@ -762,7 +767,7 @@ Model {
       Name		      "Arduino_UNO"
       SID		      "1"
       Ports		      [21, 35]
-      Position		      [195, 135, 355, 495]
+      Position		      [195, 105, 355, 465]
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -781,7 +786,7 @@ Model {
       " A),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input with internal pull-up|5: --- N/A "
       "for this pin ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for this pin ---|9: --- N/A for th"
       "is pin ---|10: Counter DIR / Encoder B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital inp"
-      "ut with internal pull-up|5: --- N/A for this pin ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/"
+      "ut with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/"
       "A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: Not connected|2: Digital ou"
       "tput|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|"
       "7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input with internal "
@@ -2232,7 +2237,7 @@ Model {
 	  LibraryVersion	  "1.91"
 	  SourceBlock		  "speclib/REXLANG"
 	  SourceType		  "REXLANG"
-	  tab_matlab		  "MORE"
+	  tab_matlab		  "BASIC"
 	  srcname		  "REXduino_master.stl"
 	  srctype		  "1: STL"
 	  stack			  "0"
@@ -3193,7 +3198,7 @@ Model {
       Name		      "BIS_BLINK_DO13"
       SID		      "137"
       Ports		      [0, 2]
-      Position		      [90, 293, 105, 317]
+      Position		      [90, 263, 105, 287]
       NamePlacement	      "alternate"
       LibraryVersion	      "1.51"
       SourceBlock	      "genlib/BIS"
@@ -3215,7 +3220,7 @@ Model {
       Name		      "CNB_CNT2_ENABLE"
       SID		      "138"
       Ports		      [0, 1]
-      Position		      [55, 428, 80, 442]
+      Position		      [55, 398, 80, 412]
       LibraryVersion	      "1.136"
       SourceBlock	      "mathlib/CNB"
       SourceType	      "CNB"
@@ -3226,7 +3231,7 @@ Model {
       Name		      "CNB_CNT2_RESET"
       SID		      "139"
       Ports		      [0, 1]
-      Position		      [55, 399, 80, 411]
+      Position		      [55, 369, 80, 381]
       LibraryVersion	      "1.136"
       SourceBlock	      "mathlib/CNB"
       SourceType	      "CNB"
@@ -3237,18 +3242,68 @@ Model {
       Name		      "CNI_PWM"
       SID		      "141"
       Ports		      [0, 1]
-      Position		      [85, 232, 110, 248]
+      Position		      [85, 202, 110, 218]
       LibraryVersion	      "1.136"
       SourceBlock	      "mathlib/CNI"
       SourceType	      "CNI"
       icn		      "128"
     }
     Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      SID		      "222"
+      Position		      [300, 560, 320, 580]
+      ZOrder		      -4
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Clock difference"
+      SID		      "227"
+      Ports		      [1]
+      Position		      [505, 594, 535, 626]
+      ZOrder		      -16
+      Floating		      off
+      Location		      [1, 45, 1921, 1115]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      TimeRange		      "30"
+      YMin		      "150750"
+      YMax		      "153250"
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Clock difference display"
+      SID		      "226"
+      Ports		      [1]
+      Position		      [460, 553, 600, 577]
+      Format		      "long"
+      Decimation	      "1"
+      Lockdown		      off
+    }
+    Block {
       BlockType		      Display
       Name		      "Communication status"
       SID		      "142"
       Ports		      [1]
-      Position		      [445, 133, 530, 197]
+      Position		      [445, 103, 530, 167]
       Decimation	      "1"
       Lockdown		      off
     }
@@ -3256,7 +3311,7 @@ Model {
       BlockType		      From
       Name		      "From_1"
       SID		      "143"
-      Position		      [240, 583, 330, 597]
+      Position		      [110, 658, 200, 672]
       ShowName		      off
       GotoTag		      "CNT2"
     }
@@ -3264,7 +3319,7 @@ Model {
       BlockType		      From
       Name		      "From_2"
       SID		      "144"
-      Position		      [145, 553, 235, 567]
+      Position		      [15, 628, 105, 642]
       ShowName		      off
       GotoTag		      "temperature1"
     }
@@ -3272,7 +3327,7 @@ Model {
       BlockType		      From
       Name		      "From_3"
       SID		      "145"
-      Position		      [240, 563, 330, 577]
+      Position		      [110, 638, 200, 652]
       ShowName		      off
       GotoTag		      "temperature2"
     }
@@ -3280,15 +3335,26 @@ Model {
       BlockType		      From
       Name		      "From_7"
       SID		      "147"
-      Position		      [145, 573, 235, 587]
+      Position		      [15, 648, 105, 662]
       ShowName		      off
       GotoTag		      "AI1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "GAIN"
+      SID		      "224"
+      Ports		      [1, 1]
+      Position		      [345, 563, 370, 577]
+      LibraryVersion	      "1.136"
+      SourceBlock	      "mathlib/GAIN"
+      SourceType	      "GAIN"
+      k			      "1000"
     }
     Block {
       BlockType		      Goto
       Name		      "Goto_1"
       SID		      "148"
-      Position		      [425, 348, 515, 362]
+      Position		      [425, 318, 515, 332]
       ShowName		      off
       GotoTag		      "AI1"
       TagVisibility	      "local"
@@ -3297,7 +3363,7 @@ Model {
       BlockType		      Goto
       Name		      "Goto_2"
       SID		      "150"
-      Position		      [730, 403, 820, 417]
+      Position		      [730, 373, 820, 387]
       ShowName		      off
       GotoTag		      "temperature1"
       TagVisibility	      "local"
@@ -3306,7 +3372,7 @@ Model {
       BlockType		      Goto
       Name		      "Goto_3"
       SID		      "151"
-      Position		      [730, 423, 820, 437]
+      Position		      [730, 393, 820, 407]
       ShowName		      off
       GotoTag		      "temperature2"
       TagVisibility	      "local"
@@ -3315,7 +3381,7 @@ Model {
       BlockType		      Goto
       Name		      "Goto_4"
       SID		      "152"
-      Position		      [425, 398, 515, 412]
+      Position		      [425, 368, 515, 382]
       ShowName		      off
       GotoTag		      "CNT2"
       TagVisibility	      "local"
@@ -3325,7 +3391,7 @@ Model {
       Name		      "Measured values"
       SID		      "219"
       Ports		      [1]
-      Position		      [445, 559, 475, 591]
+      Position		      [315, 634, 345, 666]
       ZOrder		      -16
       Floating		      off
       Location		      [644, 124, 968, 363]
@@ -3357,7 +3423,7 @@ Model {
       Name		      "Measured values display"
       SID		      "220"
       Ports		      [1]
-      Position		      [415, 610, 500, 700]
+      Position		      [285, 685, 370, 775]
       Decimation	      "1"
       Lockdown		      off
     }
@@ -3366,7 +3432,7 @@ Model {
       Name		      "Mux"
       SID		      "217"
       Ports		      [3, 1]
-      Position		      [410, 146, 415, 184]
+      Position		      [410, 116, 415, 154]
       ZOrder		      -12
       ShowName		      off
       Inputs		      "3"
@@ -3377,7 +3443,7 @@ Model {
       Name		      "Mux1"
       SID		      "218"
       Ports		      [4, 1]
-      Position		      [375, 556, 380, 594]
+      Position		      [245, 631, 250, 669]
       ZOrder		      -12
       ShowName		      off
       DisplayOption	      "bar"
@@ -3387,7 +3453,7 @@ Model {
       Name		      "OW_branch10"
       SID		      "153"
       Ports		      [2, 4]
-      Position		      [610, 412, 700, 458]
+      Position		      [610, 382, 700, 428]
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -3614,7 +3680,7 @@ Model {
       Name		      "OW_branch11"
       SID		      "165"
       Ports		      [2, 4]
-      Position		      [610, 477, 700, 523]
+      Position		      [610, 447, 700, 493]
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -3841,7 +3907,7 @@ Model {
       Name		      "OW_decompose"
       SID		      "177"
       Ports		      [1, 4]
-      Position		      [415, 433, 555, 477]
+      Position		      [415, 403, 555, 447]
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
       RTWSystemCode	      "Auto"
@@ -4556,11 +4622,21 @@ Model {
       Name		      "SLEEP"
       SID		      "214"
       Ports		      []
-      Position		      [45, 143, 75, 157]
+      Position		      [45, 113, 75, 127]
       LibraryVersion	      "1.326"
       SourceBlock	      "execlib/SLEEP"
       SourceType	      "SLEEP"
       ts		      "0.1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "SUB"
+      SID		      "225"
+      Ports		      [2, 1]
+      Position		      [400, 553, 425, 577]
+      LibraryVersion	      "1.136"
+      SourceBlock	      "mathlib/SUB"
+      SourceType	      "SUB"
     }
     Line {
       SrcBlock		      "Arduino_UNO"
@@ -4710,15 +4786,47 @@ Model {
     Line {
       SrcBlock		      "Arduino_UNO"
       SrcPort		      35
-      Points		      [20, 0; 0, 30]
-      DstBlock		      "Arduino clock"
+      Points		      [20, 0; 0, 70]
+      Branch {
+	DstBlock		"Arduino clock"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 35]
+	DstBlock		"SUB"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "GAIN"
       DstPort		      1
     }
+    Line {
+      SrcBlock		      "GAIN"
+      SrcPort		      1
+      DstBlock		      "SUB"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "SUB"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"Clock difference display"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 45]
+	DstBlock		"Clock difference"
+	DstPort			1
+      }
+    }
     Annotation {
-      Name		      "Make sure to install the RexLib function block library prior to using this example.\nDownload it fo"
-      "r free from http://www.rexcontrols.com/rexlib-for-matlab\n\nMake sure that your Arduino is running the REXduino_"
-      "slave sketch and the corresponding COM port is selected."
-      Position		      [435, 51]
+      Name		      "Make sure to install the RexLib function block library prior to using this example.\n\nDownload it "
+      "for free from http://www.rexcontrols.com/rexlib-for-matlab"
+      Position		      [380, 51]
       FontName		      "Arial"
       FontSize		      16
       FontWeight	      "bold"
