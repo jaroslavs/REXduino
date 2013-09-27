@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:40:59 2013"
   ModelVersionFormat      "1.%<AutoIncrement:10>"
   ConfigurationManager    "None"
-  #RexVersion             "2.09.0 rev. 3311, Date 2013-09-10"
+  #RexVersion             "2.09.1 rev. 3338, Date 2013-09-25"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -679,7 +679,7 @@ Model {
           BlockType               Inport
           Name                    "CNT2R"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [35, 993, 65, 1007]
+          Position                [35, 1063, 65, 1077]
           Port                    17
           PortWidth               -1
           SampleTime              -1
@@ -692,7 +692,7 @@ Model {
           BlockType               Inport
           Name                    "CNT2E"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [35, 1023, 65, 1037]
+          Position                [35, 1093, 65, 1107]
           Port                    18
           PortWidth               -1
           SampleTime              -1
@@ -705,7 +705,7 @@ Model {
           BlockType               Inport
           Name                    "CNT3R"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [35, 1053, 65, 1067]
+          Position                [35, 1123, 65, 1137]
           Port                    19
           PortWidth               -1
           SampleTime              -1
@@ -718,7 +718,7 @@ Model {
           BlockType               Inport
           Name                    "CNT3E"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [35, 1083, 65, 1097]
+          Position                [35, 1153, 65, 1167]
           Port                    20
           PortWidth               -1
           SampleTime              -1
@@ -731,7 +731,7 @@ Model {
           BlockType               Inport
           Name                    "userSend"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [35, 1113, 65, 1127]
+          Position                [35, 1183, 65, 1197]
           Port                    21
           PortWidth               -1
           SampleTime              -1
@@ -1515,7 +1515,7 @@ Model {
           BlockType               Reference
           Name                    "CNB_LOG_INCOMING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [85, 1213, 105, 1227]
+          Position                [85, 1283, 105, 1297]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           ShowPortLabels          "FromPortIcon"
@@ -1533,7 +1533,7 @@ Model {
           BlockType               Reference
           Name                    "CNB_LOG_OUTGOING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [85, 1243, 105, 1257]
+          Position                [85, 1313, 105, 1327]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           ShowPortLabels          "FromPortIcon"
@@ -1551,7 +1551,7 @@ Model {
           BlockType               SubSystem
           Name                    "CNT_mux"
           Ports                   [4, 1, 0, 0, 0]
-          Position                [145, 993, 235, 1037]
+          Position                [145, 1063, 235, 1107]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -2069,7 +2069,7 @@ Model {
           BlockType               Reference
           Name                    "MP_FORCE_RECONNECT"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [90, 1153, 105, 1167]
+          Position                [90, 1223, 105, 1237]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -2089,7 +2089,7 @@ Model {
           BlockType               Reference
           Name                    "MP_LOG_MASTER_VERSION"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [90, 1273, 105, 1287]
+          Position                [90, 1343, 105, 1357]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -2109,7 +2109,7 @@ Model {
           BlockType               Reference
           Name                    "MP_LOG_PINMODES"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [90, 1183, 105, 1197]
+          Position                [90, 1253, 105, 1267]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -2153,7 +2153,7 @@ Model {
           BlockType               Reference
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [180, 1143, 230, 1387]
+          Position                [180, 1213, 230, 1457]
           SourceBlock             "logiclib/OCTBM"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
@@ -2576,7 +2576,412 @@ Model {
           BlockType               SubSystem
           Name                    "PWM_mux2"
           Ports                   [4, 1, 0, 0, 0]
-          Position                [185, 906, 290, 954]
+          Position                [185, 901, 290, 949]
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           ""
+          #GUID                   2cdc2c9d-5b17-47ea-ac90-92322480b5e1
+          System {
+            Name                    "PWM_mux2"
+            Location                [302, 397, 795, 627]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            ZoomFactor              100
+            AutoZoom                on
+            #GUID                   2cdc2c9d-5b17-47ea-ac90-92322480b5e1
+            Block {
+              BlockType               Inport
+              Name                    "PWMdata1"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [55, 13, 85, 27]
+              Port                    1
+              PortWidth               -1
+              SampleTime              -1
+              DataType                "auto"
+              SignalType              "auto"
+              Interpolate             on
+              #GUID                   e6ef2a6c-13b1-4cec-9549-d16983bd6662
+            }
+            Block {
+              BlockType               Inport
+              Name                    "PWMdata2"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [55, 68, 85, 82]
+              Port                    2
+              PortWidth               -1
+              SampleTime              -1
+              DataType                "auto"
+              SignalType              "auto"
+              Interpolate             on
+              #GUID                   77f3aad3-f8fa-41dc-b0df-267aa79118b4
+            }
+            Block {
+              BlockType               Inport
+              Name                    "PWMdata3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [55, 108, 85, 122]
+              Port                    3
+              PortWidth               -1
+              SampleTime              -1
+              DataType                "auto"
+              SignalType              "auto"
+              Interpolate             on
+              #GUID                   c24a6f44-c864-44f1-887d-4ea882033b1e
+            }
+            Block {
+              BlockType               Inport
+              Name                    "PWMdata4"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [55, 148, 85, 162]
+              Port                    4
+              PortWidth               -1
+              SampleTime              -1
+              DataType                "auto"
+              SignalType              "auto"
+              Interpolate             on
+              #GUID                   549ea388-b9a2-4bfd-9056-0311a6ba04e7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [125, 108, 150, 132]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     126
+              iop                     "3: Bit AND"
+              #GUID                   1ef466ac-01a7-4b58-a263-182af0c1ff95
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP1"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [125, 68, 150, 92]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     127
+              iop                     "3: Bit AND"
+              #GUID                   6e7cc491-8861-40da-bcc0-9b67265c947e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [125, 28, 150, 52]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     128
+              iop                     "3: Bit AND"
+              #GUID                   2dcba7ca-3318-416d-918b-256e80ee3536
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_1"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [125, 148, 150, 172]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     129
+              iop                     "3: Bit AND"
+              #GUID                   3ff92d46-4ad9-4db7-ade8-645d382875b3
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_11"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [270, 118, 295, 142]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     130
+              iop                     "2: Bit OR"
+              #GUID                   352de1d6-b52f-4690-8002-f20e5c82fd84
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_14"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [210, 73, 235, 97]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     131
+              iop                     "5: Shift Left"
+              #GUID                   5521736b-33ef-4240-9d0f-5e76d8cdbfb9
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_15"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [270, 33, 295, 57]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     132
+              iop                     "2: Bit OR"
+              #GUID                   1392bf4f-dc3d-4443-9c20-1ad3f617eeed
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [330, 78, 355, 102]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     133
+              iop                     "2: Bit OR"
+              #GUID                   1042f51f-2247-4810-8947-a491af3cce6a
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_6"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [210, 113, 235, 137]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     134
+              iop                     "5: Shift Left"
+              #GUID                   1bf45b38-330d-4f17-9cb6-193819dfd04f
+            }
+            Block {
+              BlockType               Reference
+              Name                    "BITOP_9"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [210, 153, 235, 177]
+              SourceBlock             "logiclib/BITOP"
+              SourceType              "BITOP"
+              SID                     135
+              iop                     "5: Shift Left"
+              #GUID                   4896ebee-4139-4cf7-81ed-d5b712b886cf
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNI"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [15, 37, 40, 53]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              SID                     136
+              icn                     255
+              #GUID                   3877d0c1-7b08-4148-9286-ca5af31d2bda
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNI_1"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [175, 123, 190, 137]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              SID                     137
+              icn                     16
+              #GUID                   1323af4c-b9f4-4cdb-926d-aa77e5ffc754
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNI_4"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [175, 163, 190, 177]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              SID                     138
+              icn                     24
+              #GUID                   6b99236e-84d2-4e1e-b42f-7404c822fc02
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNI_5"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [175, 83, 190, 97]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              SID                     139
+              icn                     8
+              #GUID                   7f2606b9-962a-4fb2-8eb6-bf43d3fc41e3
+            }
+            Block {
+              BlockType               Outport
+              Name                    "PWM_data"
+              Ports                   [1, 0, 0, 0, 0]
+              Position                [380, 83, 410, 97]
+              Port                    1
+              OutputWhenDisabled      "held"
+              InitialOutput           []
+              #GUID                   d5be0335-4169-4464-af76-a8b5dc55e89d
+            }
+            Line {
+              SrcBlock                "BITOP"
+              SrcPort                 1
+              DstBlock                "BITOP_6"
+              DstPort                 1
+              #GUID                   88bf5109-7cc3-4f13-a609-a4a82805d3cb
+            }
+            Line {
+              SrcBlock                "BITOP1"
+              SrcPort                 1
+              DstBlock                "BITOP_14"
+              DstPort                 1
+              #GUID                   c589d3c5-20e3-492d-89ab-1f466ef1b97d
+            }
+            Line {
+              SrcBlock                "BITOP2"
+              SrcPort                 1
+              DstBlock                "BITOP_15"
+              DstPort                 1
+              #GUID                   a141d1cd-3982-48ca-9d41-1e608adc06e1
+            }
+            Line {
+              SrcBlock                "BITOP_1"
+              SrcPort                 1
+              DstBlock                "BITOP_9"
+              DstPort                 1
+              #GUID                   640a60f4-c57f-47d4-8061-978d7e81331b
+            }
+            Line {
+              SrcBlock                "BITOP_11"
+              SrcPort                 1
+              Points                  [10, 0; 0, -35]
+              DstBlock                "BITOP_2"
+              DstPort                 2
+              #GUID                   40a4febe-a29b-4e2f-bae2-f05b9b53480e
+            }
+            Line {
+              SrcBlock                "BITOP_14"
+              SrcPort                 1
+              Points                  [5, 0; 0, -35]
+              DstBlock                "BITOP_15"
+              DstPort                 2
+              #GUID                   c94122e2-7952-430e-a734-8532ea5f485a
+            }
+            Line {
+              SrcBlock                "BITOP_15"
+              SrcPort                 1
+              Points                  [10, 0; 0, 40]
+              DstBlock                "BITOP_2"
+              DstPort                 1
+              #GUID                   07fd7435-7ea6-4f24-a7aa-9d365fb52fb2
+            }
+            Line {
+              SrcBlock                "BITOP_2"
+              SrcPort                 1
+              DstBlock                "PWM_data"
+              DstPort                 1
+              #GUID                   e169ef96-af11-48ee-a75e-8ea712c614bb
+            }
+            Line {
+              SrcBlock                "BITOP_6"
+              SrcPort                 1
+              DstBlock                "BITOP_11"
+              DstPort                 1
+              #GUID                   7698f2c5-1188-4529-949a-1fc12c029d1f
+            }
+            Line {
+              SrcBlock                "BITOP_9"
+              SrcPort                 1
+              Points                  [15, 0]
+              DstBlock                "BITOP_11"
+              DstPort                 2
+              #GUID                   8e87bdc0-3832-423d-ba99-40772a338585
+            }
+            Line {
+              SrcBlock                "CNI"
+              SrcPort                 1
+              Points                  [55, 0]
+              #GUID                   14ee938d-8a68-43dd-a7f4-5270048aad72
+              Branch {
+                Points                  [0, 40]
+                #GUID                   fd4dd216-6517-471f-b8a0-9b1b90f7db30
+                Branch {
+                  DstBlock                "BITOP1"
+                  DstPort                 2
+                  #GUID                   fa388ae4-58cf-486d-b238-165d04e0508b
+                }
+                Branch {
+                  Points                  [0, 40]
+                  #GUID                   4878107f-8169-47cb-b0ff-0272366c4420
+                  Branch {
+                    DstBlock                "BITOP"
+                    DstPort                 2
+                    #GUID                   "fc7814c2-98fc-4f1b-a287-af38ebbc1"
+#"2bf"
+                  }
+                  Branch {
+                    Points                  [0, 40]
+                    DstBlock                "BITOP_1"
+                    DstPort                 2
+                    #GUID                   "bf8e2b56-2a57-4a7b-a993-eab494ec9"
+#"2c5"
+                  }
+                }
+              }
+              Branch {
+                DstBlock                "BITOP2"
+                DstPort                 2
+                #GUID                   8686bbd0-6ecc-463c-97ec-74ff0328db70
+              }
+            }
+            Line {
+              SrcBlock                "CNI_1"
+              SrcPort                 1
+              DstBlock                "BITOP_6"
+              DstPort                 2
+              #GUID                   a875e516-9d7e-4e04-a933-0989baeb7a82
+            }
+            Line {
+              SrcBlock                "CNI_4"
+              SrcPort                 1
+              DstBlock                "BITOP_9"
+              DstPort                 2
+              #GUID                   de13ac08-5318-41a5-8059-4df5f8c14fde
+            }
+            Line {
+              SrcBlock                "CNI_5"
+              SrcPort                 1
+              DstBlock                "BITOP_14"
+              DstPort                 2
+              #GUID                   a687e7e8-a1e4-445a-a7de-26263d2498ee
+            }
+            Line {
+              SrcBlock                "PWMdata1"
+              SrcPort                 1
+              Points                  [20, 0]
+              DstBlock                "BITOP2"
+              DstPort                 1
+              #GUID                   1812b149-2821-4296-8c19-736c7f99894a
+            }
+            Line {
+              SrcBlock                "PWMdata2"
+              SrcPort                 1
+              DstBlock                "BITOP1"
+              DstPort                 1
+              #GUID                   87907a6c-39f0-4c5d-843f-029b349503e1
+            }
+            Line {
+              SrcBlock                "PWMdata3"
+              SrcPort                 1
+              DstBlock                "BITOP"
+              DstPort                 1
+              #GUID                   4b1e6036-cdb4-4aef-a5b2-8e839c386db8
+            }
+            Line {
+              SrcBlock                "PWMdata4"
+              SrcPort                 1
+              DstBlock                "BITOP_1"
+              DstPort                 1
+              #GUID                   359f6c11-977e-44b3-abb8-3ff8ef287621
+            }
+          }
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "PWM_mux3"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [185, 971, 290, 1019]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -2585,7 +2990,7 @@ Model {
           MaskIconUnits           ""
           #GUID                   0ddbbc39-832a-466d-976d-780b831df860
           System {
-            Name                    "PWM_mux2"
+            Name                    "PWM_mux3"
             Location                [302, 397, 795, 627]
             Open                    off
             ModelBrowserVisibility  off
@@ -3496,7 +3901,7 @@ Model {
         Line {
           SrcBlock                "CNT_mux"
           SrcPort                 1
-          Points                  [265, 0; 0, -595]
+          Points                  [265, 0; 0, -665]
           DstBlock                "REXLANG_REXduino"
           DstPort                 16
           #GUID                   ffe35084-3dcf-4670-89fb-29d8a50fe34d
@@ -3505,34 +3910,34 @@ Model {
           SrcBlock                "DO10_PWM"
           SrcPort                 1
           Points                  [40, 0]
-          #GUID                   d1b580b2-0cbb-4316-9093-ce8dafadb72a
+          #GUID                   a44a052c-1c4c-4cd7-8d4b-0faf3cabdd53
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 11
-            #GUID                   d7ec5a7a-76c2-476b-a714-d7d4de40bc25
+            #GUID                   bbe45b43-254d-43ae-b7bd-18bd63b57a82
           }
           Branch {
-            Points                  [0, 585]
-            DstBlock                "PWM_mux2"
-            DstPort                 3
-            #GUID                   18b06efc-f9c9-401b-8d28-0613c0720b18
+            Points                  [0, 630]
+            DstBlock                "PWM_mux3"
+            DstPort                 1
+            #GUID                   aa5bcc30-a1d5-49e2-8e4b-aeb183908987
           }
         }
         Line {
           SrcBlock                "DO11_PWM"
           SrcPort                 1
           Points                  [30, 0]
-          #GUID                   437db996-0e9f-40b5-a5fc-abfc51774f53
+          #GUID                   b915e8d4-ad93-4a58-a0ee-0e130e08b12c
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 12
-            #GUID                   e5affddd-1c3e-4632-8357-a006c9d407ba
+            #GUID                   bdcc806d-1913-4857-a98c-99aeef03d090
           }
           Branch {
-            Points                  [0, 565]
-            DstBlock                "PWM_mux2"
-            DstPort                 4
-            #GUID                   01c8c1e7-b090-4546-ba82-57a32d09cdd6
+            Points                  [0, 610]
+            DstBlock                "PWM_mux3"
+            DstPort                 2
+            #GUID                   fab7f337-cf37-4b35-ad11-451d5ccc8d5f
           }
         }
         Line {
@@ -3621,34 +4026,34 @@ Model {
           SrcBlock                "DO6_PWM"
           SrcPort                 1
           Points                  [60, 0]
-          #GUID                   13c5f981-d7dc-4cec-9088-a4f06b7bcc08
+          #GUID                   6ebfbb84-f81d-499c-ab08-9d92d749b26e
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 7
-            #GUID                   6dd4853a-e9de-4bfa-8cde-27218d5b59fd
+            #GUID                   2fafa986-92f1-48f0-afb1-623b21bd415e
           }
           Branch {
-            Points                  [0, 685]
+            Points                  [0, 680]
             DstBlock                "PWM_mux2"
             DstPort                 1
-            #GUID                   49e323a7-eef0-4d49-879b-8c9d1fbf3d6c
+            #GUID                   8efcf0f9-5ec9-4a81-b959-331e5a4b33a9
           }
         }
         Line {
           SrcBlock                "DO9_PWM"
           SrcPort                 1
           Points                  [50, 0]
-          #GUID                   2435a143-3932-4d83-9fa7-366fcd5196b8
+          #GUID                   9828994a-3f37-49e1-a25d-dbfabbfb6b03
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 10
-            #GUID                   6b754044-63ef-4753-9edd-9d9ee687eabe
+            #GUID                   1ee85a73-a35a-42f5-9c07-2576eb3fb67e
           }
           Branch {
-            Points                  [0, 605]
+            Points                  [0, 620]
             DstBlock                "PWM_mux2"
-            DstPort                 2
-            #GUID                   dae9c3ba-c206-4333-bb0a-2c5cbd153937
+            DstPort                 4
+            #GUID                   eccfc554-81d5-418d-93d9-8d5e24fc1027
           }
         }
         Line {
@@ -3867,7 +4272,7 @@ Model {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [335, 0; 0, -855]
+          Points                  [335, 0; 0, -925]
           DstBlock                "REXLANG_REXduino"
           DstPort                 15
           #GUID                   4e907af7-4889-4773-9e35-9a351fa4230a
@@ -3881,9 +4286,9 @@ Model {
           #GUID                   a1babc90-b76a-45f6-9dde-f9ca53144fae
         }
         Line {
-          SrcBlock                "PWM_mux2"
+          SrcBlock                "PWM_mux3"
           SrcPort                 1
-          Points                  [115, 0; 0, -610]
+          Points                  [115, 0; 0, -675]
           DstBlock                "REXLANG_REXduino"
           DstPort                 6
           #GUID                   769c7e70-37e6-470d-8744-687ec9966606
@@ -4020,7 +4425,7 @@ Model {
         Line {
           SrcBlock                "userSend"
           SrcPort                 1
-          Points                  [445, 0; 0, -690]
+          Points                  [445, 0; 0, -760]
           DstBlock                "REXLANG_REXduino"
           DstPort                 17
           #GUID                   dc7ad1c6-4e07-4c8d-8410-aea570c93c1a
