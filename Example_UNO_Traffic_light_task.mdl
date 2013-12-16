@@ -1454,7 +1454,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               ShowPortLabels          "FromPortIcon"
               SystemSampleTime        -1
@@ -1954,7 +1954,7 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [915, 46, 960, 514]
-          SourceBlock             "logiclib/HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
           SourceType              "HEXDBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -1972,7 +1972,7 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [165, 42, 215, 508]
-          SourceBlock             "logiclib/HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
           SourceType              "HEXDBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2050,7 +2050,7 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [915, 538, 960, 772]
-          SourceBlock             "logiclib/OCTBD"
+          SourceBlock             "logiclib/BDOCT"
           SourceType              "OCTBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2068,7 +2068,7 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [165, 538, 215, 782]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2086,7 +2086,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [295, 1223, 345, 1467]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1

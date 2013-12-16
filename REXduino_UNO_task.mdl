@@ -1446,7 +1446,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               ShowPortLabels          "FromPortIcon"
               SystemSampleTime        -1
@@ -1946,7 +1946,7 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [915, 46, 960, 514]
-          SourceBlock             "logiclib/HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
           SourceType              "HEXDBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -1964,7 +1964,7 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [165, 42, 215, 508]
-          SourceBlock             "logiclib/HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
           SourceType              "HEXDBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2042,7 +2042,7 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [915, 538, 960, 772]
-          SourceBlock             "logiclib/OCTBD"
+          SourceBlock             "logiclib/BDOCT"
           SourceType              "OCTBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2060,7 +2060,7 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [165, 538, 215, 782]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -2078,7 +2078,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [295, 1223, 345, 1467]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -3440,8 +3440,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   61e471fd-51c4-4572-8bda-602c5a447a57
@@ -3451,8 +3451,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   924d9622-1ed7-411d-a58d-524a473da418
@@ -3462,8 +3462,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   fc4c605d-331d-463c-8ce1-01bf27be8c27
@@ -3473,8 +3473,8 @@ Model {
           Name                    "SHLD4"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 223, 265, 257]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   b0b02893-98db-43bb-ac37-fadd273c9264
@@ -3691,8 +3691,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   22c1a737-a96a-4cd6-aec5-f1b193c72184
@@ -3702,8 +3702,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   b6c5c43f-1dd5-4778-89e3-fda3e3d4a4af
@@ -3713,8 +3713,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   c38c700f-0abb-488c-8691-dbd9be833b98
@@ -3724,8 +3724,8 @@ Model {
           Name                    "SHLD4"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 223, 265, 257]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   a2412bd1-54c8-413c-a01c-b3fd3252356f
@@ -3918,7 +3918,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [125, 163, 150, 187]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "5: Shift Left"
           #GUID                   4ceeac43-5294-40ec-89e1-cf582656e47f
         }
@@ -3928,7 +3928,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [125, 53, 150, 77]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "5: Shift Left"
           #GUID                   3ad0644c-6a84-4f4c-b107-dc68cba41824
         }
@@ -3938,7 +3938,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [365, 63, 390, 87]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   8c1a8c4e-57d8-4684-ad4c-257d6806c967
         }
@@ -3948,7 +3948,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [365, 103, 390, 127]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   5eb6b509-bda1-4c4f-bf3a-4610c3e02c85
         }
@@ -3958,7 +3958,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [400, 213, 425, 237]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   6866b601-4fe6-4de1-99f4-f276f743f2de
         }
@@ -3968,7 +3968,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [310, 208, 335, 232]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "1: Bit NOT"
           #GUID                   12998a4b-afd8-4c4f-8e92-cc054295c98c
         }
@@ -3978,7 +3978,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [210, 168, 235, 192]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "6: Shift Right"
           #GUID                   b91abc25-bcf9-4753-b338-334545a06266
         }
@@ -3988,7 +3988,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [210, 58, 235, 82]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "6: Shift Right"
           #GUID                   5aad1b91-5e3c-4c6a-9e8b-d981f50963e5
         }
@@ -3998,7 +3998,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [275, 98, 300, 122]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "1: Bit NOT"
           #GUID                   dfb8d98e-56fe-49c4-9147-1a538142a55d
         }
@@ -4008,7 +4008,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [130, 283, 155, 307]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "6: Shift Right"
           #GUID                   70040bc9-1ca4-4f17-a35d-b984b9ffb233
         }
@@ -4018,7 +4018,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [240, 288, 265, 312]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   41bc8179-900f-40a3-8019-10ae24853eb7
         }
@@ -4028,7 +4028,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [240, 338, 265, 362]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   43eb6520-0618-4f14-b44e-7e3a32410ad8
         }
@@ -4038,7 +4038,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [130, 333, 155, 357]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "6: Shift Right"
           #GUID                   1a500864-d45f-464f-90a7-f9c5b3a66b63
         }
@@ -4048,7 +4048,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [400, 173, 425, 197]
           SourceBlock             "logiclib/BITOP"
-          SourceType              "Unknown"
+          SourceType              "BITOP"
           iop                     "3: Bit AND"
           #GUID                   36e29328-0b26-47ea-a6a3-92b59f38b3bb
         }
@@ -4058,7 +4058,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [80, 173, 95, 187]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     4
           #GUID                   24300865-a13e-40c9-8889-6d6c3049dd53
         }
@@ -4068,7 +4068,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [185, 298, 200, 312]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     15
           #GUID                   07f02323-646b-4932-b4f6-0225ee3ddf15
         }
@@ -4078,7 +4078,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [295, 73, 330, 87]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     2047
           #GUID                   709bd6e9-2a00-4966-84ac-03134c97e4c1
         }
@@ -4088,7 +4088,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [80, 88, 95, 102]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     20
           #GUID                   43d27b15-ed9d-4577-9a41-ac80ecf0c3b5
         }
@@ -4098,7 +4098,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [80, 293, 95, 307]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     12
           #GUID                   e526457e-e5ee-4990-b1ba-8e9e45449306
         }
@@ -4108,7 +4108,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [80, 343, 95, 357]
           SourceBlock             "mathlib/CNI"
-          SourceType              "Unknown"
+          SourceType              "CNI"
           icn                     28
           #GUID                   fcf70bd1-1457-4925-818f-a53a08611e61
         }
@@ -4118,7 +4118,7 @@ Model {
           Ports                   [0, 1, 0, 0, 0]
           Position                [395, 144, 440, 156]
           SourceBlock             "mathlib/CNR"
-          SourceType              "Unknown"
+          SourceType              "CNR"
           ycn                     "0.0625"
           #GUID                   b28a65be-bb84-47d0-a7c2-bb7db17afb9b
         }
@@ -4128,7 +4128,7 @@ Model {
           Ports                   [1, 1, 0, 0, 0]
           Position                [415, 108, 440, 122]
           SourceBlock             "mathlib/GAIN"
-          SourceType              "Unknown"
+          SourceType              "GAIN"
           k                       "-0.0625"
           #GUID                   5dfd4f5c-717e-4dff-84a4-afd239e99a71
         }
@@ -4138,7 +4138,7 @@ Model {
           Ports                   [1, 1, 0, 0, 0]
           Position                [450, 218, 475, 232]
           SourceBlock             "mathlib/GAIN"
-          SourceType              "Unknown"
+          SourceType              "GAIN"
           k                       "-0.0625"
           #GUID                   c8558e48-862c-45f8-a803-88678d3effec
         }
@@ -4148,7 +4148,7 @@ Model {
           Ports                   [1, 1, 0, 0, 0]
           Position                [415, 68, 440, 82]
           SourceBlock             "mathlib/GAIN"
-          SourceType              "Unknown"
+          SourceType              "GAIN"
           k                       "0.0625"
           #GUID                   be3cb7e8-c274-4e77-977f-14d6a6104d86
         }
@@ -4158,7 +4158,7 @@ Model {
           Ports                   [1, 1, 0, 0, 0]
           Position                [450, 178, 475, 192]
           SourceBlock             "mathlib/GAIN"
-          SourceType              "Unknown"
+          SourceType              "GAIN"
           k                       "0.0625"
           #GUID                   21cf7ae9-9143-407b-97c3-fac4a260133e
         }
@@ -4168,7 +4168,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [270, 28, 295, 52]
           SourceBlock             "mathlib/REL"
-          SourceType              "Unknown"
+          SourceType              "REL"
           irel                    "3: less than (<)"
           #GUID                   d6fd3a98-e54b-47f1-aebc-09d94db0fe82
         }
@@ -4178,7 +4178,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [245, 243, 270, 267]
           SourceBlock             "mathlib/REL"
-          SourceType              "Unknown"
+          SourceType              "REL"
           irel                    "3: less than (<)"
           #GUID                   ef9c1bbb-0e80-4da8-807c-164b44e6b71a
         }
@@ -4187,8 +4187,8 @@ Model {
           Name                    "SSW"
           Ports                   [3, 1, 0, 0, 0]
           Position                [535, 68, 565, 102]
-          SourceBlock             "reglib/SSW"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SSW"
+          SourceType              "SSW"
           #GUID                   008bfea3-2a56-414c-9ef4-bbf7a991247d
         }
         Block {
@@ -4196,8 +4196,8 @@ Model {
           Name                    "SSW_1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [570, 178, 600, 212]
-          SourceBlock             "reglib/SSW"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SSW"
+          SourceType              "SSW"
           #GUID                   47754392-7cc0-4937-873f-5c32e5e3bb65
         }
         Block {
@@ -4206,7 +4206,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [465, 108, 490, 132]
           SourceBlock             "mathlib/SUB"
-          SourceType              "Unknown"
+          SourceType              "SUB"
           #GUID                   2e6ea017-ce30-432b-bbcf-39ff97d87561
         }
         Block {
@@ -4215,7 +4215,7 @@ Model {
           Ports                   [2, 1, 0, 0, 0]
           Position                [510, 218, 535, 242]
           SourceBlock             "mathlib/SUB"
-          SourceType              "Unknown"
+          SourceType              "SUB"
           #GUID                   1e027321-eaeb-4361-abda-026b1c8abf89
         }
         Block {

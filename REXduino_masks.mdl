@@ -1630,7 +1630,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               SID                     77
               shift                   0
@@ -2046,7 +2046,7 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [935, 46, 980, 514]
-          SourceBlock             "logiclib/HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
           SourceType              "HEXDBD"
           SID                     97
           LibraryVersion          "1.78"
@@ -2058,7 +2058,7 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [185, 42, 235, 508]
-          SourceBlock             "logiclib/HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
           SourceType              "HEXDBM"
           SID                     98
           LibraryVersion          "1.78"
@@ -2130,7 +2130,7 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [935, 538, 980, 772]
-          SourceBlock             "logiclib/OCTBD"
+          SourceBlock             "logiclib/BDOCT"
           SourceType              "OCTBD"
           SID                     99
           LibraryVersion          "1.78"
@@ -2142,7 +2142,7 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [185, 538, 235, 782]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           SID                     100
           LibraryVersion          "1.78"
@@ -2154,7 +2154,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [180, 1213, 230, 1457]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -4782,7 +4782,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               SID                     495
               shift                   0
@@ -6380,7 +6380,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [175, 588, 225, 832]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -8344,7 +8344,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               ShowPortLabels          "FromPortIcon"
               SystemSampleTime        -1
@@ -8844,7 +8844,7 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [915, 46, 960, 514]
-          SourceBlock             "logiclib/HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
           SourceType              "HEXDBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -8862,7 +8862,7 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [165, 42, 215, 508]
-          SourceBlock             "logiclib/HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
           SourceType              "HEXDBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -8940,7 +8940,7 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [915, 538, 960, 772]
-          SourceBlock             "logiclib/OCTBD"
+          SourceBlock             "logiclib/BDOCT"
           SourceType              "OCTBD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -8958,7 +8958,7 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [165, 538, 215, 782]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -8976,7 +8976,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [295, 1223, 345, 1467]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -11300,7 +11300,7 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
+              SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               SID                     495
               shift                   0
@@ -11716,7 +11716,7 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [915, 46, 960, 514]
-          SourceBlock             "logiclib/HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
           SourceType              "HEXDBD"
           SID                     515
           LibraryVersion          "1.78"
@@ -11728,7 +11728,7 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [165, 42, 215, 508]
-          SourceBlock             "logiclib/HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
           SourceType              "HEXDBM"
           SID                     516
           LibraryVersion          "1.78"
@@ -11800,7 +11800,7 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [915, 538, 960, 772]
-          SourceBlock             "logiclib/OCTBD"
+          SourceBlock             "logiclib/BDOCT"
           SourceType              "OCTBD"
           SID                     517
           LibraryVersion          "1.78"
@@ -11812,7 +11812,7 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [165, 538, 215, 782]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           SID                     518
           LibraryVersion          "1.78"
@@ -11824,7 +11824,7 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [270, 1223, 320, 1467]
-          SourceBlock             "logiclib/OCTBM"
+          SourceBlock             "logiclib/BMOCT"
           SourceType              "OCTBM"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
@@ -13575,8 +13575,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   c2d845c5-b77f-4765-a2f0-4ac61f908f03
@@ -13586,8 +13586,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   c85cfda1-cae4-40a5-b1a6-ff42a02ea9f0
@@ -13597,8 +13597,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   ddd7029b-c2dd-49d4-a397-d449a0aaa2a2
@@ -13781,8 +13781,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   9f03498b-ee82-492a-bb60-bf7c42d8e202
@@ -13792,8 +13792,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   41795718-67f9-4e0e-85e4-7773d6a6871b
@@ -13803,8 +13803,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   5e17cb96-c53d-4187-b2d6-6afbcd78db50
@@ -13814,8 +13814,8 @@ Model {
           Name                    "SHLD4"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 223, 265, 257]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   67eab4bb-0b73-41c7-b641-6942eb468ae5
@@ -14032,8 +14032,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   9a975f60-781f-4424-a1a9-7781f550ad05
@@ -14043,8 +14043,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   8052f72b-58bb-4ae9-9fc1-c2dc4f6846e1
@@ -14054,8 +14054,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   02be783b-787b-4fcc-8548-32609324303d
@@ -14065,8 +14065,8 @@ Model {
           Name                    "SHLD4"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 223, 265, 257]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   ba3f2173-b74c-42c8-9b94-8724c6bb6aba
@@ -14283,8 +14283,8 @@ Model {
           Name                    "SHLD1"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 58, 265, 92]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   b79642c1-a734-44eb-89d5-c141329b771c
@@ -14294,8 +14294,8 @@ Model {
           Name                    "SHLD2"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 113, 265, 147]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   1af2b5fd-698f-452a-b12e-b4551cab3db1
@@ -14305,8 +14305,8 @@ Model {
           Name                    "SHLD3"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 168, 265, 202]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   0a42ece9-00ec-453a-a86a-2dbc974ff2b7
@@ -14316,8 +14316,8 @@ Model {
           Name                    "SHLD4"
           Ports                   [3, 1, 0, 0, 0]
           Position                [225, 223, 265, 257]
-          SourceBlock             "anallib/SHLD"
-          SourceType              "Unknown"
+          SourceBlock             "analoglib/SHLD"
+          SourceType              "SHLD"
           y0                      0
           mode                    "1: Triggered sampling"
           #GUID                   c203a287-abaf-40a4-9968-9e0bdffe7200

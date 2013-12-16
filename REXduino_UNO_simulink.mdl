@@ -1763,7 +1763,7 @@ Model {
 	      Ports		      [8, 1]
 	      Position		      [135, 21, 170, 109]
 	      LibraryVersion	      "1.87"
-	      SourceBlock	      "logiclib/OCTBM"
+	      SourceBlock	      "logiclib/BMOCT"
 	      SourceType	      "OCTBM"
 	      shift		      "0"
 	    }
@@ -2141,7 +2141,7 @@ Model {
 	  Ports			  [1, 16]
 	  Position		  [915, 46, 960, 514]
 	  LibraryVersion	  "1.87"
-	  SourceBlock		  "logiclib/HEXDBD"
+	  SourceBlock		  "logiclib/BDHEXD"
 	  SourceType		  "HEXDBD"
 	  shift			  "0"
 	}
@@ -2152,7 +2152,7 @@ Model {
 	  Ports			  [16, 1]
 	  Position		  [165, 42, 215, 508]
 	  LibraryVersion	  "1.87"
-	  SourceBlock		  "logiclib/HEXDBM"
+	  SourceBlock		  "logiclib/BMHEXD"
 	  SourceType		  "HEXDBM"
 	  shift			  "0"
 	}
@@ -2202,7 +2202,7 @@ Model {
 	  Ports			  [1, 8]
 	  Position		  [915, 538, 960, 772]
 	  LibraryVersion	  "1.87"
-	  SourceBlock		  "logiclib/OCTBD"
+	  SourceBlock		  "logiclib/BDOCT"
 	  SourceType		  "OCTBD"
 	  shift			  "16"
 	}
@@ -2213,7 +2213,7 @@ Model {
 	  Ports			  [8, 1]
 	  Position		  [165, 538, 215, 782]
 	  LibraryVersion	  "1.87"
-	  SourceBlock		  "logiclib/OCTBM"
+	  SourceBlock		  "logiclib/BMOCT"
 	  SourceType		  "OCTBM"
 	  shift			  "16"
 	}
@@ -2224,7 +2224,7 @@ Model {
 	  Ports			  [8, 1]
 	  Position		  [295, 1223, 345, 1467]
 	  LibraryVersion	  "1.87"
-	  SourceBlock		  "logiclib/OCTBM"
+	  SourceBlock		  "logiclib/BMOCT"
 	  SourceType		  "OCTBM"
 	  shift			  "0"
 	}
@@ -3516,7 +3516,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 58, 265, 92]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3528,7 +3528,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 113, 265, 147]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3540,7 +3540,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 168, 265, 202]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3552,7 +3552,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 223, 265, 257]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3743,7 +3743,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 58, 265, 92]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3755,7 +3755,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 113, 265, 147]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3767,7 +3767,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 168, 265, 202]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -3779,7 +3779,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [225, 223, 265, 257]
 	  LibraryVersion	  "1.82"
-	  SourceBlock		  "anallib/SHLD"
+	  SourceBlock		  "analoglib/SHLD"
 	  SourceType		  "SHLD"
 	  y0			  "0"
 	  mode			  "1: Triggered sampling"
@@ -4247,7 +4247,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [535, 68, 565, 102]
 	  LibraryVersion	  "1.290"
-	  SourceBlock		  "reglib/SSW"
+	  SourceBlock		  "analoglib/SSW"
 	  SourceType		  "SSW"
 	}
 	Block {
@@ -4257,7 +4257,7 @@ Model {
 	  Ports			  [3, 1]
 	  Position		  [570, 178, 600, 212]
 	  LibraryVersion	  "1.290"
-	  SourceBlock		  "reglib/SSW"
+	  SourceBlock		  "analoglib/SSW"
 	  SourceType		  "SSW"
 	}
 	Block {

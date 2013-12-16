@@ -1446,8 +1446,8 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/OCTBM"
-              SourceType              "OCTBM"
+              SourceBlock             "logiclib/BMOCT"
+              SourceType              "BMOCT"
               ShowPortLabels          "FromPortIcon"
               SystemSampleTime        -1
               FunctionWithSeparateData off
@@ -1946,8 +1946,8 @@ Model {
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
           Position                [915, 46, 960, 514]
-          SourceBlock             "logiclib/HEXDBD"
-          SourceType              "HEXDBD"
+          SourceBlock             "logiclib/BDHEXD"
+          SourceType              "BDHEXD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off
@@ -1964,8 +1964,8 @@ Model {
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
           Position                [165, 42, 215, 508]
-          SourceBlock             "logiclib/HEXDBM"
-          SourceType              "HEXDBM"
+          SourceBlock             "logiclib/BMHEXD"
+          SourceType              "BMHEXD"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off
@@ -2042,8 +2042,8 @@ Model {
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
           Position                [915, 538, 960, 772]
-          SourceBlock             "logiclib/OCTBD"
-          SourceType              "OCTBD"
+          SourceBlock             "logiclib/BDOCT"
+          SourceType              "BDOCT"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off
@@ -2060,8 +2060,8 @@ Model {
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
           Position                [165, 538, 215, 782]
-          SourceBlock             "logiclib/OCTBM"
-          SourceType              "OCTBM"
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off
@@ -2078,8 +2078,8 @@ Model {
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
           Position                [295, 1223, 345, 1467]
-          SourceBlock             "logiclib/OCTBM"
-          SourceType              "OCTBM"
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off
