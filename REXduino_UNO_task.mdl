@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.09.0 rev. 3311, Date 2013-09-10"
+  #RexVersion             "2.10.0 rev. 3639, Date 2013-12-06"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -146,10 +146,6 @@ Model {
       Position                [380, 35, 525, 395]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
       MaskPromptString        "COM port number|Pin 2 mode|Pin 3 mode|Pin 4 mod"
 "e|Pin 5 mode|Pin 6 mode|Pin 9 mode|Pin 10 mode|Pin 11 mode|Analog pin A0 mode|"
 "Analog pin A1 mode|Analog pin A2 mode|Analog pin A3 mode|Analog pin A4 mode|An"
@@ -195,6 +191,10 @@ Model {
       MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
 "pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
 "nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
       MaskValueString         "10|8: Counter|1: Not connected|10: Counter DIR "
 "/ Encoder B|1: Not connected|1: Not connected|5: PWM (analog output)|7: 1-Wire"
 " temperature|7: 1-Wire temperature|1: Not connected|6: Analog input|1: Not con"
@@ -415,7 +415,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   76d252a6-10d8-4ce0-966a-1449e0feb43b
           System {
             Name                    "AI_demux1"
@@ -712,7 +712,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   bf83d408-6a63-49ff-ada2-81e12c8cdb29
           System {
             Name                    "AI_demux2"
@@ -1387,7 +1387,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   ac2567fc-11e5-489c-afa4-ce68d39b0caf
           System {
             Name                    "CNT_mux"
@@ -1518,7 +1518,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   7395b6ed-e712-4eeb-8a37-1ea1b9f507c1
           System {
             Name                    "ERR_demux"
@@ -3381,7 +3381,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   1a0a2334-ed6d-4eb7-a75a-17ee13ad022f
       System {
         Name                    "OW_branch10"
@@ -3632,7 +3632,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   0b74e126-d59e-4738-99c0-4c36fc340872
       System {
         Name                    "OW_branch11"
@@ -3883,7 +3883,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   69eabbd5-01c9-41e0-96ff-370e5046179d
       System {
         Name                    "OW_decompose"
@@ -4782,6 +4782,15 @@ Model {
       DstBlock                "OW_branch11"
       DstPort                 2
       #GUID                   ae437a1d-2745-4452-b27a-e57c5dabaeee
+    }
+    Annotation {
+      Position                [770, 60]
+      Name                    "MAKE SURE TO INCLUDE THE ONEWIRE LIBRARY\nWHEN "
+"COMPILING THE REXDUINO SLAVE SKETCH \nFOR ARDUINO !!!"
+      FontWeight              "bold"
+      FontSize                16
+      BackgroundColor         "yellow"
+      #GUID                   23da8c0a-b913-414c-a08b-aa45706f1638
     }
   }
 }

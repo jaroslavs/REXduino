@@ -83,7 +83,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.09.0 rev. 3311, Date 2013-09-10"
+  #RexVersion             "2.10.0 rev. 3639, Date 2013-12-06"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -141,7 +141,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   9fb377be-9a0c-42d4-b02e-f42a58e3f8b6
       System {
         Name                    "AI_demux1"
@@ -378,10 +378,6 @@ Model {
       Position                [455, 213, 640, 562]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
       MaskPromptString        "COM port number|Pin modes 0 to 7 (0 and 1 ignor"
 "ed)|Pin modes 8 to 15|Pin modes 16 to 23|Pin modes 24 to 31|Pin modes 32 to 39"
 "|Pin modes 40 to 47|Pin modes 48 to 53|Pin modes A0 to A7|Pin modes A8 to A15"
@@ -394,6 +390,10 @@ Model {
       MaskVariables           "comPort=@1;pinmodes_00_07=@2;pinmodes_08_15=@3;"
 "pinmodes_16_23=@4;pinmodes_24_31=@5;pinmodes_32_39=@6;pinmodes_40_47=@7;pinmod"
 "es_48_53=@8;pinmodes_A0_A7=@9;pinmodes_A8_A15=@10"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
       MaskValueString         "10|0x320A0800|0x00200554|0|0x00077700|0|0|0|0x0"
 "0006000|0"
       #GUID                   39249541-c6ed-40a3-904a-74cac8ddfa26
@@ -649,7 +649,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   13cd7e02-783d-44a9-900b-0d9db6895a9d
           System {
             Name                    "CNT_mux"
@@ -670,7 +670,6 @@ Model {
               Name                    "CNT2R"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
-              Orientation             "right"
               Port                    1
               PortWidth               -1
               SampleTime              -1
@@ -684,7 +683,6 @@ Model {
               Name                    "CNT2E"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 53, 50, 67]
-              Orientation             "right"
               Port                    2
               PortWidth               -1
               SampleTime              -1
@@ -698,7 +696,6 @@ Model {
               Name                    "CNT3R"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 78, 50, 92]
-              Orientation             "right"
               Port                    3
               PortWidth               -1
               SampleTime              -1
@@ -712,7 +709,6 @@ Model {
               Name                    "CNT3E"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 103, 50, 117]
-              Orientation             "right"
               Port                    4
               PortWidth               -1
               SampleTime              -1
@@ -726,7 +722,6 @@ Model {
               Name                    "OCTBM"
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
-              Orientation             "right"
               SourceBlock             "logiclib/BMOCT"
               SourceType              "OCTBM"
               SID                     495
@@ -738,7 +733,6 @@ Model {
               Name                    "cntCmd"
               Ports                   [1, 0, 0, 0, 0]
               Position                [215, 58, 245, 72]
-              Orientation             "right"
               Port                    1
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -794,7 +788,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   d85c8940-d5bb-4604-b36e-50b350f2b526
           System {
             Name                    "DI_decompose1"
@@ -815,7 +809,6 @@ Model {
               Name                    "DI_00_31"
               Ports                   [0, 1, 0, 0, 0]
               Position                [25, 78, 55, 92]
-              Orientation             "right"
               Port                    1
               PortWidth               -1
               SampleTime              -1
@@ -829,7 +822,6 @@ Model {
               Name                    "DI_32_63"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 198, 50, 212]
-              Orientation             "right"
               Port                    2
               PortWidth               -1
               SampleTime              -1
@@ -843,7 +835,6 @@ Model {
               Name                    "DI_64_95"
               Ports                   [0, 1, 0, 0, 0]
               Position                [15, 308, 45, 322]
-              Orientation             "right"
               Port                    3
               PortWidth               -1
               SampleTime              -1
@@ -857,7 +848,6 @@ Model {
               Name                    "BITOP"
               Ports                   [2, 1, 0, 0, 0]
               Position                [155, 78, 180, 102]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     195
@@ -869,7 +859,6 @@ Model {
               Name                    "BITOP_1"
               Ports                   [2, 1, 0, 0, 0]
               Position                [160, 18, 185, 42]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     196
@@ -881,7 +870,6 @@ Model {
               Name                    "BITOP_10"
               Ports                   [2, 1, 0, 0, 0]
               Position                [310, 258, 335, 282]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     197
@@ -893,7 +881,6 @@ Model {
               Name                    "BITOP_2"
               Ports                   [2, 1, 0, 0, 0]
               Position                [215, 63, 240, 87]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     198
@@ -905,7 +892,6 @@ Model {
               Name                    "BITOP_3"
               Ports                   [2, 1, 0, 0, 0]
               Position                [150, 198, 175, 222]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     199
@@ -917,7 +903,6 @@ Model {
               Name                    "BITOP_4"
               Ports                   [2, 1, 0, 0, 0]
               Position                [155, 133, 180, 157]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     200
@@ -929,7 +914,6 @@ Model {
               Name                    "BITOP_5"
               Ports                   [2, 1, 0, 0, 0]
               Position                [210, 178, 235, 202]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     201
@@ -941,7 +925,6 @@ Model {
               Name                    "BITOP_6"
               Ports                   [2, 1, 0, 0, 0]
               Position                [145, 308, 170, 332]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     202
@@ -953,7 +936,6 @@ Model {
               Name                    "BITOP_7"
               Ports                   [2, 1, 0, 0, 0]
               Position                [150, 258, 175, 282]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     203
@@ -965,7 +947,6 @@ Model {
               Name                    "BITOP_8"
               Ports                   [2, 1, 0, 0, 0]
               Position                [240, 313, 265, 337]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     204
@@ -977,7 +958,6 @@ Model {
               Name                    "BITOP_9"
               Ports                   [2, 1, 0, 0, 0]
               Position                [240, 253, 265, 277]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     205
@@ -989,7 +969,6 @@ Model {
               Name                    "CNI"
               Ports                   [0, 1, 0, 0, 0]
               Position                [110, 88, 125, 102]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     206
@@ -1001,7 +980,6 @@ Model {
               Name                    "CNI_1"
               Ports                   [0, 1, 0, 0, 0]
               Position                [95, 28, 130, 42]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     207
@@ -1013,7 +991,6 @@ Model {
               Name                    "CNI_2"
               Ports                   [0, 1, 0, 0, 0]
               Position                [105, 208, 120, 222]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     208
@@ -1025,7 +1002,6 @@ Model {
               Name                    "CNI_3"
               Ports                   [0, 1, 0, 0, 0]
               Position                [90, 143, 125, 157]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     209
@@ -1037,7 +1013,6 @@ Model {
               Name                    "CNI_4"
               Ports                   [0, 1, 0, 0, 0]
               Position                [100, 318, 115, 332]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     210
@@ -1049,7 +1024,6 @@ Model {
               Name                    "CNI_5"
               Ports                   [0, 1, 0, 0, 0]
               Position                [105, 268, 120, 282]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     211
@@ -1061,7 +1035,6 @@ Model {
               Name                    "CNI_6"
               Ports                   [0, 1, 0, 0, 0]
               Position                [95, 178, 130, 192]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     212
@@ -1073,7 +1046,6 @@ Model {
               Name                    "CNI_7"
               Ports                   [0, 1, 0, 0, 0]
               Position                [185, 238, 220, 252]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     213
@@ -1085,7 +1057,6 @@ Model {
               Name                    "CNI_8"
               Ports                   [0, 1, 0, 0, 0]
               Position                [195, 323, 210, 337]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     214
@@ -1097,7 +1068,6 @@ Model {
               Name                    "DI_00_15"
               Ports                   [1, 0, 0, 0, 0]
               Position                [275, 23, 305, 37]
-              Orientation             "right"
               Port                    1
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1108,7 +1078,6 @@ Model {
               Name                    "DI_16_31"
               Ports                   [1, 0, 0, 0, 0]
               Position                [275, 68, 305, 82]
-              Orientation             "right"
               Port                    2
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1119,7 +1088,6 @@ Model {
               Name                    "DI_32_47"
               Ports                   [1, 0, 0, 0, 0]
               Position                [270, 138, 300, 152]
-              Orientation             "right"
               Port                    3
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1130,7 +1098,6 @@ Model {
               Name                    "DI_48_53"
               Ports                   [1, 0, 0, 0, 0]
               Position                [270, 183, 300, 197]
-              Orientation             "right"
               Port                    4
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1141,7 +1108,6 @@ Model {
               Name                    "DI_A0_A15"
               Ports                   [1, 0, 0, 0, 0]
               Position                [375, 263, 405, 277]
-              Orientation             "right"
               Port                    5
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1359,7 +1325,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   23639ae1-cfe4-4cce-934f-850659b55c68
           System {
             Name                    "DO_mux1"
@@ -1380,7 +1346,6 @@ Model {
               Name                    "DO_00_15"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
-              Orientation             "right"
               Port                    1
               PortWidth               -1
               SampleTime              -1
@@ -1394,7 +1359,6 @@ Model {
               Name                    "DO_16_31"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 73, 50, 87]
-              Orientation             "right"
               Port                    2
               PortWidth               -1
               SampleTime              -1
@@ -1408,7 +1372,6 @@ Model {
               Name                    "DO_32_47"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 123, 50, 137]
-              Orientation             "right"
               Port                    3
               PortWidth               -1
               SampleTime              -1
@@ -1422,7 +1385,6 @@ Model {
               Name                    "DO_48_53"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 178, 50, 192]
-              Orientation             "right"
               Port                    4
               PortWidth               -1
               SampleTime              -1
@@ -1436,7 +1398,6 @@ Model {
               Name                    "DO_A0_A15"
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 283, 50, 297]
-              Orientation             "right"
               Port                    5
               PortWidth               -1
               SampleTime              -1
@@ -1450,7 +1411,6 @@ Model {
               Name                    "BITOP_1"
               Ports                   [2, 1, 0, 0, 0]
               Position                [135, 73, 160, 97]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     226
@@ -1462,7 +1422,6 @@ Model {
               Name                    "BITOP_10"
               Ports                   [2, 1, 0, 0, 0]
               Position                [355, 133, 380, 157]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     227
@@ -1474,7 +1433,6 @@ Model {
               Name                    "BITOP_11"
               Ports                   [2, 1, 0, 0, 0]
               Position                [295, 288, 320, 312]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     228
@@ -1486,7 +1444,6 @@ Model {
               Name                    "BITOP_12"
               Ports                   [2, 1, 0, 0, 0]
               Position                [295, 248, 320, 272]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     229
@@ -1498,7 +1455,6 @@ Model {
               Name                    "BITOP_13"
               Ports                   [2, 1, 0, 0, 0]
               Position                [290, 128, 315, 152]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     230
@@ -1510,7 +1466,6 @@ Model {
               Name                    "BITOP_2"
               Ports                   [2, 1, 0, 0, 0]
               Position                [225, 78, 250, 102]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     231
@@ -1522,7 +1477,6 @@ Model {
               Name                    "BITOP_3"
               Ports                   [2, 1, 0, 0, 0]
               Position                [135, 23, 160, 47]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     232
@@ -1534,7 +1488,6 @@ Model {
               Name                    "BITOP_4"
               Ports                   [2, 1, 0, 0, 0]
               Position                [135, 123, 160, 147]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     233
@@ -1546,7 +1499,6 @@ Model {
               Name                    "BITOP_5"
               Ports                   [2, 1, 0, 0, 0]
               Position                [130, 283, 155, 307]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     234
@@ -1558,7 +1510,6 @@ Model {
               Name                    "BITOP_6"
               Ports                   [2, 1, 0, 0, 0]
               Position                [290, 73, 315, 97]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     235
@@ -1570,7 +1521,6 @@ Model {
               Name                    "BITOP_7"
               Ports                   [2, 1, 0, 0, 0]
               Position                [150, 243, 175, 267]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     236
@@ -1582,7 +1532,6 @@ Model {
               Name                    "BITOP_8"
               Ports                   [2, 1, 0, 0, 0]
               Position                [135, 178, 160, 202]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     237
@@ -1594,7 +1543,6 @@ Model {
               Name                    "BITOP_9"
               Ports                   [2, 1, 0, 0, 0]
               Position                [225, 183, 250, 207]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     238
@@ -1606,7 +1554,6 @@ Model {
               Name                    "CNI_1"
               Ports                   [0, 1, 0, 0, 0]
               Position                [175, 88, 200, 102]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     239
@@ -1618,7 +1565,6 @@ Model {
               Name                    "CNI_11"
               Ports                   [0, 1, 0, 0, 0]
               Position                [75, 83, 110, 97]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     240
@@ -1630,7 +1576,6 @@ Model {
               Name                    "CNI_12"
               Ports                   [0, 1, 0, 0, 0]
               Position                [95, 253, 130, 267]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     241
@@ -1642,7 +1587,6 @@ Model {
               Name                    "CNI_13"
               Ports                   [0, 1, 0, 0, 0]
               Position                [245, 258, 270, 272]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     242
@@ -1654,7 +1598,6 @@ Model {
               Name                    "CNI_2"
               Ports                   [0, 1, 0, 0, 0]
               Position                [80, 33, 115, 47]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     243
@@ -1666,7 +1609,6 @@ Model {
               Name                    "CNI_3"
               Ports                   [0, 1, 0, 0, 0]
               Position                [75, 133, 110, 147]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     244
@@ -1678,7 +1620,6 @@ Model {
               Name                    "CNI_4"
               Ports                   [0, 1, 0, 0, 0]
               Position                [75, 293, 110, 307]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     245
@@ -1690,7 +1631,6 @@ Model {
               Name                    "CNI_5"
               Ports                   [0, 1, 0, 0, 0]
               Position                [70, 188, 105, 202]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     246
@@ -1702,7 +1642,6 @@ Model {
               Name                    "CNI_6"
               Ports                   [0, 1, 0, 0, 0]
               Position                [175, 193, 200, 207]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     247
@@ -1714,7 +1653,6 @@ Model {
               Name                    "CNI_7"
               Ports                   [0, 1, 0, 0, 0]
               Position                [245, 298, 270, 312]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     248
@@ -1726,7 +1664,6 @@ Model {
               Name                    "DO_00_31"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 78, 440, 92]
-              Orientation             "right"
               Port                    1
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1737,7 +1674,6 @@ Model {
               Name                    "DO_32_63"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
-              Orientation             "right"
               Port                    2
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1748,7 +1684,6 @@ Model {
               Name                    "DO_64_95"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 293, 440, 307]
-              Orientation             "right"
               Port                    3
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -1975,7 +1910,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   fed0ce91-aab5-40ef-99f8-621c8fcca6ce
           System {
             Name                    "ERR_demux"
@@ -1996,7 +1931,6 @@ Model {
               Name                    "data"
               Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
-              Orientation             "right"
               Port                    1
               PortWidth               -1
               SampleTime              -1
@@ -2010,7 +1944,6 @@ Model {
               Name                    "BITOP_1"
               Ports                   [2, 1, 0, 0, 0]
               Position                [125, 83, 150, 107]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     254
@@ -2022,7 +1955,6 @@ Model {
               Name                    "BITOP_10"
               Ports                   [2, 1, 0, 0, 0]
               Position                [125, 23, 150, 47]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     255
@@ -2034,7 +1966,6 @@ Model {
               Name                    "BITOP_2"
               Ports                   [2, 1, 0, 0, 0]
               Position                [210, 88, 235, 112]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     256
@@ -2046,7 +1977,6 @@ Model {
               Name                    "BITOP_4"
               Ports                   [2, 1, 0, 0, 0]
               Position                [345, 198, 370, 222]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     257
@@ -2058,7 +1988,6 @@ Model {
               Name                    "BITOP_5"
               Ports                   [2, 1, 0, 0, 0]
               Position                [210, 128, 235, 152]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     258
@@ -2070,7 +1999,6 @@ Model {
               Name                    "BITOP_6"
               Ports                   [2, 1, 0, 0, 0]
               Position                [305, 133, 330, 157]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     259
@@ -2082,7 +2010,6 @@ Model {
               Name                    "BITOP_7"
               Ports                   [2, 1, 0, 0, 0]
               Position                [270, 193, 295, 217]
-              Orientation             "right"
               SourceBlock             "logiclib/BITOP"
               SourceType              "BITOP"
               SID                     260
@@ -2094,7 +2021,6 @@ Model {
               Name                    "CNI"
               Ports                   [0, 1, 0, 0, 0]
               Position                [65, 57, 95, 73]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     261
@@ -2106,7 +2032,6 @@ Model {
               Name                    "CNI_1"
               Ports                   [0, 1, 0, 0, 0]
               Position                [70, 93, 85, 107]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     262
@@ -2118,7 +2043,6 @@ Model {
               Name                    "CNI_2"
               Ports                   [0, 1, 0, 0, 0]
               Position                [260, 143, 275, 157]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     263
@@ -2130,7 +2054,6 @@ Model {
               Name                    "CNI_3"
               Ports                   [0, 1, 0, 0, 0]
               Position                [220, 203, 235, 217]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     264
@@ -2142,7 +2065,6 @@ Model {
               Name                    "CNI_4"
               Ports                   [0, 1, 0, 0, 0]
               Position                [270, 233, 300, 247]
-              Orientation             "right"
               SourceBlock             "mathlib/CNI"
               SourceType              "CNI"
               SID                     265
@@ -2154,7 +2076,6 @@ Model {
               Name                    "err_code"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 93, 440, 107]
-              Orientation             "right"
               Port                    1
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -2165,7 +2086,6 @@ Model {
               Name                    "err_subcode"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 28, 440, 42]
-              Orientation             "right"
               Port                    2
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -2176,7 +2096,6 @@ Model {
               Name                    "status"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
-              Orientation             "right"
               Port                    3
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -2187,7 +2106,6 @@ Model {
               Name                    "AIdata"
               Ports                   [1, 0, 0, 0, 0]
               Position                [410, 203, 440, 217]
-              Orientation             "right"
               Port                    4
               OutputWhenDisabled      "held"
               InitialOutput           []
@@ -3380,7 +3298,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   2e53b27b-0120-4cbe-9dd6-5e2a1d07c119
       System {
         Name                    "OW_branch26"
@@ -3631,7 +3549,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   9454cb7c-a433-4632-84a3-074a89d992f4
       System {
         Name                    "OW_branch27"
@@ -3882,7 +3800,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   e58887af-0be0-49bc-9b05-b082780d8218
       System {
         Name                    "OW_branch28"
@@ -4133,7 +4051,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   fc7a065b-b4fa-496c-8532-b5b0159d1cb9
       System {
         Name                    "OW_decompose"
@@ -4536,7 +4454,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   1dd3a842-e532-4734-9b96-cd4db7ca390f
       System {
         Name                    "OW_decompose2"
@@ -4939,7 +4857,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   8dd2c2fe-14d3-415f-bb02-4e6d2d635cf2
       System {
         Name                    "PWM_mux"
@@ -5332,7 +5250,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   a2f9b708-92ce-4f0b-8526-afe6e1d6879d
       System {
         Name                    "PWM_mux2"
@@ -6099,6 +6017,15 @@ Model {
 "\nA: Counter DIR / Encoder B (only pins 4 and 5)"
       HorizontalAlignment     "left"
       #GUID                   2fea5537-2a8b-42f1-98c9-32bc4b336ca0
+    }
+    Annotation {
+      Position                [215, 40]
+      Name                    "MAKE SURE TO INCLUDE THE ONEWIRE LIBRARY\nWHEN "
+"COMPILING THE REXDUINO SLAVE SKETCH \nFOR ARDUINO !!!"
+      FontWeight              "bold"
+      FontSize                16
+      BackgroundColor         "yellow"
+      #GUID                   e1cdce72-f265-4661-ab9f-c24a8493fcc0
     }
   }
 }

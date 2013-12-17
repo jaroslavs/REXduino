@@ -3,7 +3,7 @@
  *  Commands for REXduino slave                      *
  *  REX and Arduino communication over serial port   *
  *                                                   *
- *  (c) Jaroslav SOBOTA, 2012                        *
+ *  (c) Jaroslav SOBOTA, 2013                        *
  *  email: jsobota@kky.zcu.cz                        *
  *                                                   *
  ****************************************************/
