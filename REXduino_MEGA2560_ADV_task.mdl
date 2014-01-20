@@ -723,7 +723,7 @@ Model {
               Ports                   [8, 1, 0, 0, 0]
               Position                [135, 21, 170, 109]
               SourceBlock             "logiclib/BMOCT"
-              SourceType              "OCTBM"
+              SourceType              "BMOCT"
               SID                     495
               shift                   0
               #GUID                   8f229329-241d-48a1-b980-52a7adc28282
@@ -2321,7 +2321,7 @@ Model {
           Ports                   [8, 1, 0, 0, 0]
           Position                [175, 588, 225, 832]
           SourceBlock             "logiclib/BMOCT"
-          SourceType              "OCTBM"
+          SourceType              "BMOCT"
           ShowPortLabels          "FromPortIcon"
           SystemSampleTime        -1
           FunctionWithSeparateData off

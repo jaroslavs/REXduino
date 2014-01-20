@@ -1764,7 +1764,7 @@ Model {
 	      Position		      [135, 21, 170, 109]
 	      LibraryVersion	      "1.87"
 	      SourceBlock	      "logiclib/BMOCT"
-	      SourceType	      "OCTBM"
+	      SourceType	      "BMOCT"
 	      shift		      "0"
 	    }
 	    Block {
@@ -2142,7 +2142,7 @@ Model {
 	  Position		  [915, 46, 960, 514]
 	  LibraryVersion	  "1.87"
 	  SourceBlock		  "logiclib/BDHEXD"
-	  SourceType		  "HEXDBD"
+	  SourceType		  "BDHEXD"
 	  shift			  "0"
 	}
 	Block {
@@ -2153,7 +2153,7 @@ Model {
 	  Position		  [165, 42, 215, 508]
 	  LibraryVersion	  "1.87"
 	  SourceBlock		  "logiclib/BMHEXD"
-	  SourceType		  "HEXDBM"
+	  SourceType		  "BMHEXD"
 	  shift			  "0"
 	}
 	Block {
@@ -2203,7 +2203,7 @@ Model {
 	  Position		  [915, 538, 960, 772]
 	  LibraryVersion	  "1.87"
 	  SourceBlock		  "logiclib/BDOCT"
-	  SourceType		  "OCTBD"
+	  SourceType		  "BDOCT"
 	  shift			  "16"
 	}
 	Block {
@@ -2214,7 +2214,7 @@ Model {
 	  Position		  [165, 538, 215, 782]
 	  LibraryVersion	  "1.87"
 	  SourceBlock		  "logiclib/BMOCT"
-	  SourceType		  "OCTBM"
+	  SourceType		  "BMOCT"
 	  shift			  "16"
 	}
 	Block {
@@ -2225,7 +2225,7 @@ Model {
 	  Position		  [295, 1223, 345, 1467]
 	  LibraryVersion	  "1.87"
 	  SourceBlock		  "logiclib/BMOCT"
-	  SourceType		  "OCTBM"
+	  SourceType		  "BMOCT"
 	  shift			  "0"
 	}
 	Block {
