@@ -162,9 +162,16 @@ void setup()
   Serial.println();  
    Serial.println("Initializing...");  
    */
-  //change the PWM frequency only if you are ABSOLUTELY SURE what you are doing !!!
-  //setPwmFrequency(9, 8); //for Arduino UNO - modify PWM frequency on pins 9 and 10, but BEWARE, it conflicts with the Servo library !!!
-  //TCCR2B = (TCCR2B & ~7) | 2; //for Arduino MEGA2560 - change PWM frequency of pins 9 and 10 on MEGA2560 to approx. 4KHz
+  //Change the PWM frequency only if you are ABSOLUTELY SURE what you are doing !!!
+  //Base frequency on pins 9 and 10 is 31250 Hz
+  //The divisors available on pins 9 and 10 are: 1 (=31.25 KHz), 8 (~ 3.9 KHz), 64 (~ 488 Hz), 256 (~ 122 Hz), and 1024 (~ 30 Hz).
+  //BEWARE, changing the PWM timing conflicts with the Servo library !!!
+  //setPwmFrequency(9, 8); //for Arduino UNO
+  //For Arduino MEGA2560 - change PWM frequency of pins 9 and 10 on MEGA2560
+  //Prescalers available on pins 9 and 10 are: 1 (=31.25 KHz), 2 (~ 3.9 KHz), 3 (~ 488 Hz), 4 (~ 122 Hz), and 5 (~ 30 Hz).
+  //int myPrescaler = 2;
+  //TCCR2B = (TCCR2B & ~7) | myPrescaler; //
+  
 #ifdef USEI2C
   Wire.begin(); // join i2c bus
 #endif
