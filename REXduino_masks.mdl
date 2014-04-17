@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:40:59 2013"
   ModelVersionFormat      "1.%<AutoIncrement:10>"
   ConfigurationManager    "None"
-  #RexVersion             "2.09.1 rev. 3338, Date 2013-09-25"
+  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -149,7 +149,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   1b110ae4-5c15-4f43-b378-10b87b6118c4
       System {
         Name                    "AI_demux"
@@ -395,52 +395,48 @@ Model {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_MEGA2560"
-      Ports                   [21, 37, 0, 0, 0]
+      Ports                   [21, 36, 0, 0, 0]
       Position                [530, 12, 680, 388]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
-      MaskPromptString        "COM port number|Pin 2 mode|Pin 3 mode|Pin 4 mod"
-"e|Pin 5 mode|Pin 6 mode|Pin 9 mode|Pin 10 mode|Pin 11 mode|Analog pin A0 mode|"
-"Analog pin A1 mode|Analog pin A2 mode|Analog pin A3 mode|Analog pin A4 mode|An"
-"alog pin A5 mode"
-      MaskStyleString         "popup(1|2|3|4|5|6|7|8|9|10|11|12),popup(1: Not "
-"connected|2: Digital output|3: Digital input|4: Digital input with internal pu"
-"ll-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature"
-"|8: Counter|9: Encoder),popup(1: Not connected|2: Digital output|3: Digital in"
-"put|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A f"
-"or this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder),popup(1: Not conn"
-"ected|2: Digital output|3: Digital input|4: Digital input with internal pull-u"
-"p|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature|8: "
-"--- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder"
-" B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input"
-" with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1"
-"-Wire temperature|8: --- N/A for this pin ---|9: --- N/A for this pin ---|10: "
-"Counter DIR / Encoder B),popup(1: Not connected|2: Digital output|3: Digital i"
-"nput|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A "
-"for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital outp"
-"ut|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog outp"
-"ut)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|"
-"2: Digital output|3: Digital input|4: Digital input with internal pull-up|5: P"
-"WM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1:"
-" Not connected|2: Digital output|3: Digital input|4: Digital input with intern"
-"al pull-up|5: PWM (analog output)|6: --- N/A for this pin|7: 1-Wire temperatur"
-"e),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input "
-"with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire te"
+      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
+"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
+"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+      MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
+"6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder),popup"
+"(1: Not connected|2: Digital output|3: Digital input|4: Digital input with int"
+"ernal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire tem"
+"perature|8: Counter|9: Encoder),popup(1: Not connected|2: Digital output|3: Di"
+"gital input|4: Digital input with internal pull-up|5: PWM (analog output)|6: -"
+"-- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for this pin ---|9: -"
+"-- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: Not connected|2:"
+" Digital output|3: Digital input|4: Digital input with internal pull-up|5: PWM"
+" (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A "
+"for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popu"
+"p(1: Not connected|2: Digital output|3: Digital input|4: Digital input with in"
+"ternal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire te"
 "mperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digita"
-"l input with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1"
-"-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|4"
-": Digital input with internal pull-up|5: --- N/A for this pin ---|6: Analog in"
-"put|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital"
-" input|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: A"
-"nalog input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3:"
-" Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin "
-"---|6: Analog input|7: 1-Wire temperature),popup(1: Not connected|2: Digital o"
-"utput|3: Digital input|4: Digital input with internal pull-up|5: --- N/A for t"
-"his pin ---|6: Analog input|7: 1-Wire temperature)"
+"l input with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin -"
+"--|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital "
+"input|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A"
+" for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital out"
+"put|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog out"
+"put)|6: --- N/A for this pin|7: 1-Wire temperature),popup(1: Not connected|2: "
+"Digital output|3: Digital input|4: Digital input with internal pull-up|5: --- "
+"N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not conne"
+"cted|2: Digital output|3: Digital input|4: Digital input with internal pull-up"
+"|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: N"
+"ot connected|2: Digital output|3: Digital input|4: Digital input with internal"
+" pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),po"
+"pup(1: Not connected|2: Digital output|3: Digital input|4: Digital input with "
+"internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire tempera"
+"ture),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital inp"
+"ut with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire"
+" temperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Dig"
+"ital input with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7"
+": 1-Wire temperature)"
       MaskCallbackString      "||||||||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
@@ -448,10 +444,14 @@ Model {
       MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
 "pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
 "nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
-      MaskValueString         "10|1: Not connected|1: Not connected|1: Not con"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
+"1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
-"Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not connec"
-"ted|1: Not connected|1: Not connected"
+"Not connected|1: Not connected|1: Not connected"
       #GUID                   66ecff36-c34c-4b95-b967-388b602328f7
       System {
         Name                    "Arduino_MEGA2560"
@@ -750,7 +750,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   6ae44577-6b01-4079-8931-b443323656af
           System {
             Name                    "AI_demux1"
@@ -1003,7 +1003,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   b1fc6369-c08d-4e1b-a81d-fe8744ec4391
           System {
             Name                    "AI_demux2"
@@ -1256,7 +1256,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   ac66bcbc-ad2e-40ec-8303-08dae4f05c64
           System {
             Name                    "AI_demux3"
@@ -1557,7 +1557,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   e4a40c43-f35a-4b41-9b6d-ec4bf31259f2
           System {
             Name                    "CNT_mux"
@@ -1696,7 +1696,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   03503f8b-c623-4164-82a1-c20cd52406e1
           System {
             Name                    "ERR_demux"
@@ -2177,7 +2177,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   f1caa4af-bcdf-445d-979c-e8955ed3fe29
           System {
             Name                    "PWM_mux1"
@@ -2582,7 +2582,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   2cdc2c9d-5b17-47ea-ac90-92322480b5e1
           System {
             Name                    "PWM_mux2"
@@ -2987,7 +2987,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   0ddbbc39-832a-466d-976d-780b831df860
           System {
             Name                    "PWM_mux3"
@@ -3396,8 +3396,8 @@ Model {
           srctype                 "1: STL"
           stack                   0
           debug                   "1: No check"
-          fname                   "REXduino_data.dat"
-          p0                      "comPort"
+          fname                   "comPort"
+          p0                      0
           p1                      "pinmode2"
           p2                      "pinmode3"
           p3                      "pinmode4"
@@ -3417,13 +3417,13 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "iE"
+          Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1010, 18, 1040, 32]
+          Position                [1070, 1193, 1100, 1207]
           Port                    1
           OutputWhenDisabled      "held"
           InitialOutput           []
-          #GUID                   6769a300-3f08-485c-918e-dfd1f7418c01
+          #GUID                   024829bc-d7ed-4b6a-954c-13e89e4fd56c
         }
         Block {
           BlockType               Outport
@@ -3447,20 +3447,10 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
-          Position                [1070, 1193, 1100, 1207]
-          Port                    4
-          OutputWhenDisabled      "held"
-          InitialOutput           []
-          #GUID                   024829bc-d7ed-4b6a-954c-13e89e4fd56c
-        }
-        Block {
-          BlockType               Outport
           Name                    "DI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 108, 1040, 122]
-          Port                    5
+          Port                    4
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   9130db71-878f-4a60-a01c-172d8b083290
@@ -3470,7 +3460,7 @@ Model {
           Name                    "DI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 138, 1040, 152]
-          Port                    6
+          Port                    5
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   80e96e74-114f-4ff8-a792-6a94e72d7daa
@@ -3480,7 +3470,7 @@ Model {
           Name                    "DI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 168, 1040, 182]
-          Port                    7
+          Port                    6
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   78e8fd7d-178f-43a1-8171-b2d76d10b283
@@ -3490,7 +3480,7 @@ Model {
           Name                    "DI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 198, 1040, 212]
-          Port                    8
+          Port                    7
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   dda4e95a-88ed-4544-b39d-baf2e0dc3a82
@@ -3500,7 +3490,7 @@ Model {
           Name                    "DI6"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 228, 1040, 242]
-          Port                    9
+          Port                    8
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   8044e9bb-a1a4-421a-b315-c33e01e14ebc
@@ -3510,7 +3500,7 @@ Model {
           Name                    "DI7"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 258, 1040, 272]
-          Port                    10
+          Port                    9
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   50bab5bc-0a3d-46a6-b94f-f301bbba58a6
@@ -3520,7 +3510,7 @@ Model {
           Name                    "DI8"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 288, 1040, 302]
-          Port                    11
+          Port                    10
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   c06ecc09-eb73-4c16-8049-ba7d6bc842e5
@@ -3530,7 +3520,7 @@ Model {
           Name                    "DI9"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 318, 1040, 332]
-          Port                    12
+          Port                    11
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   38da3cc0-0acc-4ead-83f6-32a442883f9e
@@ -3540,7 +3530,7 @@ Model {
           Name                    "DI10"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 348, 1040, 362]
-          Port                    13
+          Port                    12
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   adb3dc77-dbb4-4405-845f-2f62a20b9648
@@ -3550,7 +3540,7 @@ Model {
           Name                    "DI11"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 378, 1040, 392]
-          Port                    14
+          Port                    13
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   23297733-d11f-4c18-a563-761d4a6a1217
@@ -3560,7 +3550,7 @@ Model {
           Name                    "DI_A0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 468, 1040, 482]
-          Port                    15
+          Port                    14
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   153fad43-71a4-4920-9794-0c56e730d07f
@@ -3570,7 +3560,7 @@ Model {
           Name                    "DI_A1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 498, 1040, 512]
-          Port                    16
+          Port                    15
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   60e8c9c7-71b1-4779-90dd-ff4329a85b3b
@@ -3580,7 +3570,7 @@ Model {
           Name                    "DI_A2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 543, 1040, 557]
-          Port                    17
+          Port                    16
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   20f665fd-90eb-43d2-9dbe-b7b2a8f5ceb8
@@ -3590,7 +3580,7 @@ Model {
           Name                    "DI_A3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 573, 1040, 587]
-          Port                    18
+          Port                    17
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   d3437f3b-4b87-4c4b-9524-cbe51cc44197
@@ -3600,7 +3590,7 @@ Model {
           Name                    "DI_A4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 603, 1040, 617]
-          Port                    19
+          Port                    18
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   0729cdef-e693-4662-812d-4ab742d18343
@@ -3610,7 +3600,7 @@ Model {
           Name                    "DI_A5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 633, 1040, 647]
-          Port                    20
+          Port                    19
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   c8b66f5e-a63b-4735-93e1-d5b1bf1605b3
@@ -3620,7 +3610,7 @@ Model {
           Name                    "AI0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 798, 1105, 812]
-          Port                    21
+          Port                    20
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   c02720ee-4f1b-461c-a440-0682bf06713d
@@ -3630,7 +3620,7 @@ Model {
           Name                    "AI1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 823, 1105, 837]
-          Port                    22
+          Port                    21
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   9b1276e2-594f-40be-ae6a-bd6ecafc305a
@@ -3640,7 +3630,7 @@ Model {
           Name                    "AI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 848, 1105, 862]
-          Port                    23
+          Port                    22
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   d035a9b5-d93c-4962-86f4-3b49aae88681
@@ -3650,7 +3640,7 @@ Model {
           Name                    "AI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 873, 1105, 887]
-          Port                    24
+          Port                    23
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   95c425d3-d4d1-4c78-8519-3b3f51934638
@@ -3660,7 +3650,7 @@ Model {
           Name                    "AI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 898, 1105, 912]
-          Port                    25
+          Port                    24
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   7ff55f62-8736-4473-8787-3f3e186e7dae
@@ -3670,7 +3660,7 @@ Model {
           Name                    "AI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 923, 1105, 937]
-          Port                    26
+          Port                    25
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e87f9f91-a29a-4411-994e-b87565221391
@@ -3680,7 +3670,7 @@ Model {
           Name                    "AI6"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 953, 1105, 967]
-          Port                    27
+          Port                    26
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e8199fe2-8fa4-4dce-bc77-7e1c444b45ba
@@ -3690,7 +3680,7 @@ Model {
           Name                    "AI7"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 978, 1105, 992]
-          Port                    28
+          Port                    27
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   983d765e-b276-40e0-baad-350110f9396c
@@ -3700,7 +3690,7 @@ Model {
           Name                    "CNT2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1058, 1100, 1072]
-          Port                    29
+          Port                    28
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   c8822ec2-b0d9-4ed7-a344-4755aa7c3262
@@ -3710,7 +3700,7 @@ Model {
           Name                    "CNT3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1088, 1100, 1102]
-          Port                    30
+          Port                    29
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   fb9d24c1-ffbe-47a8-85d2-7c5a2bb7c418
@@ -3720,7 +3710,7 @@ Model {
           Name                    "OW_2_3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1248, 1100, 1262]
-          Port                    31
+          Port                    30
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   992b2f43-2e66-42e7-a216-04d6fe4d0213
@@ -3730,7 +3720,7 @@ Model {
           Name                    "OW_4_5_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1278, 1100, 1292]
-          Port                    32
+          Port                    31
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   a69016e6-3a1e-441b-b824-9da728714faa
@@ -3740,7 +3730,7 @@ Model {
           Name                    "OW_6_9_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1308, 1100, 1322]
-          Port                    33
+          Port                    32
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   af1881e7-93c2-4df4-a365-05c75b62f810
@@ -3750,7 +3740,7 @@ Model {
           Name                    "OW_10_11_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1338, 1100, 1352]
-          Port                    34
+          Port                    33
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b036ab13-5e06-48d9-a5a2-4ffdbf799748
@@ -3760,7 +3750,7 @@ Model {
           Name                    "OW_A0_A1_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1368, 1100, 1382]
-          Port                    35
+          Port                    34
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   f5493825-6a21-41e6-8326-8f5049aa5cbc
@@ -3770,7 +3760,7 @@ Model {
           Name                    "OW_A2_A3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1398, 1100, 1412]
-          Port                    36
+          Port                    35
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   1c41bea7-5aa5-4aba-89a9-541599e3ab5f
@@ -3780,7 +3770,7 @@ Model {
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1428, 1100, 1442]
-          Port                    37
+          Port                    36
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   3a4a58e1-543b-43cf-8474-fd57b03904ea
@@ -4295,14 +4285,6 @@ Model {
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
-          SrcPort                 1
-          Points                  [235, 0; 0, -245]
-          DstBlock                "iE"
-          DstPort                 1
-          #GUID                   554bb4cd-442e-40e6-b4fe-c32d634f1967
-        }
-        Line {
-          SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [235, 0]
           #GUID                   26fe6424-d9c3-45ef-87f5-c14e24ea7403
@@ -4435,19 +4417,16 @@ Model {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_MEGA2560_ADV"
-      Ports                   [14, 22, 0, 0, 0]
-      Position                [525, 523, 710, 872]
+      Ports                   [14, 21, 0, 0, 0]
+      Position                [525, 525, 710, 875]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
-      MaskPromptString        "COM port number|Pin modes 0 to 7 (0 and 1 ignor"
-"ed)|Pin modes 8 to 15|Pin modes 16 to 23|Pin modes 24 to 31|Pin modes 32 to 39"
-"|Pin modes 40 to 47|Pin modes 48 to 53|Pin modes A0 to A7|Pin modes A8 to A15"
-      MaskStyleString         "popup(1|2|3|4|5|6|7|8|9|10|11|12),edit,edit,edi"
-"t,edit,edit,edit,edit,edit,edit"
+      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin modes 0 to 7 (0 and 1 ignored)|Pin modes 8 to 15|Pin modes 16 t"
+"o 23|Pin modes 24 to 31|Pin modes 32 to 39|Pin modes 40 to 47|Pin modes 48 to "
+"53|Pin modes A0 to A7|Pin modes A8 to A15"
+      MaskStyleString         "edit,edit,edit,edit,edit,edit,edit,edit,edit,ed"
+"it"
       MaskCallbackString      "|||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on"
@@ -4455,7 +4434,11 @@ Model {
       MaskVariables           "comPort=@1;pinmodes_00_07=@2;pinmodes_08_15=@3;"
 "pinmodes_16_23=@4;pinmodes_24_31=@5;pinmodes_32_39=@6;pinmodes_40_47=@7;pinmod"
 "es_48_53=@8;pinmodes_A0_A7=@9;pinmodes_A8_A15=@10"
-      MaskValueString         "10|0|0|0|0|0|0|0|0|0"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|0|0|0|0|0|0|0|0|0"
       #GUID                   74e6401e-4504-4dc9-b24c-f6170c59982e
       System {
         Name                    "Arduino_MEGA2560_ADV"
@@ -4709,7 +4692,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   bdfe63c5-f68b-4d09-833e-85b1a7d7b48e
           System {
             Name                    "CNT_mux"
@@ -4848,7 +4831,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   ea435815-cde7-441b-a180-e8a2babca0b7
           System {
             Name                    "DI_decompose1"
@@ -5385,7 +5368,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   90302130-cd10-4c92-9263-c2d5d615943d
           System {
             Name                    "DO_mux1"
@@ -5970,7 +5953,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   3d725204-81d2-4827-89d8-0daf6d722121
           System {
             Name                    "ERR_demux"
@@ -6407,8 +6390,8 @@ Model {
           srctype                 "1: STL"
           stack                   0
           debug                   "1: No check"
-          fname                   "REXduino_data.dat"
-          p0                      "comPort"
+          fname                   "comPort"
+          p0                      0
           p1                      "pinmodes_00_07"
           p2                      "pinmodes_08_15"
           p3                      "pinmodes_16_23"
@@ -6428,13 +6411,13 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "iE"
+          Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 8, 845, 22]
+          Position                [735, 403, 765, 417]
           Port                    1
           OutputWhenDisabled      "held"
           InitialOutput           []
-          #GUID                   89becf40-9dd3-4411-9662-5d534667fb1d
+          #GUID                   0fcb93cc-c9a2-4a90-bd63-77739abcb824
         }
         Block {
           BlockType               Outport
@@ -6458,20 +6441,10 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 403, 765, 417]
-          Port                    4
-          OutputWhenDisabled      "held"
-          InitialOutput           []
-          #GUID                   0fcb93cc-c9a2-4a90-bd63-77739abcb824
-        }
-        Block {
-          BlockType               Outport
           Name                    "DI_00_15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 38, 845, 52]
-          Port                    5
+          Port                    4
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   4c5620da-eef2-4e93-b02e-b15a00bd99ef
@@ -6481,7 +6454,7 @@ Model {
           Name                    "DI_16_31"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 68, 845, 82]
-          Port                    6
+          Port                    5
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   5429fe75-2a16-41e0-aa5b-cfa900a0f1ae
@@ -6491,7 +6464,7 @@ Model {
           Name                    "DI_32_47"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 98, 845, 112]
-          Port                    7
+          Port                    6
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   254ac818-4d5d-49af-814f-8e40dbdfda3e
@@ -6501,7 +6474,7 @@ Model {
           Name                    "DI_48_53"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 128, 845, 142]
-          Port                    8
+          Port                    7
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   4970b5a6-2e64-469b-9827-556dc21ab9be
@@ -6511,7 +6484,7 @@ Model {
           Name                    "DI_A0_A15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 158, 845, 172]
-          Port                    9
+          Port                    8
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b3ed3917-b9b6-4ab4-832d-aec3eabfd79f
@@ -6521,7 +6494,7 @@ Model {
           Name                    "AI_00_02"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 193, 765, 207]
-          Port                    10
+          Port                    9
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   0fcfa2fd-f38d-4df0-8891-a09ad91e1142
@@ -6531,7 +6504,7 @@ Model {
           Name                    "AI_03_05"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 223, 765, 237]
-          Port                    11
+          Port                    10
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b2d3e7cf-40ad-4527-a3e0-ed486b41072b
@@ -6541,7 +6514,7 @@ Model {
           Name                    "AI_06_08"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 253, 765, 267]
-          Port                    12
+          Port                    11
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   cb1f82d3-cbc5-4ea4-8f82-77208db58cb1
@@ -6551,7 +6524,7 @@ Model {
           Name                    "AI_09_11"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 283, 765, 297]
-          Port                    13
+          Port                    12
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   d248e419-efe6-4a13-9eec-2e4c3d7bda38
@@ -6561,7 +6534,7 @@ Model {
           Name                    "AI_12_14"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 313, 765, 327]
-          Port                    14
+          Port                    13
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e060c726-5d54-4836-bb12-776992fa03bc
@@ -6571,7 +6544,7 @@ Model {
           Name                    "AI15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 433, 765, 447]
-          Port                    15
+          Port                    14
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   119d72ca-0b66-4a59-89dc-d33862f9dd04
@@ -6581,7 +6554,7 @@ Model {
           Name                    "OW_22_23_data_CNT2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 463, 765, 477]
-          Port                    16
+          Port                    15
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e9e36db4-3694-407f-bee1-9618542038f4
@@ -6591,7 +6564,7 @@ Model {
           Name                    "OW_24_25_data_CNT3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 493, 765, 507]
-          Port                    17
+          Port                    16
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   de8e3d01-85b1-413c-b018-c5620da535bc
@@ -6601,7 +6574,7 @@ Model {
           Name                    "OW_26_27_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 523, 765, 537]
-          Port                    18
+          Port                    17
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   6bf76be3-2c44-4b9c-94d0-3cf11a0aa03f
@@ -6611,7 +6584,7 @@ Model {
           Name                    "OW_28_29_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 553, 765, 567]
-          Port                    19
+          Port                    18
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   ac3598f8-334f-4a2e-9cfa-d57fdde60a25
@@ -6621,7 +6594,7 @@ Model {
           Name                    "OW_30_31_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 583, 765, 597]
-          Port                    20
+          Port                    19
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   9f3b0d44-7d99-4455-9f3a-f65d374e522f
@@ -6631,7 +6604,7 @@ Model {
           Name                    "OW_32_33_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 613, 765, 627]
-          Port                    21
+          Port                    20
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   205b93e2-7c3a-4816-8daf-f452f7ca4c79
@@ -6641,7 +6614,7 @@ Model {
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 643, 765, 657]
-          Port                    22
+          Port                    21
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   bd810bc3-da36-4623-95e0-0a7b0fce25c5
@@ -6894,14 +6867,6 @@ Model {
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
-          SrcPort                 1
-          Points                  [165, 0; 0, -145]
-          DstBlock                "iE"
-          DstPort                 1
-          #GUID                   38615ff5-31fb-4bfa-9726-b382006ae1ac
-        }
-        Line {
-          SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [175, 0; 0, -45]
           DstBlock                "DI_decompose1"
@@ -7040,52 +7005,48 @@ Model {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_UNO"
-      Ports                   [21, 35, 0, 0, 0]
+      Ports                   [21, 34, 0, 0, 0]
       Position                [345, 30, 490, 390]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
-      MaskPromptString        "COM port number|Pin 2 mode|Pin 3 mode|Pin 4 mod"
-"e|Pin 5 mode|Pin 6 mode|Pin 9 mode|Pin 10 mode|Pin 11 mode|Analog pin A0 mode|"
-"Analog pin A1 mode|Analog pin A2 mode|Analog pin A3 mode|Analog pin A4 mode|An"
-"alog pin A5 mode"
-      MaskStyleString         "popup(1|2|3|4|5|6|7|8|9|10|11|12),popup(1: Not "
-"connected|2: Digital output|3: Digital input|4: Digital input with internal pu"
-"ll-up|5: --- N/A for this pin ---|6: --- N/A for this pin ---|7: 1-Wire temper"
-"ature|8: Counter|9: Encoder A),popup(1: Not connected|2: Digital output|3: Dig"
-"ital input|4: Digital input with internal pull-up|5: PWM (analog output)|6: --"
-"- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A),popup(1:"
+      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
+"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
+"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+      MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
+" ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
+"),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input w"
+"ith internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-W"
+"ire temperature|8: Counter|9: Encoder A),popup(1: Not connected|2: Digital out"
+"put|3: Digital input|4: Digital input with internal pull-up|5: --- N/A for thi"
+"s pin ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for thi"
+"s pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: No"
+"t connected|2: Digital output|3: Digital input|4: Digital input with internal "
+"pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperatu"
+"re|8: --- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / E"
+"ncoder B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital"
+" input with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin --"
+"-|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital i"
+"nput|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A "
+"for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital outp"
+"ut|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog outp"
+"ut)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|"
+"2: Digital output|3: Digital input|4: Digital input with internal pull-up|5: P"
+"WM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1:"
 " Not connected|2: Digital output|3: Digital input|4: Digital input with intern"
-"al pull-up|5: --- N/A for this pin ---|6: --- N/A for this pin ---|7: 1-Wire t"
-"emperature|8: --- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter"
-" DIR / Encoder B),popup(1: Not connected|2: Digital output|3: Digital input|4:"
-" Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A for thi"
-"s pin ---|7: 1-Wire temperature|8: --- N/A for this pin ---|9: --- N/A for thi"
-"s pin ---|10: Counter DIR / Encoder B),popup(1: Not connected|2: Digital outpu"
-"t|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog outpu"
-"t)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2"
-": Digital output|3: Digital input|4: Digital input with internal pull-up|5: PW"
-"M (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: "
-"Not connected|2: Digital output|3: Digital input|4: Digital input with interna"
-"l pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire tempera"
-"ture),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital inp"
-"ut with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7:"
-" 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input"
-"|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: Analog "
-"input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digit"
-"al input|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6:"
-" Analog input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|"
-"3: Digital input|4: Digital input with internal pull-up|5: --- N/A for this pi"
-"n ---|6: Analog input|7: 1-Wire temperature),popup(1: Not connected|2: Digital"
-" output|3: Digital input|4: Digital input with internal pull-up|5: --- N/A for"
-" this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not connected|2:"
-" Digital output|3: Digital input|4: Digital input with internal pull-up|5: ---"
-" N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not conn"
-"ected|2: Digital output|3: Digital input|4: Digital input with internal pull-u"
-"p|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature)"
+"al pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),"
+"popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input wit"
+"h internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire tempe"
+"rature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital i"
+"nput with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wi"
+"re temperature),popup(1: Not connected|2: Digital output|3: Digital input|4: D"
+"igital input with internal pull-up|5: --- N/A for this pin ---|6: Analog input"
+"|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital in"
+"put|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: Anal"
+"og input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Di"
+"gital input|4: Digital input with internal pull-up|5: --- N/A for this pin ---"
+"|6: Analog input|7: 1-Wire temperature)"
       MaskCallbackString      "||||||||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
@@ -7093,10 +7054,14 @@ Model {
       MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
 "pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
 "nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
-      MaskValueString         "10|1: Not connected|1: Not connected|1: Not con"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
+"1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
-"Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not connec"
-"ted|1: Not connected|1: Not connected"
+"Not connected|1: Not connected|1: Not connected"
       #GUID                   c1120156-9cf6-4f33-beca-d7e04c91557f
       System {
         Name                    "Arduino_UNO"
@@ -7313,7 +7278,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   ff1cef63-7aaa-4e3b-9b21-d9f3bdcc4958
           System {
             Name                    "AI_demux1"
@@ -7610,7 +7575,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   94be4cf0-0236-44af-b3f3-52fb83443cff
           System {
             Name                    "AI_demux2"
@@ -8285,7 +8250,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   9a0d935b-110b-4e74-be8c-37e572094446
           System {
             Name                    "CNT_mux"
@@ -8416,7 +8381,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   d9f88251-6e67-4d5b-ab4e-c731b6ca267e
           System {
             Name                    "ERR_demux"
@@ -9009,8 +8974,8 @@ Model {
           srctype                 "1: STL"
           stack                   0
           debug                   "1: No check"
-          fname                   "REXduino_data.dat"
-          p0                      "comPort"
+          fname                   "comPort"
+          p0                      0
           p1                      "pinmode2"
           p2                      "pinmode3"
           p3                      "pinmode4"
@@ -9030,12 +8995,12 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "iE"
+          Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 18, 1020, 32]
+          Position                [1050, 1023, 1080, 1037]
           Port                    1
           IconDisplay             "Port number"
-          #GUID                   d379ad3f-da46-4b54-8955-5aec2d372943
+          #GUID                   df5bf1b0-58a2-4231-808d-ccaeed37bdc2
         }
         Block {
           BlockType               Outport
@@ -9057,19 +9022,10 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1023, 1080, 1037]
-          Port                    4
-          IconDisplay             "Port number"
-          #GUID                   df5bf1b0-58a2-4231-808d-ccaeed37bdc2
-        }
-        Block {
-          BlockType               Outport
           Name                    "DI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 108, 1020, 122]
-          Port                    5
+          Port                    4
           IconDisplay             "Port number"
           #GUID                   2b1857db-c99e-46c8-b729-2b37e01e932c
         }
@@ -9078,7 +9034,7 @@ Model {
           Name                    "DI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 138, 1020, 152]
-          Port                    6
+          Port                    5
           IconDisplay             "Port number"
           #GUID                   f5ceec76-bcef-4aa0-98cc-67ef63bcf11e
         }
@@ -9087,7 +9043,7 @@ Model {
           Name                    "DI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 168, 1020, 182]
-          Port                    7
+          Port                    6
           IconDisplay             "Port number"
           #GUID                   b4dbb970-7715-4205-8d44-fdb30208f9c9
         }
@@ -9096,7 +9052,7 @@ Model {
           Name                    "DI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 198, 1020, 212]
-          Port                    8
+          Port                    7
           IconDisplay             "Port number"
           #GUID                   f6b83965-bd07-4f32-9a4f-46e42896e922
         }
@@ -9105,7 +9061,7 @@ Model {
           Name                    "DI6"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 228, 1020, 242]
-          Port                    9
+          Port                    8
           IconDisplay             "Port number"
           #GUID                   abb4c3a5-e0a8-4207-9022-0871973c475b
         }
@@ -9114,7 +9070,7 @@ Model {
           Name                    "DI7"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 258, 1020, 272]
-          Port                    10
+          Port                    9
           IconDisplay             "Port number"
           #GUID                   6f5395b7-6bb1-4d06-90f8-1411645861aa
         }
@@ -9123,7 +9079,7 @@ Model {
           Name                    "DI8"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 288, 1020, 302]
-          Port                    11
+          Port                    10
           IconDisplay             "Port number"
           #GUID                   2868ed51-25fc-4879-95b9-51b7e58ff019
         }
@@ -9132,7 +9088,7 @@ Model {
           Name                    "DI9"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 318, 1020, 332]
-          Port                    12
+          Port                    11
           IconDisplay             "Port number"
           #GUID                   0157b2e9-4538-4522-bf40-b209fea70691
         }
@@ -9141,7 +9097,7 @@ Model {
           Name                    "DI10"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 348, 1020, 362]
-          Port                    13
+          Port                    12
           IconDisplay             "Port number"
           #GUID                   2fc3baf6-016d-47d8-b76d-a125ab904975
         }
@@ -9150,7 +9106,7 @@ Model {
           Name                    "DI11"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 378, 1020, 392]
-          Port                    14
+          Port                    13
           IconDisplay             "Port number"
           #GUID                   6139866c-fd09-4c50-b913-812482c72984
         }
@@ -9159,7 +9115,7 @@ Model {
           Name                    "DI_A0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 468, 1020, 482]
-          Port                    15
+          Port                    14
           IconDisplay             "Port number"
           #GUID                   f8e011ed-1836-4e9d-9109-e341c25a3536
         }
@@ -9168,7 +9124,7 @@ Model {
           Name                    "DI_A1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 498, 1020, 512]
-          Port                    16
+          Port                    15
           IconDisplay             "Port number"
           #GUID                   18cb217f-62f2-4aff-9f70-c7841a9f8817
         }
@@ -9177,7 +9133,7 @@ Model {
           Name                    "DI_A2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 543, 1020, 557]
-          Port                    17
+          Port                    16
           IconDisplay             "Port number"
           #GUID                   8635881a-eeff-4675-b567-bf2c2cc94857
         }
@@ -9186,7 +9142,7 @@ Model {
           Name                    "DI_A3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 573, 1020, 587]
-          Port                    18
+          Port                    17
           IconDisplay             "Port number"
           #GUID                   d7b4fb4a-0eaf-439a-8cb6-4587a326113f
         }
@@ -9195,7 +9151,7 @@ Model {
           Name                    "DI_A4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 603, 1020, 617]
-          Port                    19
+          Port                    18
           IconDisplay             "Port number"
           #GUID                   5301de4f-0110-4a84-8981-de33de199099
         }
@@ -9204,7 +9160,7 @@ Model {
           Name                    "DI_A5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 633, 1020, 647]
-          Port                    20
+          Port                    19
           IconDisplay             "Port number"
           #GUID                   fad7bd92-4ec3-4333-93c2-bd770f64d272
         }
@@ -9213,7 +9169,7 @@ Model {
           Name                    "AI0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 798, 1085, 812]
-          Port                    21
+          Port                    20
           IconDisplay             "Port number"
           #GUID                   78c77755-da53-4dce-afa0-15c7ec4f162e
         }
@@ -9222,7 +9178,7 @@ Model {
           Name                    "AI1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 823, 1085, 837]
-          Port                    22
+          Port                    21
           IconDisplay             "Port number"
           #GUID                   1b2e08ae-f1cf-4237-9aac-0a5eaf2e99d4
         }
@@ -9231,7 +9187,7 @@ Model {
           Name                    "AI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 848, 1085, 862]
-          Port                    23
+          Port                    22
           IconDisplay             "Port number"
           #GUID                   2d967b78-7266-4eae-9640-b2d3a9ec9c37
         }
@@ -9240,7 +9196,7 @@ Model {
           Name                    "AI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 873, 1085, 887]
-          Port                    24
+          Port                    23
           IconDisplay             "Port number"
           #GUID                   0c205553-5697-44c9-913b-f7a7c92e8224
         }
@@ -9249,7 +9205,7 @@ Model {
           Name                    "AI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 898, 1085, 912]
-          Port                    25
+          Port                    24
           IconDisplay             "Port number"
           #GUID                   f6b931cc-c610-48de-9dc5-11a2e704d4a1
         }
@@ -9258,7 +9214,7 @@ Model {
           Name                    "AI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 923, 1085, 937]
-          Port                    26
+          Port                    25
           IconDisplay             "Port number"
           #GUID                   1b30c18f-3ad3-437c-a73f-ef9d3f891f92
         }
@@ -9267,7 +9223,7 @@ Model {
           Name                    "CNT2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1078, 1080, 1092]
-          Port                    27
+          Port                    26
           IconDisplay             "Port number"
           #GUID                   14cc711e-d187-4b78-a2f7-2fc12a2d7036
         }
@@ -9276,7 +9232,7 @@ Model {
           Name                    "CNT3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1108, 1080, 1122]
-          Port                    28
+          Port                    27
           IconDisplay             "Port number"
           #GUID                   4f1a3ffb-383d-45b2-9b0e-ac27a23c86cb
         }
@@ -9285,7 +9241,7 @@ Model {
           Name                    "OW_2_3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1163, 1080, 1177]
-          Port                    29
+          Port                    28
           IconDisplay             "Port number"
           #GUID                   a74adb37-75b7-40e1-8a28-5fbd22cdea37
         }
@@ -9294,7 +9250,7 @@ Model {
           Name                    "OW_4_5_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1188, 1080, 1202]
-          Port                    30
+          Port                    29
           IconDisplay             "Port number"
           #GUID                   9fd181e3-3d30-4390-b90f-69b354a36dcb
         }
@@ -9303,7 +9259,7 @@ Model {
           Name                    "OW_6_9_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1218, 1080, 1232]
-          Port                    31
+          Port                    30
           IconDisplay             "Port number"
           #GUID                   f2fd69f4-0bf1-4def-a847-c8ef5fea3066
         }
@@ -9312,7 +9268,7 @@ Model {
           Name                    "OW_10_11_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1248, 1080, 1262]
-          Port                    32
+          Port                    31
           IconDisplay             "Port number"
           #GUID                   d216dfab-3ed5-4fe4-96af-34f9458277e8
         }
@@ -9321,7 +9277,7 @@ Model {
           Name                    "OW_A0_A1_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1278, 1080, 1292]
-          Port                    33
+          Port                    32
           IconDisplay             "Port number"
           #GUID                   73cf7ebe-a0c1-421f-af9f-6d3b086d6d52
         }
@@ -9330,7 +9286,7 @@ Model {
           Name                    "OW_A2_A3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1308, 1080, 1322]
-          Port                    34
+          Port                    33
           IconDisplay             "Port number"
           #GUID                   bcc67c13-b54b-45fd-b36b-d1c316a88132
         }
@@ -9339,7 +9295,7 @@ Model {
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1338, 1080, 1352]
-          Port                    35
+          Port                    34
           IconDisplay             "Port number"
           #GUID                   ac81f54b-32d1-4473-9d37-c8abb3338b23
         }
@@ -9982,14 +9938,6 @@ Model {
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
-          SrcPort                 1
-          Points                  [235, 0; 0, -245]
-          DstBlock                "iE"
-          DstPort                 1
-          #GUID                   4d6541ff-290e-4043-9209-68e0be41fb17
-        }
-        Line {
-          SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [235, 0]
           #GUID                   24557567-77e8-4b12-a426-e8ee258473aa
@@ -10114,25 +10062,25 @@ Model {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_UNO_ADV"
-      Ports                   [23, 40, 0, 0, 0]
+      Ports                   [23, 39, 0, 0, 0]
       Position                [345, 459, 490, 871]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
-      MaskPromptString        "COM port number|Pin modes 0 to 7 (0 and 1 ignor"
-"ed)|Pin modes 8 to 13|Pin modes A0 to A5"
-      MaskStyleString         "popup(1|2|3|4|5|6|7|8|9|10|11|12),edit,edit,edi"
-"t"
+      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin modes 0 to 7 (0 and 1 ignored)|Pin modes 8 to 13|Pin modes A0 t"
+"o A5"
+      MaskStyleString         "edit,edit,edit,edit"
       MaskCallbackString      "|||"
       MaskTunableValueString  "on,on,on,on"
       MaskEnableString        "on,on,on,on"
       MaskVisibilityString    "on,on,on,on"
       MaskVariables           "comPort=@1;pinmodes_00_07=@2;pinmodes_08_13=@3;"
 "pinmodes_A0_A5=@4"
-      MaskValueString         "10|0|0|0"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|0|0|0"
       #GUID                   e51923a2-3454-4436-964e-3399a555bf11
       System {
         Name                    "Arduino_UNO_ADV"
@@ -10457,7 +10405,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   4c4eb61e-81f9-4b5c-bef3-3a1e67e30612
           System {
             Name                    "AI_demux1"
@@ -10710,7 +10658,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   c4e7b90a-783e-4531-9081-d2203f71a6bd
           System {
             Name                    "AI_demux2"
@@ -11227,7 +11175,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   1804ec4f-342b-4fb6-99d8-ce8f0b0843f0
           System {
             Name                    "CNT_mux"
@@ -11366,7 +11314,7 @@ Model {
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
-          MaskIconUnits           ""
+          MaskIconUnits           "autoscale"
           #GUID                   90fd9616-58ec-4639-b3f8-a9fc9b844078
           System {
             Name                    "ERR_demux"
@@ -11851,8 +11799,8 @@ Model {
           srctype                 "1: STL"
           stack                   0
           debug                   "1: No check"
-          fname                   "REXduino_data.dat"
-          p0                      "comPort"
+          fname                   "comPort"
+          p0                      0
           p1                      "pinmodes_00_07"
           p2                      "pinmodes_08_13"
           p3                      "pinmodes_A0_A5"
@@ -11872,13 +11820,13 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "iE"
+          Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 18, 1020, 32]
+          Position                [1050, 1023, 1080, 1037]
           Port                    1
           OutputWhenDisabled      "held"
           InitialOutput           []
-          #GUID                   5ff19dc7-9b09-467b-9c20-38cc2fcb74b4
+          #GUID                   e183472e-8e66-410b-a57e-9b771973b681
         }
         Block {
           BlockType               Outport
@@ -11902,20 +11850,10 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1023, 1080, 1037]
-          Port                    4
-          OutputWhenDisabled      "held"
-          InitialOutput           []
-          #GUID                   e183472e-8e66-410b-a57e-9b771973b681
-        }
-        Block {
-          BlockType               Outport
           Name                    "DI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 108, 1020, 122]
-          Port                    5
+          Port                    4
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   a24ce61a-9e75-493f-9cdc-d30e2db22bd8
@@ -11925,7 +11863,7 @@ Model {
           Name                    "DI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 138, 1020, 152]
-          Port                    6
+          Port                    5
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   7b0879ac-1281-4034-ae9d-bd190195a993
@@ -11935,7 +11873,7 @@ Model {
           Name                    "DI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 168, 1020, 182]
-          Port                    7
+          Port                    6
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   356b531f-7b97-4f00-9e2b-6c467c3a961e
@@ -11945,7 +11883,7 @@ Model {
           Name                    "DI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 198, 1020, 212]
-          Port                    8
+          Port                    7
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   51c72576-00d0-4667-bda0-eb0aaba6e326
@@ -11955,7 +11893,7 @@ Model {
           Name                    "DI6"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 228, 1020, 242]
-          Port                    9
+          Port                    8
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b4456cc3-b073-446d-a276-f86b9eb11f98
@@ -11965,7 +11903,7 @@ Model {
           Name                    "DI7"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 258, 1020, 272]
-          Port                    10
+          Port                    9
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   5b46aef6-f154-411c-a73f-2dfb2629e162
@@ -11975,7 +11913,7 @@ Model {
           Name                    "DI8"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 288, 1020, 302]
-          Port                    11
+          Port                    10
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   6a05a5cb-9366-4dca-85f6-432709d8e7a8
@@ -11985,7 +11923,7 @@ Model {
           Name                    "DI9"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 318, 1020, 332]
-          Port                    12
+          Port                    11
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   6cf95db3-7c38-4585-8c10-9917a9103e4f
@@ -11995,7 +11933,7 @@ Model {
           Name                    "DI10"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 348, 1020, 362]
-          Port                    13
+          Port                    12
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   f5e7c86b-a3b6-4e50-8fbd-4fcbac0cf3e5
@@ -12005,7 +11943,7 @@ Model {
           Name                    "DI11"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 378, 1020, 392]
-          Port                    14
+          Port                    13
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   aa6b4271-3eb7-42c0-91d7-73d638baaca4
@@ -12015,7 +11953,7 @@ Model {
           Name                    "DI1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 408, 1020, 422]
-          Port                    15
+          Port                    14
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   0ddedca2-009f-40b3-9698-8a12fabee27b
@@ -12025,7 +11963,7 @@ Model {
           Name                    "DI12"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 438, 1020, 452]
-          Port                    16
+          Port                    15
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   f4bc8b64-1a71-4edf-9127-5d92f35f2b4d
@@ -12035,7 +11973,7 @@ Model {
           Name                    "DI_A0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 468, 1020, 482]
-          Port                    17
+          Port                    16
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   7b77b356-629c-4d8c-989b-b073ad8d5680
@@ -12045,7 +11983,7 @@ Model {
           Name                    "DI_A1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 498, 1020, 512]
-          Port                    18
+          Port                    17
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   df000cbc-4283-44c0-a7a7-085d02dd19bb
@@ -12055,7 +11993,7 @@ Model {
           Name                    "DI_A2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 543, 1020, 557]
-          Port                    19
+          Port                    18
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b924dcd0-6f43-475b-a1a0-8303acf44c0a
@@ -12065,7 +12003,7 @@ Model {
           Name                    "DI_A3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 573, 1020, 587]
-          Port                    20
+          Port                    19
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   1f4457dd-c785-4525-8ec0-da75949a9775
@@ -12075,7 +12013,7 @@ Model {
           Name                    "DI_A4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 603, 1020, 617]
-          Port                    21
+          Port                    20
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   c38be0de-86ba-4dd3-9de2-c34145af70ed
@@ -12085,7 +12023,7 @@ Model {
           Name                    "DI_A5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [990, 633, 1020, 647]
-          Port                    22
+          Port                    21
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   76c66830-083e-489b-915b-1bdc8377b401
@@ -12095,7 +12033,7 @@ Model {
           Name                    "AI0"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 798, 1085, 812]
-          Port                    23
+          Port                    22
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   492aa454-e439-484f-bd8b-45d63a2415b3
@@ -12105,7 +12043,7 @@ Model {
           Name                    "AI1"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 823, 1085, 837]
-          Port                    24
+          Port                    23
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b209fc55-f894-42b5-86ab-546214d5f73a
@@ -12115,7 +12053,7 @@ Model {
           Name                    "AI2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 848, 1085, 862]
-          Port                    25
+          Port                    24
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   f566220d-19ff-4dc0-8a3d-be4176b3cb09
@@ -12125,7 +12063,7 @@ Model {
           Name                    "AI3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 873, 1085, 887]
-          Port                    26
+          Port                    25
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   4d159614-41eb-4705-90f9-d570dea4d5e3
@@ -12135,7 +12073,7 @@ Model {
           Name                    "AI4"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 898, 1085, 912]
-          Port                    27
+          Port                    26
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b5be7f4e-add8-4c15-aa7b-54cf2a3aef28
@@ -12145,7 +12083,7 @@ Model {
           Name                    "AI5"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 923, 1085, 937]
-          Port                    28
+          Port                    27
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   1e79c8f4-a753-4cd6-855e-cbbf874838b3
@@ -12155,7 +12093,7 @@ Model {
           Name                    "CNT2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1078, 1080, 1092]
-          Port                    29
+          Port                    28
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   585b5a6e-1041-4f91-9376-a8fd0f3fa299
@@ -12165,7 +12103,7 @@ Model {
           Name                    "CNT3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1108, 1080, 1122]
-          Port                    30
+          Port                    29
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   426469a1-7490-4595-afbc-aa886dc51d8e
@@ -12175,7 +12113,7 @@ Model {
           Name                    "OW_2_3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1163, 1080, 1177]
-          Port                    31
+          Port                    30
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   5df71bba-0868-44de-91dc-fc445b72d9e1
@@ -12185,7 +12123,7 @@ Model {
           Name                    "OW_4_5_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1188, 1080, 1202]
-          Port                    32
+          Port                    31
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   bba2bf81-4c2b-4fe5-a443-d69871beb73d
@@ -12195,7 +12133,7 @@ Model {
           Name                    "OW_6_7_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1218, 1080, 1232]
-          Port                    33
+          Port                    32
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   3f7f4935-a26f-432c-86b2-7c97ab0d0412
@@ -12205,7 +12143,7 @@ Model {
           Name                    "OW_8_9_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1248, 1080, 1262]
-          Port                    34
+          Port                    33
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   1e34a22f-7152-4509-bec7-d367f1532ff3
@@ -12215,7 +12153,7 @@ Model {
           Name                    "OW_10_11_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1278, 1080, 1292]
-          Port                    35
+          Port                    34
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   bbda0476-3626-4654-b261-c81c47b911c9
@@ -12225,7 +12163,7 @@ Model {
           Name                    "OW_12_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1308, 1080, 1322]
-          Port                    36
+          Port                    35
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   99808628-0812-42c6-aedf-7bc78db490ba
@@ -12235,7 +12173,7 @@ Model {
           Name                    "OW_A0_A1_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1338, 1080, 1352]
-          Port                    37
+          Port                    36
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e6ffa666-d5e3-49c4-bcf6-e887c09b4437
@@ -12245,7 +12183,7 @@ Model {
           Name                    "OW_A2_A3_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1368, 1080, 1382]
-          Port                    38
+          Port                    37
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   8fc40c6b-47c2-4616-9f22-e41d63b8b4a8
@@ -12255,7 +12193,7 @@ Model {
           Name                    "OW_A4_A5_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1398, 1080, 1412]
-          Port                    39
+          Port                    38
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b4b6438c-53ba-4296-89a8-b5042de53d5c
@@ -12265,7 +12203,7 @@ Model {
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1428, 1080, 1442]
-          Port                    40
+          Port                    39
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   be998568-2edd-4988-8915-e4526eb0a6e8
@@ -12937,14 +12875,6 @@ Model {
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
-          SrcPort                 1
-          Points                  [235, 0; 0, -245]
-          DstBlock                "iE"
-          DstPort                 1
-          #GUID                   e0ff4d31-c661-40b1-8128-b3259bffa742
-        }
-        Line {
-          SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [235, 0]
           #GUID                   c1cdae89-52ca-4e89-961f-f1b1f22f6057
@@ -13100,7 +13030,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   181754c6-eea0-451e-a853-3248cdc63603
       System {
         Name                    "OW_decompose"
@@ -13516,7 +13446,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   28efb3ea-226a-4c22-9562-04dff8bec5c9
       System {
         Name                    "OW_sensors_13_15"
@@ -13722,7 +13652,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   1a908841-b850-4f82-9bab-d667ffaff3d4
       System {
         Name                    "OW_sensors_1_4"
@@ -13973,7 +13903,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   f77fb71c-9de0-41f4-bc10-770febdbce86
       System {
         Name                    "OW_sensors_5_8"
@@ -14224,7 +14154,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   a8c68f33-90aa-4e5f-b407-5ddad7c425b8
       System {
         Name                    "OW_sensors_9_12"
@@ -14475,7 +14405,7 @@ Model {
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
-      MaskIconUnits           ""
+      MaskIconUnits           "autoscale"
       #GUID                   9d1b14a9-f209-4d17-8f3a-1f158f8bedaa
       System {
         Name                    "PWM_mux"

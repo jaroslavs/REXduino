@@ -83,7 +83,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.0 rev. 3639, Date 2013-12-06"
+  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -135,7 +135,7 @@ Model {
       BlockType               SubSystem
       Name                    "AI_demux1"
       Ports                   [1, 3, 0, 0, 0]
-      Position                [725, 362, 795, 398]
+      Position                [725, 357, 795, 393]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -374,15 +374,16 @@ Model {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_MEGA2560_ADV"
-      Ports                   [14, 22, 0, 0, 0]
-      Position                [455, 213, 640, 562]
+      Ports                   [14, 21, 0, 0, 0]
+      Position                [455, 215, 640, 565]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskPromptString        "COM port number|Pin modes 0 to 7 (0 and 1 ignor"
-"ed)|Pin modes 8 to 15|Pin modes 16 to 23|Pin modes 24 to 31|Pin modes 32 to 39"
-"|Pin modes 40 to 47|Pin modes 48 to 53|Pin modes A0 to A7|Pin modes A8 to A15"
-      MaskStyleString         "popup(1|2|3|4|5|6|7|8|9|10|11|12),edit,edit,edi"
-"t,edit,edit,edit,edit,edit,edit"
+      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin modes 0 to 7 (0 and 1 ignored)|Pin modes 8 to 15|Pin modes 16 t"
+"o 23|Pin modes 24 to 31|Pin modes 32 to 39|Pin modes 40 to 47|Pin modes 48 to "
+"53|Pin modes A0 to A7|Pin modes A8 to A15"
+      MaskStyleString         "edit,edit,edit,edit,edit,edit,edit,edit,edit,ed"
+"it"
       MaskCallbackString      "|||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on"
@@ -394,8 +395,8 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      MaskValueString         "10|0x320A0800|0x00200554|0|0x00077700|0|0|0|0x0"
-"0006000|0"
+      MaskValueString         "/dev/ttyACM0|0x320A0800|0x00200554|0|0x00077700"
+"|0|0|0|0x00006000|0"
       #GUID                   39249541-c6ed-40a3-904a-74cac8ddfa26
       System {
         Name                    "Arduino_MEGA2560_ADV"
@@ -2347,8 +2348,8 @@ Model {
           srctype                 "1: STL"
           stack                   0
           debug                   "1: No check"
-          fname                   "REXduino_data.dat"
-          p0                      "comPort"
+          fname                   "comPort"
+          p0                      0
           p1                      "pinmodes_00_07"
           p2                      "pinmodes_08_15"
           p3                      "pinmodes_16_23"
@@ -2368,13 +2369,13 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "iE"
+          Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 8, 845, 22]
+          Position                [735, 403, 765, 417]
           Port                    1
           OutputWhenDisabled      "held"
           InitialOutput           []
-          #GUID                   03610449-a1e5-43d0-8a50-5bb4ff87c8a8
+          #GUID                   01e0019d-3c29-45df-b353-68022dbd69f1
         }
         Block {
           BlockType               Outport
@@ -2398,20 +2399,10 @@ Model {
         }
         Block {
           BlockType               Outport
-          Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 403, 765, 417]
-          Port                    4
-          OutputWhenDisabled      "held"
-          InitialOutput           []
-          #GUID                   01e0019d-3c29-45df-b353-68022dbd69f1
-        }
-        Block {
-          BlockType               Outport
           Name                    "DI_00_15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 38, 845, 52]
-          Port                    5
+          Port                    4
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   d2d8b2e3-d6d3-4a66-8f93-5fcc793ade4f
@@ -2421,7 +2412,7 @@ Model {
           Name                    "DI_16_31"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 68, 845, 82]
-          Port                    6
+          Port                    5
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   b1cc29b5-3aac-4daf-a917-7398045709db
@@ -2431,7 +2422,7 @@ Model {
           Name                    "DI_32_47"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 98, 845, 112]
-          Port                    7
+          Port                    6
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   d90e11f1-6e2f-49a1-b584-2b756a06b5ab
@@ -2441,7 +2432,7 @@ Model {
           Name                    "DI_48_53"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 128, 845, 142]
-          Port                    8
+          Port                    7
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   9eaeb93d-87b0-4378-b316-dd485475895d
@@ -2451,7 +2442,7 @@ Model {
           Name                    "DI_A0_A15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [815, 158, 845, 172]
-          Port                    9
+          Port                    8
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   fc922126-1670-46e8-bd59-332faf3a04a4
@@ -2461,7 +2452,7 @@ Model {
           Name                    "AI_00_02"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 193, 765, 207]
-          Port                    10
+          Port                    9
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   178eb806-7d0f-4fd1-8ba0-a5d2f81ee0ad
@@ -2471,7 +2462,7 @@ Model {
           Name                    "AI_03_05"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 223, 765, 237]
-          Port                    11
+          Port                    10
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   1d34cf3c-88cf-4d48-8071-d03869e067a0
@@ -2481,7 +2472,7 @@ Model {
           Name                    "AI_06_08"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 253, 765, 267]
-          Port                    12
+          Port                    11
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e9e3dc68-80d7-4a2d-a935-094752e5e172
@@ -2491,7 +2482,7 @@ Model {
           Name                    "AI_09_11"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 283, 765, 297]
-          Port                    13
+          Port                    12
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   25fba005-17f6-4839-b04e-1093c2640f2b
@@ -2501,7 +2492,7 @@ Model {
           Name                    "AI_12_14"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 313, 765, 327]
-          Port                    14
+          Port                    13
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   915fd7c1-c589-44be-a8c2-31042907b42e
@@ -2511,7 +2502,7 @@ Model {
           Name                    "AI15"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 433, 765, 447]
-          Port                    15
+          Port                    14
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   eddcb6f6-65fb-4362-ab36-036d01d4848e
@@ -2521,7 +2512,7 @@ Model {
           Name                    "OW_22_23_data_CNT2"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 463, 765, 477]
-          Port                    16
+          Port                    15
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   f1a77a73-5533-4073-98d9-4fc5d20e83d3
@@ -2531,7 +2522,7 @@ Model {
           Name                    "OW_24_25_data_CNT3"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 493, 765, 507]
-          Port                    17
+          Port                    16
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   df216d1c-8dd3-4a24-a674-bc38e2426a96
@@ -2541,7 +2532,7 @@ Model {
           Name                    "OW_26_27_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 523, 765, 537]
-          Port                    18
+          Port                    17
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   0ba2b0d6-b2ed-4df6-8899-4d9fab33f5e4
@@ -2551,7 +2542,7 @@ Model {
           Name                    "OW_28_29_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 553, 765, 567]
-          Port                    19
+          Port                    18
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   e8b1fe9c-4995-48ea-9df5-6e7437e71103
@@ -2561,7 +2552,7 @@ Model {
           Name                    "OW_30_31_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 583, 765, 597]
-          Port                    20
+          Port                    19
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   7b5fe379-fdd4-4fcb-9883-5664fb8691f2
@@ -2571,7 +2562,7 @@ Model {
           Name                    "OW_32_33_data"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 613, 765, 627]
-          Port                    21
+          Port                    20
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   81128bb2-0a1d-4fd3-92a3-c0cc5c0e8d77
@@ -2581,7 +2572,7 @@ Model {
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
           Position                [735, 643, 765, 657]
-          Port                    22
+          Port                    21
           OutputWhenDisabled      "held"
           InitialOutput           []
           #GUID                   0244269a-e2a2-41be-81fe-6c7b169286cf
@@ -2834,14 +2825,6 @@ Model {
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
-          SrcPort                 1
-          Points                  [165, 0; 0, -145]
-          DstBlock                "iE"
-          DstPort                 1
-          #GUID                   aa4afef0-e2fb-4362-ae83-f601fbbdbcf1
-        }
-        Line {
-          SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [175, 0; 0, -45]
           DstBlock                "DI_decompose1"
@@ -3045,7 +3028,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_PWM10"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [235, 412, 260, 428]
+      Position                [235, 417, 260, 433]
       SourceBlock             "mathlib/CNI"
       ShowName                on
       NamePlacement           ""
@@ -3056,7 +3039,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_PWM9"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [235, 382, 260, 398]
+      Position                [235, 387, 260, 403]
       SourceBlock             "mathlib/CNI"
       ShowName                on
       NamePlacement           ""
@@ -3067,7 +3050,7 @@ Model {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [950, 88, 1040, 102]
+      Position                [950, 98, 1040, 112]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "TRND_RUN"
@@ -3127,7 +3110,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [705, 418, 795, 432]
+      Position                [705, 428, 795, 442]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "CNT2"
@@ -3149,7 +3132,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [990, 458, 1080, 472]
+      Position                [990, 453, 1080, 467]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "temperature1"
@@ -3160,7 +3143,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [990, 478, 1080, 492]
+      Position                [990, 473, 1080, 487]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "temperature2"
@@ -3171,7 +3154,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [830, 363, 920, 377]
+      Position                [830, 358, 920, 372]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "AI3"
@@ -3292,7 +3275,7 @@ Model {
       BlockType               SubSystem
       Name                    "OW_branch26"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [870, 457, 960, 503]
+      Position                [870, 452, 960, 498]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -3543,7 +3526,7 @@ Model {
       BlockType               SubSystem
       Name                    "OW_branch27"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [870, 522, 960, 568]
+      Position                [870, 517, 960, 563]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -3794,7 +3777,7 @@ Model {
       BlockType               SubSystem
       Name                    "OW_branch28"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [870, 602, 960, 648]
+      Position                [870, 587, 960, 633]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -4045,7 +4028,7 @@ Model {
       BlockType               SubSystem
       Name                    "OW_decompose"
       Ports                   [1, 4, 0, 0, 0]
-      Position                [680, 463, 820, 507]
+      Position                [680, 458, 820, 502]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -4448,7 +4431,7 @@ Model {
       BlockType               SubSystem
       Name                    "OW_decompose2"
       Ports                   [1, 4, 0, 0, 0]
-      Position                [680, 608, 820, 652]
+      Position                [680, 593, 820, 637]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -4851,7 +4834,7 @@ Model {
       BlockType               SubSystem
       Name                    "PWM_mux"
       Ports                   [4, 1, 0, 0, 0]
-      Position                [290, 352, 385, 398]
+      Position                [290, 357, 385, 403]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -5244,7 +5227,7 @@ Model {
       BlockType               SubSystem
       Name                    "PWM_mux2"
       Ports                   [4, 1, 0, 0, 0]
-      Position                [290, 412, 385, 458]
+      Position                [290, 417, 385, 463]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -5659,7 +5642,7 @@ Model {
       BlockType               Reference
       Name                    "TRND_ERROR"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [1065, 43, 1110, 117]
+      Position                [1065, 53, 1110, 127]
       SourceBlock             "arclib/TRND"
       ShowName                on
       NamePlacement           ""
@@ -5711,80 +5694,72 @@ Model {
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 4
-      Points                  [65, 0; 0, -190]
-      DstBlock                "TRND_ERROR"
-      DstPort                 4
-      #GUID                   5e77cb87-f783-479d-bd4e-c490b938a120
+      Points                  [80, 0]
+      DstBlock                "HEXDBD_DI_02_15"
+      DstPort                 1
+      #GUID                   a258a286-d1b6-4265-8f79-e61046fad979
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 5
-      Points                  [80, 0]
-      DstBlock                "HEXDBD_DI_02_15"
+      Points                  [165, 0]
+      DstBlock                "HEXDBD_DI_16_31"
       DstPort                 1
-      #GUID                   2d642e1f-443c-4517-817d-ffcb4d3ace1b
+      #GUID                   69442e12-e92d-4e5b-8976-e691cdc832ef
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 6
-      Points                  [165, 0]
-      DstBlock                "HEXDBD_DI_16_31"
+      Points                  [250, 0]
+      DstBlock                "HEXDBD_32_47"
       DstPort                 1
-      #GUID                   2aad2a98-388e-4add-9bba-ffa889605e92
+      #GUID                   29d08ac5-6a6d-4b64-985c-b463485b14f6
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 7
-      Points                  [250, 0]
-      DstBlock                "HEXDBD_32_47"
+      Points                  [325, 0]
+      DstBlock                "OCTBD_DI_48_53"
       DstPort                 1
-      #GUID                   7d63a77c-a366-4c3a-a086-8542b74dfff1
+      #GUID                   3d99558a-2e17-41d0-b76f-c8c8e718da30
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 8
-      Points                  [325, 0]
-      DstBlock                "OCTBD_DI_48_53"
-      DstPort                 1
-      #GUID                   84b47be2-e96d-45eb-aa0e-a15b6640f6cc
-    }
-    Line {
-      SrcBlock                "Arduino_MEGA2560_ADV"
-      SrcPort                 9
       Points                  [410, 0]
       DstBlock                "HEXDBD_DI_A0_A15"
       DstPort                 1
-      #GUID                   63137d35-3eac-4393-b2b4-aac2dbb7b5e9
+      #GUID                   7e2b5730-ff23-4822-859a-7ad0d2464134
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
-      SrcPort                 11
+      SrcPort                 10
       DstBlock                "AI_demux1"
       DstPort                 1
-      #GUID                   638ad4b3-9eee-4eeb-bb37-c45a5056b094
+      #GUID                   183e7cbb-3ddd-42a3-99e3-ddbf208e178c
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
-      SrcPort                 16
+      SrcPort                 15
       Points                  [45, 0]
       DstBlock                "Goto_1"
       DstPort                 1
-      #GUID                   93d83258-fb07-48ed-b9a3-e10bc150364d
+      #GUID                   4f2903be-9e0a-43bc-a109-849db9e785ef
+    }
+    Line {
+      SrcBlock                "Arduino_MEGA2560_ADV"
+      SrcPort                 17
+      DstBlock                "OW_decompose"
+      DstPort                 1
+      #GUID                   3591dd90-9338-453b-a48b-5fb05daf94a3
     }
     Line {
       SrcBlock                "Arduino_MEGA2560_ADV"
       SrcPort                 18
-      DstBlock                "OW_decompose"
-      DstPort                 1
-      #GUID                   f59597e1-3fc9-4fbc-ab9b-bdc6b0f3b3e7
-    }
-    Line {
-      SrcBlock                "Arduino_MEGA2560_ADV"
-      SrcPort                 19
       Points                  [20, 0]
       DstBlock                "OW_decompose2"
       DstPort                 1
-      #GUID                   0a307e3c-d599-4054-9614-8ae398bd92f1
+      #GUID                   0b326f36-f8ff-415a-985d-d53054efc687
     }
     Line {
       SrcBlock                "BIS_BLINK_DO13"
@@ -5796,7 +5771,7 @@ Model {
     Line {
       SrcBlock                "CNB_CNT2_ENABLE"
       SrcPort                 1
-      Points                  [145, 0; 0, -35]
+      Points                  [145, 0; 0, -30]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 11
       #GUID                   6045d4a3-b595-49c2-9eac-8bc6e293e78d
@@ -5804,7 +5779,7 @@ Model {
     Line {
       SrcBlock                "CNB_CNT2_RESET"
       SrcPort                 1
-      Points                  [135, 0; 0, -30]
+      Points                  [135, 0; 0, -25]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 10
       #GUID                   39fc6da9-7362-42e5-b3bc-9ead265e4d35
@@ -5894,7 +5869,7 @@ Model {
     Line {
       SrcBlock                "HEXDBM_DO_02_15"
       SrcPort                 1
-      Points                  [40, 0; 0, 85]
+      Points                  [40, 0; 0, 90]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 1
       #GUID                   041312b4-6006-4aae-8ab2-0b178f73610d
@@ -5902,7 +5877,7 @@ Model {
     Line {
       SrcBlock                "HEXDBM_DO_16_31"
       SrcPort                 1
-      Points                  [30, 0; 0, 55]
+      Points                  [30, 0; 0, 60]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 2
       #GUID                   b9f0782f-25e9-45d0-96f4-68e04282e346
@@ -5910,7 +5885,7 @@ Model {
     Line {
       SrcBlock                "HEXDBM_DO_32_47"
       SrcPort                 1
-      Points                  [30, 0; 0, -110]
+      Points                  [30, 0; 0, -105]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 3
       #GUID                   d6512ce1-3765-498b-98ba-cc7cd98c16f6
@@ -5918,7 +5893,7 @@ Model {
     Line {
       SrcBlock                "HEXDBM_DO_A0_A15"
       SrcPort                 1
-      Points                  [50, 0; 0, -350]
+      Points                  [50, 0; 0, -345]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 5
       #GUID                   ea5cb896-0d1d-4c9c-9e36-8636c99604a6
@@ -5926,7 +5901,7 @@ Model {
     Line {
       SrcBlock                "OCTBM_DO_48_53"
       SrcPort                 1
-      Points                  [40, 0; 0, -230]
+      Points                  [40, 0; 0, -225]
       DstBlock                "Arduino_MEGA2560_ADV"
       DstPort                 4
       #GUID                   f08d923e-f55b-4f80-a6d7-daa545785e3b
