@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "Example_UNO_Traffic_light_task"
-    Location                [270, 32, 1124, 498]
+    Location                [270, 32, 1003, 545]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -143,7 +143,7 @@ Model {
       BlockType               Reference
       Name                    "AND_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [620, 53, 655, 77]
+      Position                [620, 43, 655, 67]
       SourceBlock             "logiclib/AND_"
       #GUID                   5576ce2d-7e03-401c-a6d3-503c0f5525e4
     }
@@ -151,13 +151,13 @@ Model {
       BlockType               SubSystem
       Name                    "Arduino_UNO"
       Ports                   [21, 34, 0, 0, 0]
-      Position                [210, 20, 355, 380]
+      Position                [210, 40, 355, 400]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
-"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
-"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+      MaskPromptString        "Serial device, e.g. \\\\.\\COM7, /dev/ttyACM0, "
+"/dev/ttyUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9"
+" mode|Pin 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin"
+" A2 mode|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
@@ -3208,7 +3208,7 @@ Model {
       BlockType               Reference
       Name                    "BINS_GREEN"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 118, 115, 142]
+      Position                [65, 138, 115, 162]
       SourceBlock             "genlib/BINS"
       Y0                      on
       t1                      0
@@ -3226,7 +3226,7 @@ Model {
       BlockType               Reference
       Name                    "BINS_RED"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 208, 115, 232]
+      Position                [65, 228, 115, 252]
       SourceBlock             "genlib/BINS"
       Y0                      off
       t1                      2
@@ -3244,7 +3244,7 @@ Model {
       BlockType               Reference
       Name                    "BINS_YELLOW"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 163, 115, 187]
+      Position                [65, 183, 115, 207]
       SourceBlock             "genlib/BINS"
       Y0                      off
       t1                      0
@@ -3262,7 +3262,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [430, 48, 450, 62]
+      Position                [430, 38, 450, 52]
       SourceBlock             "mathlib/CNI"
       icn                     3
       NamePlacement           "alternate"
@@ -3272,7 +3272,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [285, 425, 295, 435]
+      Position                [285, 445, 295, 455]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -3282,7 +3282,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [455, 93, 480, 107]
+      Position                [455, 78, 480, 92]
       SourceBlock             "logiclib/NOT_"
       #GUID                   9fc18cf6-484c-469e-a346-b9c41e1a711d
     }
@@ -3290,7 +3290,7 @@ Model {
       BlockType               Reference
       Name                    "REL"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [470, 48, 495, 72]
+      Position                [470, 38, 495, 62]
       SourceBlock             "mathlib/REL"
       irel                    "1: equality (==)"
       NamePlacement           "alternate"
@@ -3300,7 +3300,7 @@ Model {
       BlockType               Reference
       Name                    "TIMER_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [530, 53, 570, 77]
+      Position                [530, 43, 570, 67]
       SourceBlock             "logiclib/TIMER_"
       mode                    "2: Delayed ON"
       pt                      1
@@ -3309,25 +3309,24 @@ Model {
     Line {
       SrcBlock                "AND_"
       SrcPort                 1
-      Points                  [25, 0; 0, 370]
+      Points                  [25, 0; 0, 400]
       DstBlock                "LPBRK"
       DstPort                 1
       #GUID                   33c484f9-3524-40db-b85f-ebd85e1cb414
     }
     Line {
       SrcBlock                "Arduino_UNO"
-      SrcPort                 4
+      SrcPort                 1
       DstBlock                "REL"
       DstPort                 2
-      #GUID                   83a8380a-f250-44c1-a5db-684dc44858d4
+      #GUID                   cfe84840-8ee0-48e6-aca6-cac4d176e233
     }
     Line {
       SrcBlock                "Arduino_UNO"
-      SrcPort                 5
-      Points                  [25, 0; 0, 25]
+      SrcPort                 4
       DstBlock                "NOT_"
       DstPort                 1
-      #GUID                   2a5ad408-7aac-468a-a389-e18e82343b12
+      #GUID                   a0eb8db2-aef4-4020-b7b9-d435e395f0ec
     }
     Line {
       SrcBlock                "BINS_GREEN"

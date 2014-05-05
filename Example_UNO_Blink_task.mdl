@@ -146,10 +146,10 @@ Model {
       Position                [270, 20, 415, 380]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
-"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
-"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+      MaskPromptString        "Serial device, e.g. \\\\.\\COM7, /dev/ttyACM0, "
+"/dev/ttyUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9"
+" mode|Pin 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin"
+" A2 mode|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
@@ -220,203 +220,203 @@ Model {
           BlockType               Inport
           Name                    "DO2"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 103, 50, 117]
+          Position                [40, 73, 70, 87]
           Port                    1
           IconDisplay             "Port number"
-          #GUID                   9043fc09-29fe-4ce6-9986-0902ed79b4a7
+          #GUID                   bb42a2dd-1de8-41c4-9d30-2cab055601af
         }
         Block {
           BlockType               Inport
           Name                    "DO3_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 133, 50, 147]
+          Position                [40, 103, 70, 117]
           Port                    2
           IconDisplay             "Port number"
-          #GUID                   d66b0399-8c62-4115-9d07-e77d7b79e60f
+          #GUID                   2868d2f2-4f3b-4316-9ccc-b9523ac3c4bf
         }
         Block {
           BlockType               Inport
           Name                    "DO4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 163, 50, 177]
+          Position                [40, 133, 70, 147]
           Port                    3
           IconDisplay             "Port number"
-          #GUID                   932c9086-55fe-4448-8f27-76d0c0b1e59e
+          #GUID                   9d3b487b-3593-4660-b2bb-3d780a930ef3
         }
         Block {
           BlockType               Inport
           Name                    "DO5_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 193, 50, 207]
+          Position                [40, 163, 70, 177]
           Port                    4
           IconDisplay             "Port number"
-          #GUID                   9f6683c5-aea7-463d-941f-7fbc8fe66193
+          #GUID                   ce71d5f8-e63e-4362-be72-b77dc886bd11
         }
         Block {
           BlockType               Inport
           Name                    "DO6_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 223, 50, 237]
+          Position                [40, 193, 70, 207]
           Port                    5
           IconDisplay             "Port number"
-          #GUID                   5ded8bd5-ac48-4f1c-b685-7f4e0a1ec3aa
+          #GUID                   5cfa1005-6543-4866-9521-9dfc528846d7
         }
         Block {
           BlockType               Inport
           Name                    "DO9_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 313, 50, 327]
+          Position                [40, 283, 70, 297]
           Port                    6
           IconDisplay             "Port number"
-          #GUID                   cd2b2821-dea4-4a99-b12b-7278cc54d2f3
+          #GUID                   0e702ee0-5e37-4c92-b5cf-9115a00486fc
         }
         Block {
           BlockType               Inport
           Name                    "DO10_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 343, 50, 357]
+          Position                [40, 313, 70, 327]
           Port                    7
           IconDisplay             "Port number"
-          #GUID                   9314d53c-66ef-4d51-9132-05fedd544667
+          #GUID                   11d9d873-817e-489e-9499-6e12e90bb3bc
         }
         Block {
           BlockType               Inport
           Name                    "DO11_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 373, 50, 387]
+          Position                [40, 343, 70, 357]
           Port                    8
           IconDisplay             "Port number"
-          #GUID                   c7ade638-9b69-4e04-b084-af909ba6fbaa
+          #GUID                   6f529a7a-a2c0-487e-a14d-5b04b8daa7cf
         }
         Block {
           BlockType               Inport
           Name                    "DO12"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 403, 50, 417]
+          Position                [40, 373, 70, 387]
           Port                    9
           IconDisplay             "Port number"
-          #GUID                   53035227-5666-432a-bf31-0894c9acf411
+          #GUID                   c845eab9-1b04-48e5-b6bd-57410ea817ef
         }
         Block {
           BlockType               Inport
           Name                    "DO13"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 433, 50, 447]
+          Position                [40, 403, 70, 417]
           Port                    10
           IconDisplay             "Port number"
-          #GUID                   8791dd34-df12-45de-b751-836b3d4d8f21
+          #GUID                   77561051-6fd8-48b2-ad23-9e8ba4d740b3
         }
         Block {
           BlockType               Inport
           Name                    "DO_A0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 463, 50, 477]
+          Position                [40, 433, 70, 447]
           Port                    11
           IconDisplay             "Port number"
-          #GUID                   d5abd8fe-750c-4f2b-90fe-8cb32c7609f3
+          #GUID                   4e3f2ee3-a68e-44df-b83f-ab11c81d962f
         }
         Block {
           BlockType               Inport
           Name                    "DO_A1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 493, 50, 507]
+          Position                [40, 463, 70, 477]
           Port                    12
           IconDisplay             "Port number"
-          #GUID                   1fa4f580-5351-4c2b-af93-5cae9c686c79
+          #GUID                   0c729d8b-28bc-486f-85b0-e9854ee36f2d
         }
         Block {
           BlockType               Inport
           Name                    "DO_A2"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 548, 50, 562]
+          Position                [40, 518, 70, 532]
           Port                    13
           IconDisplay             "Port number"
-          #GUID                   ebf38959-f272-485b-ab7f-9a637200bd77
+          #GUID                   815ddd20-d0d8-4bef-b805-41cd302616ee
         }
         Block {
           BlockType               Inport
           Name                    "DO_A3"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 578, 50, 592]
+          Position                [40, 548, 70, 562]
           Port                    14
           IconDisplay             "Port number"
-          #GUID                   666ccd82-a0bf-4004-8e6a-c15275951d48
+          #GUID                   78abb38e-ee65-482c-917c-cc8512389794
         }
         Block {
           BlockType               Inport
           Name                    "DO_A4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 608, 50, 622]
+          Position                [40, 578, 70, 592]
           Port                    15
           IconDisplay             "Port number"
-          #GUID                   d43f23be-ae8f-4820-a50e-380c3cd26b68
+          #GUID                   3a96b803-95c5-4242-a415-197a68643209
         }
         Block {
           BlockType               Inport
           Name                    "DO_A5"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 638, 50, 652]
+          Position                [40, 608, 70, 622]
           Port                    16
           IconDisplay             "Port number"
-          #GUID                   7369b596-7a31-4f2e-aaa3-e4afec7f2c0e
+          #GUID                   49eb3611-d7ee-4d83-b9d0-4058dd781920
         }
         Block {
           BlockType               Inport
           Name                    "CNT2R"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [15, 1078, 45, 1092]
+          Position                [35, 1048, 65, 1062]
           Port                    17
           IconDisplay             "Port number"
-          #GUID                   f883094e-400d-4e0d-9005-f5af687ca8da
+          #GUID                   99ac1943-de6f-4476-83e5-5c69aabbdb97
         }
         Block {
           BlockType               Inport
           Name                    "CNT2E"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [15, 1108, 45, 1122]
+          Position                [35, 1078, 65, 1092]
           Port                    18
           IconDisplay             "Port number"
-          #GUID                   c2c32ca6-b03c-4f86-868d-aa9e4fb921cf
+          #GUID                   287bc822-4eed-4564-b225-17f4fcafe4a8
         }
         Block {
           BlockType               Inport
           Name                    "CNT3R"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [15, 1138, 45, 1152]
+          Position                [35, 1108, 65, 1122]
           Port                    19
           IconDisplay             "Port number"
-          #GUID                   345fd297-db51-4c05-9a43-9566115b0751
+          #GUID                   7229928d-6eb9-4d11-a0b5-8ed30bdf45b1
         }
         Block {
           BlockType               Inport
           Name                    "CNT3E"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [15, 1168, 45, 1182]
+          Position                [35, 1138, 65, 1152]
           Port                    20
           IconDisplay             "Port number"
-          #GUID                   1a25ac62-7278-4526-8dd7-38f582829148
+          #GUID                   e23e815a-8587-4fa2-b6d1-197f4ebf9930
         }
         Block {
           BlockType               Inport
           Name                    "userSend"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [15, 1203, 45, 1217]
+          Position                [35, 1173, 65, 1187]
           Port                    21
           IconDisplay             "Port number"
-          #GUID                   dded8c59-0d8f-4481-aa7c-4a72d9b4dd8b
+          #GUID                   4f5f21d9-537b-43b3-8901-5725d47c13cd
         }
         Block {
           BlockType               SubSystem
           Name                    "AI_demux1"
           Ports                   [1, 3, 0, 0, 0]
-          Position                [900, 798, 1000, 832]
+          Position                [920, 768, 1020, 802]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
           MaskIconUnits           "autoscale"
-          #GUID                   76d252a6-10d8-4ce0-966a-1449e0feb43b
+          #GUID                   1bc0de40-22f5-4ef8-ac07-3fbb6fcedb22
           System {
             Name                    "AI_demux1"
             Location                [85, 107, 467, 321]
@@ -432,7 +432,7 @@ Model {
             TiledPageScale          1
             ShowPageBoundaries      off
             ZoomFactor              100
-            #GUID                   76d252a6-10d8-4ce0-966a-1449e0feb43b
+            #GUID                   1bc0de40-22f5-4ef8-ac07-3fbb6fcedb22
             Block {
               BlockType               Inport
               Name                    "AI_data"
@@ -440,7 +440,7 @@ Model {
               Position                [10, 23, 40, 37]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   8f62bd1e-0ef7-4161-a5f9-2f9cc9be2b97
+              #GUID                   c9c42cca-d9c5-4616-8bdd-d77a32e753cf
             }
             Block {
               BlockType               Reference
@@ -458,7 +458,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   afe037fb-b3c5-4399-b6e3-2d6ea20302ab
+              #GUID                   36968748-06e8-4ee6-b7ff-704075e6b157
             }
             Block {
               BlockType               Reference
@@ -476,7 +476,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   a9fa0104-b9d7-4553-aae1-a36d7abaf177
+              #GUID                   a7e15b2f-c808-47b5-8f6c-477b447dfaaa
             }
             Block {
               BlockType               Reference
@@ -494,7 +494,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   d79bcfec-cace-404b-bfb4-22985071cd04
+              #GUID                   4e1afc8f-f7dd-468e-8dcf-aafaddfbfe19
             }
             Block {
               BlockType               Reference
@@ -512,7 +512,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   db6cfcd7-fe19-4150-8ae0-0ef2bb8a4a9e
+              #GUID                   00dfcdf4-0306-49ae-82de-7354629354f9
             }
             Block {
               BlockType               Reference
@@ -530,7 +530,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   086d959d-4b92-4266-b3bb-a17eb28b6c87
+              #GUID                   e90a82b7-e04d-48dd-ac80-8d60c6b30b78
             }
             Block {
               BlockType               Reference
@@ -548,7 +548,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     1023
-              #GUID                   f66a89e8-3d38-4495-ac08-e20dfba159f5
+              #GUID                   1170796f-8bee-404c-b540-847b71414f74
             }
             Block {
               BlockType               Reference
@@ -566,7 +566,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     10
-              #GUID                   b6b634d8-be0d-4d8c-ba78-29dff3bd35f9
+              #GUID                   4a5415f8-0048-4451-bcc4-532af7b5aa2a
             }
             Block {
               BlockType               Outport
@@ -575,7 +575,7 @@ Model {
               Position                [325, 28, 355, 42]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   319200b7-85c8-423a-a6ed-3cfb9d854059
+              #GUID                   d9e2df68-960b-44c0-8c1c-deb3f23b3c57
             }
             Block {
               BlockType               Outport
@@ -584,7 +584,7 @@ Model {
               Position                [325, 108, 355, 122]
               Port                    2
               IconDisplay             "Port number"
-              #GUID                   fe232819-ebfd-4d6d-b159-2f96a63d70a7
+              #GUID                   55bdd968-4887-4682-bae8-3a5f0bd71aa6
             }
             Block {
               BlockType               Outport
@@ -593,40 +593,40 @@ Model {
               Position                [325, 173, 355, 187]
               Port                    3
               IconDisplay             "Port number"
-              #GUID                   eb294c0d-8b00-45c8-9ef4-9391fe61dc91
+              #GUID                   851e611e-de40-4264-ac7c-e84983b95746
             }
             Line {
               SrcBlock                "AI_data"
               SrcPort                 1
               Points                  [5, 0]
-              #GUID                   bbbb2f97-62eb-46fa-b20b-7dcdbe4b243a
+              #GUID                   fae25e68-66e1-4d9a-973e-45c7c68c9750
               Branch {
                 Points                  [0, 75]
                 DstBlock                "BITOP_1"
                 DstPort                 1
-                #GUID                   d6e8be24-6f27-4424-817f-386fc42861b9
+                #GUID                   33170e6f-4064-421e-91db-3cc6fc0dca60
               }
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 1
-                #GUID                   61873aaf-f7ff-4a98-b3ce-456597f15fed
+                #GUID                   b8edfe22-3886-49bd-9c3e-f8d311d7ed09
               }
             }
             Line {
               SrcBlock                "BITOP_1"
               SrcPort                 1
               Points                  [15, 0]
-              #GUID                   2435057f-f6e7-4772-92e7-5cf7bc8e9c1a
+              #GUID                   4024c5f2-aa71-4cf7-89e6-e7ccf78c6518
               Branch {
                 DstBlock                "BITOP_2"
                 DstPort                 1
-                #GUID                   5ba2e41b-7ca7-48bd-b472-14db28cb5627
+                #GUID                   3e25716b-e877-4958-b5f9-f799bc73ad8f
               }
               Branch {
                 Points                  [0, 60]
                 DstBlock                "BITOP_3"
                 DstPort                 1
-                #GUID                   5dd3beeb-4fb1-4706-b62f-3055f37bf00e
+                #GUID                   bb05fdf4-6f9b-44af-92ed-806132dd7953
               }
             }
             Line {
@@ -634,52 +634,52 @@ Model {
               SrcPort                 1
               DstBlock                "AIdata1"
               DstPort                 1
-              #GUID                   9ea596f0-d987-4428-be15-a93b492d127a
+              #GUID                   04b50162-cb94-4bf1-aa96-fb127258fe0c
             }
             Line {
               SrcBlock                "BITOP_2"
               SrcPort                 1
               DstBlock                "AIdata2"
               DstPort                 1
-              #GUID                   cc1a9738-496e-4010-bd48-15aff845de8d
+              #GUID                   aa7a712c-bc70-4ea7-b737-7ef45b93a12c
             }
             Line {
               SrcBlock                "BITOP_3"
               SrcPort                 1
               DstBlock                "BITOP_4"
               DstPort                 1
-              #GUID                   f361cff6-3ca8-4272-b420-7d8320195f92
+              #GUID                   aafcc5fe-042d-4fed-b56e-7abc635c09b0
             }
             Line {
               SrcBlock                "BITOP_4"
               SrcPort                 1
               DstBlock                "AIdata3"
               DstPort                 1
-              #GUID                   b4011179-e4ad-4b17-b0ee-744aac5d0335
+              #GUID                   9ae0738a-baf7-4ec4-a433-a0790e86818b
             }
             Line {
               SrcBlock                "CNI"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   b119f088-b97d-4704-b346-6519a044ed27
+              #GUID                   e29b9323-9452-49ed-80c1-0c978ee50b85
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 2
-                #GUID                   6a97fe24-5fee-48a4-a168-a694f7651120
+                #GUID                   cd4579a0-9a3b-4ee8-b0b8-f815b4f6581a
               }
               Branch {
                 Points                  [75, 0; 0, 55]
-                #GUID                   85f82937-8767-4e76-8891-d35f4a4746a3
+                #GUID                   87720356-8b83-4434-90c9-e80b46b5c012
                 Branch {
                   DstBlock                "BITOP_2"
                   DstPort                 2
-                  #GUID                   9b45ebd8-1ef6-4d67-89b6-9c95766b3964
+                  #GUID                   16689b0d-ee03-4a76-82cd-f6ea7092e2cd
                 }
                 Branch {
                   Points                  [0, 25; 50, 0; 0, 40]
                   DstBlock                "BITOP_4"
                   DstPort                 2
-                  #GUID                   d5186e88-c6fe-485b-b57e-fa5b917a9137
+                  #GUID                   04f15db4-bc3c-475c-bacd-ddac50f11dbd
                 }
               }
             }
@@ -687,17 +687,17 @@ Model {
               SrcBlock                "CNI_1"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   833596a8-5db5-4945-8f32-047a615fad4a
+              #GUID                   b8ccf3b3-efaa-445a-82ac-3c8610fa42fd
               Branch {
                 DstBlock                "BITOP_1"
                 DstPort                 2
-                #GUID                   1fcb3438-8e03-4101-8822-660e1f5b62db
+                #GUID                   a6d400de-2caf-466f-8b19-82447f0694bc
               }
               Branch {
                 Points                  [0, 65]
                 DstBlock                "BITOP_3"
                 DstPort                 2
-                #GUID                   e9d60f5b-7aea-4f55-a2e8-de188e62f2f5
+                #GUID                   b03f7825-7f5a-479d-b1b0-4f283d47a460
               }
             }
           }
@@ -706,14 +706,14 @@ Model {
           BlockType               SubSystem
           Name                    "AI_demux2"
           Ports                   [1, 3, 0, 0, 0]
-          Position                [900, 873, 1000, 907]
+          Position                [920, 843, 1020, 877]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
           MaskIconUnits           "autoscale"
-          #GUID                   bf83d408-6a63-49ff-ada2-81e12c8cdb29
+          #GUID                   f9b4c4ee-8c8f-4baa-bfce-444a8edd571b
           System {
             Name                    "AI_demux2"
             Location                [85, 107, 467, 321]
@@ -729,7 +729,7 @@ Model {
             TiledPageScale          1
             ShowPageBoundaries      off
             ZoomFactor              100
-            #GUID                   bf83d408-6a63-49ff-ada2-81e12c8cdb29
+            #GUID                   f9b4c4ee-8c8f-4baa-bfce-444a8edd571b
             Block {
               BlockType               Inport
               Name                    "AI_data"
@@ -737,7 +737,7 @@ Model {
               Position                [10, 23, 40, 37]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   70a1e10e-2c74-4b0b-a520-f0794c295793
+              #GUID                   7631cbbc-eeec-477c-80cd-0e59c982f03e
             }
             Block {
               BlockType               Reference
@@ -755,7 +755,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   77cf7648-0379-477e-96c9-dc358a16a2a3
+              #GUID                   207d832e-8aa7-4876-bb5e-210cd972d1b7
             }
             Block {
               BlockType               Reference
@@ -773,7 +773,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   86b44398-7870-439f-9400-6291f253da78
+              #GUID                   4976458f-9e15-4cbb-8a55-f75e647a39f1
             }
             Block {
               BlockType               Reference
@@ -791,7 +791,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   52b88c08-1811-4006-a82c-ed97cdfbd356
+              #GUID                   b3c97bdb-caf2-46b1-9483-6d88aab3eba9
             }
             Block {
               BlockType               Reference
@@ -809,7 +809,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   a054babb-a90c-43e1-b8fe-6e02002a5914
+              #GUID                   fe5b5f56-32ca-44cb-aef1-449c4fd42080
             }
             Block {
               BlockType               Reference
@@ -827,7 +827,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   b9887b80-e1d7-48df-a6ca-d393901c46a7
+              #GUID                   05e44277-c258-474b-96cc-ed529c59c908
             }
             Block {
               BlockType               Reference
@@ -845,7 +845,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     1023
-              #GUID                   975a8755-b484-4591-8549-46d369dcd675
+              #GUID                   8d445d92-97b0-4049-853c-eb6b7a45f182
             }
             Block {
               BlockType               Reference
@@ -863,7 +863,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     10
-              #GUID                   7fe0e3aa-e340-411e-8479-23ae55e5ccee
+              #GUID                   d637db9f-7bd9-44bb-9f7c-9c9d3dfc46f5
             }
             Block {
               BlockType               Outport
@@ -872,7 +872,7 @@ Model {
               Position                [325, 28, 355, 42]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   3498878e-cddc-419b-b259-2dd9465aefe4
+              #GUID                   4436c3e6-2930-4e58-94ee-2dbc9eb1db94
             }
             Block {
               BlockType               Outport
@@ -881,7 +881,7 @@ Model {
               Position                [325, 108, 355, 122]
               Port                    2
               IconDisplay             "Port number"
-              #GUID                   ff8c1689-888a-4c1a-a6d0-f8de6f96ee46
+              #GUID                   31e916ae-165d-4514-9f3d-a936b96e046f
             }
             Block {
               BlockType               Outport
@@ -890,40 +890,40 @@ Model {
               Position                [325, 173, 355, 187]
               Port                    3
               IconDisplay             "Port number"
-              #GUID                   9969c9f4-9d9a-4477-8335-7efaf904e995
+              #GUID                   cc15ac45-c3c9-4049-b1dd-4ed97b4375fc
             }
             Line {
               SrcBlock                "AI_data"
               SrcPort                 1
               Points                  [5, 0]
-              #GUID                   d42dbe2a-7067-4831-8936-770baf6a2d96
+              #GUID                   a8ef4042-bbcf-44f4-a86a-c5f93b8fc3c0
               Branch {
                 Points                  [0, 75]
                 DstBlock                "BITOP_1"
                 DstPort                 1
-                #GUID                   5df0a414-5c7e-4277-90cb-eef80bed2934
+                #GUID                   81124b25-149f-4a3d-9972-eee860198252
               }
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 1
-                #GUID                   2afee001-a027-4f0e-865d-52a95c111d7c
+                #GUID                   1e6a2445-6c17-400d-b85b-3a148de55b45
               }
             }
             Line {
               SrcBlock                "BITOP_1"
               SrcPort                 1
               Points                  [15, 0]
-              #GUID                   ed715d20-4fc2-4c05-bf6c-ec4283bd0eb5
+              #GUID                   041ac5e0-2983-4f2e-9bfb-bcad02e8652f
               Branch {
                 DstBlock                "BITOP_2"
                 DstPort                 1
-                #GUID                   309f90b4-983b-4dd3-82cd-90c083b9872e
+                #GUID                   9eb1ca43-0e3b-425a-929a-0fa9a8dcfd1b
               }
               Branch {
                 Points                  [0, 60]
                 DstBlock                "BITOP_3"
                 DstPort                 1
-                #GUID                   7f0e99de-e83d-4c97-a183-e110d7261b25
+                #GUID                   5a9f5242-2709-4960-89da-e06b05a92c9a
               }
             }
             Line {
@@ -931,52 +931,52 @@ Model {
               SrcPort                 1
               DstBlock                "AIdata1"
               DstPort                 1
-              #GUID                   7b764111-b74c-45d8-aded-ef8d016ecb85
+              #GUID                   ff58a710-09aa-4223-b6ab-09d12629197e
             }
             Line {
               SrcBlock                "BITOP_2"
               SrcPort                 1
               DstBlock                "AIdata2"
               DstPort                 1
-              #GUID                   f55325ea-a7d3-464d-ada3-b5508d9e1a92
+              #GUID                   e54bea0b-98cd-4d80-aab6-9096c559c82c
             }
             Line {
               SrcBlock                "BITOP_3"
               SrcPort                 1
               DstBlock                "BITOP_4"
               DstPort                 1
-              #GUID                   6409a04c-7ad6-4662-a55e-80d69c01e34d
+              #GUID                   7571553d-60b0-4fc8-b4a9-3145b228d764
             }
             Line {
               SrcBlock                "BITOP_4"
               SrcPort                 1
               DstBlock                "AIdata3"
               DstPort                 1
-              #GUID                   b5c10455-f1fe-452b-8430-171e708fbe68
+              #GUID                   7db8fe2e-73ae-48e5-9f3a-11917944c909
             }
             Line {
               SrcBlock                "CNI"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   0af45e38-d265-4adb-9a92-4a6c041f5236
+              #GUID                   456e8524-a77e-4170-8adb-fa2148d51f68
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 2
-                #GUID                   794fdc88-e8f5-4ca1-95ea-1112975643bc
+                #GUID                   a7a7cc87-98a9-479c-9c72-c3b3951e47d3
               }
               Branch {
                 Points                  [75, 0; 0, 55]
-                #GUID                   f09f224d-1ba9-4283-8358-6bc060e1cec6
+                #GUID                   c58fdaa1-0fcc-4f6f-a78e-13f865854c93
                 Branch {
                   DstBlock                "BITOP_2"
                   DstPort                 2
-                  #GUID                   2d68f7b6-9800-4a14-ac0a-5d38487c88da
+                  #GUID                   c0013d7d-aaed-4b8c-a9e0-f74aae69bfb0
                 }
                 Branch {
                   Points                  [0, 25; 50, 0; 0, 40]
                   DstBlock                "BITOP_4"
                   DstPort                 2
-                  #GUID                   cbf2b7b5-9930-46a9-857c-01c651d15180
+                  #GUID                   53b8289f-b63f-4d65-9746-0b75497b91c7
                 }
               }
             }
@@ -984,17 +984,17 @@ Model {
               SrcBlock                "CNI_1"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   67b38b5c-db01-4649-86ac-ece9735a9ad9
+              #GUID                   d64506f9-f8d8-489e-9ab0-7ba07a96696b
               Branch {
                 DstBlock                "BITOP_1"
                 DstPort                 2
-                #GUID                   063ce803-bec0-4cd8-8785-5470a4c6efe0
+                #GUID                   7f7f0c75-6de2-4fac-b7a4-121c8a6f2ac0
               }
               Branch {
                 Points                  [0, 65]
                 DstBlock                "BITOP_3"
                 DstPort                 2
-                #GUID                   82519155-89d7-4cde-9819-35bb34a86ac1
+                #GUID                   a5977a02-9d9b-4994-aace-546862003d89
               }
             }
           }
@@ -1003,7 +1003,7 @@ Model {
           BlockType               Reference
           Name                    "BITOP"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 833, 225, 857]
+          Position                [220, 803, 245, 827]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1015,13 +1015,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   3313cb3e-7c37-4694-a77b-390892370701
+          #GUID                   30c218ae-793e-4e23-9252-d4dd68ac08e2
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_1"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 873, 225, 897]
+          Position                [220, 843, 245, 867]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1033,13 +1033,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   9b6ce2a1-93ad-45a0-b3fc-7064202b382a
+          #GUID                   d91499ce-72c2-4726-a7fd-eec36cf08b83
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_10"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [295, 268, 320, 292]
+          Position                [315, 238, 340, 262]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1051,13 +1051,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "2: Bit OR"
-          #GUID                   42a243c6-daf9-4fd5-bb0d-d7186a7a7860
+          #GUID                   83d35da1-229f-4ac4-a235-9b5291913d94
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_11"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [345, 843, 370, 867]
+          Position                [365, 813, 390, 837]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1069,13 +1069,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "2: Bit OR"
-          #GUID                   f2a9ee7d-cd5a-40a6-8aa5-376f6d019e09
+          #GUID                   1e5ffd1e-af26-4e2f-913b-d7205c88273a
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_12"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [345, 918, 370, 942]
+          Position                [365, 888, 390, 912]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1087,13 +1087,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "2: Bit OR"
-          #GUID                   b2606972-891c-49ae-8f7d-5269e700a4bb
+          #GUID                   7a5cffe4-6964-45a8-b99a-08a53f198db7
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_13"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [345, 998, 370, 1022]
+          Position                [365, 968, 390, 992]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1105,13 +1105,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "2: Bit OR"
-          #GUID                   76913ddc-cbf8-4d6f-8ab8-86c404b77d2a
+          #GUID                   bd141c46-deff-420a-94a4-9e7a0ea3c7b1
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_2"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 913, 225, 937]
+          Position                [220, 883, 245, 907]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1123,13 +1123,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   05c05d81-2e09-47ec-bb9e-02063684e863
+          #GUID                   a7792f02-0769-451f-8267-fe2558828416
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_3"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 953, 225, 977]
+          Position                [220, 923, 245, 947]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1141,13 +1141,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   b07c2520-021d-47a1-985e-8dc0380ece5b
+          #GUID                   5dd11114-d967-42d5-b51f-abb468ec1f81
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_4"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 993, 225, 1017]
+          Position                [220, 963, 245, 987]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1159,13 +1159,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   053c2048-34d5-47ac-9c70-728396e42d86
+          #GUID                   5b71c677-1a45-48a8-b24f-995e74d43fdf
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_5"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [200, 1033, 225, 1057]
+          Position                [220, 1003, 245, 1027]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1177,13 +1177,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "3: Bit AND"
-          #GUID                   c07cc5fc-4ede-41fc-9346-26e04531e407
+          #GUID                   67ea8b68-ad7d-4f6c-ba40-fa4567f99a5e
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_6"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [285, 838, 310, 862]
+          Position                [305, 808, 330, 832]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1195,13 +1195,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "5: Shift Left"
-          #GUID                   214c1b64-9e6f-4bb1-bb11-de91f2dcfa3a
+          #GUID                   3ef5616f-5c9a-40fb-afee-e9b889f6bd5a
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_7"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [285, 1038, 310, 1062]
+          Position                [305, 1008, 330, 1032]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1213,13 +1213,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "5: Shift Left"
-          #GUID                   a6b782d5-b87f-4edd-af4b-9d5fd20d651d
+          #GUID                   4bcf5aa5-6f91-4507-81ad-b46c2a53a9d9
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_8"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [285, 958, 310, 982]
+          Position                [305, 928, 330, 952]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1231,13 +1231,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "5: Shift Left"
-          #GUID                   5244cd0a-5e0e-4684-9f25-a67ea413a8cb
+          #GUID                   878aad79-4dd6-4d3e-8d2a-dd5f1594743f
         }
         Block {
           BlockType               Reference
           Name                    "BITOP_9"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [285, 878, 310, 902]
+          Position                [305, 848, 330, 872]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           ShowPortLabels          "FromPortIcon"
@@ -1249,13 +1249,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           iop                     "5: Shift Left"
-          #GUID                   866d48f5-54ee-4969-ae59-e27bd6abe835
+          #GUID                   77a6a486-d7cc-4fc9-a2b8-220e1b9dc8c4
         }
         Block {
           BlockType               Reference
           Name                    "CNB_LOG_INCOMING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1293, 220, 1307]
+          Position                [220, 1263, 240, 1277]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           ShowPortLabels          "FromPortIcon"
@@ -1267,13 +1267,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           YCN                     off
-          #GUID                   f6bc0a1b-5f14-45b4-ba3d-aabcff53ba38
+          #GUID                   62a05547-2f34-4a19-a356-a96b2cff417c
         }
         Block {
           BlockType               Reference
           Name                    "CNB_LOG_OUTGOING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1323, 220, 1337]
+          Position                [220, 1293, 240, 1307]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           ShowPortLabels          "FromPortIcon"
@@ -1285,13 +1285,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           YCN                     off
-          #GUID                   84adb948-2d71-4a54-b8ec-643917b4f9b7
+          #GUID                   6c27f30a-74c4-4240-9b8c-90972ab85175
         }
         Block {
           BlockType               Reference
           Name                    "CNI"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [135, 842, 160, 858]
+          Position                [155, 812, 180, 828]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           ShowPortLabels          "FromPortIcon"
@@ -1303,13 +1303,31 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           icn                     255
-          #GUID                   8d7d6bd2-d592-445b-bca4-0798056fc660
+          #GUID                   8c14a827-5b98-4aeb-b030-98d127ecb9f5
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI0"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [445, 333, 465, 347]
+          SourceBlock             "mathlib/CNI"
+          icn                     0
+          #GUID                   5aa15f11-a7c0-4992-a9e1-c6c559fe2ad8
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [470, 343, 490, 357]
+          SourceBlock             "mathlib/CNI"
+          icn                     1
+          #GUID                   058ee9a6-e7d2-4747-970c-07e6177a0842
         }
         Block {
           BlockType               Reference
           Name                    "CNI_1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [250, 848, 265, 862]
+          Position                [270, 818, 285, 832]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           ShowPortLabels          "FromPortIcon"
@@ -1321,13 +1339,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           icn                     8
-          #GUID                   9e9fe7e2-300f-43e8-8c50-f5bdbdd46bd4
+          #GUID                   d859f44d-58a5-40a0-8027-2f1c1ccc2c94
         }
         Block {
           BlockType               Reference
           Name                    "CNI_2"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [250, 1048, 265, 1062]
+          Position                [270, 1018, 285, 1032]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           ShowPortLabels          "FromPortIcon"
@@ -1339,13 +1357,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           icn                     8
-          #GUID                   ef78823f-ce1e-4459-b19a-6c2b633270ed
+          #GUID                   9c96eaeb-eba3-4353-bffd-198fde83b4dd
         }
         Block {
           BlockType               Reference
           Name                    "CNI_3"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [250, 968, 265, 982]
+          Position                [270, 938, 285, 952]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           ShowPortLabels          "FromPortIcon"
@@ -1357,13 +1375,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           icn                     24
-          #GUID                   1214a37f-4d1e-46a0-8438-b13809b0e118
+          #GUID                   8620ef9a-32a1-4bfe-85ab-661e44fba528
         }
         Block {
           BlockType               Reference
           Name                    "CNI_4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [250, 888, 265, 902]
+          Position                [270, 858, 285, 872]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           ShowPortLabels          "FromPortIcon"
@@ -1375,20 +1393,29 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           icn                     24
-          #GUID                   e310d1a2-3f5a-4866-8821-d4c4e964e69b
+          #GUID                   bd174672-5cc7-4a23-81f5-9ae6d799e916
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_comPort"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [510, 308, 535, 322]
+          SourceBlock             "mathlib/CNI"
+          icn                     15
+          #GUID                   0652ad7a-71c1-4dd0-b400-304c67bce745
         }
         Block {
           BlockType               SubSystem
           Name                    "CNT_mux"
           Ports                   [4, 1, 0, 0, 0]
-          Position                [115, 1098, 205, 1142]
+          Position                [135, 1068, 225, 1112]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
           MaskIconUnits           "autoscale"
-          #GUID                   ac2567fc-11e5-489c-afa4-ce68d39b0caf
+          #GUID                   e6b147e9-d0fc-409e-9797-1a7fb3327812
           System {
             Name                    "CNT_mux"
             Location                [191, 175, 463, 337]
@@ -1404,7 +1431,7 @@ Model {
             TiledPageScale          1
             ShowPageBoundaries      off
             ZoomFactor              100
-            #GUID                   ac2567fc-11e5-489c-afa4-ce68d39b0caf
+            #GUID                   e6b147e9-d0fc-409e-9797-1a7fb3327812
             Block {
               BlockType               Inport
               Name                    "CNT2R"
@@ -1412,7 +1439,7 @@ Model {
               Position                [20, 23, 50, 37]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   34f28fbe-346a-43f4-998e-34a4c0a9ac70
+              #GUID                   b5c5c0b2-e4a8-4870-9f3b-884dae28bf0b
             }
             Block {
               BlockType               Inport
@@ -1421,7 +1448,7 @@ Model {
               Position                [20, 53, 50, 67]
               Port                    2
               IconDisplay             "Port number"
-              #GUID                   cd75db72-c19f-4b5f-969c-ded455a36fd0
+              #GUID                   0f92be8e-25ba-4ee0-bc76-3e3d6beaf429
             }
             Block {
               BlockType               Inport
@@ -1430,7 +1457,7 @@ Model {
               Position                [20, 78, 50, 92]
               Port                    3
               IconDisplay             "Port number"
-              #GUID                   35ef9059-3ae9-4743-9235-eecbabe5b79d
+              #GUID                   2238a820-d2a4-4de1-a412-bda1cc6eaf77
             }
             Block {
               BlockType               Inport
@@ -1439,7 +1466,7 @@ Model {
               Position                [20, 103, 50, 117]
               Port                    4
               IconDisplay             "Port number"
-              #GUID                   5d087117-cc5c-4551-9dc4-d86c1777acb9
+              #GUID                   92cad090-50a9-4a11-aec6-8f723c8449b2
             }
             Block {
               BlockType               Reference
@@ -1457,7 +1484,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               shift                   0
-              #GUID                   85039556-0309-46d5-9744-b3bfc8f4d0dc
+              #GUID                   8bcdacbd-ed39-45e2-8c6e-2a476e1db850
             }
             Block {
               BlockType               Outport
@@ -1466,7 +1493,7 @@ Model {
               Position                [215, 58, 245, 72]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   a516caab-d4a1-435b-98fc-c49c398fd732
+              #GUID                   cf579167-9f7b-4578-8bec-4dfe8943a97d
             }
             Line {
               SrcBlock                "CNT2E"
@@ -1474,14 +1501,14 @@ Model {
               Points                  [20, 0; 0, -20]
               DstBlock                "OCTBM"
               DstPort                 2
-              #GUID                   82f6eab4-1322-4ad1-bec0-648e19c5b8ee
+              #GUID                   1dac4a5c-edce-4c57-870c-f8fc9d22ff7f
             }
             Line {
               SrcBlock                "CNT2R"
               SrcPort                 1
               DstBlock                "OCTBM"
               DstPort                 1
-              #GUID                   93efa119-792f-4942-974c-dfdc46fd8bd7
+              #GUID                   6cc4f223-6f46-4e60-bcb2-16fe99e55f58
             }
             Line {
               SrcBlock                "CNT3E"
@@ -1489,7 +1516,7 @@ Model {
               Points                  [45, 0; 0, -50]
               DstBlock                "OCTBM"
               DstPort                 4
-              #GUID                   9034d355-b41b-4846-8622-fc92ea1d5842
+              #GUID                   65bc0939-c931-4bae-8d17-6378c3339fae
             }
             Line {
               SrcBlock                "CNT3R"
@@ -1497,14 +1524,14 @@ Model {
               Points                  [35, 0; 0, -35]
               DstBlock                "OCTBM"
               DstPort                 3
-              #GUID                   fbb9eca5-8bf4-4ff1-9e5d-fcc218c426b7
+              #GUID                   aa3af3ea-2e64-4fff-9bc3-1b4c1d3ee353
             }
             Line {
               SrcBlock                "OCTBM"
               SrcPort                 1
               DstBlock                "cntCmd"
               DstPort                 1
-              #GUID                   9128022a-e499-41f4-8740-1c618081311f
+              #GUID                   6e2bdc3a-1531-4b45-9536-26faf16d0f71
             }
           }
         }
@@ -1512,14 +1539,14 @@ Model {
           BlockType               SubSystem
           Name                    "ERR_demux"
           Ports                   [1, 4, 0, 0, 0]
-          Position                [900, 962, 1000, 1008]
+          Position                [920, 932, 1020, 978]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
           MaskIconOpaque          on
           MaskIconRotate          "none"
           MaskIconUnits           "autoscale"
-          #GUID                   7395b6ed-e712-4eeb-8a37-1ea1b9f507c1
+          #GUID                   44314712-fdc6-4120-a032-97db5778268e
           System {
             Name                    "ERR_demux"
             Location                [87, 105, 565, 382]
@@ -1535,7 +1562,7 @@ Model {
             TiledPageScale          1
             ShowPageBoundaries      off
             ZoomFactor              100
-            #GUID                   7395b6ed-e712-4eeb-8a37-1ea1b9f507c1
+            #GUID                   44314712-fdc6-4120-a032-97db5778268e
             Block {
               BlockType               Inport
               Name                    "data"
@@ -1543,7 +1570,7 @@ Model {
               Position                [10, 23, 40, 37]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   b340c76d-dcde-4c3e-8f14-91e25f5a97d4
+              #GUID                   c310c9fb-7575-44e1-a5a7-b688d392caa2
             }
             Block {
               BlockType               Reference
@@ -1561,7 +1588,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   66096246-2678-4289-84c4-da79ec0d966c
+              #GUID                   8232ca0d-0e00-4dbd-bd1e-dc1cdbabf83b
             }
             Block {
               BlockType               Reference
@@ -1579,7 +1606,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   986aff86-0d6a-4e9f-84eb-e378776436d5
+              #GUID                   9dc051f8-6d87-4e41-9bd8-8481d8c2db2c
             }
             Block {
               BlockType               Reference
@@ -1597,7 +1624,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   5a393389-d186-44fa-86c2-d01da48b2340
+              #GUID                   726cff3d-607d-4dcd-929e-f87dd32c271c
             }
             Block {
               BlockType               Reference
@@ -1615,7 +1642,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   9a4601d2-fd1b-4dd5-8167-96ecfc3da48f
+              #GUID                   7672de8e-9f92-49a7-a855-523777e1c9b3
             }
             Block {
               BlockType               Reference
@@ -1633,7 +1660,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   c4f71af9-1027-4d9a-8c81-972cd1ce60c7
+              #GUID                   ce4a36bf-59cf-47c6-a351-7b466428e96f
             }
             Block {
               BlockType               Reference
@@ -1651,7 +1678,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "3: Bit AND"
-              #GUID                   d8f57b9d-2581-4104-9a6c-8aff71c9b5f1
+              #GUID                   8293b7e5-839e-4a6a-a34e-05322516bc8f
             }
             Block {
               BlockType               Reference
@@ -1669,7 +1696,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               iop                     "6: Shift Right"
-              #GUID                   3d8f6d4c-6d01-49a5-8926-c0bd2e43d00e
+              #GUID                   8f113d24-24c1-4f1c-8bc7-864dbabb464d
             }
             Block {
               BlockType               Reference
@@ -1687,7 +1714,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     255
-              #GUID                   eeecfcd0-2c58-4a5d-af1e-738f6e491f50
+              #GUID                   9b9c95fd-e9e2-41e2-bb12-4832d1fbcb68
             }
             Block {
               BlockType               Reference
@@ -1705,7 +1732,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     8
-              #GUID                   9a2c89b0-3ce5-4c82-b2cf-93dbf9162b5f
+              #GUID                   1816f23a-dafe-4849-84a2-00114db93843
             }
             Block {
               BlockType               Reference
@@ -1723,7 +1750,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     63
-              #GUID                   5a92c163-c3f4-4e89-b604-d0262dadb0be
+              #GUID                   412081f0-05d8-4217-a478-e5f75165aee8
             }
             Block {
               BlockType               Reference
@@ -1741,7 +1768,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     6
-              #GUID                   2b5e9fdf-0c6b-4a45-8309-499bcf826bbb
+              #GUID                   8b6ccd6a-07de-4dcc-a588-fae2b105351f
             }
             Block {
               BlockType               Reference
@@ -1759,7 +1786,7 @@ Model {
               RTWMemSecDataInternal   "Inherit from model"
               RTWMemSecDataParameters "Inherit from model"
               icn                     1023
-              #GUID                   0b8930d3-f2aa-4431-abd4-61d57dbd6bdc
+              #GUID                   973da505-363a-4c58-81db-cfeb80d8269c
             }
             Block {
               BlockType               Outport
@@ -1768,7 +1795,7 @@ Model {
               Position                [410, 93, 440, 107]
               Port                    1
               IconDisplay             "Port number"
-              #GUID                   f2cdbfce-478e-417c-b28d-f7f2f8298d5c
+              #GUID                   c0ae9019-37c4-4f74-8391-73a65e76580e
             }
             Block {
               BlockType               Outport
@@ -1777,7 +1804,7 @@ Model {
               Position                [410, 28, 440, 42]
               Port                    2
               IconDisplay             "Port number"
-              #GUID                   36d2be1f-ea78-4ce4-b22e-bc8ecf3ee8b8
+              #GUID                   2e54b9d7-1b4a-4011-975b-de575a5ead74
             }
             Block {
               BlockType               Outport
@@ -1786,7 +1813,7 @@ Model {
               Position                [410, 138, 440, 152]
               Port                    3
               IconDisplay             "Port number"
-              #GUID                   e410b01d-efb2-46a6-a6a2-628971f6468c
+              #GUID                   746ba109-3612-4342-be40-f05f6d23f0b9
             }
             Block {
               BlockType               Outport
@@ -1795,23 +1822,23 @@ Model {
               Position                [410, 203, 440, 217]
               Port                    4
               IconDisplay             "Port number"
-              #GUID                   620d048f-5643-4e71-a9ad-6a02bb28d9a9
+              #GUID                   c037e2fc-6cc8-4480-b80a-b955ccb952e5
             }
             Line {
               SrcBlock                "BITOP_1"
               SrcPort                 1
               Points                  [15, 0]
-              #GUID                   848c6da4-6d1c-497e-9c54-785efcc0a50f
+              #GUID                   fcf86df4-eff8-4e8d-92eb-4b5ff16ac5f8
               Branch {
                 DstBlock                "BITOP_2"
                 DstPort                 1
-                #GUID                   9e562fb5-9811-453d-9e65-3a2f157be560
+                #GUID                   5531bc8a-8ed2-42eb-b9b8-386706972583
               }
               Branch {
                 Points                  [0, 40]
                 DstBlock                "BITOP_5"
                 DstPort                 1
-                #GUID                   4f1807bd-831c-46f4-8efa-1cf9bda702a2
+                #GUID                   99e1869c-88ea-4947-afd0-d09a28f242b5
               }
             }
             Line {
@@ -1819,37 +1846,37 @@ Model {
               SrcPort                 1
               DstBlock                "err_subcode"
               DstPort                 1
-              #GUID                   a18615ee-5370-41f4-8214-4d92631f3fe6
+              #GUID                   844f2f68-3a21-45eb-b356-a8fee6c1b6df
             }
             Line {
               SrcBlock                "BITOP_2"
               SrcPort                 1
               DstBlock                "err_code"
               DstPort                 1
-              #GUID                   828a16ee-5943-4c93-8a7b-db6f0463362a
+              #GUID                   9633de66-796c-4790-aebc-94da22f5f90b
             }
             Line {
               SrcBlock                "BITOP_4"
               SrcPort                 1
               DstBlock                "AIdata"
               DstPort                 1
-              #GUID                   c7b14ee9-04df-434e-ad67-b98bbf809332
+              #GUID                   4f6028ab-c4e0-4945-9c91-9c492c24ef4a
             }
             Line {
               SrcBlock                "BITOP_5"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   37c5b507-442f-49a0-9d1c-3596511da248
+              #GUID                   a73520c7-11b3-4b7b-a5ab-84393a36a0f8
               Branch {
                 DstBlock                "BITOP_6"
                 DstPort                 1
-                #GUID                   21a36802-fdc6-4562-b406-1531c4507c92
+                #GUID                   d58f7050-338a-4533-9c9d-822fee7e5d9f
               }
               Branch {
                 Points                  [0, 60]
                 DstBlock                "BITOP_7"
                 DstPort                 1
-                #GUID                   cd0b42aa-9734-4a8b-ad02-35b76b37af3c
+                #GUID                   4b16d2f6-2578-4d07-9085-92c3a397692e
               }
             }
             Line {
@@ -1857,47 +1884,47 @@ Model {
               SrcPort                 1
               DstBlock                "status"
               DstPort                 1
-              #GUID                   956f9462-dc00-4c32-ac62-3d7eb37e575a
+              #GUID                   7557da22-7c85-47b9-9643-3798656f0bee
             }
             Line {
               SrcBlock                "BITOP_7"
               SrcPort                 1
               DstBlock                "BITOP_4"
               DstPort                 1
-              #GUID                   db076b86-d9c1-4990-a586-8b0478eb7671
+              #GUID                   6f6f0baf-2ff9-455d-a816-3b051eb0274b
             }
             Line {
               SrcBlock                "CNI"
               SrcPort                 1
               Points                  [10, 0]
-              #GUID                   45063e0b-9c40-4a7b-959a-63be7a6389f3
+              #GUID                   099cdec6-0dc5-4e6e-8dfa-6ff38403bdb1
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 2
-                #GUID                   9311ca9a-0e78-48d9-a494-df7b83ab3a6f
+                #GUID                   a5bc74ab-7243-40dd-a6da-7c4a6cd5dd43
               }
               Branch {
                 Points                  [75, 0; 0, 40]
                 DstBlock                "BITOP_2"
                 DstPort                 2
-                #GUID                   f9841c74-1656-4e01-81d6-0f32e91e7c34
+                #GUID                   d6c5c864-c40c-4310-96e3-f8e8e36f0b3e
               }
             }
             Line {
               SrcBlock                "CNI_1"
               SrcPort                 1
               Points                  [15, 0]
-              #GUID                   f90ce0f3-4ad0-426f-908b-cc5009eca5ce
+              #GUID                   7f300986-16b4-4bd8-bdbc-7309554fbe41
               Branch {
                 DstBlock                "BITOP_1"
                 DstPort                 2
-                #GUID                   4b59f463-2183-428b-94ab-229b87938a43
+                #GUID                   98452ec6-f23f-4a1b-9c63-8c7df6220f6d
               }
               Branch {
                 Points                  [0, 45]
                 DstBlock                "BITOP_5"
                 DstPort                 2
-                #GUID                   61821de2-34df-4d65-9740-6e9484362f15
+                #GUID                   4ef23cf7-fb0a-4b35-8248-b89609147095
               }
             }
             Line {
@@ -1905,14 +1932,14 @@ Model {
               SrcPort                 1
               DstBlock                "BITOP_6"
               DstPort                 2
-              #GUID                   10de6b16-148c-40c1-86df-b2141ebf6307
+              #GUID                   039bd2ab-425e-4aa5-b850-57aa753b677d
             }
             Line {
               SrcBlock                "CNI_3"
               SrcPort                 1
               DstBlock                "BITOP_7"
               DstPort                 2
-              #GUID                   add8b767-c921-4fca-b893-8e60f405a7d5
+              #GUID                   d9cdf6f1-d78e-4260-8fe2-af551c5be81b
             }
             Line {
               SrcBlock                "CNI_4"
@@ -1920,23 +1947,23 @@ Model {
               Points                  [20, 0; 0, -25]
               DstBlock                "BITOP_4"
               DstPort                 2
-              #GUID                   001ffe10-3938-4ebf-9379-7331e1057c18
+              #GUID                   fba44a45-4b69-4903-a4b4-56b65e819757
             }
             Line {
               SrcBlock                "data"
               SrcPort                 1
               Points                  [5, 0]
-              #GUID                   11224c01-9014-4471-b6f2-d5f225aca7d4
+              #GUID                   1ab38ba8-f3dc-4224-a0e3-eaea9463f849
               Branch {
                 Points                  [0, 60]
                 DstBlock                "BITOP_1"
                 DstPort                 1
-                #GUID                   212d94d6-ff6b-46d2-a7ee-8dc17455a867
+                #GUID                   8a60de61-5811-433e-9b44-6f01ed06bb36
               }
               Branch {
                 DstBlock                "BITOP_10"
                 DstPort                 1
-                #GUID                   4a852372-079e-4d8b-b3a0-4cb81f9f4e7a
+                #GUID                   9e5cea41-e27a-48df-bc48-759233899fb9
               }
             }
           }
@@ -1945,7 +1972,7 @@ Model {
           BlockType               Reference
           Name                    "HEXDBD"
           Ports                   [1, 16, 0, 0, 0]
-          Position                [915, 46, 960, 514]
+          Position                [935, 16, 980, 484]
           SourceBlock             "logiclib/BDHEXD"
           SourceType              "BDHEXD"
           ShowPortLabels          "FromPortIcon"
@@ -1957,13 +1984,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           shift                   0
-          #GUID                   2d8daafc-175f-4a11-a52c-76d04f9eaa5a
+          #GUID                   100d079e-2296-4d9e-961c-bbe443c66714
         }
         Block {
           BlockType               Reference
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
-          Position                [165, 42, 215, 508]
+          Position                [185, 12, 235, 478]
           SourceBlock             "logiclib/BMHEXD"
           SourceType              "BMHEXD"
           ShowPortLabels          "FromPortIcon"
@@ -1975,13 +2002,21 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           shift                   0
-          #GUID                   a3c39345-4b3a-48f3-89d4-5707d7c01770
+          #GUID                   c0df02d2-a54c-4e30-9fa8-0afd4c7f7064
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ISSW"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [565, 333, 595, 367]
+          SourceBlock             "logiclib/ISSW"
+          #GUID                   34b07c15-32b3-41b8-b377-865bf2244611
         }
         Block {
           BlockType               Reference
           Name                    "MP_FORCE_RECONNECT"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1233, 220, 1247]
+          Position                [225, 1203, 240, 1217]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -1995,13 +2030,13 @@ Model {
           pwidth                  10
           BSTATE                  off
           RPTF                    off
-          #GUID                   659022ae-c77f-42cd-b37f-25710353c470
+          #GUID                   943f8c02-3ab6-4dc3-b739-5ecb29f154dc
         }
         Block {
           BlockType               Reference
           Name                    "MP_LOG_MASTER_VERSION"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1353, 220, 1367]
+          Position                [225, 1323, 240, 1337]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -2015,13 +2050,13 @@ Model {
           pwidth                  10
           BSTATE                  off
           RPTF                    off
-          #GUID                   052e2931-d6f7-4193-a834-0cfde4a852a2
+          #GUID                   80a57f90-d316-4567-895c-727291fad9af
         }
         Block {
           BlockType               Reference
           Name                    "MP_LOG_PINMODES"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1263, 220, 1277]
+          Position                [225, 1233, 240, 1247]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           ShowPortLabels          "FromPortIcon"
@@ -2035,13 +2070,13 @@ Model {
           pwidth                  10
           BSTATE                  off
           RPTF                    off
-          #GUID                   3df2a61f-f403-48f3-bb1c-864efbe92093
+          #GUID                   1f28ad92-3832-4ee3-b3b0-37cd7e1de0a9
         }
         Block {
           BlockType               Reference
           Name                    "OCTBD"
           Ports                   [1, 8, 0, 0, 0]
-          Position                [915, 538, 960, 772]
+          Position                [935, 508, 980, 742]
           SourceBlock             "logiclib/BDOCT"
           SourceType              "BDOCT"
           ShowPortLabels          "FromPortIcon"
@@ -2053,13 +2088,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           shift                   16
-          #GUID                   eb534178-f8db-4334-b302-90e2eae1350e
+          #GUID                   b18d85da-9b47-4fd9-bf80-b443e5dbf573
         }
         Block {
           BlockType               Reference
           Name                    "OCTBM"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [165, 538, 215, 782]
+          Position                [185, 508, 235, 752]
           SourceBlock             "logiclib/BMOCT"
           SourceType              "BMOCT"
           ShowPortLabels          "FromPortIcon"
@@ -2071,13 +2106,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           shift                   16
-          #GUID                   bd03786a-1ac4-48be-acfb-7f1411f02311
+          #GUID                   3cf3e15e-535a-4a8b-a895-c0fc4cfe13fc
         }
         Block {
           BlockType               Reference
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [295, 1223, 345, 1467]
+          Position                [315, 1193, 365, 1437]
           SourceBlock             "logiclib/BMOCT"
           SourceType              "BMOCT"
           ShowPortLabels          "FromPortIcon"
@@ -2089,13 +2124,13 @@ Model {
           RTWMemSecDataInternal   "Inherit from model"
           RTWMemSecDataParameters "Inherit from model"
           shift                   0
-          #GUID                   5408978c-d3c6-4313-8114-cbfffb94f180
+          #GUID                   6a54ef66-88f1-4996-b0a7-0059a9032bbc
         }
         Block {
           BlockType               Reference
           Name                    "REXLANG_REXduino"
           Ports                   [17, 17, 0, 0, 0]
-          Position                [600, 260, 650, 440]
+          Position                [620, 230, 670, 410]
           SourceBlock             "speclib/REXLANG"
           SourceType              "REXLANG"
           ShowPortLabels          "FromPortIcon"
@@ -2128,320 +2163,362 @@ Model {
           p13                     "pinmodeA4"
           p14                     "pinmodeA5"
           p15                     1
-          #GUID                   9a5e9848-48ea-424c-b3c6-2f9a79c51ac0
+          #GUID                   229a18d7-d458-4ba6-9081-4b0cfa142f91
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Simulation_Detector"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [495, 352, 510, 368]
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   41986d0c-6b98-4735-b32a-f7c006702a76
+          System {
+            Name                    "Simulation_Detector"
+            Location                [50, 69, 1224, 553]
+            #GUID                   41986d0c-6b98-4735-b32a-f7c006702a76
+            Block {
+              BlockType               Reference
+              Name                    "CNI3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [20, 23, 40, 37]
+              SourceBlock             "mathlib/CNI"
+              icn                     1
+              #GUID                   ae72bced-a5e2-4375-b67b-aeb754116a14
+            }
+            Block {
+              BlockType               Outport
+              Name                    "Y"
+              Ports                   [1, 0, 0, 0, 0]
+              Position                [65, 23, 95, 37]
+              Port                    1
+              #GUID                   e5b99e07-0be6-4691-a0e0-148bed8caca8
+            }
+            Line {
+              SrcBlock                "CNI3"
+              SrcPort                 1
+              DstBlock                "Y"
+              DstPort                 1
+              #GUID                   a7882df5-709c-471d-a3e0-cabade757af8
+            }
+          }
         }
         Block {
           BlockType               Outport
           Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1023, 1080, 1037]
+          Position                [1070, 993, 1100, 1007]
           Port                    1
           IconDisplay             "Port number"
-          #GUID                   4c8f5175-86de-4c1a-aa07-6ceb5ac98aed
+          #GUID                   5a9afbb1-faed-4a2a-a983-4e6ac0a36691
         }
         Block {
           BlockType               Outport
           Name                    "err_code"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 963, 1080, 977]
+          Position                [1070, 933, 1100, 947]
           Port                    2
           IconDisplay             "Port number"
-          #GUID                   82aac70a-2be7-4750-bed0-f4c8fba04a55
+          #GUID                   1258a506-7dde-477c-afed-881891570373
         }
         Block {
           BlockType               Outport
           Name                    "err_subcode"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 993, 1080, 1007]
+          Position                [1070, 963, 1100, 977]
           Port                    3
           IconDisplay             "Port number"
-          #GUID                   1bcd2ad4-8c78-4660-ba12-c8045c85dddc
+          #GUID                   8c874dd0-ee83-4dc2-aace-f3de7457f148
         }
         Block {
           BlockType               Outport
           Name                    "DI2"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 108, 1020, 122]
+          Position                [1010, 78, 1040, 92]
           Port                    4
           IconDisplay             "Port number"
-          #GUID                   66c50d03-b307-4a62-b7e4-494b632d7154
+          #GUID                   d30c8591-375c-410e-8704-c1168a7cccdc
         }
         Block {
           BlockType               Outport
           Name                    "DI3"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 138, 1020, 152]
+          Position                [1010, 108, 1040, 122]
           Port                    5
           IconDisplay             "Port number"
-          #GUID                   558d7cf8-3c1e-49d4-a360-1ac7d4c28df6
+          #GUID                   38e9b516-4e70-4f2c-95b6-398d8f57863d
         }
         Block {
           BlockType               Outport
           Name                    "DI4"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 168, 1020, 182]
+          Position                [1010, 138, 1040, 152]
           Port                    6
           IconDisplay             "Port number"
-          #GUID                   8e72edae-cbcd-4489-aed0-414c1e54f817
+          #GUID                   1e281e70-bc78-414b-9930-51455853f14f
         }
         Block {
           BlockType               Outport
           Name                    "DI5"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 198, 1020, 212]
+          Position                [1010, 168, 1040, 182]
           Port                    7
           IconDisplay             "Port number"
-          #GUID                   41880380-7d7f-4e37-accd-ab17c222896f
+          #GUID                   aa1ba12a-7462-4702-88ca-6ca2e0c241de
         }
         Block {
           BlockType               Outport
           Name                    "DI6"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 228, 1020, 242]
+          Position                [1010, 198, 1040, 212]
           Port                    8
           IconDisplay             "Port number"
-          #GUID                   97c0b7fc-f88e-41f1-9d69-55e36728bc67
+          #GUID                   1df15dd0-5baf-45fa-b748-3784f8241dec
         }
         Block {
           BlockType               Outport
           Name                    "DI7"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 258, 1020, 272]
+          Position                [1010, 228, 1040, 242]
           Port                    9
           IconDisplay             "Port number"
-          #GUID                   bae63f9b-8b36-493b-a1bc-3fb05b8789dd
+          #GUID                   e6f19e6a-f2fe-4a54-afaf-645ae52bf7cd
         }
         Block {
           BlockType               Outport
           Name                    "DI8"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 288, 1020, 302]
+          Position                [1010, 258, 1040, 272]
           Port                    10
           IconDisplay             "Port number"
-          #GUID                   a23d380f-8194-430a-843e-7663f74f5d68
+          #GUID                   3c93e90a-5cd4-47fb-b401-01fc3f36baea
         }
         Block {
           BlockType               Outport
           Name                    "DI9"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 318, 1020, 332]
+          Position                [1010, 288, 1040, 302]
           Port                    11
           IconDisplay             "Port number"
-          #GUID                   b0acf541-0963-4952-bcfd-3845f63dab18
+          #GUID                   4e0ae903-402b-4e2d-a54a-e9871d124ab1
         }
         Block {
           BlockType               Outport
           Name                    "DI10"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 348, 1020, 362]
+          Position                [1010, 318, 1040, 332]
           Port                    12
           IconDisplay             "Port number"
-          #GUID                   2c22bfbc-50d3-4c84-be6e-c66cc7d64128
+          #GUID                   dfb37fbc-9f1a-4688-b634-4513c6922dc8
         }
         Block {
           BlockType               Outport
           Name                    "DI11"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 378, 1020, 392]
+          Position                [1010, 348, 1040, 362]
           Port                    13
           IconDisplay             "Port number"
-          #GUID                   52e40877-4b31-450b-8759-6cfe31ed9aa2
+          #GUID                   9c4b1251-bdc4-4dc3-b75a-fb0fda0c2b22
         }
         Block {
           BlockType               Outport
           Name                    "DI_A0"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 468, 1020, 482]
+          Position                [1010, 438, 1040, 452]
           Port                    14
           IconDisplay             "Port number"
-          #GUID                   db250b20-bbd8-4953-8531-6269e447ac31
+          #GUID                   2d0bbe20-7547-4bfa-9f9e-4af729fee2be
         }
         Block {
           BlockType               Outport
           Name                    "DI_A1"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 498, 1020, 512]
+          Position                [1010, 468, 1040, 482]
           Port                    15
           IconDisplay             "Port number"
-          #GUID                   09759aa6-cc7c-4ba3-9cfe-cda4c713cb21
+          #GUID                   8a2e9917-41a2-497a-b225-ad08a99ca124
         }
         Block {
           BlockType               Outport
           Name                    "DI_A2"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 543, 1020, 557]
+          Position                [1010, 513, 1040, 527]
           Port                    16
           IconDisplay             "Port number"
-          #GUID                   775e6239-cdc9-40af-b1c9-199c2a776dc1
+          #GUID                   d623b383-30e9-41d2-bf3f-f88ece544914
         }
         Block {
           BlockType               Outport
           Name                    "DI_A3"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 573, 1020, 587]
+          Position                [1010, 543, 1040, 557]
           Port                    17
           IconDisplay             "Port number"
-          #GUID                   355e07ff-a949-46a9-8fc8-f979c4b34850
+          #GUID                   edef7b76-2de5-42d7-a62c-4187a507b94a
         }
         Block {
           BlockType               Outport
           Name                    "DI_A4"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 603, 1020, 617]
+          Position                [1010, 573, 1040, 587]
           Port                    18
           IconDisplay             "Port number"
-          #GUID                   cacbe17b-608a-4dd4-bd20-81cb9dd2a9f9
+          #GUID                   744bc3d3-f057-4f69-a272-68ec8fcc2cf9
         }
         Block {
           BlockType               Outport
           Name                    "DI_A5"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [990, 633, 1020, 647]
+          Position                [1010, 603, 1040, 617]
           Port                    19
           IconDisplay             "Port number"
-          #GUID                   16e5cf2f-5bc4-4369-b903-f00e6d68a061
+          #GUID                   ff125474-ea6a-4a42-9281-1ba3f2eea089
         }
         Block {
           BlockType               Outport
           Name                    "AI0"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 798, 1085, 812]
+          Position                [1075, 768, 1105, 782]
           Port                    20
           IconDisplay             "Port number"
-          #GUID                   d4d3554b-c6d7-466b-b4b4-dd96267aaf64
+          #GUID                   fa3bbeee-0012-41fe-beff-c53d4c4f3d4f
         }
         Block {
           BlockType               Outport
           Name                    "AI1"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 823, 1085, 837]
+          Position                [1075, 793, 1105, 807]
           Port                    21
           IconDisplay             "Port number"
-          #GUID                   45a6165b-5d03-4a92-901b-4c9fc6a5d618
+          #GUID                   17f58621-2977-4eb0-9e9b-c6d08cdcd9c3
         }
         Block {
           BlockType               Outport
           Name                    "AI2"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 848, 1085, 862]
+          Position                [1075, 818, 1105, 832]
           Port                    22
           IconDisplay             "Port number"
-          #GUID                   8cf2e573-446b-4752-bfda-4bf222ac2ca0
+          #GUID                   4b05a034-af81-4072-b49d-9fe23b9921a7
         }
         Block {
           BlockType               Outport
           Name                    "AI3"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 873, 1085, 887]
+          Position                [1075, 843, 1105, 857]
           Port                    23
           IconDisplay             "Port number"
-          #GUID                   883b218d-d197-4b3d-b903-68a4a69d97ab
+          #GUID                   9229dbc2-6ef3-4dad-9a75-5fca6c9c3c18
         }
         Block {
           BlockType               Outport
           Name                    "AI4"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 898, 1085, 912]
+          Position                [1075, 868, 1105, 882]
           Port                    24
           IconDisplay             "Port number"
-          #GUID                   f16dba94-a399-4a58-bbb9-ce3e93b892a6
+          #GUID                   29c08754-5448-4f11-9d7d-aee635d37037
         }
         Block {
           BlockType               Outport
           Name                    "AI5"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1055, 923, 1085, 937]
+          Position                [1075, 893, 1105, 907]
           Port                    25
           IconDisplay             "Port number"
-          #GUID                   258f02ec-e8e7-4780-9dc7-54b7c9453b70
+          #GUID                   b0592e08-c4bf-4e38-8f41-d72284a3d0f9
         }
         Block {
           BlockType               Outport
           Name                    "CNT2"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1078, 1080, 1092]
+          Position                [1070, 1048, 1100, 1062]
           Port                    26
           IconDisplay             "Port number"
-          #GUID                   2d0b1a05-6b93-4b1f-9e58-177dbf0f2413
+          #GUID                   e1bab5f1-0c2e-41dc-86aa-34818f7a0a8b
         }
         Block {
           BlockType               Outport
           Name                    "CNT3"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1108, 1080, 1122]
+          Position                [1070, 1078, 1100, 1092]
           Port                    27
           IconDisplay             "Port number"
-          #GUID                   3db5337f-3eb0-491b-b033-3bde9c264cff
+          #GUID                   4519c6b3-f9c2-45f9-ac49-e9b8237dbad6
         }
         Block {
           BlockType               Outport
           Name                    "OW_2_3_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1163, 1080, 1177]
+          Position                [1070, 1133, 1100, 1147]
           Port                    28
           IconDisplay             "Port number"
-          #GUID                   b0e74b8d-74a0-420a-abbf-0293b36577a5
+          #GUID                   54a4ca28-bf5f-4acd-bd8e-8974bc5b015a
         }
         Block {
           BlockType               Outport
           Name                    "OW_4_5_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1188, 1080, 1202]
+          Position                [1070, 1158, 1100, 1172]
           Port                    29
           IconDisplay             "Port number"
-          #GUID                   43d4d331-d990-41e1-836b-35945b1bb964
+          #GUID                   1054fe84-7f4c-4825-9d0a-7b93395d5a54
         }
         Block {
           BlockType               Outport
           Name                    "OW_6_9_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1218, 1080, 1232]
+          Position                [1070, 1188, 1100, 1202]
           Port                    30
           IconDisplay             "Port number"
-          #GUID                   d44c3b9d-fab2-4419-8695-72c0c3ad38b0
+          #GUID                   f49e5b69-3a05-4db1-bd47-19cb06459c1d
         }
         Block {
           BlockType               Outport
           Name                    "OW_10_11_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1248, 1080, 1262]
+          Position                [1070, 1218, 1100, 1232]
           Port                    31
           IconDisplay             "Port number"
-          #GUID                   d424a1a7-1a16-473a-8e2d-36a5dce0ffb5
+          #GUID                   e2d785e6-0c49-4dab-b778-3bd58b9f5070
         }
         Block {
           BlockType               Outport
           Name                    "OW_A0_A1_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1278, 1080, 1292]
+          Position                [1070, 1248, 1100, 1262]
           Port                    32
           IconDisplay             "Port number"
-          #GUID                   d5bdb3ee-5a73-42fa-823b-c0c09ec62fb8
+          #GUID                   c417f3f7-edce-4a78-9b93-d71a1d8583b3
         }
         Block {
           BlockType               Outport
           Name                    "OW_A2_A3_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1308, 1080, 1322]
+          Position                [1070, 1278, 1100, 1292]
           Port                    33
           IconDisplay             "Port number"
-          #GUID                   c58697ec-e7c9-4062-bda0-d83e46ad2eaa
+          #GUID                   ccc4dc12-984c-437a-903c-c49b08cf024b
         }
         Block {
           BlockType               Outport
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [1050, 1338, 1080, 1352]
+          Position                [1070, 1308, 1100, 1322]
           Port                    34
           IconDisplay             "Port number"
-          #GUID                   b2cbdce8-ca65-4a32-a7da-9fd52fda6163
+          #GUID                   357c2dff-8772-494e-9f8d-203dbbbc6881
         }
         Line {
           SrcBlock                "AI_demux1"
           SrcPort                 1
           DstBlock                "AI0"
           DstPort                 1
-          #GUID                   42cabae5-f607-4188-8043-49f660ab1617
+          #GUID                   c987875c-71c5-458d-b47e-39dd822995c6
         }
         Line {
           SrcBlock                "AI_demux1"
@@ -2449,7 +2526,7 @@ Model {
           Points                  [30, 0; 0, 15]
           DstBlock                "AI1"
           DstPort                 1
-          #GUID                   e0301049-c48d-4eb9-bd5e-a3b53588eb5e
+          #GUID                   f0b5e4a7-302c-42bd-978c-57e5eb8576bb
         }
         Line {
           SrcBlock                "AI_demux1"
@@ -2457,14 +2534,14 @@ Model {
           Points                  [20, 0; 0, 30]
           DstBlock                "AI2"
           DstPort                 1
-          #GUID                   938bb379-74c6-4e0d-aacb-48a78df9eaad
+          #GUID                   9b47ae02-ccdf-40fb-9241-e9fdd21ba998
         }
         Line {
           SrcBlock                "AI_demux2"
           SrcPort                 1
           DstBlock                "AI3"
           DstPort                 1
-          #GUID                   d7497276-18fd-4f74-b8d9-d16c09c223a8
+          #GUID                   2b95fbe1-75b0-4f48-8db6-28233b5f7402
         }
         Line {
           SrcBlock                "AI_demux2"
@@ -2472,7 +2549,7 @@ Model {
           Points                  [30, 0; 0, 15]
           DstBlock                "AI4"
           DstPort                 1
-          #GUID                   af490e23-231a-49de-9b85-db86ec467f57
+          #GUID                   adca81ef-f65b-4e0d-9712-b6f6c651275c
         }
         Line {
           SrcBlock                "AI_demux2"
@@ -2480,28 +2557,28 @@ Model {
           Points                  [20, 0; 0, 30]
           DstBlock                "AI5"
           DstPort                 1
-          #GUID                   d9467318-6553-4e92-b91b-635e0a032ba7
+          #GUID                   6d161ece-2139-41a2-9bdc-ebbfb81c7fbf
         }
         Line {
           SrcBlock                "BITOP"
           SrcPort                 1
           DstBlock                "BITOP_6"
           DstPort                 1
-          #GUID                   a6b94155-8ab5-4c82-82ae-ed0e4eefb116
+          #GUID                   e1a41f85-f839-47d7-b3e0-b25ec0d1dcc1
         }
         Line {
           SrcBlock                "BITOP_1"
           SrcPort                 1
           DstBlock                "BITOP_9"
           DstPort                 1
-          #GUID                   9284954b-58c4-4d03-8085-435fc3f6d621
+          #GUID                   3dcf9dd9-9deb-4b7e-a6a5-c764562d366a
         }
         Line {
           SrcBlock                "BITOP_10"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
           DstPort                 2
-          #GUID                   f43a3260-6a4a-4ebe-8da0-400d226d826f
+          #GUID                   2bc3cc7c-3003-4408-9ae5-d37a83fb3234
         }
         Line {
           SrcBlock                "BITOP_11"
@@ -2509,7 +2586,7 @@ Model {
           Points                  [5, 0; 0, -545]
           DstBlock                "REXLANG_REXduino"
           DstPort                 5
-          #GUID                   f3d6fd95-25f6-4a64-b1cd-cb609820bfe5
+          #GUID                   85ffa665-c2e0-4e83-93da-d8eeb8632e20
         }
         Line {
           SrcBlock                "BITOP_12"
@@ -2517,7 +2594,7 @@ Model {
           Points                  [15, 0; 0, -610]
           DstBlock                "REXLANG_REXduino"
           DstPort                 6
-          #GUID                   9a0d6651-bca1-4efc-b417-194f7a2b971f
+          #GUID                   da588f80-29b1-4a8e-8f55-e1493aa74a56
         }
         Line {
           SrcBlock                "BITOP_13"
@@ -2525,42 +2602,42 @@ Model {
           Points                  [25, 0; 0, -680]
           DstBlock                "REXLANG_REXduino"
           DstPort                 7
-          #GUID                   585ecd02-979f-43d9-b449-5f38ebb30609
+          #GUID                   3829b69b-de76-4222-96c6-97752bf21302
         }
         Line {
           SrcBlock                "BITOP_2"
           SrcPort                 1
           DstBlock                "BITOP_12"
           DstPort                 1
-          #GUID                   6b80ed94-eb98-42f7-b63a-f508fc892154
+          #GUID                   c6a9bcb4-42fc-4088-9779-f9fff00843ce
         }
         Line {
           SrcBlock                "BITOP_3"
           SrcPort                 1
           DstBlock                "BITOP_8"
           DstPort                 1
-          #GUID                   a5983661-c86e-49d1-9625-5cbea09a6104
+          #GUID                   c1c44bd9-a965-484e-ad24-15a489b768cd
         }
         Line {
           SrcBlock                "BITOP_4"
           SrcPort                 1
           DstBlock                "BITOP_13"
           DstPort                 1
-          #GUID                   48feea41-cd6e-49e5-b4b3-0d124e2a40bd
+          #GUID                   ff43f015-139c-4948-bb20-cbe42125c262
         }
         Line {
           SrcBlock                "BITOP_5"
           SrcPort                 1
           DstBlock                "BITOP_7"
           DstPort                 1
-          #GUID                   302e1677-c060-4cd1-9d58-7ca9d26793d5
+          #GUID                   29237721-c946-4667-8b0d-27a6584c4d6b
         }
         Line {
           SrcBlock                "BITOP_6"
           SrcPort                 1
           DstBlock                "BITOP_11"
           DstPort                 1
-          #GUID                   4642ff57-f86a-4aa1-95f3-4284ed512931
+          #GUID                   79373682-04de-4c4b-8068-d9e219d117e4
         }
         Line {
           SrcBlock                "BITOP_7"
@@ -2568,7 +2645,7 @@ Model {
           Points                  [0, -35]
           DstBlock                "BITOP_13"
           DstPort                 2
-          #GUID                   21cf4c95-d0ba-4fce-a0ba-a830cb84b10b
+          #GUID                   fd68f528-9317-4662-9c43-0070a5dc45dc
         }
         Line {
           SrcBlock                "BITOP_8"
@@ -2576,7 +2653,7 @@ Model {
           Points                  [0, -35]
           DstBlock                "BITOP_12"
           DstPort                 2
-          #GUID                   6b7021d1-f758-4dfa-b024-bc70c9886c85
+          #GUID                   d7655851-9840-4e36-9f73-1fbb57ee0bdd
         }
         Line {
           SrcBlock                "BITOP_9"
@@ -2584,111 +2661,133 @@ Model {
           Points                  [10, 0; 0, -30]
           DstBlock                "BITOP_11"
           DstPort                 2
-          #GUID                   41a91fb5-81e7-47ad-acc2-42109733e5df
+          #GUID                   848fd23e-72ab-4bec-87c7-3cd5af7a64bd
         }
         Line {
           SrcBlock                "CNB_LOG_INCOMING"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
           DstPort                 3
-          #GUID                   c031bcfe-43a2-4e73-8cf9-d1c49d8785c9
+          #GUID                   7ddec50b-7e75-4985-ada3-d16bd74faf3d
         }
         Line {
           SrcBlock                "CNB_LOG_OUTGOING"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
           DstPort                 4
-          #GUID                   91a60c09-528f-4e30-a7dd-31470d8abd14
+          #GUID                   2e5882b6-514f-4801-ba23-89e7af92db15
         }
         Line {
           SrcBlock                "CNI"
           SrcPort                 1
           Points                  [10, 0]
-          #GUID                   c975fdfd-9065-4051-a287-f15c93a42691
+          #GUID                   e4d061fe-8f29-42ef-ac6f-31a1e6a87123
           Branch {
             DstBlock                "BITOP"
             DstPort                 2
-            #GUID                   207021a6-4a9d-4c05-88f9-e1f21bb1617d
+            #GUID                   627cc4eb-ac37-46a0-babd-2fe08468780f
           }
           Branch {
             Points                  [0, 40]
-            #GUID                   fb3ced02-24a5-487d-bad1-c59da17f4c88
+            #GUID                   40a89f9e-9e46-4dad-8fa8-47fd4f586864
             Branch {
               DstBlock                "BITOP_1"
               DstPort                 2
-              #GUID                   b4dfbdbd-0d7a-4e79-b97f-a2b929f26abf
+              #GUID                   72b1794a-cbfe-43a2-b584-99031f75b7ea
             }
             Branch {
               Points                  [0, 40]
-              #GUID                   9c99b924-df0e-417b-8fe6-9fbba0a82da8
+              #GUID                   8485a10c-059a-4e0b-8047-75ea63b4d1ee
               Branch {
                 DstBlock                "BITOP_2"
                 DstPort                 2
-                #GUID                   2d0e20b8-b036-4f26-a6cc-fea248579a71
+                #GUID                   a835c087-d268-4a48-95ad-7c211088d1e1
               }
               Branch {
                 Points                  [0, 40]
-                #GUID                   0662332f-5b69-4711-9dab-a3c416606cec
+                #GUID                   3cbc1117-2583-4846-8636-7fa26034db3d
                 Branch {
                   DstBlock                "BITOP_3"
                   DstPort                 2
-                  #GUID                   4a4c1eb6-8725-49f0-a37f-e68e4972934b
+                  #GUID                   36244d35-a47e-45ef-b53c-29330e0d6adc
                 }
                 Branch {
                   Points                  [0, 40]
-                  #GUID                   a32cf851-387b-4b55-8a9e-2d808100d0eb
+                  #GUID                   b48cc364-1362-4699-a19b-7b1bead0618e
                   Branch {
                     DstBlock                "BITOP_4"
                     DstPort                 2
-                    #GUID                   "f845afdf-ab28-44cb-bc43-3026bbb23"
-#"726"
+                    #GUID                   "fe44f4f7-c241-4929-bd8b-404fa3714"
+#"539"
                   }
                   Branch {
                     Points                  [0, 40]
                     DstBlock                "BITOP_5"
                     DstPort                 2
-                    #GUID                   "91fec11f-55fa-41ff-a9c9-188762f7c"
-#"abc"
+                    #GUID                   "e5e4f316-d8b3-4237-b73e-369c42f30"
+#"00c"
                   }
                 }
               }
             }
           }
+        }
+        Line {
+          SrcBlock                "CNI0"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 1
+          #GUID                   11c97584-862b-4b58-8e4b-362e517638db
+        }
+        Line {
+          SrcBlock                "CNI1"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 2
+          #GUID                   8951cb1a-18a6-40c6-9ac5-9310cbc53560
         }
         Line {
           SrcBlock                "CNI_1"
           SrcPort                 1
           DstBlock                "BITOP_6"
           DstPort                 2
-          #GUID                   0fcccf81-f916-4886-b1bb-5c59e8a6967e
+          #GUID                   4b0d5339-70dd-4e10-83c6-c9c21c716d8c
         }
         Line {
           SrcBlock                "CNI_2"
           SrcPort                 1
           DstBlock                "BITOP_7"
           DstPort                 2
-          #GUID                   9f18c8cd-24d4-494d-a923-99008871fe72
+          #GUID                   b292565c-6f6b-4244-8e3f-78e669381841
         }
         Line {
           SrcBlock                "CNI_3"
           SrcPort                 1
           DstBlock                "BITOP_8"
           DstPort                 2
-          #GUID                   f43cc05c-b748-4905-a615-22c8f760f31b
+          #GUID                   bb9eaa68-adf9-4560-aa73-7d64b7c444af
         }
         Line {
           SrcBlock                "CNI_4"
           SrcPort                 1
           DstBlock                "BITOP_9"
           DstPort                 2
-          #GUID                   32b40817-c49c-4b68-a62e-9c0079062f6b
+          #GUID                   351e8a98-5196-446b-b482-18483eafca31
+        }
+        Line {
+          SrcBlock                "CNI_comPort"
+          SrcPort                 1
+          Points                  [65, 0]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 11
+          #GUID                   971e228f-dae4-4ca5-ad8f-0e646fec5020
         }
         Line {
           SrcBlock                "CNT2E"
           SrcPort                 1
           DstBlock                "CNT_mux"
           DstPort                 2
-          #GUID                   1de63f29-1eda-4b6b-a719-ec70d7d7da04
+          #GUID                   fff02a62-998f-4eab-8735-154d308909ee
         }
         Line {
           SrcBlock                "CNT2R"
@@ -2696,7 +2795,7 @@ Model {
           Points                  [40, 0; 0, 20]
           DstBlock                "CNT_mux"
           DstPort                 1
-          #GUID                   8ae5430d-c401-4943-855c-ba383050f24b
+          #GUID                   440c8646-11e8-4d0b-823a-8647838c1c88
         }
         Line {
           SrcBlock                "CNT3E"
@@ -2704,7 +2803,7 @@ Model {
           Points                  [50, 0]
           DstBlock                "CNT_mux"
           DstPort                 4
-          #GUID                   8a2b5124-9d83-4b93-be81-99da1da64eb3
+          #GUID                   9963a16a-ca5b-4f4c-b7cd-25406388206c
         }
         Line {
           SrcBlock                "CNT3R"
@@ -2712,7 +2811,7 @@ Model {
           Points                  [40, 0; 0, -20]
           DstBlock                "CNT_mux"
           DstPort                 3
-          #GUID                   272ce1a8-28d8-4cfc-a2e2-85b9f160595c
+          #GUID                   c73e708b-49c1-4402-83e1-6d0eb76bbf5a
         }
         Line {
           SrcBlock                "CNT_mux"
@@ -2720,40 +2819,40 @@ Model {
           Points                  [275, 0; 0, -700]
           DstBlock                "REXLANG_REXduino"
           DstPort                 16
-          #GUID                   601ebf33-3edc-4a54-8c84-334945fac726
+          #GUID                   60f6bb3b-56f3-4711-8caf-733ec9963d69
         }
         Line {
           SrcBlock                "DO10_PWM"
           SrcPort                 1
           Points                  [35, 0]
-          #GUID                   66fd1cc8-f2bb-4829-9310-bc7e60d3553a
+          #GUID                   a7aa52f2-4208-4ea5-bd1e-f30867d25bcb
           Branch {
             Points                  [0, 650]
             DstBlock                "BITOP_4"
             DstPort                 1
-            #GUID                   9a71f639-eb82-4fb0-966f-24dfae79de15
+            #GUID                   0a474481-831b-4668-a71a-166f694a79c7
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 11
-            #GUID                   c748491e-1257-4ea5-84f8-8109c57216e7
+            #GUID                   e17a4d96-905a-426a-8383-87acb41e09a0
           }
         }
         Line {
           SrcBlock                "DO11_PWM"
           SrcPort                 1
           Points                  [25, 0]
-          #GUID                   56cb8c0a-fde6-4b6e-b4a5-a504cfbc18c7
+          #GUID                   996495c1-ce67-435f-92a5-54ffdd4115a6
           Branch {
             Points                  [0, 660]
             DstBlock                "BITOP_5"
             DstPort                 1
-            #GUID                   fe026d85-85f7-49a0-aee5-915478eee5dc
+            #GUID                   00b0acb0-a26d-479e-b9f7-1028883beaaf
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 12
-            #GUID                   cc9f56f5-5bf2-45e5-9b66-c30901556476
+            #GUID                   005baa1d-70c5-4f27-9c9f-78c544983ec6
           }
         }
         Line {
@@ -2761,37 +2860,37 @@ Model {
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 13
-          #GUID                   4c911daf-8a43-41f0-838e-f9013e56551c
+          #GUID                   cf11ecb2-eb77-4f2f-bbd2-6d415072b7e1
         }
         Line {
           SrcBlock                "DO13"
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 14
-          #GUID                   a9635d76-eff7-4544-906d-0097a19d3a90
+          #GUID                   ee1b8fd8-e8d2-48ac-92c1-2b7a9c40b3ce
         }
         Line {
           SrcBlock                "DO2"
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 3
-          #GUID                   a5ca5f73-a5b6-483a-8bfa-364f57266c2b
+          #GUID                   a8dbd56d-3bfa-4fa6-aa81-545ce56bc5ea
         }
         Line {
           SrcBlock                "DO3_PWM"
           SrcPort                 1
           Points                  [75, 0]
-          #GUID                   eccb93be-5fa1-4949-b019-6be6cfe556b2
+          #GUID                   b5131bb9-19b1-4f20-b857-dd524bff4239
           Branch {
             Points                  [0, 700]
             DstBlock                "BITOP"
             DstPort                 1
-            #GUID                   5dd240c1-09c0-4e4c-9c82-fefadf926727
+            #GUID                   00db7a4a-5368-4fe6-9988-e56775a7d0d1
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 4
-            #GUID                   cc4ddb79-e497-41fd-aa10-418bfef6a581
+            #GUID                   b7d14805-5fad-480d-af1a-84efe5cfb1c0
           }
         }
         Line {
@@ -2799,57 +2898,57 @@ Model {
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 5
-          #GUID                   651eec7d-44f3-41a4-8a7d-1146821b31de
+          #GUID                   33dcb11b-a28e-4dc8-b115-e35a503de474
         }
         Line {
           SrcBlock                "DO5_PWM"
           SrcPort                 1
           Points                  [65, 0]
-          #GUID                   44d4c7af-c540-42ee-8211-75f091593266
+          #GUID                   00e92517-1346-4f25-acc7-0e4b14e7cca3
           Branch {
             Points                  [0, 680]
             DstBlock                "BITOP_1"
             DstPort                 1
-            #GUID                   5eb7c67d-88ae-4a5f-b82e-4284ea74c7fd
+            #GUID                   e51d7b59-6825-4d37-bcbb-557ec3c091eb
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 6
-            #GUID                   cf8ec7ed-0cb5-4be0-9944-bf64dbcc30be
+            #GUID                   96a643f6-e235-4e51-bd68-addae22772e5
           }
         }
         Line {
           SrcBlock                "DO6_PWM"
           SrcPort                 1
           Points                  [55, 0]
-          #GUID                   2460001a-b8dd-4e6b-a239-d68b92ade14c
+          #GUID                   ca6b0974-939a-4436-94f7-437d7760e31f
           Branch {
             Points                  [0, 690]
             DstBlock                "BITOP_2"
             DstPort                 1
-            #GUID                   862a5dd3-be1c-4904-8625-b5c710d7eb8f
+            #GUID                   9d17c4db-9ead-482f-84a3-02f1fb5b697a
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 7
-            #GUID                   0a584483-a93f-470a-9b86-6b8952d9c17c
+            #GUID                   8c452cee-5d1b-46e5-a171-b8bb79a7f0dd
           }
         }
         Line {
           SrcBlock                "DO9_PWM"
           SrcPort                 1
           Points                  [45, 0]
-          #GUID                   4c7ff04a-f4c4-4604-953e-abb4c1243ea7
+          #GUID                   3bab73dd-c86b-4c04-9d57-26f84e33c606
           Branch {
             Points                  [0, 640]
             DstBlock                "BITOP_3"
             DstPort                 1
-            #GUID                   5864a877-9267-4354-b717-3ae35724c94d
+            #GUID                   3a3dc379-2281-40fa-b2e4-4ad04dc4db3e
           }
           Branch {
             DstBlock                "HEXDBM"
             DstPort                 10
-            #GUID                   604edca5-09c1-43ca-a72e-2b8ebe1c8a74
+            #GUID                   743cebba-b20c-4909-93be-dcfa8665ea02
           }
         }
         Line {
@@ -2857,49 +2956,49 @@ Model {
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 15
-          #GUID                   8588443d-182c-4b25-9239-0ddbef74f4c8
+          #GUID                   198e5929-3bd6-4464-b2b1-2ed91f2e7604
         }
         Line {
           SrcBlock                "DO_A1"
           SrcPort                 1
           DstBlock                "HEXDBM"
           DstPort                 16
-          #GUID                   aaffd141-3e69-479b-8fe1-512758fcbb4f
+          #GUID                   78c16c87-9a96-46f2-9c93-16d3a19d1488
         }
         Line {
           SrcBlock                "DO_A2"
           SrcPort                 1
           DstBlock                "OCTBM"
           DstPort                 1
-          #GUID                   4de9cc32-1e91-4911-a6d1-c1df33d8024c
+          #GUID                   cedf7749-845c-471a-b850-1430c4b8ee84
         }
         Line {
           SrcBlock                "DO_A3"
           SrcPort                 1
           DstBlock                "OCTBM"
           DstPort                 2
-          #GUID                   7193a905-1e65-414f-bebf-30603c15212f
+          #GUID                   c332bb8c-ece1-471f-af99-41f9d1e9ea4d
         }
         Line {
           SrcBlock                "DO_A4"
           SrcPort                 1
           DstBlock                "OCTBM"
           DstPort                 3
-          #GUID                   b1b64646-cac5-4cd7-8503-a56c35527077
+          #GUID                   dad2c69f-ecbe-4482-a056-8fe8862bd2f3
         }
         Line {
           SrcBlock                "DO_A5"
           SrcPort                 1
           DstBlock                "OCTBM"
           DstPort                 4
-          #GUID                   ee3fd9bd-19bf-49b8-afe7-8812de3d6115
+          #GUID                   8b399bf4-4729-479f-99cc-fd29c2ef11bf
         }
         Line {
           SrcBlock                "ERR_demux"
           SrcPort                 1
           DstBlock                "err_code"
           DstPort                 1
-          #GUID                   bcf38d22-dab9-4f28-92b4-9cc1a02c5b99
+          #GUID                   049363f5-25bb-40ad-b0f6-ebaf17a72c56
         }
         Line {
           SrcBlock                "ERR_demux"
@@ -2907,7 +3006,7 @@ Model {
           Points                  [30, 0]
           DstBlock                "err_subcode"
           DstPort                 1
-          #GUID                   1f9f50dd-3918-4e92-986c-a3e02dfedff7
+          #GUID                   cc1b44f2-1232-4f99-bdef-374a4f6c7d75
         }
         Line {
           SrcBlock                "ERR_demux"
@@ -2915,147 +3014,154 @@ Model {
           Points                  [20, 0; 0, 40]
           DstBlock                "comm_status"
           DstPort                 1
-          #GUID                   07dd20b3-a89f-44a7-ad7c-90fdf473deb6
+          #GUID                   8f239d0e-b902-451f-8629-5390a00ee546
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 3
           DstBlock                "DI2"
           DstPort                 1
-          #GUID                   c4d24005-2fd7-42f4-83ea-dd9e6479896a
+          #GUID                   0b416214-bb1e-4684-a2f2-99da20aad122
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 4
           DstBlock                "DI3"
           DstPort                 1
-          #GUID                   420d7415-746d-4160-8303-80685e05dd42
+          #GUID                   f00576f9-418b-4768-9c9d-4473de7e820c
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 5
           DstBlock                "DI4"
           DstPort                 1
-          #GUID                   1a785b00-2c2d-431a-9650-057555963993
+          #GUID                   62a682cf-826b-427b-9333-51fc803dd36d
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 6
           DstBlock                "DI5"
           DstPort                 1
-          #GUID                   3134642e-4fb6-46dd-a7dc-a68a8c7eb3b3
+          #GUID                   c043e9c3-c54c-4239-97cd-79d88c179ae1
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 7
           DstBlock                "DI6"
           DstPort                 1
-          #GUID                   62c016b3-7184-446f-bd65-e9435d4ebba4
+          #GUID                   e71eb2e9-6a3d-4ac6-aee8-3a105b060ae5
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 8
           DstBlock                "DI7"
           DstPort                 1
-          #GUID                   3d5d915d-62a3-4afe-afad-deb85918f286
+          #GUID                   65426ab7-f8a1-4508-b2aa-6f3e9b3d82bb
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 9
           DstBlock                "DI8"
           DstPort                 1
-          #GUID                   da312f0a-ab76-423f-b1b4-aa8171e0b3e6
+          #GUID                   4e99dd34-8549-48af-b127-7b7659ae5f87
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 10
           DstBlock                "DI9"
           DstPort                 1
-          #GUID                   f97edc4b-01c9-48db-958c-29e1c4b61fec
+          #GUID                   1d248f2a-00f6-4012-8f8c-9de2904f04a4
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 11
           DstBlock                "DI10"
           DstPort                 1
-          #GUID                   d5210d38-8de5-4e74-a2f7-d19e5715deb9
+          #GUID                   d2995985-c8e6-4a2e-a27c-4fc530daae63
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 12
           DstBlock                "DI11"
           DstPort                 1
-          #GUID                   ae492f31-7008-4934-9a4a-0b7fe9e177cd
+          #GUID                   ba186260-cb7e-4f13-902b-2d15dfe29110
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 15
           DstBlock                "DI_A0"
           DstPort                 1
-          #GUID                   f7ff331f-1559-47fa-a6e9-3d048ca5144a
+          #GUID                   2002e5fd-c638-43c5-9c26-3efd3d1d485d
         }
         Line {
           SrcBlock                "HEXDBD"
           SrcPort                 16
           DstBlock                "DI_A1"
           DstPort                 1
-          #GUID                   8b826cb3-fc77-4cb6-8148-b202ecb5165d
+          #GUID                   9bdea75b-4abb-4295-bfd3-80ab3e640f78
         }
         Line {
           SrcBlock                "HEXDBM"
           SrcPort                 1
           DstBlock                "BITOP_10"
           DstPort                 1
-          #GUID                   7f27bbb2-1e24-4af5-8e7d-ac048caaa261
+          #GUID                   f2de3c93-aa0e-4c39-bf90-6d151cce9f65
+        }
+        Line {
+          SrcBlock                "ISSW"
+          SrcPort                 1
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 12
+          #GUID                   2c491270-5d84-4d89-8de8-ad06e1080a04
         }
         Line {
           SrcBlock                "MP_FORCE_RECONNECT"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
           DstPort                 1
-          #GUID                   f03ad8d4-4982-4201-8430-38ade6ac86e6
+          #GUID                   b3c05a14-e85d-43f0-8b01-3b51015ebf97
         }
         Line {
           SrcBlock                "MP_LOG_MASTER_VERSION"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
           DstPort                 5
-          #GUID                   4784b9c4-1814-4063-a2dc-c6ea6fa8b567
+          #GUID                   f422463b-bb70-4e7b-b041-415d018b8a22
         }
         Line {
           SrcBlock                "MP_LOG_PINMODES"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
           DstPort                 2
-          #GUID                   bdecba3a-823e-4619-be43-4f5ab92f2fd9
+          #GUID                   56932e6d-5636-40d5-8fbb-2418e055ae2d
         }
         Line {
           SrcBlock                "OCTBD"
           SrcPort                 1
           DstBlock                "DI_A2"
           DstPort                 1
-          #GUID                   931d57fb-6683-4949-916f-58cb3469f575
+          #GUID                   fe453061-41bc-40b2-aad9-f41702b500bf
         }
         Line {
           SrcBlock                "OCTBD"
           SrcPort                 2
           DstBlock                "DI_A3"
           DstPort                 1
-          #GUID                   c106cc4c-de32-4596-8dae-41279c46b5d8
+          #GUID                   32562e0a-6995-4817-80db-b2b6d98beab1
         }
         Line {
           SrcBlock                "OCTBD"
           SrcPort                 3
           DstBlock                "DI_A4"
           DstPort                 1
-          #GUID                   fb0eed71-c364-4980-a788-3cbaea7dfaec
+          #GUID                   8e0a8820-6df9-463c-a05c-a9953085af71
         }
         Line {
           SrcBlock                "OCTBD"
           SrcPort                 4
           DstBlock                "DI_A5"
           DstPort                 1
-          #GUID                   7b1c9333-76f3-4623-b072-9a188cc0ffb9
+          #GUID                   542d350a-6f25-41a7-aed6-6d262fddd657
         }
         Line {
           SrcBlock                "OCTBM"
@@ -3063,7 +3169,7 @@ Model {
           Points                  [35, 0; 0, -375]
           DstBlock                "BITOP_10"
           DstPort                 2
-          #GUID                   aedfb522-592d-49cf-a8ec-9ac034d52506
+          #GUID                   31b0569c-ca7e-46ab-a503-c326701b927b
         }
         Line {
           SrcBlock                "OCTBM_DEBUG"
@@ -3071,23 +3177,23 @@ Model {
           Points                  [200, 0; 0, -935]
           DstBlock                "REXLANG_REXduino"
           DstPort                 15
-          #GUID                   ad65c8a4-1e7e-4fc6-9332-a54e031c0034
+          #GUID                   3714c2c4-0443-4264-a5e3-f0fb71f59fdb
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
           SrcPort                 2
           Points                  [235, 0]
-          #GUID                   8091732a-626d-4a9f-9dc4-c9c31d6ec569
+          #GUID                   670812ed-4a00-4b6c-90f7-a09f5fec1f23
           Branch {
             DstBlock                "HEXDBD"
             DstPort                 1
-            #GUID                   99a5c177-df2a-4b45-bfbb-398acbbf51e3
+            #GUID                   56782332-fae2-472b-9fdf-a07b18258abd
           }
           Branch {
             Points                  [0, 375]
             DstBlock                "OCTBD"
             DstPort                 1
-            #GUID                   882e64f8-ae58-4fe3-8002-cfaf9eb89a90
+            #GUID                   08ae28bb-4779-4265-9099-7335a2a55bab
           }
         }
         Line {
@@ -3096,7 +3202,7 @@ Model {
           Points                  [225, 0; 0, 505]
           DstBlock                "AI_demux1"
           DstPort                 1
-          #GUID                   e859754a-c5d6-4b35-8515-6b3409b5af5a
+          #GUID                   af5bb948-4b8c-4200-9f5e-93fb70a2f6ef
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3104,7 +3210,7 @@ Model {
           Points                  [215, 0; 0, 570]
           DstBlock                "AI_demux2"
           DstPort                 1
-          #GUID                   0aee14d3-07d9-4683-8a29-6193edd11090
+          #GUID                   69f429b7-cd87-4bb7-9a09-0ae985b1db77
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3112,7 +3218,7 @@ Model {
           Points                  [160, 0; 0, 745]
           DstBlock                "CNT2"
           DstPort                 1
-          #GUID                   9f563e5f-8b0c-45d3-af69-3dc8a4e27f85
+          #GUID                   c64453d9-da4a-466a-b7e7-e9892728cbf3
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3120,7 +3226,7 @@ Model {
           Points                  [150, 0; 0, 765]
           DstBlock                "CNT3"
           DstPort                 1
-          #GUID                   8ca5cc54-bce9-4abd-90d4-45e62e6c1930
+          #GUID                   d1154ce1-286b-470f-9017-45ee5b55e155
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3128,7 +3234,7 @@ Model {
           Points                  [205, 0; 0, 625]
           DstBlock                "ERR_demux"
           DstPort                 1
-          #GUID                   3335cdd7-de4c-447f-ba6e-8993c972be78
+          #GUID                   562a8bd2-e258-45df-985a-fb1be7b1b83a
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3136,7 +3242,7 @@ Model {
           Points                  [100, 0; 0, 800]
           DstBlock                "OW_2_3_data"
           DstPort                 1
-          #GUID                   d1737580-ec74-4fb0-b743-1d1ba5efad80
+          #GUID                   0af9fa95-9f6b-49fc-bcfb-7077d29a68b3
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3144,7 +3250,7 @@ Model {
           Points                  [90, 0; 0, 815]
           DstBlock                "OW_4_5_data"
           DstPort                 1
-          #GUID                   b3b2ccab-7e1d-49da-a378-0f95282d9ec3
+          #GUID                   7a629fd0-f162-4850-aeeb-09afcc079278
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3152,7 +3258,7 @@ Model {
           Points                  [80, 0; 0, 835]
           DstBlock                "OW_6_9_data"
           DstPort                 1
-          #GUID                   77d7784d-c97e-4db7-b5cc-e96137957d8b
+          #GUID                   d0cf0df7-0a47-49a6-874b-5dbd3a4e1ce4
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3160,7 +3266,7 @@ Model {
           Points                  [70, 0; 0, 855]
           DstBlock                "OW_10_11_data"
           DstPort                 1
-          #GUID                   c0ee3bc0-1bef-40e3-8249-37cc44392d3a
+          #GUID                   5e43edab-3a04-4386-9e10-33880d214ab9
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3168,7 +3274,7 @@ Model {
           Points                  [60, 0; 0, 875]
           DstBlock                "OW_A0_A1_data"
           DstPort                 1
-          #GUID                   04eaae57-5c08-4d71-977d-108e7a21b0fa
+          #GUID                   d034b05c-3e7f-4595-830d-2133f083f1fe
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3176,7 +3282,7 @@ Model {
           Points                  [50, 0; 0, 895]
           DstBlock                "OW_A2_A3_data"
           DstPort                 1
-          #GUID                   b9e838d7-826d-4395-973b-caeb747fe0dd
+          #GUID                   541f0f2c-603c-40c7-8408-6d3433b39d6a
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -3184,7 +3290,14 @@ Model {
           Points                  [40, 0; 0, 915]
           DstBlock                "userRecv"
           DstPort                 1
-          #GUID                   cf8dca5d-770e-42eb-876e-5164ae55c3a8
+          #GUID                   c35243b2-349d-48e9-9ac8-eaf43a14ca13
+        }
+        Line {
+          SrcBlock                "Simulation_Detector"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 3
+          #GUID                   b9da9af2-8e53-45bb-aad7-ebb1e9218d1e
         }
         Line {
           SrcBlock                "userSend"
@@ -3192,7 +3305,7 @@ Model {
           Points                  [445, 0; 0, -780]
           DstBlock                "REXLANG_REXduino"
           DstPort                 17
-          #GUID                   c2427cd2-bda6-4559-b789-57cf2555d9d6
+          #GUID                   3e808844-6d38-4747-a42c-d945bbda5862
         }
       }
     }

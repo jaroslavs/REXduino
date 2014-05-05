@@ -146,7 +146,7 @@ Model {
       Position                [440, 35, 585, 395]
       ShowPortLabels          on
       MaskType                "REX sequence"
-      MaskPromptString        "Serial device, e.g. COM1, /dev/ttyACM0, /dev/tt"
+      MaskPromptString        "Serial device, e.g. \\\\.\\COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
 "in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
 "e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
