@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "X_UNO_PWMout_task"
-    Location                [215, 31, 853, 476]
+    Location                [215, 31, 853, 558]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -3271,6 +3271,14 @@ Model {
       DstBlock                "GAIN"
       DstPort                 1
       #GUID                   bbd288ed-b5b3-4f56-80ba-a51e6a0094ee
+    }
+    Annotation {
+      Position                [330, 470]
+      Text                    "See X_UNO_PWMout.png for wiring diagram.\n\nSee"
+" X_UNO_PWMout.mp4 for video."
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   4dd9f964-c5e4-415d-8889-d849e4e1b4d4
     }
   }
 }

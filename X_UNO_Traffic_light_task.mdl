@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "X_UNO_Traffic_light_task"
-    Location                [227, 31, 960, 544]
+    Location                [227, 31, 960, 616]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -3233,6 +3233,21 @@ Model {
       DstBlock                "AND_"
       DstPort                 1
       #GUID                   43bd3790-30dd-46b5-8ad8-11b7c076cd96
+    }
+    Annotation {
+      Position                [360, 545]
+      Text                    "See X_UNO_Traffic_light.png for wiring diagram."
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   1e19d0da-d708-4057-ad24-71f8a6d890ae
+    }
+    Annotation {
+      Position                [360, 500]
+      Text                    "Red-yellow-green sequence is triggered by a pus"
+"h button connected to IO pin 2."
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   3cec10fb-7887-4f2f-9a54-f2c2a6090c7b
     }
   }
 }

@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "X_UNO_Blink_task"
-    Location                [207, 32, 811, 616]
+    Location                [207, 32, 811, 558]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -3108,6 +3108,14 @@ Model {
       DstBlock                "Arduino_UNO"
       DstPort                 7
       #GUID                   b83e99cd-ab23-4bc5-a603-dae38357e02e
+    }
+    Annotation {
+      Position                [330, 460]
+      Text                    "See X_UNO_Blink.png for wiring diagram.\n\nSee "
+"X_UNO_Blink.mp4 for video."
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   79f2c066-3557-40dc-a140-da3759485415
     }
   }
 }
