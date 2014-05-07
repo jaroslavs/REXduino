@@ -1,5 +1,5 @@
 Model {
-  Name                    "Example_UNO_Blink_exec"
+  Name                    "X_UNO_Blink_exec"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -125,8 +125,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "Example_UNO_Blink_exec"
-    Location                [12, 31, 210, 339]
+    Name                    "X_UNO_Blink_exec"
+    Location                [12, 31, 193, 339]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -160,7 +160,7 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "Example_UNO_Blink_task"
+      Name                    "X_UNO_Blink_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [100, 147, 150, 163]
       SourceBlock             "execlib/TASK"
@@ -177,7 +177,7 @@ Model {
     Line {
       SrcBlock                "EXEC_1"
       SrcPort                 5
-      DstBlock                "Example_UNO_Blink_task"
+      DstBlock                "X_UNO_Blink_task"
       DstPort                 1
       #GUID                   045e8092-5517-46ae-95cd-17b385aee420
     }

@@ -1,5 +1,5 @@
 Model {
-  Name                    "REXduino_UNO_exec"
+  Name                    "X_UNO_Generic_exec"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -125,7 +125,7 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "REXduino_UNO_exec"
+    Name                    "X_UNO_Generic_exec"
     Location                [12, 31, 210, 339]
     Open                    on
     ModelBrowserVisibility  off
@@ -160,7 +160,7 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "REXduino_UNO_task"
+      Name                    "X_UNO_Generic_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [100, 147, 150, 163]
       SourceBlock             "execlib/TASK"
@@ -177,7 +177,7 @@ Model {
     Line {
       SrcBlock                "EXEC_1"
       SrcPort                 5
-      DstBlock                "REXduino_UNO_task"
+      DstBlock                "X_UNO_Generic_task"
       DstPort                 1
       #GUID                   045e8092-5517-46ae-95cd-17b385aee420
     }
