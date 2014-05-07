@@ -31,7 +31,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 1 //even number = release, odd number = development
-#define REVISION 1 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 2 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 //#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
