@@ -208,7 +208,7 @@ Model {
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
       MaskIconUnits	      "autoscale"
-      MaskValueString	      "COM8-7.5-|8: Counter|1: Not connected|10: Count"
+      MaskValueString	      "COM7|8: Counter|1: Not connected|10: Count"
 "er DIR / Encoder B|2: Digital output|1: Not connected|5: PWM (analog output)|"
 "1: Not connected|1: Not connected|1: Not connected|6: Analog input|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected"
