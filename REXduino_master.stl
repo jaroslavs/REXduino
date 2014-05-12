@@ -3,7 +3,7 @@
 *  REXduino master                                  *
 *  REX and Arduino communication over serial port   *
 *                                                   *
-*  (c) Jaroslav SOBOTA, 2013                        *
+*  Jaroslav SOBOTA, 2013                            *
 *  email: jsobota@kky.zcu.cz                        *
 *                                                   *
 ****************************************************/
@@ -30,8 +30,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **************************************************************************/
 
 #define MAJORVERSION 1
-#define MINORVERSION 0 //even number = release, odd number = development
-#define REVISION 12 //for hotfixes, even number = hotfix applied, odd number = development
+#define MINORVERSION 1 //even number = release, odd number = development
+#define REVISION 2 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 #define COM_BAUDRATE 57600 //change this line according to desired baudrate
@@ -56,6 +56,21 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define ERROR_ONEWIRE             52 // 1-Wire-related error response from Arduino 
 #define ERROR_ONEWIRE_BUSYBUS       50 // 1-Wire bus busy
 
+#define CON_COM1 33
+#define CON_COM2 34
+#define CON_COM3 35
+#define CON_COM4 36
+#define CON_COM5 37
+#define CON_COM6 38
+#define CON_COM7 39
+#define CON_COM8 40
+#define CON_COM9 41
+#define CON_COM10 42
+#define CON_COM11 43
+#define CON_COM12 44
+#define CON_COM13 45
+#define CON_COM14 46
+#define CON_COM15 47
 #define CON_SERIALDEVICE_FNAME 63
 
 #define PINMODE_NC0		0 //not connected (due to Simulink compatibility)
@@ -103,6 +118,8 @@ long input(4) input4;
 long input(5) input5;
 long input(6) input6;
 long input(7) input7;
+long input(9) comPort;
+long input(10) SimulinkDetector;
 long input(13) debug;
 long input(14) CNTcmd;
 long input(15) userSend;
@@ -505,8 +522,74 @@ int initPort(void)
 	{
 		pinModes[i] = PINMODE_NC;
 	}
-		handle = Open(CON_SERIALDEVICE_FNAME,COM_BAUDRATE,0);
+		if (SimulinkDetector)
+		{
+      switch (comPort)
+	{ //open COM port, returns handle>=0 if OK, otherwise REX error is returned (<0)
+	case 1:
+		handle = Open(CON_COM1,COM_BAUDRATE,0);
     Trace(1,1); 
+		break;
+	case 2:
+		handle = Open(CON_COM2,COM_BAUDRATE,0); 
+		Trace(1,2);
+    break;
+	case 3:
+		handle = Open(CON_COM3,COM_BAUDRATE,0); 
+		break;
+	case 4:
+		handle = Open(CON_COM4,COM_BAUDRATE,0); 
+		break;
+	case 5:
+		handle = Open(CON_COM5,COM_BAUDRATE,0); 
+		break;
+	case 6:
+		handle = Open(CON_COM6,COM_BAUDRATE,0); 
+		break;
+	case 7:
+		handle = Open(CON_COM7,COM_BAUDRATE,0); 
+		break;
+	case 8:
+		handle = Open(CON_COM8,COM_BAUDRATE,0); 
+		break;
+	case 9:
+		handle = Open(CON_COM9,COM_BAUDRATE,0); 
+		break;
+	case 10:
+		handle = Open(CON_COM10,COM_BAUDRATE,0); 
+		Trace(1,10);
+    break;
+	case 11:
+		handle = Open(CON_COM11,COM_BAUDRATE,0);
+    Trace(1,11); 
+		break;
+	case 12:
+		handle = Open(CON_COM12,COM_BAUDRATE,0);
+    Trace(1,12); 
+		break;
+	case 13:
+		handle = Open(CON_COM13,COM_BAUDRATE,0);
+    Trace(1,13); 
+		break;
+	case 14:
+		handle = Open(CON_COM14,COM_BAUDRATE,0);
+    Trace(1,14); 
+		break;
+	case 15:
+		handle = Open(CON_COM15,COM_BAUDRATE,0);
+    Trace(1,15); 
+		break;
+	default:
+    handle = -1;
+    Trace(1,-1);	
+	} //end switch com_port
+
+    }
+    else
+    {
+    handle = Open(CON_SERIALDEVICE_FNAME,COM_BAUDRATE,0);
+    Trace(1,CON_SERIALDEVICE_FNAME);
+    } 
 	if(handle>=0)
 	{
 		GetOptions(handle, buffer);   //read serial port parameters; for details see e.g. MSDN functions SetComState and SetCommTimeouts
