@@ -4408,7 +4408,7 @@ Model {
     }
     Block {
       BlockType               SubSystem
-      Name                    "Arduino_MEGA2560_ADV"
+      Name                    "Arduino_MEGA2560hex"
       Ports                   [14, 21, 0, 0, 0]
       Position                [525, 506, 710, 854]
       ShowPortLabels          on
@@ -4438,7 +4438,7 @@ Model {
       MaskValueString         "/dev/ttyACM0|0|0|0|0|0|0|0|0|0"
       #GUID                   75c9ef59-58bd-4a65-9f6b-251f27fefb4f
       System {
-        Name                    "Arduino_MEGA2560_ADV"
+        Name                    "Arduino_MEGA2560hex"
         Location                [133, 104, 1014, 871]
         Open                    off
         ModelBrowserVisibility  off
@@ -9899,7 +9899,7 @@ Model {
     }
     Block {
       BlockType               SubSystem
-      Name                    "Arduino_UNO_ADV"
+      Name                    "Arduino_UNOhex"
       Ports                   [23, 39, 0, 0, 0]
       Position                [345, 461, 490, 859]
       ShowPortLabels          on
@@ -9926,7 +9926,7 @@ Model {
       MaskValueString         "/dev/ttyACM0|0|0|0"
       #GUID                   1c8d4179-13b7-4d8b-838a-9e4ed2d3800e
       System {
-        Name                    "Arduino_UNO_ADV"
+        Name                    "Arduino_UNOhex"
         Location                [12, 153, 1164, 872]
         Open                    off
         ModelBrowserVisibility  off
@@ -14637,7 +14637,8 @@ Model {
       Position                [160, 135]
       Text                    "PWM range 0..255\n\nAnalog input (AI) range 0.."
 "1023\n\n1-Wire bus must be enabled in the REXduino slave\nto allow switching p"
-"ins to 1-Wire mode\n(OneWire library for Arduino is required)\n\nMax 15 1-Wire"
+"ins to 1-Wire mode\nUncomment the line //#define USE1WIRE\n"
+"(OneWire library for Arduino will be required)\n\nMax 15 1-Wire"
 " devices per branch\n\nIf I2C is enabled in the REXduino slave, some pins \nmi"
 "ght be unusable\n\nSee REXduino.ino and REXduino_master.stl for error codes"
       HorizontalAlignment     "left"
@@ -14645,7 +14646,7 @@ Model {
     }
     Annotation {
       Position                [80, 445]
-      Text                    "Advanced masks"
+      Text                    "Hexadecimal masks"
       FontSize                16
       FontWeight              "bold"
       #GUID                   395d4f12-65ac-46fb-afc6-526e448c0f93

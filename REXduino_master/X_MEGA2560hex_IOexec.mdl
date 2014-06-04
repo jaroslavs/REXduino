@@ -1,5 +1,5 @@
 Model {
-  Name                    "X_MEGA2560_ADV_exec"
+  Name                    "X_MEGA2560hex_IOexec"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -125,7 +125,7 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "X_MEGA2560_ADV_exec"
+    Name                    "X_MEGA2560hex_IOexec"
     Location                [10, 30, 212, 376]
     Open                    on
     ModelBrowserVisibility  off
@@ -160,7 +160,7 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "X_MEGA2560_ADV_task"
+      Name                    "X_MEGA2560hex_IOtask"
       Ports                   [1, 1, 0, 0, 0]
       Position                [105, 147, 155, 163]
       SourceBlock             "execlib/TASK"
@@ -179,7 +179,7 @@ Model {
     Line {
       SrcBlock                "EXEC_1"
       SrcPort                 5
-      DstBlock                "X_MEGA2560_ADV_task"
+      DstBlock                "X_MEGA2560hex_IOtask"
       DstPort                 1
       #GUID                   3654cad9-52e7-4ed7-97aa-91d0bd80bcf5
     }

@@ -4241,7 +4241,8 @@ Model {
       Text		      "Make sure to install the RexLib function block "
 "library prior to using this example.\n\nDownload it for free from http://www."
 "rexcontrols.com/rexlib-for-matlab\n\nThe use of 1-Wire bus must be enabled in"
-" the REXduino slave!!!\n(OneWire library for Arduino is required)"
+" the REXduino slave!!!\nUncomment the line //#define USE1WIRE (OneWire library" 
+" for Arduino will be required)"
       FontName		      "Arial"
       FontSize		      16
       FontWeight	      "bold"

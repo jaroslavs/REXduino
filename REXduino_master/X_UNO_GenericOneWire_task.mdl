@@ -4616,8 +4616,8 @@ Model {
     Annotation {
       Position                [785, 65]
       Text                    "MAKE SURE TO ENABLE THE 1-WIRE BUS IN\nTHE REXD"
-"UINO SLAVE SKETCH FOR ARDUINO !!!\n\nTHE ONEWIRE LIBRARY FOR ARDUINO IS REQUIR"
-"ED !!!"
+"UINO SLAVE SKETCH FOR ARDUINO !!!\n\nUNCOMMENT THE LINE //#define USE1WIRE\n"
+"THE ONEWIRE LIBRARY FOR ARDUINO IS REQUIRED !!!"
       FontWeight              "bold"
       FontSize                16
       BackgroundColor         "yellow"
