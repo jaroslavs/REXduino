@@ -3112,7 +3112,7 @@ Model {
     Annotation {
       Position                [330, 460]
       Text                    "See X_UNO_Blink.png for wiring diagram.\n\nSee "
-"X_UNO_Blink.mp4 for video."
+"X_UNO_Blink.avi for video."
       FontWeight              "bold"
       FontSize                16
       #GUID                   79f2c066-3557-40dc-a140-da3759485415

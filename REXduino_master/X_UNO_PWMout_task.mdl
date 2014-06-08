@@ -3275,7 +3275,7 @@ Model {
     Annotation {
       Position                [330, 470]
       Text                    "See X_UNO_PWMout.png for wiring diagram.\n\nSee"
-" X_UNO_PWMout.mp4 for video."
+" X_UNO_PWMout.avi for video."
       FontWeight              "bold"
       FontSize                16
       #GUID                   4dd9f964-c5e4-415d-8889-d849e4e1b4d4
