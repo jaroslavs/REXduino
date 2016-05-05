@@ -172,6 +172,7 @@ else
 {
 	i=0;
 }
+return;
 }
 
 void initCommunication(void)
@@ -182,6 +183,7 @@ void initCommunication(void)
 	sent = Send(hCom,commandData,3);
 	sentCnt = sentCnt+3;
 	traceSentData(3);
+return;
 }
 
 void setDigitalOutput(long pin, long data[])
@@ -193,6 +195,7 @@ void setDigitalOutput(long pin, long data[])
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void setDigitalOutputMulti(long mask[], long data[], long maskByteSize)
@@ -207,6 +210,7 @@ void setDigitalOutputMulti(long mask[], long data[], long maskByteSize)
 	commandData[2*maskByteSize+1]=';';
 	sent = Send(hCom,commandData,2*maskByteSize+2);
 	traceSentData(2*maskByteSize+2);
+return;
 }
 
 void readDigitalInput(long pin)
@@ -217,6 +221,7 @@ void readDigitalInput(long pin)
 	sent = Send(hCom,commandData,3);
 	sentCnt = sentCnt+3;
 	traceSentData(3);
+return;
 }
 
 void readDigitalInputMulti(long mask[], long maskByteSize)
@@ -230,6 +235,7 @@ void readDigitalInputMulti(long mask[], long maskByteSize)
 	commandData[maskByteSize+1]=';';
 	sent = Send(hCom,commandData,maskByteSize+2);
 	traceSentData(maskByteSize+2);
+return;
 }
 
 void setAnalogOutput(long pin, long data[])
@@ -241,6 +247,7 @@ void setAnalogOutput(long pin, long data[])
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void readAnalogInput(long pin)
@@ -251,6 +258,7 @@ void readAnalogInput(long pin)
 	sent = Send(hCom,commandData,3);
 	sentCnt = sentCnt+3;
 	traceSentData(3);
+return;
 }
 
 void readOnewireTemp(long pin)
@@ -261,6 +269,7 @@ void readOnewireTemp(long pin)
 	sent = Send(hCom,commandData,3);
 	sentCnt = sentCnt+3;
 	traceSentData(3);
+return;
 }
 
 void readOnewireTempMulti(long mask[], long maskByteSize)
@@ -274,6 +283,7 @@ void readOnewireTempMulti(long mask[], long maskByteSize)
 	commandData[maskByteSize+1]=';';
 	sent = Send(hCom,commandData,maskByteSize+2);
 	traceSentData(maskByteSize+2);
+return;
 }
 
 void readCounter(long pin, long resetflag, long enableflag)
@@ -285,6 +295,7 @@ void readCounter(long pin, long resetflag, long enableflag)
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void enableCounter(long pin)
@@ -296,6 +307,7 @@ void enableCounter(long pin)
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void disableCounter(long pin)
@@ -307,6 +319,7 @@ void disableCounter(long pin)
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void resetCounter(long pin)
@@ -318,6 +331,7 @@ void resetCounter(long pin)
 	sent = Send(hCom,commandData,4);
 	sentCnt = sentCnt+4;
 	traceSentData(4);
+return;
 }
 
 void setDigiPotentiometer(long addrI2C, long resistorValues)
@@ -332,6 +346,7 @@ void setDigiPotentiometer(long addrI2C, long resistorValues)
 	sent = Send(hCom,commandData,7);
 	sentCnt = sentCnt+7;
 	traceSentData(7);
+return;
 }
 
 void readBarometer(void)
@@ -341,6 +356,7 @@ void readBarometer(void)
 	sent = Send(hCom,commandData,2);
 	sentCnt = sentCnt+2;
 	traceSentData(2);
+return;
 }
 
 void userCommand(long micros)
@@ -356,6 +372,7 @@ void userCommand(long micros)
 	sent = Send(hCom,commandData,3);
 	sentCnt = sentCnt+3;
 	traceSentData(3);
+return;
 }
 
 int initPin(long pin)
@@ -525,59 +542,59 @@ int initPort(void)
 	}
 		if (SimulinkDetector)
 		{
-      switch (comPort)
+      switch (comPortNo)
 	{ //open COM port, returns handle>=0 if OK, otherwise REX error is returned (<0)
 	case 1:
-		handle = Open(CON_COM1,COM_BAUDRATE,0);
+		handle = Open(CON_COM1,"",COM_BAUDRATE,0);
     Trace(1,1); 
 		break;
 	case 2:
-		handle = Open(CON_COM2,COM_BAUDRATE,0); 
+		handle = Open(CON_COM2,"",COM_BAUDRATE,0); 
 		Trace(1,2);
     break;
 	case 3:
-		handle = Open(CON_COM3,COM_BAUDRATE,0); 
+		handle = Open(CON_COM3,"",COM_BAUDRATE,0); 
 		break;
 	case 4:
-		handle = Open(CON_COM4,COM_BAUDRATE,0); 
+		handle = Open(CON_COM4,"",COM_BAUDRATE,0); 
 		break;
 	case 5:
-		handle = Open(CON_COM5,COM_BAUDRATE,0); 
+		handle = Open(CON_COM5,"",COM_BAUDRATE,0); 
 		break;
 	case 6:
-		handle = Open(CON_COM6,COM_BAUDRATE,0); 
+		handle = Open(CON_COM6,"",COM_BAUDRATE,0); 
 		break;
 	case 7:
-		handle = Open(CON_COM7,COM_BAUDRATE,0); 
+		handle = Open(CON_COM7,"",COM_BAUDRATE,0); 
 		break;
 	case 8:
-		handle = Open(CON_COM8,COM_BAUDRATE,0); 
+		handle = Open(CON_COM8,"",COM_BAUDRATE,0); 
 		break;
 	case 9:
-		handle = Open(CON_COM9,COM_BAUDRATE,0); 
+		handle = Open(CON_COM9,"",COM_BAUDRATE,0); 
 		break;
 	case 10:
-		handle = Open(CON_COM10,COM_BAUDRATE,0); 
+		handle = Open(CON_COM10,"",COM_BAUDRATE,0); 
 		Trace(1,10);
     break;
 	case 11:
-		handle = Open(CON_COM11,COM_BAUDRATE,0);
+		handle = Open(CON_COM11,"",COM_BAUDRATE,0);
     Trace(1,11); 
 		break;
 	case 12:
-		handle = Open(CON_COM12,COM_BAUDRATE,0);
+		handle = Open(CON_COM12,"",COM_BAUDRATE,0);
     Trace(1,12); 
 		break;
 	case 13:
-		handle = Open(CON_COM13,COM_BAUDRATE,0);
+		handle = Open(CON_COM13,"",COM_BAUDRATE,0);
     Trace(1,13); 
 		break;
 	case 14:
-		handle = Open(CON_COM14,COM_BAUDRATE,0);
+		handle = Open(CON_COM14,"",COM_BAUDRATE,0);
     Trace(1,14); 
 		break;
 	case 15:
-		handle = Open(CON_COM15,COM_BAUDRATE,0);
+		handle = Open(CON_COM15,"",COM_BAUDRATE,0);
     Trace(1,15); 
 		break;
 	default:
@@ -588,10 +605,11 @@ int initPort(void)
     }
     else
     {
-    handle = Open(CON_SERIALDEVICE_FNAME,COM_BAUDRATE,0);
-    Trace(1,CON_SERIALDEVICE_FNAME);
+    handle = OpenCom(comPort,COM_BAUDRATE,0);
+    Trace(1,comPort);
     } 
-	if(handle>=0)
+	buffer[0] = 0;
+  if(handle>=0)
 	{
 		GetOptions(handle, buffer);   //read serial port parameters; for details see e.g. MSDN functions SetComState and SetCommTimeouts
 
@@ -623,7 +641,8 @@ int initPort(void)
 		}
 */		
 //purge serial buffer by reading data which were in the serial buffer before opening the port
-		while ((i=Recv(handle,dropData,1))>0)
+		dropData[0] = 0;
+    while ((i=Recv(handle,dropData,1))>0)
 		{
       Trace(2222,dropData[0]);
     }
@@ -635,8 +654,6 @@ int initPort(void)
 
 int closePort(long handle)
 {
-	long i;
-//zavru port
 if(handle>=0) Close(handle);
 	Trace(2,0);
 				handle = -1;
@@ -648,7 +665,6 @@ if(handle>=0) Close(handle);
 
 int init(void)
 {
-	long i;
 	// initialization commands executed once at startup of REXLANG
 	hCom = initPort(); //calls also parchange()
 	portOpenTime = CurrentTime();
@@ -661,10 +677,10 @@ int init(void)
 int main(void)
 {
 	long lastIn[1];
-	long i, j, k, l;
+	long i, k, l;
 	long Padc, Tadc;
 	double a0, b1, b2, c12;
-	long outputData1, outputData2, outputData3, outputData4, outputData5;
+	long outputData1, outputData2, outputData3;
 	long countDigitalIn=0;
 	long countDigitalOut=0;
 	long countOnewireBranch=0;
@@ -675,7 +691,7 @@ int main(void)
   long debugChange;
 	REXduinoError = 0;
 	sentCnt = 0; //counter of sent bytes
-
+  
   TRACE_INCOMING = (debug>>2) & 1;
   TRACE_OUTGOING = (debug>>3) & 1;
   
@@ -698,7 +714,7 @@ int main(void)
 
 	if (hCom<0)
 	{ //serial port not open
-		if (ElapsedTime(portOpenTime)>COM_REOPEN_INTERVAL*0.001)
+		if (ElapsedTime(CurrentTime(),portOpenTime)>COM_REOPEN_INTERVAL*0.001)
 		{
 			hCom = initPort();
 			portOpenTime = CurrentTime();
@@ -710,14 +726,15 @@ int main(void)
 	{ //serial port open
 		if (!initialized) 
 		{ //communication between REX and Arduino not established yet
-			if (ElapsedTime(initAttemptTime)>COMM_INIT_INTERVAL*0.001)
+			if (ElapsedTime(CurrentTime(),initAttemptTime)>COMM_INIT_INTERVAL*0.001)
 			{
         initCommunication();
 				initAttemptTime=CurrentTime();
 			}
 			lastSuccess = CurrentTime();
 		}
-		while ((j=Recv(hCom,lastIn,1))>0)
+    lastIn[0] = 0;
+		while ((Recv(hCom,lastIn,1))>0)
 		{ // first we process incoming serial data
 			responseCnt++;
 			responseData[responseCnt-1] = lastIn[0];
@@ -986,7 +1003,7 @@ int main(void)
 
 		// here j==0 might mean that Arduino is disconnected, but I'm not sure if it works on all platforms
 		//"Arduino disconnected" or no "valid response received within timeout period" or "opening of port succeeded but the communication initialization did not proceed"
-		if ( (ElapsedTime(lastSuccess)>(TIMEOUT_FAC*GetPeriod())) || ((ElapsedTime(portOpenTime)>COM_REOPEN_INTERVAL*0.001) && (!initialized)) )
+		if ( (ElapsedTime(CurrentTime(),lastSuccess)>(TIMEOUT_FAC*GetPeriod())) || ((ElapsedTime(CurrentTime(),portOpenTime)>COM_REOPEN_INTERVAL*0.001) && (!initialized)) )
 		{ 
 			hCom = closePort(hCom);
 		}
@@ -1118,7 +1135,7 @@ int main(void)
 	output0 = outputData1;
 	output1 = outputData2;
 	output2 = outputData3;
-	output8 = REXduinoError | ((connected && !initialized)||(connected && pinsSync))<<16 | initialized<<17 | analogIn[69]<<22;  
+  output8 = REXduinoError | ((long)((connected && !initialized)||(connected && pinsSync)))<<16 | initialized<<17 | analogIn[69]<<22;  
 	switch (maskType)
 	{
 	case MASKTYPE_ARD_UNO:

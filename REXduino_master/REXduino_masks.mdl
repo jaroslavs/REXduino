@@ -94,7 +94,102 @@ Model {
   LastModifiedDate        "Mon May 05 18:05:26 2014"
   ModelVersionFormat      "1.%<AutoIncrement:17>"
   ConfigurationManager    "None"
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.45.0 rev. 6445, Date 2016-04-28"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Mon Mar 04 19:02:50 2013"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon May 05 18:05:26 2014"
+  ModelVersionFormat      "1.%<AutoIncrement:17>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.45.0 rev. 6445 - REXCONV, Date 2016-4-28"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -135,7 +230,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "A4"
     PaperUnits              "centimeters"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   480d3759-4cf8-4432-b86b-a2ad92f39a67
@@ -162,7 +256,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   39fcd5de-7362-4e3e-8c36-e7d6e459aada
         Block {
@@ -393,9 +486,11 @@ Model {
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
-"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
-"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|P"
+"in 3 mode|Pin 3 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 5 mode|Pi"
+"n 5 mode|Pin 5 mode|Pin 5 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin"
+" 9 mode|Pin 9 mode|Pin 9 mode|Pin 9 mode|Pin 10 mode|Pin 10 mode|Pin 10 mode|P"
+"in 10 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
 "6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder),popup"
@@ -430,18 +525,18 @@ Model {
 " temperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Dig"
 "ital input with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7"
 ": 1-Wire temperature)"
-      MaskCallbackString      "REXduino_mask_comPort = get_param(gcb,'comPort'"
-");\nREXduino_mask_comPort = sscanf(fliplr(REXduino_mask_comPort),'%u',1);\nif"
-" ( ~isempty(REXduino_mask_comPort) & (REXduino_mask_comPort<100) )\nset_param"
-"([gcb '/CNI_comPort'],'icn',fliplr(num2str(REXduino_mask_comPort)))\nelse\nse"
-"t_param([gcb '/CNI_comPort'],'icn','15')    \nend\nclear REXduino_mask_comPor"
-"t||||||||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "REXduino_mask_comPortNo = get_param(gcb,'comPor"
+"t');\nREXduino_mask_comPortNo = sscanf(fliplr(REXduino_mask_comPortNo),'%u',1)"
+";\nif ( ~isempty(REXduino_mask_comPortNo) & (REXduino_mask_comPortNo<100) )\ns"
+"et_param([gcb '/CNI_comPortNo'],'icn',fliplr(num2str(REXduino_mask_comPortNo))"
+")\nelse\nset_param([gcb '/CNI_comPortNo'],'icn','15')    \nend\nclear REXduino"
+"_mask_comPortNo||||||||||||||"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
-"pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
-"nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
+      MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
+"pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
+"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15"
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
@@ -462,14 +557,13 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "usletter"
         PaperUnits              "inches"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   8b713dac-4d18-4514-afa9-b8e4d372fea9
         Block {
           BlockType               Inport
           Name                    "DO2_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 103, 50, 117]
+          Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
           SampleTime              -1
@@ -482,7 +576,7 @@ Model {
           BlockType               Inport
           Name                    "DO3_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 133, 50, 147]
+          Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
           SampleTime              -1
@@ -495,7 +589,7 @@ Model {
           BlockType               Inport
           Name                    "DO4_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 163, 50, 177]
+          Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
           SampleTime              -1
@@ -508,7 +602,7 @@ Model {
           BlockType               Inport
           Name                    "DO5_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 193, 50, 207]
+          Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
           SampleTime              -1
@@ -521,7 +615,7 @@ Model {
           BlockType               Inport
           Name                    "DO6_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 223, 50, 237]
+          Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
           SampleTime              -1
@@ -534,7 +628,7 @@ Model {
           BlockType               Inport
           Name                    "DO9_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 313, 50, 327]
+          Position                [20, 318, 50, 332]
           Port                    6
           PortWidth               -1
           SampleTime              -1
@@ -547,7 +641,7 @@ Model {
           BlockType               Inport
           Name                    "DO10_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 343, 50, 357]
+          Position                [20, 348, 50, 362]
           Port                    7
           PortWidth               -1
           SampleTime              -1
@@ -560,7 +654,7 @@ Model {
           BlockType               Inport
           Name                    "DO11_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 373, 50, 387]
+          Position                [20, 378, 50, 392]
           Port                    8
           PortWidth               -1
           SampleTime              -1
@@ -573,7 +667,7 @@ Model {
           BlockType               Inport
           Name                    "DO12"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 403, 50, 417]
+          Position                [20, 408, 50, 422]
           Port                    9
           PortWidth               -1
           SampleTime              -1
@@ -586,7 +680,7 @@ Model {
           BlockType               Inport
           Name                    "DO13"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 433, 50, 447]
+          Position                [20, 438, 50, 452]
           Port                    10
           PortWidth               -1
           SampleTime              -1
@@ -599,7 +693,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 463, 50, 477]
+          Position                [20, 468, 50, 482]
           Port                    11
           PortWidth               -1
           SampleTime              -1
@@ -612,7 +706,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 493, 50, 507]
+          Position                [20, 498, 50, 512]
           Port                    12
           PortWidth               -1
           SampleTime              -1
@@ -761,7 +855,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   679d60c9-8d41-4118-a315-a95652e4a2c9
             Block {
@@ -1007,7 +1100,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   01cd96c6-13f0-4461-9d11-1a79e5688259
             Block {
@@ -1253,7 +1345,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   30ed6635-dfb4-4243-8b2f-2f509d438ced
             Block {
@@ -1480,7 +1571,7 @@ Model {
           BlockType               Reference
           Name                    "BITOP_10"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [315, 268, 340, 292]
+          Position                [315, 273, 340, 297]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           iop                     "2: Bit OR"
@@ -1510,7 +1601,7 @@ Model {
           BlockType               Reference
           Name                    "CNI0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [440, 363, 460, 377]
+          Position                [440, 368, 460, 382]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     0
@@ -1520,7 +1611,7 @@ Model {
           BlockType               Reference
           Name                    "CNI1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [465, 373, 485, 387]
+          Position                [465, 378, 485, 392]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     1
@@ -1528,9 +1619,9 @@ Model {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI_comPort"
+          Name                    "CNI_comPortNo"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [505, 338, 530, 352]
+          Position                [505, 343, 530, 357]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     15
@@ -1559,7 +1650,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   3f120b5c-0f0a-4586-9a03-5cf6a13d9994
             Block {
@@ -1697,7 +1787,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   30f5066d-117e-4b59-b1f9-791a6ae90636
             Block {
@@ -2031,7 +2120,7 @@ Model {
           BlockType               Reference
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
-          Position                [185, 42, 235, 508]
+          Position                [185, 47, 235, 513]
           SourceBlock             "logiclib/BMHEXD"
           SourceType              "BMHEXD"
           shift                   0
@@ -2041,7 +2130,7 @@ Model {
           BlockType               Reference
           Name                    "ISSW"
           Ports                   [3, 1, 0, 0, 0]
-          Position                [560, 363, 590, 397]
+          Position                [560, 368, 590, 402]
           SourceBlock             "logiclib/ISSW"
           SourceType              "ISSW"
           #GUID                   13183b09-de65-4973-8eed-0a765a2323d0
@@ -2135,7 +2224,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   30ab89f8-f4b9-4a6e-891d-304097a0d405
             Block {
@@ -2526,7 +2614,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   135aa524-5424-405c-8358-ec21eb280473
             Block {
@@ -2917,7 +3004,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   9a8f9d76-e036-4b95-96ce-eb24bbc8ae98
             Block {
@@ -3288,17 +3374,17 @@ Model {
         Block {
           BlockType               Reference
           Name                    "REXLANG_REXduino"
-          Ports                   [17, 17, 0, 0, 0]
+          Ports                   [18, 17, 0, 0, 0]
           Position                [620, 260, 670, 440]
           SourceBlock             "speclib/REXLANG"
+          strs                    0
           SourceType              "REXLANG"
           tab_matlab              "MORE"
-          srcname                 "REXduino_master.stl"
-          srctype                 "1: STL"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
           stack                   0
           debug                   "1: No check"
-          fname                   "comPort"
-          p0                      0
+          p0                      "comPort"
           p1                      "pinmode2"
           p2                      "pinmode3"
           p3                      "pinmode4"
@@ -3320,7 +3406,7 @@ Model {
           BlockType               SubSystem
           Name                    "Simulation_Detector"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [490, 382, 505, 398]
+          Position                [490, 387, 505, 403]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -3339,7 +3425,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   7bc5913e-787b-4164-a2ff-51d500316c7a
             Block {
@@ -3348,7 +3433,7 @@ Model {
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 40, 37]
               SourceBlock             "mathlib/CNI"
-              SourceType              "Unknown"
+              SourceType              "CNI"
               icn                     1
               #GUID                   93fbb8d9-b719-4e42-b830-bed62d62a59b
             }
@@ -3796,7 +3881,7 @@ Model {
           SrcBlock                "BITOP_10"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 2
+          DstPort                 3
           #GUID                   6d8bbc06-604d-42fa-8713-e60aef43d858
         }
         Line {
@@ -3828,11 +3913,11 @@ Model {
           #GUID                   80d99698-0465-456b-bac0-944912bbe46c
         }
         Line {
-          SrcBlock                "CNI_comPort"
+          SrcBlock                "CNI_comPortNo"
           SrcPort                 1
           Points                  [65, 0; 0, 25]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 11
+          DstPort                 12
           #GUID                   838fb1ed-b180-43ce-a182-f638d40999ae
         }
         Line {
@@ -3869,9 +3954,9 @@ Model {
         Line {
           SrcBlock                "CNT_mux"
           SrcPort                 1
-          Points                  [265, 0; 0, -665]
+          Points                  [265, 0; 0, -660]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 16
+          DstPort                 17
           #GUID                   8e1ab20b-abcc-4d44-88c7-c6d609c4e5af
         }
         Line {
@@ -3885,7 +3970,7 @@ Model {
             #GUID                   43c2494d-5525-4641-b439-0824c9b7ea20
           }
           Branch {
-            Points                  [0, 630]
+            Points                  [0, 625]
             DstBlock                "PWM_mux3"
             DstPort                 1
             #GUID                   df107d24-207d-4ff3-99ac-c3855946a375
@@ -3902,7 +3987,7 @@ Model {
             #GUID                   f9def656-2831-4f49-a6f8-dba346e36db2
           }
           Branch {
-            Points                  [0, 610]
+            Points                  [0, 605]
             DstBlock                "PWM_mux3"
             DstPort                 2
             #GUID                   6dac25f2-74d3-44fc-9331-29dc98fd4629
@@ -3933,7 +4018,7 @@ Model {
             #GUID                   f3fe90ba-f266-4f48-b56e-031d30938694
           }
           Branch {
-            Points                  [0, 725]
+            Points                  [0, 720]
             DstBlock                "PWM_mux1"
             DstPort                 1
             #GUID                   51b6c8eb-ddd1-4d25-8fae-7b4de8eb043d
@@ -3950,7 +4035,7 @@ Model {
             #GUID                   c36f66c9-d81c-4bdb-a785-99073ad5d62d
           }
           Branch {
-            Points                  [0, 705]
+            Points                  [0, 700]
             DstBlock                "PWM_mux1"
             DstPort                 2
             #GUID                   a9d1bff4-b795-48cd-8e09-63996d44c47a
@@ -3967,7 +4052,7 @@ Model {
             #GUID                   0be04eb2-84a0-49c1-ab14-e50ef3bc0da7
           }
           Branch {
-            Points                  [0, 685]
+            Points                  [0, 680]
             DstBlock                "PWM_mux1"
             DstPort                 3
             #GUID                   27875046-539f-41df-8f19-0116940b9f17
@@ -3984,7 +4069,7 @@ Model {
             #GUID                   5d3fb2f7-e998-4649-89b1-bbf18f935245
           }
           Branch {
-            Points                  [0, 665]
+            Points                  [0, 660]
             DstBlock                "PWM_mux1"
             DstPort                 4
             #GUID                   ac552fee-9562-473b-bb38-9319fa2a59ba
@@ -4001,7 +4086,7 @@ Model {
             #GUID                   77a736f8-1708-4939-8bea-e312c1494527
           }
           Branch {
-            Points                  [0, 680]
+            Points                  [0, 675]
             DstBlock                "PWM_mux2"
             DstPort                 1
             #GUID                   56de1261-ddbb-469c-8c4d-b8d3e0d344fa
@@ -4018,7 +4103,7 @@ Model {
             #GUID                   f302b884-a237-468d-898b-c850ef0a8a77
           }
           Branch {
-            Points                  [0, 620]
+            Points                  [0, 615]
             DstBlock                "PWM_mux2"
             DstPort                 4
             #GUID                   6ffcf00b-a8c1-4cb5-865b-2eb3a1c9b5a0
@@ -4184,7 +4269,7 @@ Model {
           SrcBlock                "ISSW"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 12
+          DstPort                 13
           #GUID                   f6f0c82d-f80c-47c1-acca-6c23ebcbe670
         }
         Line {
@@ -4239,7 +4324,7 @@ Model {
         Line {
           SrcBlock                "OCTBM"
           SrcPort                 1
-          Points                  [35, 0; 0, -375]
+          Points                  [35, 0; 0, -370]
           DstBlock                "BITOP_10"
           DstPort                 2
           #GUID                   f3c95515-9db7-4e5a-95b7-6b1e9c5e26bb
@@ -4247,25 +4332,25 @@ Model {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [335, 0; 0, -925]
+          Points                  [335, 0; 0, -920]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 15
+          DstPort                 16
           #GUID                   9208aa21-1d49-4aff-b513-66b4194cf712
         }
         Line {
           SrcBlock                "PWM_mux1"
           SrcPort                 1
-          Points                  [105, 0; 0, -540]
+          Points                  [105, 0; 0, -535]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 5
+          DstPort                 6
           #GUID                   a5cdc074-8221-4d27-991e-2be9eb71bcca
         }
         Line {
           SrcBlock                "PWM_mux3"
           SrcPort                 1
-          Points                  [115, 0; 0, -675]
+          Points                  [115, 0; 0, -670]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 6
+          DstPort                 7
           #GUID                   abf44a27-234b-42c7-ab50-b71175e70700
         }
         Line {
@@ -4399,9 +4484,9 @@ Model {
         Line {
           SrcBlock                "userSend"
           SrcPort                 1
-          Points                  [445, 0; 0, -760]
+          Points                  [445, 0; 0, -755]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 17
+          DstPort                 18
           #GUID                   122c75f8-3715-4408-98d4-bd11b9f56227
         }
       }
@@ -4419,13 +4504,13 @@ Model {
 "53|Pin modes A0 to A7|Pin modes A8 to A15"
       MaskStyleString         "edit,edit,edit,edit,edit,edit,edit,edit,edit,ed"
 "it"
-      MaskCallbackString      "REXduino_mask_comPort = get_param(gcb,'comPort'"
-");\nREXduino_mask_comPort = sscanf(fliplr(REXduino_mask_comPort),'%u',1);\nif"
-" ( ~isempty(REXduino_mask_comPort) & (REXduino_mask_comPort<100) )\nset_param"
-"([gcb '/CNI_comPort'],'icn',fliplr(num2str(REXduino_mask_comPort)))\nelse\nse"
-"t_param([gcb '/CNI_comPort'],'icn','15')    \nend\nclear REXduino_mask_comPor"
-"t|||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "REXduino_mask_comPortNo = get_param(gcb,'comPor"
+"t');\nREXduino_mask_comPortNo = sscanf(fliplr(REXduino_mask_comPortNo),'%u',1)"
+";\nif ( ~isempty(REXduino_mask_comPortNo) & (REXduino_mask_comPortNo<100) )\ns"
+"et_param([gcb '/CNI_comPortNo'],'icn',fliplr(num2str(REXduino_mask_comPortNo))"
+")\nelse\nset_param([gcb '/CNI_comPortNo'],'icn','15')    \nend\nclear REXduino"
+"_mask_comPortNo|||||||||"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on"
       MaskVariables           "comPort=@1;pinmodes_00_07=@2;pinmodes_08_15=@3;"
@@ -4439,7 +4524,7 @@ Model {
       #GUID                   75c9ef59-58bd-4a65-9f6b-251f27fefb4f
       System {
         Name                    "Arduino_MEGA2560hex"
-        Location                [133, 104, 1014, 871]
+        Location                [226, 70, 1111, 941]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -4448,7 +4533,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "usletter"
         PaperUnits              "inches"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   acc8a2f9-9f66-4128-a696-4de8d95b7020
         Block {
@@ -4675,9 +4759,9 @@ Model {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI_comPort"
+          Name                    "CNI_comPortNo"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [240, 233, 265, 247]
+          Position                [230, 233, 255, 247]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     15
@@ -4706,7 +4790,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   fb77eb87-28cb-4611-90a4-ffe64b33a5da
             Block {
@@ -4826,7 +4909,7 @@ Model {
           BlockType               SubSystem
           Name                    "DI_decompose1"
           Ports                   [3, 5, 0, 0, 0]
-          Position                [630, 114, 750, 176]
+          Position                [630, 109, 750, 171]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -4845,7 +4928,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   98c15b3a-21cb-465c-9680-823e37cb7b88
             Block {
@@ -5362,7 +5444,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   fd0b8ea8-feb2-4b09-80f5-f2a2411b4ff1
             Block {
@@ -5905,7 +5986,7 @@ Model {
           BlockType               SubSystem
           Name                    "ERR_demux"
           Ports                   [1, 4, 0, 0, 0]
-          Position                [585, 342, 685, 388]
+          Position                [585, 337, 685, 383]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -5924,7 +6005,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   da90c578-2e26-4e99-8391-c453c1d4b0de
             Block {
@@ -6302,17 +6382,17 @@ Model {
         Block {
           BlockType               Reference
           Name                    "REXLANG_REXduino"
-          Ports                   [17, 17, 0, 0, 0]
-          Position                [365, 150, 415, 330]
+          Ports                   [18, 17, 0, 0, 0]
+          Position                [365, 145, 415, 325]
           SourceBlock             "speclib/REXLANG"
+          strs                    0
           SourceType              "REXLANG"
           tab_matlab              "MORE"
-          srcname                 "REXduino_master.stl"
-          srctype                 "1: STL"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
           stack                   0
           debug                   "1: No check"
-          fname                   "comPort"
-          p0                      0
+          p0                      "comPort"
           p1                      "pinmodes_00_07"
           p2                      "pinmodes_08_15"
           p3                      "pinmodes_16_23"
@@ -6353,7 +6433,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   94ae3642-ed4b-4209-8407-66145d51af5c
             Block {
@@ -6362,7 +6441,7 @@ Model {
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 40, 37]
               SourceBlock             "mathlib/CNI"
-              SourceType              "Unknown"
+              SourceType              "CNI"
               icn                     1
               #GUID                   58ec7816-7581-4cc2-896c-ef39a71bdca8
             }
@@ -6389,7 +6468,7 @@ Model {
           BlockType               Outport
           Name                    "comm_status"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 403, 765, 417]
+          Position                [735, 398, 765, 412]
           Port                    1
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6399,7 +6478,7 @@ Model {
           BlockType               Outport
           Name                    "err_code"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 343, 765, 357]
+          Position                [735, 338, 765, 352]
           Port                    2
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6409,7 +6488,7 @@ Model {
           BlockType               Outport
           Name                    "err_subcode"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 373, 765, 387]
+          Position                [735, 368, 765, 382]
           Port                    3
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6419,7 +6498,7 @@ Model {
           BlockType               Outport
           Name                    "DI_00_15"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 38, 845, 52]
+          Position                [815, 33, 845, 47]
           Port                    4
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6429,7 +6508,7 @@ Model {
           BlockType               Outport
           Name                    "DI_16_31"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 68, 845, 82]
+          Position                [815, 63, 845, 77]
           Port                    5
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6439,7 +6518,7 @@ Model {
           BlockType               Outport
           Name                    "DI_32_47"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 98, 845, 112]
+          Position                [815, 93, 845, 107]
           Port                    6
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6449,7 +6528,7 @@ Model {
           BlockType               Outport
           Name                    "DI_48_53"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 128, 845, 142]
+          Position                [815, 123, 845, 137]
           Port                    7
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6459,7 +6538,7 @@ Model {
           BlockType               Outport
           Name                    "DI_A0_A15"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [815, 158, 845, 172]
+          Position                [815, 153, 845, 167]
           Port                    8
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6469,7 +6548,7 @@ Model {
           BlockType               Outport
           Name                    "AI_00_02"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 193, 765, 207]
+          Position                [735, 188, 765, 202]
           Port                    9
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6479,7 +6558,7 @@ Model {
           BlockType               Outport
           Name                    "AI_03_05"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 223, 765, 237]
+          Position                [735, 218, 765, 232]
           Port                    10
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6489,7 +6568,7 @@ Model {
           BlockType               Outport
           Name                    "AI_06_08"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 253, 765, 267]
+          Position                [735, 248, 765, 262]
           Port                    11
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6499,7 +6578,7 @@ Model {
           BlockType               Outport
           Name                    "AI_09_11"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 283, 765, 297]
+          Position                [735, 278, 765, 292]
           Port                    12
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6509,7 +6588,7 @@ Model {
           BlockType               Outport
           Name                    "AI_12_14"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 313, 765, 327]
+          Position                [735, 308, 765, 322]
           Port                    13
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6519,7 +6598,7 @@ Model {
           BlockType               Outport
           Name                    "AI15"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 433, 765, 447]
+          Position                [735, 428, 765, 442]
           Port                    14
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6529,7 +6608,7 @@ Model {
           BlockType               Outport
           Name                    "OW_22_23_data_CNT2"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 463, 765, 477]
+          Position                [735, 458, 765, 472]
           Port                    15
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6539,7 +6618,7 @@ Model {
           BlockType               Outport
           Name                    "OW_24_25_data_CNT3"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 493, 765, 507]
+          Position                [735, 488, 765, 502]
           Port                    16
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6549,7 +6628,7 @@ Model {
           BlockType               Outport
           Name                    "OW_26_27_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 523, 765, 537]
+          Position                [735, 518, 765, 532]
           Port                    17
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6559,7 +6638,7 @@ Model {
           BlockType               Outport
           Name                    "OW_28_29_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 553, 765, 567]
+          Position                [735, 548, 765, 562]
           Port                    18
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6569,7 +6648,7 @@ Model {
           BlockType               Outport
           Name                    "OW_30_31_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 583, 765, 597]
+          Position                [735, 578, 765, 592]
           Port                    19
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6579,7 +6658,7 @@ Model {
           BlockType               Outport
           Name                    "OW_32_33_data"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 613, 765, 627]
+          Position                [735, 608, 765, 622]
           Port                    20
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6589,7 +6668,7 @@ Model {
           BlockType               Outport
           Name                    "userRecv"
           Ports                   [1, 0, 0, 0, 0]
-          Position                [735, 643, 765, 657]
+          Position                [735, 638, 765, 652]
           Port                    21
           OutputWhenDisabled      "held"
           InitialOutput           []
@@ -6624,11 +6703,11 @@ Model {
           #GUID                   b6c458c3-bbae-4253-81e7-79cb9ff9d1a0
         }
         Line {
-          SrcBlock                "CNI_comPort"
+          SrcBlock                "CNI_comPortNo"
           SrcPort                 1
-          Points                  [65, 0; 0, 20]
+          Points                  [75, 0; 0, 20]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 11
+          DstPort                 12
           #GUID                   f066f26d-3c15-4339-8dfb-d59209167d0e
         }
         Line {
@@ -6667,7 +6746,7 @@ Model {
           SrcPort                 1
           Points                  [20, 0; 0, -75]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 16
+          DstPort                 17
           #GUID                   934226f8-2105-4595-9fa6-2037966e886a
         }
         Line {
@@ -6753,7 +6832,7 @@ Model {
           SrcPort                 1
           Points                  [20, 0; 0, 55]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 2
+          DstPort                 3
           #GUID                   2716f7c1-63d0-4ed8-83ca-bc55e6d0c57a
         }
         Line {
@@ -6761,7 +6840,7 @@ Model {
           SrcPort                 2
           Points                  [10, 0; 0, 40]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 3
+          DstPort                 4
           #GUID                   8e023620-812f-4254-9dc4-0d9340bda322
         }
         Line {
@@ -6769,7 +6848,7 @@ Model {
           SrcPort                 3
           Points                  [0, 25]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 4
+          DstPort                 5
           #GUID                   aad3e699-b275-410a-984a-2d0b2ef9e6a7
         }
         Line {
@@ -6807,7 +6886,7 @@ Model {
           SrcBlock                "ISSW"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 12
+          DstPort                 13
           #GUID                   0bea1f2b-7d3a-4d18-8ba5-f42099834636
         }
         Line {
@@ -6836,14 +6915,14 @@ Model {
           SrcPort                 1
           Points                  [105, 0; 0, -410]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 15
+          DstPort                 16
           #GUID                   cba82668-1d63-4373-899f-6516c0ce7cb0
         }
         Line {
           SrcBlock                "PWM_02_05"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 5
+          DstPort                 6
           #GUID                   056cb9ab-e611-47b6-97fa-fbee6f47458f
         }
         Line {
@@ -6851,7 +6930,7 @@ Model {
           SrcPort                 1
           Points                  [80, 0; 0, -20]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 6
+          DstPort                 7
           #GUID                   047a419c-a4e2-4879-b8cd-4271a953233b
         }
         Line {
@@ -6859,7 +6938,7 @@ Model {
           SrcPort                 1
           Points                  [90, 0; 0, -40]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 7
+          DstPort                 8
           #GUID                   4c0e1f33-b53c-4cdd-a5b2-cb8c499f0fc0
         }
         Line {
@@ -6867,7 +6946,7 @@ Model {
           SrcPort                 1
           Points                  [100, 0; 0, -60]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 8
+          DstPort                 9
           #GUID                   6c0258f0-a5a9-490f-8333-7646e76adce8
         }
         Line {
@@ -7009,7 +7088,7 @@ Model {
           SrcPort                 1
           Points                  [195, 0; 0, -240]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 17
+          DstPort                 18
           #GUID                   b0a0d9b2-1d8b-4245-a32f-226b934c444f
         }
       }
@@ -7022,9 +7101,11 @@ Model {
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
-"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
-"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|P"
+"in 3 mode|Pin 3 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 5 mode|Pi"
+"n 5 mode|Pin 5 mode|Pin 5 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin"
+" 9 mode|Pin 9 mode|Pin 9 mode|Pin 9 mode|Pin 10 mode|Pin 10 mode|Pin 10 mode|P"
+"in 10 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
@@ -7059,18 +7140,18 @@ Model {
 "og input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Di"
 "gital input|4: Digital input with internal pull-up|5: --- N/A for this pin ---"
 "|6: Analog input|7: 1-Wire temperature)"
-      MaskCallbackString      "REXduino_mask_comPort = get_param(gcb,'comPort'"
-");\nREXduino_mask_comPort = sscanf(fliplr(REXduino_mask_comPort),'%u',1);\nif"
-" ( ~isempty(REXduino_mask_comPort) & (REXduino_mask_comPort<100) )\nset_param"
-"([gcb '/CNI_comPort'],'icn',fliplr(num2str(REXduino_mask_comPort)))\nelse\nse"
-"t_param([gcb '/CNI_comPort'],'icn','15')    \nend\nclear REXduino_mask_comPor"
-"t||||||||||||||"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "REXduino_mask_comPortNo = get_param(gcb,'comPor"
+"t');\nREXduino_mask_comPortNo = sscanf(fliplr(REXduino_mask_comPortNo),'%u',1)"
+";\nif ( ~isempty(REXduino_mask_comPortNo) & (REXduino_mask_comPortNo<100) )\ns"
+"et_param([gcb '/CNI_comPortNo'],'icn',fliplr(num2str(REXduino_mask_comPortNo))"
+")\nelse\nset_param([gcb '/CNI_comPortNo'],'icn','15')    \nend\nclear REXduino"
+"_mask_comPortNo||||||||||||||"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=@3;pinmode4=@4;"
-"pinmode5=@5;pinmode6=@6;pinmode9=@7;pinmode10=@8;pinmode11=@9;pinmodeA0=@10;pi"
-"nmodeA1=@11;pinmodeA2=@12;pinmodeA3=@13;pinmodeA4=@14;pinmodeA5=@15"
+      MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
+"pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
+"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15"
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
@@ -7091,14 +7172,13 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "usletter"
         PaperUnits              "inches"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   89c7a3a9-ea88-4e3e-847a-382bd8c7f2be
         Block {
           BlockType               Inport
           Name                    "DO2"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 103, 50, 117]
+          Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
           SampleTime              -1
@@ -7111,7 +7191,7 @@ Model {
           BlockType               Inport
           Name                    "DO3_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 133, 50, 147]
+          Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
           SampleTime              -1
@@ -7124,7 +7204,7 @@ Model {
           BlockType               Inport
           Name                    "DO4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 163, 50, 177]
+          Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
           SampleTime              -1
@@ -7137,7 +7217,7 @@ Model {
           BlockType               Inport
           Name                    "DO5_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 193, 50, 207]
+          Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
           SampleTime              -1
@@ -7150,7 +7230,7 @@ Model {
           BlockType               Inport
           Name                    "DO6_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 223, 50, 237]
+          Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
           SampleTime              -1
@@ -7163,7 +7243,7 @@ Model {
           BlockType               Inport
           Name                    "DO9_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 313, 50, 327]
+          Position                [20, 318, 50, 332]
           Port                    6
           PortWidth               -1
           SampleTime              -1
@@ -7176,7 +7256,7 @@ Model {
           BlockType               Inport
           Name                    "DO10_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 343, 50, 357]
+          Position                [20, 348, 50, 362]
           Port                    7
           PortWidth               -1
           SampleTime              -1
@@ -7189,7 +7269,7 @@ Model {
           BlockType               Inport
           Name                    "DO11_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 373, 50, 387]
+          Position                [20, 378, 50, 392]
           Port                    8
           PortWidth               -1
           SampleTime              -1
@@ -7202,7 +7282,7 @@ Model {
           BlockType               Inport
           Name                    "DO12"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 403, 50, 417]
+          Position                [20, 408, 50, 422]
           Port                    9
           PortWidth               -1
           SampleTime              -1
@@ -7215,7 +7295,7 @@ Model {
           BlockType               Inport
           Name                    "DO13"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 433, 50, 447]
+          Position                [20, 438, 50, 452]
           Port                    10
           PortWidth               -1
           SampleTime              -1
@@ -7228,7 +7308,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 463, 50, 477]
+          Position                [20, 468, 50, 482]
           Port                    11
           PortWidth               -1
           SampleTime              -1
@@ -7241,7 +7321,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 493, 50, 507]
+          Position                [20, 498, 50, 512]
           Port                    12
           PortWidth               -1
           SampleTime              -1
@@ -7390,7 +7470,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   526f34a3-9ba4-43ec-af99-cc86ed00260f
             Block {
@@ -7636,7 +7715,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   eb652d3a-c359-443f-afa0-a43c12b236c0
             Block {
@@ -7883,7 +7961,7 @@ Model {
           BlockType               Reference
           Name                    "BITOP_10"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [295, 268, 320, 292]
+          Position                [295, 273, 320, 297]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           iop                     "2: Bit OR"
@@ -8033,7 +8111,7 @@ Model {
           BlockType               Reference
           Name                    "CNI0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [425, 363, 445, 377]
+          Position                [425, 368, 445, 382]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     0
@@ -8043,7 +8121,7 @@ Model {
           BlockType               Reference
           Name                    "CNI1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [450, 373, 470, 387]
+          Position                [450, 378, 470, 392]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     1
@@ -8091,7 +8169,7 @@ Model {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI_comPort"
+          Name                    "CNI_comPortNo"
           Ports                   [0, 1, 0, 0, 0]
           Position                [490, 338, 515, 352]
           SourceBlock             "mathlib/CNI"
@@ -8122,7 +8200,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   45380440-440f-4c13-8a80-9ec2a007466a
             Block {
@@ -8260,7 +8337,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   1a204727-e2ef-4b25-94cb-2b12491dd1bc
             Block {
@@ -8594,7 +8670,7 @@ Model {
           BlockType               Reference
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
-          Position                [165, 42, 215, 508]
+          Position                [165, 47, 215, 513]
           SourceBlock             "logiclib/BMHEXD"
           SourceType              "BMHEXD"
           shift                   0
@@ -8604,7 +8680,7 @@ Model {
           BlockType               Reference
           Name                    "ISSW"
           Ports                   [3, 1, 0, 0, 0]
-          Position                [545, 363, 575, 397]
+          Position                [545, 368, 575, 402]
           SourceBlock             "logiclib/ISSW"
           SourceType              "ISSW"
           #GUID                   b3c83a5c-2703-456b-96ea-e7b3443bcd11
@@ -8678,17 +8754,17 @@ Model {
         Block {
           BlockType               Reference
           Name                    "REXLANG_REXduino"
-          Ports                   [17, 17, 0, 0, 0]
+          Ports                   [18, 17, 0, 0, 0]
           Position                [600, 260, 650, 440]
           SourceBlock             "speclib/REXLANG"
+          strs                    0
           SourceType              "REXLANG"
           tab_matlab              "MORE"
-          srcname                 "REXduino_master.stl"
-          srctype                 "1: STL"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
           stack                   0
           debug                   "1: No check"
-          fname                   "comPort"
-          p0                      0
+          p0                      "comPort"
           p1                      "pinmode2"
           p2                      "pinmode3"
           p3                      "pinmode4"
@@ -8710,7 +8786,7 @@ Model {
           BlockType               SubSystem
           Name                    "Simulation_Detector"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [475, 382, 490, 398]
+          Position                [475, 387, 490, 403]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -8729,7 +8805,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   90eaf7fa-53e3-40b9-b2be-cf71c8761dde
             Block {
@@ -8738,7 +8813,7 @@ Model {
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 40, 37]
               SourceBlock             "mathlib/CNI"
-              SourceType              "Unknown"
+              SourceType              "CNI"
               icn                     1
               #GUID                   ebff2b09-e566-4c46-a1f8-ffd23db9c885
             }
@@ -9165,31 +9240,31 @@ Model {
           SrcBlock                "BITOP_10"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 2
+          DstPort                 3
           #GUID                   362f34be-e2b6-4299-9951-3098b8261ae3
         }
         Line {
           SrcBlock                "BITOP_11"
           SrcPort                 1
-          Points                  [5, 0; 0, -545]
+          Points                  [5, 0; 0, -540]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 5
+          DstPort                 6
           #GUID                   da5afa77-1799-40c9-8c33-bf78d51b9ca8
         }
         Line {
           SrcBlock                "BITOP_12"
           SrcPort                 1
-          Points                  [15, 0; 0, -610]
+          Points                  [15, 0; 0, -605]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 6
+          DstPort                 7
           #GUID                   43e4a06d-5680-44c5-903f-2beb18668ed2
         }
         Line {
           SrcBlock                "BITOP_13"
           SrcPort                 1
-          Points                  [25, 0; 0, -680]
+          Points                  [25, 0; 0, -675]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 7
+          DstPort                 8
           #GUID                   d5f843e5-fe3b-4bd9-8221-405ef55854b7
         }
         Line {
@@ -9363,11 +9438,11 @@ Model {
           #GUID                   034314e8-6433-461a-afd4-e1ec46ea3fc7
         }
         Line {
-          SrcBlock                "CNI_comPort"
+          SrcBlock                "CNI_comPortNo"
           SrcPort                 1
           Points                  [65, 0]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 11
+          DstPort                 12
           #GUID                   ecaab517-57d3-4124-aeff-93e07159da98
         }
         Line {
@@ -9404,9 +9479,9 @@ Model {
         Line {
           SrcBlock                "CNT_mux"
           SrcPort                 1
-          Points                  [275, 0; 0, -700]
+          Points                  [275, 0; 0, -695]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 16
+          DstPort                 17
           #GUID                   4b9765fa-3be6-46db-ac95-95cabb0ddbe3
         }
         Line {
@@ -9415,7 +9490,7 @@ Model {
           Points                  [35, 0]
           #GUID                   f52e7882-8600-4e8c-abc8-302b1beae16a
           Branch {
-            Points                  [0, 650]
+            Points                  [0, 645]
             DstBlock                "BITOP_4"
             DstPort                 1
             #GUID                   8981c8e1-de55-4ea4-b3c5-8c561b7d328b
@@ -9432,7 +9507,7 @@ Model {
           Points                  [25, 0]
           #GUID                   5ebcce2a-42c5-4e20-940e-3b151ac6719e
           Branch {
-            Points                  [0, 660]
+            Points                  [0, 655]
             DstBlock                "BITOP_5"
             DstPort                 1
             #GUID                   ed4eba8b-97b4-4963-96f3-f64c92fe876b
@@ -9470,7 +9545,7 @@ Model {
           Points                  [75, 0]
           #GUID                   5ef024ff-99a2-4331-a9aa-ba45c5c3b611
           Branch {
-            Points                  [0, 700]
+            Points                  [0, 695]
             DstBlock                "BITOP"
             DstPort                 1
             #GUID                   7d8c376e-d3b3-4e03-b417-20af046606c8
@@ -9494,7 +9569,7 @@ Model {
           Points                  [65, 0]
           #GUID                   21cf908d-4ce9-471e-93c0-f57779d7e94c
           Branch {
-            Points                  [0, 680]
+            Points                  [0, 675]
             DstBlock                "BITOP_1"
             DstPort                 1
             #GUID                   2ed3073e-5586-49a1-a129-36fadeedf6c7
@@ -9511,7 +9586,7 @@ Model {
           Points                  [55, 0]
           #GUID                   8b63c031-3fca-4339-b6d6-6e3a09fd1581
           Branch {
-            Points                  [0, 690]
+            Points                  [0, 685]
             DstBlock                "BITOP_2"
             DstPort                 1
             #GUID                   852bad5e-8f32-42c1-beee-bf67b730f436
@@ -9528,7 +9603,7 @@ Model {
           Points                  [45, 0]
           #GUID                   677d2f32-93de-4da7-8def-a36c9d2b8780
           Branch {
-            Points                  [0, 640]
+            Points                  [0, 635]
             DstBlock                "BITOP_3"
             DstPort                 1
             #GUID                   7127b664-8408-41a6-ba63-7fd1df52d996
@@ -9699,7 +9774,7 @@ Model {
           SrcBlock                "ISSW"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 12
+          DstPort                 13
           #GUID                   011d5503-48d9-4e6c-9fe6-924652ffe3ae
         }
         Line {
@@ -9754,7 +9829,7 @@ Model {
         Line {
           SrcBlock                "OCTBM"
           SrcPort                 1
-          Points                  [35, 0; 0, -375]
+          Points                  [35, 0; 0, -370]
           DstBlock                "BITOP_10"
           DstPort                 2
           #GUID                   d4755f2a-e46c-4142-a757-b0d97b96c841
@@ -9762,9 +9837,9 @@ Model {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [200, 0; 0, -935]
+          Points                  [200, 0; 0, -930]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 15
+          DstPort                 16
           #GUID                   356c41ec-c358-407d-b3c0-362e26d8377c
         }
         Line {
@@ -9890,9 +9965,9 @@ Model {
         Line {
           SrcBlock                "userSend"
           SrcPort                 1
-          Points                  [445, 0; 0, -780]
+          Points                  [445, 0; 0, -775]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 17
+          DstPort                 18
           #GUID                   f8425cac-5295-4520-8032-d23c2ff84282
         }
       }
@@ -9908,13 +9983,13 @@ Model {
 "yUSB0 etc.|Pin modes 0 to 7 (0 and 1 ignored)|Pin modes 8 to 13|Pin modes A0 t"
 "o A5"
       MaskStyleString         "edit,edit,edit,edit"
-      MaskCallbackString      "REXduino_mask_comPort = get_param(gcb,'comPort'"
-");\nREXduino_mask_comPort = sscanf(fliplr(REXduino_mask_comPort),'%u',1);\nif"
-" ( ~isempty(REXduino_mask_comPort) & (REXduino_mask_comPort<100) )\nset_param"
-"([gcb '/CNI_comPort'],'icn',fliplr(num2str(REXduino_mask_comPort)))\nelse\nse"
-"t_param([gcb '/CNI_comPort'],'icn','15')    \nend\nclear REXduino_mask_comPor"
-"t|||"
       MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "REXduino_mask_comPortNo = get_param(gcb,'comPor"
+"t');\nREXduino_mask_comPortNo = sscanf(fliplr(REXduino_mask_comPortNo),'%u',1)"
+";\nif ( ~isempty(REXduino_mask_comPortNo) & (REXduino_mask_comPortNo<100) )\ns"
+"et_param([gcb '/CNI_comPortNo'],'icn',fliplr(num2str(REXduino_mask_comPortNo))"
+")\nelse\nset_param([gcb '/CNI_comPortNo'],'icn','15')    \nend\nclear REXduino"
+"_mask_comPortNo|||"
       MaskEnableString        "on,on,on,on"
       MaskVisibilityString    "on,on,on,on"
       MaskVariables           "comPort=@1;pinmodes_00_07=@2;pinmodes_08_13=@3;"
@@ -9936,14 +10011,13 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "usletter"
         PaperUnits              "inches"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   e529a425-9fc9-4ec5-a0f0-3d5ac02c126f
         Block {
           BlockType               Inport
           Name                    "DO2"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 103, 50, 117]
+          Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
           SampleTime              -1
@@ -9956,7 +10030,7 @@ Model {
           BlockType               Inport
           Name                    "DO3_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 133, 50, 147]
+          Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
           SampleTime              -1
@@ -9969,7 +10043,7 @@ Model {
           BlockType               Inport
           Name                    "DO4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 163, 50, 177]
+          Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
           SampleTime              -1
@@ -9982,7 +10056,7 @@ Model {
           BlockType               Inport
           Name                    "DO5_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 193, 50, 207]
+          Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
           SampleTime              -1
@@ -9995,7 +10069,7 @@ Model {
           BlockType               Inport
           Name                    "DO6_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 223, 50, 237]
+          Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
           SampleTime              -1
@@ -10008,7 +10082,7 @@ Model {
           BlockType               Inport
           Name                    "DO7"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 253, 50, 267]
+          Position                [20, 258, 50, 272]
           Port                    6
           PortWidth               -1
           SampleTime              -1
@@ -10021,7 +10095,7 @@ Model {
           BlockType               Inport
           Name                    "DO8"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 283, 50, 297]
+          Position                [20, 288, 50, 302]
           Port                    7
           PortWidth               -1
           SampleTime              -1
@@ -10034,7 +10108,7 @@ Model {
           BlockType               Inport
           Name                    "DO9_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 313, 50, 327]
+          Position                [20, 318, 50, 332]
           Port                    8
           PortWidth               -1
           SampleTime              -1
@@ -10047,7 +10121,7 @@ Model {
           BlockType               Inport
           Name                    "DO10_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 343, 50, 357]
+          Position                [20, 348, 50, 362]
           Port                    9
           PortWidth               -1
           SampleTime              -1
@@ -10060,7 +10134,7 @@ Model {
           BlockType               Inport
           Name                    "DO11_PWM"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 373, 50, 387]
+          Position                [20, 378, 50, 392]
           Port                    10
           PortWidth               -1
           SampleTime              -1
@@ -10073,7 +10147,7 @@ Model {
           BlockType               Inport
           Name                    "DO12"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 403, 50, 417]
+          Position                [20, 408, 50, 422]
           Port                    11
           PortWidth               -1
           SampleTime              -1
@@ -10086,7 +10160,7 @@ Model {
           BlockType               Inport
           Name                    "DO13"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 433, 50, 447]
+          Position                [20, 438, 50, 452]
           Port                    12
           PortWidth               -1
           SampleTime              -1
@@ -10099,7 +10173,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 463, 50, 477]
+          Position                [20, 468, 50, 482]
           Port                    13
           PortWidth               -1
           SampleTime              -1
@@ -10112,7 +10186,7 @@ Model {
           BlockType               Inport
           Name                    "DO_A1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [20, 493, 50, 507]
+          Position                [20, 498, 50, 512]
           Port                    14
           PortWidth               -1
           SampleTime              -1
@@ -10261,7 +10335,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   f6348c55-2eef-4a0d-a856-b254ad39bdbd
             Block {
@@ -10507,7 +10580,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   4c5009c2-ff7a-4237-a276-ae138f989a6f
             Block {
@@ -10754,7 +10826,7 @@ Model {
           BlockType               Reference
           Name                    "BITOP_10"
           Ports                   [2, 1, 0, 0, 0]
-          Position                [295, 268, 320, 292]
+          Position                [295, 273, 320, 297]
           SourceBlock             "logiclib/BITOP"
           SourceType              "BITOP"
           iop                     "2: Bit OR"
@@ -10904,7 +10976,7 @@ Model {
           BlockType               Reference
           Name                    "CNI0"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [420, 363, 440, 377]
+          Position                [420, 368, 440, 382]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     0
@@ -10914,7 +10986,7 @@ Model {
           BlockType               Reference
           Name                    "CNI1"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [445, 373, 465, 387]
+          Position                [445, 378, 465, 392]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     1
@@ -10962,9 +11034,9 @@ Model {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI_comPort"
+          Name                    "CNI_comPortNo"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [485, 338, 510, 352]
+          Position                [485, 343, 510, 357]
           SourceBlock             "mathlib/CNI"
           SourceType              "CNI"
           icn                     15
@@ -10993,7 +11065,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   9577a6e2-b7cc-40f4-8b03-a54ad54310fe
             Block {
@@ -11131,7 +11202,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "A4"
             PaperUnits              "centimeters"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   e392997f-e462-4fd4-b941-28dba78ed26c
             Block {
@@ -11465,7 +11535,7 @@ Model {
           BlockType               Reference
           Name                    "HEXDBM"
           Ports                   [16, 1, 0, 0, 0]
-          Position                [165, 42, 215, 508]
+          Position                [165, 47, 215, 513]
           SourceBlock             "logiclib/BMHEXD"
           SourceType              "BMHEXD"
           shift                   0
@@ -11475,7 +11545,7 @@ Model {
           BlockType               Reference
           Name                    "ISSW"
           Ports                   [3, 1, 0, 0, 0]
-          Position                [540, 363, 570, 397]
+          Position                [540, 368, 570, 402]
           SourceBlock             "logiclib/ISSW"
           SourceType              "ISSW"
           #GUID                   e02a09a5-6978-4468-866b-a46c02428c22
@@ -11549,17 +11619,17 @@ Model {
         Block {
           BlockType               Reference
           Name                    "REXLANG_REXduino"
-          Ports                   [17, 17, 0, 0, 0]
+          Ports                   [18, 17, 0, 0, 0]
           Position                [600, 260, 650, 440]
           SourceBlock             "speclib/REXLANG"
+          strs                    0
           SourceType              "REXLANG"
           tab_matlab              "MORE"
-          srcname                 "REXduino_master.stl"
-          srctype                 "1: STL"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
           stack                   0
           debug                   "1: No check"
-          fname                   "comPort"
-          p0                      0
+          p0                      "comPort"
           p1                      "pinmodes_00_07"
           p2                      "pinmodes_08_13"
           p3                      "pinmodes_A0_A5"
@@ -11581,7 +11651,7 @@ Model {
           BlockType               SubSystem
           Name                    "Simulation_Detector"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [470, 382, 485, 398]
+          Position                [470, 387, 485, 403]
           ShowPortLabels          on
           MaskType                "REX sequence"
           MaskIconFrame           on
@@ -11600,7 +11670,6 @@ Model {
             PaperPositionMode       "auto"
             PaperType               "usletter"
             PaperUnits              "inches"
-            ZoomFactor              100
             AutoZoom                on
             #GUID                   89ad6328-9478-4bf1-8ab6-3f1b1b73e0b4
             Block {
@@ -11609,7 +11678,7 @@ Model {
               Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 40, 37]
               SourceBlock             "mathlib/CNI"
-              SourceType              "Unknown"
+              SourceType              "CNI"
               icn                     1
               #GUID                   d304a2f8-a94c-4317-a7ef-7ee5dbda50ee
             }
@@ -12086,31 +12155,31 @@ Model {
           SrcBlock                "BITOP_10"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 2
+          DstPort                 3
           #GUID                   55ea6488-8a52-4f93-8cb7-a3d14a04ae11
         }
         Line {
           SrcBlock                "BITOP_11"
           SrcPort                 1
-          Points                  [5, 0; 0, -545]
+          Points                  [5, 0; 0, -540]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 5
+          DstPort                 6
           #GUID                   b79323db-96b4-464c-be3f-d090710b9a76
         }
         Line {
           SrcBlock                "BITOP_12"
           SrcPort                 1
-          Points                  [15, 0; 0, -610]
+          Points                  [15, 0; 0, -605]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 6
+          DstPort                 7
           #GUID                   04e1b869-f4c5-4c42-8ca3-e032381b796a
         }
         Line {
           SrcBlock                "BITOP_13"
           SrcPort                 1
-          Points                  [25, 0; 0, -680]
+          Points                  [25, 0; 0, -675]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 7
+          DstPort                 8
           #GUID                   d0247396-5aa7-4024-9023-7a8403d5a993
         }
         Line {
@@ -12284,11 +12353,11 @@ Model {
           #GUID                   d700d1d7-23b2-4af8-b0d2-f39d256c1dc6
         }
         Line {
-          SrcBlock                "CNI_comPort"
+          SrcBlock                "CNI_comPortNo"
           SrcPort                 1
           Points                  [65, 0; 0, 25]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 11
+          DstPort                 12
           #GUID                   f9e5830b-763f-4814-88c1-2910342f5643
         }
         Line {
@@ -12325,9 +12394,9 @@ Model {
         Line {
           SrcBlock                "CNT_mux"
           SrcPort                 1
-          Points                  [275, 0; 0, -700]
+          Points                  [275, 0; 0, -695]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 16
+          DstPort                 17
           #GUID                   99fc1a56-c0da-4c95-9366-ff73eb6c48c6
         }
         Line {
@@ -12336,7 +12405,7 @@ Model {
           Points                  [35, 0]
           #GUID                   9f621853-c131-4d75-aa63-9e08234140ab
           Branch {
-            Points                  [0, 650]
+            Points                  [0, 645]
             DstBlock                "BITOP_4"
             DstPort                 1
             #GUID                   0fa985b4-5eaf-446b-b5b2-6483e583bfe4
@@ -12353,7 +12422,7 @@ Model {
           Points                  [25, 0]
           #GUID                   6562ddf7-3e91-4db8-a654-b035cffa4624
           Branch {
-            Points                  [0, 660]
+            Points                  [0, 655]
             DstBlock                "BITOP_5"
             DstPort                 1
             #GUID                   c10f5425-b0a7-4973-82e1-a8d6887fe292
@@ -12391,7 +12460,7 @@ Model {
           Points                  [75, 0]
           #GUID                   89ae0bdf-a7f8-49fd-898e-9964028b0d28
           Branch {
-            Points                  [0, 700]
+            Points                  [0, 695]
             DstBlock                "BITOP"
             DstPort                 1
             #GUID                   afa95c45-9b0d-47c2-affa-bb79c9207736
@@ -12415,7 +12484,7 @@ Model {
           Points                  [65, 0]
           #GUID                   892ce094-1b0f-46af-b2b2-0eaf9ef349f1
           Branch {
-            Points                  [0, 680]
+            Points                  [0, 675]
             DstBlock                "BITOP_1"
             DstPort                 1
             #GUID                   557fc5a4-0962-4ae2-be2c-2714f0042615
@@ -12432,7 +12501,7 @@ Model {
           Points                  [55, 0]
           #GUID                   1f6ac0a7-8d07-46c2-95cb-b000a401fa71
           Branch {
-            Points                  [0, 690]
+            Points                  [0, 685]
             DstBlock                "BITOP_2"
             DstPort                 1
             #GUID                   61ad1aca-7b64-4f61-992f-b8973df58215
@@ -12463,7 +12532,7 @@ Model {
           Points                  [45, 0]
           #GUID                   dd568e6e-ea8a-415b-854d-5c0d28993ea5
           Branch {
-            Points                  [0, 640]
+            Points                  [0, 635]
             DstBlock                "BITOP_3"
             DstPort                 1
             #GUID                   6932c28d-b1d5-4a25-bd48-217e8fb9aa92
@@ -12648,7 +12717,7 @@ Model {
           SrcBlock                "ISSW"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
-          DstPort                 12
+          DstPort                 13
           #GUID                   b08fd6b4-03d5-4e59-a42b-bb53938e83d9
         }
         Line {
@@ -12703,7 +12772,7 @@ Model {
         Line {
           SrcBlock                "OCTBM"
           SrcPort                 1
-          Points                  [35, 0; 0, -375]
+          Points                  [35, 0; 0, -370]
           DstBlock                "BITOP_10"
           DstPort                 2
           #GUID                   4eeaa0e0-3ee2-43dc-a8a1-dcecddb1c123
@@ -12711,9 +12780,9 @@ Model {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [200, 0; 0, -935]
+          Points                  [200, 0; 0, -930]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 15
+          DstPort                 16
           #GUID                   19a5ccc9-27bd-49c1-880f-824766af50b8
         }
         Line {
@@ -12863,9 +12932,9 @@ Model {
         Line {
           SrcBlock                "userSend"
           SrcPort                 1
-          Points                  [445, 0; 0, -780]
+          Points                  [445, 0; 0, -775]
           DstBlock                "REXLANG_REXduino"
-          DstPort                 17
+          DstPort                 18
           #GUID                   cc43f083-6125-43a9-91f6-4bfb666da74a
         }
       }
@@ -12893,7 +12962,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   b09b33ab-98f6-4a9d-920b-fbdababce2c3
         Block {
@@ -13294,7 +13362,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   45e3bb4e-7fdb-40f3-b602-d23b02b231fe
         Block {
@@ -13499,7 +13566,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   52bf05d8-1248-468c-8798-956b2597a830
         Block {
@@ -13749,7 +13815,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   2cbe3d3e-eba1-4268-a552-977b3b94a86c
         Block {
@@ -13999,7 +14064,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   46048c52-a317-427e-88a5-bd854162246c
         Block {
@@ -14249,7 +14313,6 @@ Model {
         PaperPositionMode       "auto"
         PaperType               "A4"
         PaperUnits              "centimeters"
-        ZoomFactor              100
         AutoZoom                on
         #GUID                   38948651-6a7d-46a6-adc3-2f02aa420ca9
         Block {
@@ -14637,10 +14700,10 @@ Model {
       Position                [160, 135]
       Text                    "PWM range 0..255\n\nAnalog input (AI) range 0.."
 "1023\n\n1-Wire bus must be enabled in the REXduino slave\nto allow switching p"
-"ins to 1-Wire mode\nUncomment the line //#define USE1WIRE\n"
-"(OneWire library for Arduino will be required)\n\nMax 15 1-Wire"
-" devices per branch\n\nIf I2C is enabled in the REXduino slave, some pins \nmi"
-"ght be unusable\n\nSee REXduino.ino and REXduino_master.stl for error codes"
+"ins to 1-Wire mode\nUncomment the line //#define USE1WIRE\n(OneWire library fo"
+"r Arduino will be required)\n\nMax 15 1-Wire devices per branch\n\nIf I2C is e"
+"nabled in the REXduino slave, some pins \nmight be unusable\n\nSee REXduino.in"
+"o and REXduino_master.stl for error codes"
       HorizontalAlignment     "left"
       #GUID                   cf451a1b-98fa-4326-b759-20cbbd2958b3
     }
