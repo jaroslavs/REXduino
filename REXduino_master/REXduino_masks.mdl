@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Mon May 05 18:05:26 2014"
   ModelVersionFormat      "1.%<AutoIncrement:17>"
   ConfigurationManager    "None"
-  #RexVersion             "2.45.0 rev. 6445, Date 2016-04-28"
+  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -188,7 +188,7 @@ Model {
   LastModifiedDate        "Mon May 05 18:05:26 2014"
   ModelVersionFormat      "1.%<AutoIncrement:17>"
   ConfigurationManager    "None"
-  #RexVersion             "2.45.0 rev. 6445 - REXCONV, Date 2016-4-28"
+  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -221,7 +221,7 @@ Model {
   }
   System {
     Name                    "REXduino_masks"
-    Location                [81, 151, 879, 824]
+    Location                [13, 35, 811, 708]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -486,11 +486,11 @@ Model {
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|P"
-"in 3 mode|Pin 3 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 5 mode|Pi"
-"n 5 mode|Pin 5 mode|Pin 5 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin"
-" 9 mode|Pin 9 mode|Pin 9 mode|Pin 9 mode|Pin 10 mode|Pin 10 mode|Pin 10 mode|P"
-"in 10 mode"
+"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|P"
+"in 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pi"
+"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin"
+" 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin "
+"3 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
 "6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder),popup"
@@ -7101,11 +7101,11 @@ Model {
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
-"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|P"
-"in 3 mode|Pin 3 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 4 mode|Pin 5 mode|Pi"
-"n 5 mode|Pin 5 mode|Pin 5 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin 6 mode|Pin"
-" 9 mode|Pin 9 mode|Pin 9 mode|Pin 9 mode|Pin 10 mode|Pin 10 mode|Pin 10 mode|P"
-"in 10 mode"
+"yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|P"
+"in 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pi"
+"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin"
+" 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin "
+"3 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
