@@ -1,0 +1,400 @@
+Model {
+  Name                    "UNO_Generic_task"
+  Version                 3.00
+  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "UNO_Generic_task"
+    Location                [239, 34, 1222, 676]
+    #GUID                   6cbffdae-fa0b-4639-aaf9-84c5fceffc35
+    Block {
+      BlockType               Reference
+      Name                    "Arduino_UNO"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [295, 66, 440, 414]
+      SourceBlock             "REXduino_library/Arduino_UNO"
+      ShowPortLabels          on
+      comPort                 "/dev/ttyACM0"
+      pinmode2                "8: Counter"
+      pinmode3                "1: Not connected"
+      pinmode4                "10: Counter DIR / Encoder B"
+      pinmode5                "2: Digital output"
+      pinmode6                "1: Not connected"
+      pinmode9                "5: PWM (analog output)"
+      pinmode10               "1: Not connected"
+      pinmode11               "1: Not connected"
+      pinmodeA0               "6: Analog input"
+      pinmodeA1               "6: Analog input"
+      pinmodeA2               "6: Analog input"
+      pinmodeA3               "1: Not connected"
+      pinmodeA4               "1: Not connected"
+      pinmodeA5               "1: Not connected"
+      FontSize                10
+      #GUID                   80543c06-1657-4b26-98f1-6f70a90917ea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_DO13"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [160, 233, 175, 257]
+      SourceBlock             "genlib/BIS"
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.7"
+      t2                      "0.8"
+      t3                      "0.9"
+      t4                      1
+      t5                      0
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      FontSize                10
+      #GUID                   d47ec72d-f541-4503-8445-c7c7b84962fd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_CNT2_ENABLE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 348, 150, 362]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      YCN                     on
+      #GUID                   a2bb220f-fc67-4310-ad6a-ec7b757487a9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_CNT2_RESET"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 324, 150, 336]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      YCN                     off
+      #GUID                   56ce79e2-0de0-4be1-a78d-2b1f1ab4df44
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 126, 180, 144]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      YCN                     on
+      NamePlacement           ""
+      ShowName                on
+      FontSize                10
+      #GUID                   a97d2fd8-2131-4161-8127-027f13c30b0c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TRND_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [380, 549, 400, 561]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      YCN                     on
+      NamePlacement           ""
+      ShowName                on
+      #GUID                   d132707d-b119-4066-9e24-33dd2224ad78
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_PWM"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [155, 157, 180, 173]
+      SourceBlock             "mathlib/CNI"
+      SourceType              "CNI"
+      icn                     128
+      FontSize                10
+      #GUID                   e0e4bb7c-6079-47d3-9eac-9f4f7863046b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [470, 33, 550, 57]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bc3006ec-98d6-4899-b1ab-dad752171ed6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [565, 53, 645, 77]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   14b8b4bc-1789-4f03-8c9f-857d5b356412
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [565, 83, 645, 107]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3d5cbbe1-f950-482f-87b6-052403a5b273
+    }
+    Block {
+      BlockType               From
+      Name                    "From_1"
+      Position                [275, 538, 365, 552]
+      ShowName                off
+      GotoTag                 "CNT2"
+      #GUID                   ca45d83c-1727-4af9-9e67-797392a94ded
+    }
+    Block {
+      BlockType               From
+      Name                    "From_2"
+      Position                [180, 508, 270, 522]
+      ShowName                off
+      GotoTag                 "AI0"
+      #GUID                   72c3fa81-057a-4a3e-a066-dd461d54522a
+    }
+    Block {
+      BlockType               From
+      Name                    "From_3"
+      Position                [275, 518, 365, 532]
+      ShowName                off
+      GotoTag                 "AI1"
+      #GUID                   77830f0f-de2c-43b9-ac54-e05056c1c25a
+    }
+    Block {
+      BlockType               From
+      Name                    "From_7"
+      Position                [180, 528, 270, 542]
+      ShowName                off
+      GotoTag                 "AI2"
+      #GUID                   274fbe9c-c31e-4714-a736-c4c78f2577fe
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_1"
+      Position                [600, 268, 690, 282]
+      ShowName                off
+      GotoTag                 "AI1"
+      TagVisibility           "local"
+      #GUID                   e15a3de0-17a8-483e-9896-68f8619d8970
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_2"
+      Position                [495, 258, 585, 272]
+      ShowName                off
+      GotoTag                 "AI0"
+      TagVisibility           "local"
+      #GUID                   75000646-d9ef-4cfc-8973-ab5a91df0e94
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_3"
+      Position                [495, 278, 585, 292]
+      ShowName                off
+      GotoTag                 "AI2"
+      TagVisibility           "local"
+      #GUID                   c9872723-4756-456a-96de-5c9d85c24a85
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_4"
+      Position                [495, 318, 585, 332]
+      ShowName                off
+      GotoTag                 "CNT2"
+      TagVisibility           "local"
+      #GUID                   cb0cc485-b608-4294-ad5e-ac07b7a763c3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [450, 503, 495, 577]
+      SourceBlock             "arclib/TRND"
+      SourceType              "TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Data trend"
+      timesrc                 1
+      #GUID                   01c74909-1b31-4942-8d1f-d83fdfae7952
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 1
+      Points                  [5, 0; 0, -30]
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   6253810d-1c00-4b41-b867-8802416781ed
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 2
+      Points                  [15, 0; 0, -20]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   e183ecbd-069c-4422-a6ae-b561098ae638
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 3
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   a0edcd96-a2eb-49d3-9949-772cb4cee478
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 20
+      DstBlock                "Goto_2"
+      DstPort                 1
+      #GUID                   bc55eb52-612a-4999-9e5e-58add1ca318b
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 21
+      DstBlock                "Goto_1"
+      DstPort                 1
+      #GUID                   089d8e93-453c-4d3d-a128-552af60378a3
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 22
+      DstBlock                "Goto_3"
+      DstPort                 1
+      #GUID                   06094d80-41b9-4894-97bf-033ab2b9a4c0
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 26
+      DstBlock                "Goto_4"
+      DstPort                 1
+      #GUID                   89da8b95-a2c2-4248-9794-944abaeaf6d3
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_DO13"
+      SrcPort                 1
+      Points                  [100, 0]
+      DstBlock                "Arduino_UNO"
+      DstPort                 10
+      #GUID                   11a0ede8-2d1a-400d-ba80-1bd3bf01456d
+    }
+    Line {
+      SrcBlock                "CNB_CNT2_ENABLE"
+      SrcPort                 1
+      Points                  [40, 0; 0, -10]
+      DstBlock                "Arduino_UNO"
+      DstPort                 18
+      #GUID                   6a271185-fd2e-4fad-9b9e-a14c555a5406
+    }
+    Line {
+      SrcBlock                "CNB_CNT2_RESET"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 17
+      #GUID                   568e0456-5b7e-453d-84be-14f26ee775c9
+    }
+    Line {
+      SrcBlock                "CNB_DO5"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 4
+      #GUID                   4bbb5585-e995-408e-bad0-c06667802d06
+    }
+    Line {
+      SrcBlock                "CNB_TRND_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   d87b8eec-0f2e-4a05-99e0-2e2d07f7d473
+    }
+    Line {
+      SrcBlock                "CNI_PWM"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 6
+      #GUID                   33c79673-8d36-471e-ab43-ca69aba808dd
+    }
+    Line {
+      SrcBlock                "From_1"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   2fa7f48a-5f64-45da-bbce-d2f78a5cc868
+    }
+    Line {
+      SrcBlock                "From_2"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   c3b82f5c-f1ca-4993-a424-9d1c1918c9f8
+    }
+    Line {
+      SrcBlock                "From_3"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   639a9f9e-9a41-43d9-a7bc-90ac6f8cedef
+    }
+    Line {
+      SrcBlock                "From_7"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   248d51f2-f84b-4776-8818-1e14e29ae86b
+    }
+    Annotation {
+      Position                [455, 345]
+      Text                    "IF YOU WISH TO USE 1-WIRE TEMPERATURE SENSORS,\n"
+"YOU HAVE TO ENABLE IT IN THE REXDUINO SLAVE SKETCH\nFOR ARDUINO !!!\n\nREFER T"
+"O UNO_GenericOneWire EXAMPLE FOR MORE DETAILS."
+      FontWeight              "bold"
+      FontSize                16
+      BackgroundColor         "yellow"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   49466422-2e5a-4fbd-93cf-eb84c53f6de7
+    }
+  }
+}

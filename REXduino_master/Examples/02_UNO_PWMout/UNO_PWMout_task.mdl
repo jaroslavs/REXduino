@@ -1,0 +1,561 @@
+Model {
+  Name                    "UNO_PWMout_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "Jarda"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:87>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "Jarda"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:87>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "UNO_PWMout_task"
+    Location                [223, 34, 1137, 561]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   56b1ca65-dfbb-4cb8-9b4c-c53d1799e388
+    Block {
+      BlockType               Reference
+      Name                    "Arduino_UNO"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [465, 41, 610, 389]
+      SourceBlock             "REXduino_library/Arduino_UNO"
+      ShowPortLabels          on
+      comPort                 "/dev/ttyACM0"
+      pinmode2                "1: Not connected"
+      pinmode3                "1: Not connected"
+      pinmode4                "1: Not connected"
+      pinmode5                "5: PWM (analog output)"
+      pinmode6                "5: PWM (analog output)"
+      pinmode9                "5: PWM (analog output)"
+      pinmode10               "5: PWM (analog output)"
+      pinmode11               "5: PWM (analog output)"
+      pinmodeA0               "1: Not connected"
+      pinmodeA1               "1: Not connected"
+      pinmodeA2               "1: Not connected"
+      pinmodeA3               "1: Not connected"
+      pinmodeA4               "1: Not connected"
+      pinmodeA5               "1: Not connected"
+      FontSize                10
+      #GUID                   8334a188-f6a9-4143-838c-dbeedd53193e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR1"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [225, 103, 255, 127]
+      SourceBlock             "analoglib/CNDR"
+      n                       4
+      SATF                    on
+      up                      [-1 -0.6 0.6 1]
+      yp                      [255 0 0 255]
+      #GUID                   60a195f3-08cf-4ebc-b44f-629a86c99adf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR2"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [225, 148, 255, 172]
+      SourceBlock             "analoglib/CNDR"
+      n                       3
+      SATF                    on
+      up                      [-1 -0.6 -0.2]
+      yp                      [0 255 0]
+      #GUID                   3dd61f9c-4596-46a7-afc1-057d3d2dd8c8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR3"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [225, 193, 255, 217]
+      SourceBlock             "analoglib/CNDR"
+      n                       3
+      SATF                    on
+      up                      [-0.6 -0.2 0.2]
+      yp                      [0 255 0]
+      #GUID                   6712d850-8589-46ff-ad2a-1f554fbfa45a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR4"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [225, 238, 255, 262]
+      SourceBlock             "analoglib/CNDR"
+      n                       3
+      SATF                    on
+      up                      [-0.2 0.2 0.6]
+      yp                      [0 255 0]
+      #GUID                   d6d38d31-15cd-42e0-9685-d1b32c870a64
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR5"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [225, 283, 255, 307]
+      SourceBlock             "analoglib/CNDR"
+      n                       3
+      SATF                    on
+      up                      [0.2 0.6 1]
+      yp                      [0 255 0]
+      #GUID                   cd6cd010-7cd7-4807-8ba9-82a3c2a36474
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [650, 8, 730, 32]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b518c2ff-96ea-4834-97b6-49e6e49df858
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [745, 28, 825, 52]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   ca7d927e-58a2-4ae1-9073-c0952f98b2a6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [745, 58, 825, 82]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bc08a70f-28a9-4b1a-beba-c084c859902c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [340, 103, 365, 117]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   d863df14-931f-4155-a9be-071443ee214f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [340, 148, 365, 162]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   aa6414e3-299d-4f03-8974-609601d3716f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [340, 193, 365, 207]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   db96f3cf-3ec6-48db-bd24-b2b734a5a522
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [340, 238, 365, 252]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   c8310ff8-82c5-4ae3-aea4-8f49752de7d3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [340, 283, 365, 297]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   68f9b3c8-160a-42a4-9327-c4967e093cd8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 108, 50, 122]
+      SourceBlock             "genlib/SG"
+      isig                    "3: SAWTOOTH"
+      amp                     1
+      freq                    2
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  0
+      #GUID                   3b8666b3-8300-4766-b73e-6944b975b99f
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 1
+      Points                  [10, 0; 0, -30]
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   f4f4eff7-4d41-409a-aa26-b5fe88e0ec4c
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 2
+      Points                  [25, 0; 0, -20]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   e73832fc-b2b7-433f-a1f4-8adc609dc778
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 3
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   af52e13e-1a86-457a-b310-1f0a6c445a5e
+    }
+    Line {
+      SrcBlock                "CNDR1"
+      SrcPort                 1
+      DstBlock                "RTOI1"
+      DstPort                 1
+      #GUID                   4bfc1595-d7ad-4d33-b50e-930089f6bfb4
+    }
+    Line {
+      SrcBlock                "CNDR2"
+      SrcPort                 1
+      DstBlock                "RTOI2"
+      DstPort                 1
+      #GUID                   e2287a79-b4ea-4a7a-b7c4-e497802c43cd
+    }
+    Line {
+      SrcBlock                "CNDR3"
+      SrcPort                 1
+      DstBlock                "RTOI3"
+      DstPort                 1
+      #GUID                   9f825d62-c5a8-44c3-bc5e-7b2cb0538939
+    }
+    Line {
+      SrcBlock                "CNDR4"
+      SrcPort                 1
+      DstBlock                "RTOI4"
+      DstPort                 1
+      #GUID                   0cf12759-a39a-4905-8b16-c197d4900d22
+    }
+    Line {
+      SrcBlock                "CNDR5"
+      SrcPort                 1
+      DstBlock                "RTOI5"
+      DstPort                 1
+      #GUID                   575ef689-66db-4210-a145-6fd0dc4f76f1
+    }
+    Line {
+      SrcBlock                "RTOI1"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 4
+      #GUID                   b601a5fd-95c2-4d2f-8815-4581a103db6d
+    }
+    Line {
+      SrcBlock                "RTOI2"
+      SrcPort                 1
+      Points                  [15, 0; 0, -30]
+      DstBlock                "Arduino_UNO"
+      DstPort                 5
+      #GUID                   b0722503-552d-4d8a-86c1-4976591d40ad
+    }
+    Line {
+      SrcBlock                "RTOI3"
+      SrcPort                 1
+      Points                  [25, 0; 0, -60]
+      DstBlock                "Arduino_UNO"
+      DstPort                 6
+      #GUID                   f5305dd0-5fd4-4848-8492-4458fa6eb480
+    }
+    Line {
+      SrcBlock                "RTOI4"
+      SrcPort                 1
+      Points                  [35, 0; 0, -90]
+      DstBlock                "Arduino_UNO"
+      DstPort                 7
+      #GUID                   f7657796-e78f-47f9-b6f7-ca004d79ad71
+    }
+    Line {
+      SrcBlock                "RTOI5"
+      SrcPort                 1
+      Points                  [45, 0; 0, -120]
+      DstBlock                "Arduino_UNO"
+      DstPort                 8
+      #GUID                   d1e7d8b9-749b-4135-bade-70078530625f
+    }
+    Line {
+      SrcBlock                "SG"
+      SrcPort                 1
+      Points                  [105, 0]
+      #GUID                   bbd288ed-b5b3-4f56-80ba-a51e6a0094ee
+      Branch {
+        DstBlock                "CNDR1"
+        DstPort                 1
+        #GUID                   4360a7c1-0fc0-412a-a09f-957752c86497
+      }
+      Branch {
+        Points                  [0, 45]
+        #GUID                   844a9651-4107-4c8e-b21f-7e1b7112cdc0
+        Branch {
+          DstBlock                "CNDR2"
+          DstPort                 1
+          #GUID                   5e95ccc8-bbdb-4430-aa70-653291e2e231
+        }
+        Branch {
+          Points                  [0, 45]
+          #GUID                   8d998578-de1b-466f-b736-1a3d9f7afea1
+          Branch {
+            DstBlock                "CNDR3"
+            DstPort                 1
+            #GUID                   6f3252a8-13a2-4982-9730-792db10da2d7
+          }
+          Branch {
+            Points                  [0, 45]
+            #GUID                   5fb3f6af-1508-4722-873d-539610060d1c
+            Branch {
+              DstBlock                "CNDR4"
+              DstPort                 1
+              #GUID                   7a5730c6-ab6d-4157-9d14-f7725c112da1
+            }
+            Branch {
+              Points                  [0, 45]
+              DstBlock                "CNDR5"
+              DstPort                 1
+              #GUID                   4ef516cc-edac-4d3a-a474-8801b3b9ee25
+            }
+          }
+        }
+      }
+    }
+    Annotation {
+      Position                [30, 445]
+      Text                    "See UNO_PWMout.png for wiring diagram.\n\nSee U"
+"NO_PWMout.avi for video."
+      FontWeight              "bold"
+      FontSize                16
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   4dd9f964-c5e4-415d-8889-d849e4e1b4d4
+    }
+  }
+}

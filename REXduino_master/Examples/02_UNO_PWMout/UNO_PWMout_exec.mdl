@@ -1,5 +1,5 @@
 Model {
-  Name                    "X_UNO_PWMout_exec"
+  Name                    "UNO_PWMout_exec"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:32:01 2013"
   ModelVersionFormat      "1.%<AutoIncrement:50>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
+  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -195,7 +195,7 @@ Model {
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -208,7 +208,7 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -220,8 +220,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "X_UNO_PWMout_exec"
-    Location                [12, 31, 202, 339]
+    Name                    "UNO_PWMout_exec"
+    Location                [12, 34, 202, 342]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -235,12 +235,12 @@ Model {
     #GUID                   63c7994b-3fc3-4f92-9bb1-30218746ab4a
     Block {
       BlockType               Reference
-      Name                    "EXEC_1"
+      Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
       Position                [10, 10, 55, 270]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
-      target                  "PC - Linux"
+      target                  "Generic target device"
       tick                    "0.01"
       ntick0                  2
       ntick1                  12
@@ -250,11 +250,12 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
+      FontSize                10
       #GUID                   3f932883-bab7-425a-a354-dd3921bb557a
     }
     Block {
       BlockType               Reference
-      Name                    "X_UNO_PWMout_task"
+      Name                    "UNO_PWMout_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [100, 147, 150, 163]
       SourceBlock             "execlib/TASK"
@@ -266,12 +267,13 @@ Model {
       filename                ""
       MDLOPEN                 on
       bEdit                   off
+      FontSize                10
       #GUID                   5e3a4ae0-7321-4050-aedc-1e37b156bede
     }
     Line {
-      SrcBlock                "EXEC_1"
+      SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "X_UNO_PWMout_task"
+      DstBlock                "UNO_PWMout_task"
       DstPort                 1
       #GUID                   045e8092-5517-46ae-95cd-17b385aee420
     }

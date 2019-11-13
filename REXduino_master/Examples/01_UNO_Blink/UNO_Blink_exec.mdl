@@ -1,5 +1,5 @@
 Model {
-  Name                    "X_MEGA2560hex_OneWire_exec"
+  Name                    "UNO_Blink_exec"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -91,10 +91,10 @@ Model {
   ModifiedByFormat        "%<Auto>"
   LastModifiedBy          "XPMUser"
   ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:35:33 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:49>"
+  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:50>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
+  #RexVersion             "2.50.10 rev. 11179, Date 2019-11-10"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -185,8 +185,196 @@ Model {
   ModifiedByFormat        "%<Auto>"
   LastModifiedBy          "XPMUser"
   ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:35:33 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:49>"
+  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:50>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.45.0 rev. 6445 - REXCONV, Date 2016-4-28"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Wed May 20 15:02:02 2009"
+  Creator                 "ojezek"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:50>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Wed May 20 15:02:02 2009"
+  Creator                 "ojezek"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:50>"
   ConfigurationManager    "None"
   #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
   SavedCharacterEncoding  "UTF-8"
@@ -195,7 +383,7 @@ Model {
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -208,7 +396,7 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -220,8 +408,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "X_MEGA2560hex_OneWire_exec"
-    Location                [10, 30, 255, 376]
+    Name                    "UNO_Blink_exec"
+    Location                [11, 33, 192, 341]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -232,15 +420,15 @@ Model {
     PaperUnits              "centimeters"
     AutoZoom                on
     ReportName              "simulink-default.rpt"
-    #GUID                   1b73db3d-389a-4e0d-a8d6-1238169a6cc4
+    #GUID                   63c7994b-3fc3-4f92-9bb1-30218746ab4a
     Block {
       BlockType               Reference
-      Name                    "EXEC_1"
+      Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
       Position                [10, 10, 55, 270]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
-      target                  "PC - Windows"
+      target                  "Generic target device"
       tick                    "0.05"
       ntick0                  2
       ntick1                  12
@@ -250,13 +438,14 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   03696ac2-e4da-4bc8-8be0-7232cc634eab
+      FontSize                10
+      #GUID                   3f932883-bab7-425a-a354-dd3921bb557a
     }
     Block {
       BlockType               Reference
-      Name                    "X_MEGA2560hex_OneWire_task"
+      Name                    "UNO_Blink_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [130, 147, 180, 163]
+      Position                [100, 147, 150, 163]
       SourceBlock             "execlib/TASK"
       SourceType              "TASK"
       factor                  1
@@ -266,16 +455,15 @@ Model {
       filename                ""
       MDLOPEN                 on
       bEdit                   off
-      NamePlacement           ""
-      ShowName                on
-      #GUID                   0a6e2b0b-db0a-4bf2-af37-eee605f1212a
+      FontSize                10
+      #GUID                   5e3a4ae0-7321-4050-aedc-1e37b156bede
     }
     Line {
-      SrcBlock                "EXEC_1"
+      SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "X_MEGA2560hex_OneWire_task"
+      DstBlock                "UNO_Blink_task"
       DstPort                 1
-      #GUID                   3654cad9-52e7-4ed7-97aa-91d0bd80bcf5
+      #GUID                   045e8092-5517-46ae-95cd-17b385aee420
     }
   }
 }
