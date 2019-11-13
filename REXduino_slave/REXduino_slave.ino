@@ -30,12 +30,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **************************************************************************/
 
 #define MAJORVERSION 1
-#define MINORVERSION 4 //even number = release, odd number = development
-#define REVISION 0 //for hotfixes, even number = hotfix applied, odd number = development
+#define MINORVERSION 5 //even number = release, odd number = development
+#define REVISION 1 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
-#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
-#define USEI2C //uncomment this line to use I2C bus
+//#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
+//#define USEI2C //uncomment this line to use I2C bus
 
 // uncomment the line below to use watchdog timer (8s by default, see the setup() section)
 //     - works on Arduino UNO R2, R3
@@ -525,11 +525,3 @@ void loop()
     command_data_length = 0;
   }
 } //end loop
-
-
-
-
-
-
-
-
