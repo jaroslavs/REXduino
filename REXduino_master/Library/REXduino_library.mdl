@@ -1,5 +1,5 @@
-Model {
-  Name                    "REXduino_masks"
+Library {
+  Name                    "REXduino_library"
   Version                 3.00
   SimParamPage            "Solver"
   SampleTimeColors        off
@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Mon May 05 18:05:26 2014"
   ModelVersionFormat      "1.%<AutoIncrement:17>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
+  #RexVersion             "2.50.10 rev. 11179, Date 2019-11-10"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -195,7 +195,7 @@ Model {
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -208,7 +208,7 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -220,7 +220,7 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "REXduino_masks"
+    Name                    "REXduino_library"
     Location                [13, 35, 811, 708]
     Open                    on
     ModelBrowserVisibility  off
@@ -261,7 +261,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "AI_data"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [10, 23, 40, 37]
           Port                    1
           PortWidth               -1
@@ -344,7 +343,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AIa"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [325, 28, 355, 42]
           Port                    1
           OutputWhenDisabled      "held"
@@ -354,7 +352,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AIb"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [325, 108, 355, 122]
           Port                    2
           OutputWhenDisabled      "held"
@@ -364,7 +361,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AIc"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [325, 173, 355, 187]
           Port                    3
           OutputWhenDisabled      "held"
@@ -488,9 +484,9 @@ Model {
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|P"
 "in 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pi"
-"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin"
-" 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin "
-"3 mode"
+"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin"
+" 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin "
+"2 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
 "6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder),popup"
@@ -562,7 +558,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO2_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
@@ -575,7 +570,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO3_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
@@ -588,7 +582,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO4_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
@@ -601,7 +594,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO5_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
@@ -614,7 +606,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO6_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
@@ -627,7 +618,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO9_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 318, 50, 332]
           Port                    6
           PortWidth               -1
@@ -640,7 +630,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO10_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 348, 50, 362]
           Port                    7
           PortWidth               -1
@@ -653,7 +642,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO11_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 378, 50, 392]
           Port                    8
           PortWidth               -1
@@ -666,7 +654,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO12"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 408, 50, 422]
           Port                    9
           PortWidth               -1
@@ -679,7 +666,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO13"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 438, 50, 452]
           Port                    10
           PortWidth               -1
@@ -692,7 +678,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A0"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 468, 50, 482]
           Port                    11
           PortWidth               -1
@@ -705,7 +690,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A1"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 498, 50, 512]
           Port                    12
           PortWidth               -1
@@ -718,7 +702,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A2"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 548, 50, 562]
           Port                    13
           PortWidth               -1
@@ -731,7 +714,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A3"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 578, 50, 592]
           Port                    14
           PortWidth               -1
@@ -744,7 +726,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A4"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 608, 50, 622]
           Port                    15
           PortWidth               -1
@@ -757,7 +738,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A5"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 638, 50, 652]
           Port                    16
           PortWidth               -1
@@ -770,7 +750,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [35, 1063, 65, 1077]
           Port                    17
           PortWidth               -1
@@ -783,7 +762,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [35, 1093, 65, 1107]
           Port                    18
           PortWidth               -1
@@ -796,7 +774,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [35, 1123, 65, 1137]
           Port                    19
           PortWidth               -1
@@ -809,7 +786,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [35, 1153, 65, 1167]
           Port                    20
           PortWidth               -1
@@ -822,7 +798,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "userSend"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [35, 1183, 65, 1197]
           Port                    21
           PortWidth               -1
@@ -860,7 +835,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -943,7 +917,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -953,7 +926,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -963,7 +935,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -1105,7 +1076,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -1188,7 +1158,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -1198,7 +1167,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -1208,7 +1176,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -1350,7 +1317,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -1433,7 +1399,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -1443,7 +1408,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -1453,7 +1417,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -1655,7 +1618,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
               Port                    1
               PortWidth               -1
@@ -1668,7 +1630,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 53, 50, 67]
               Port                    2
               PortWidth               -1
@@ -1681,7 +1642,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 78, 50, 92]
               Port                    3
               PortWidth               -1
@@ -1694,7 +1654,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 103, 50, 117]
               Port                    4
               PortWidth               -1
@@ -1717,7 +1676,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "cntCmd"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [215, 58, 245, 72]
               Port                    1
               OutputWhenDisabled      "held"
@@ -1792,7 +1750,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -1925,7 +1882,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_code"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 93, 440, 107]
               Port                    1
               OutputWhenDisabled      "held"
@@ -1935,7 +1891,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_subcode"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 28, 440, 42]
               Port                    2
               OutputWhenDisabled      "held"
@@ -1945,7 +1900,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "status"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
               Port                    3
               OutputWhenDisabled      "held"
@@ -1955,7 +1909,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 203, 440, 217]
               Port                    4
               OutputWhenDisabled      "held"
@@ -2229,7 +2182,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata1"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 13, 85, 27]
               Port                    1
               PortWidth               -1
@@ -2242,7 +2194,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata2"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 68, 85, 82]
               Port                    2
               PortWidth               -1
@@ -2255,7 +2206,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata3"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 108, 85, 122]
               Port                    3
               PortWidth               -1
@@ -2268,7 +2218,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata4"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 148, 85, 162]
               Port                    4
               PortWidth               -1
@@ -2421,7 +2370,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "PWM_data"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [380, 83, 410, 97]
               Port                    1
               OutputWhenDisabled      "held"
@@ -2619,7 +2567,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata1"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 13, 85, 27]
               Port                    1
               PortWidth               -1
@@ -2632,7 +2579,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata2"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 68, 85, 82]
               Port                    2
               PortWidth               -1
@@ -2645,7 +2591,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata3"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 108, 85, 122]
               Port                    3
               PortWidth               -1
@@ -2658,7 +2603,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata4"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 148, 85, 162]
               Port                    4
               PortWidth               -1
@@ -2811,7 +2755,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "PWM_data"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [380, 83, 410, 97]
               Port                    1
               OutputWhenDisabled      "held"
@@ -3009,7 +2952,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata1"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 13, 85, 27]
               Port                    1
               PortWidth               -1
@@ -3022,7 +2964,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata2"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 68, 85, 82]
               Port                    2
               PortWidth               -1
@@ -3035,7 +2976,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata3"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 108, 85, 122]
               Port                    3
               PortWidth               -1
@@ -3048,7 +2988,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "PWMdata4"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [55, 148, 85, 162]
               Port                    4
               PortWidth               -1
@@ -3201,7 +3140,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "PWM_data"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [380, 83, 410, 97]
               Port                    1
               OutputWhenDisabled      "held"
@@ -3440,7 +3378,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "Y"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [65, 23, 95, 37]
               Port                    1
               OutputWhenDisabled      "held"
@@ -3459,7 +3396,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1193, 1100, 1207]
           Port                    1
           OutputWhenDisabled      "held"
@@ -3469,7 +3405,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_code"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1133, 1100, 1147]
           Port                    2
           OutputWhenDisabled      "held"
@@ -3479,7 +3414,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_subcode"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1163, 1100, 1177]
           Port                    3
           OutputWhenDisabled      "held"
@@ -3489,7 +3423,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 108, 1040, 122]
           Port                    4
           OutputWhenDisabled      "held"
@@ -3499,7 +3432,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 138, 1040, 152]
           Port                    5
           OutputWhenDisabled      "held"
@@ -3509,7 +3441,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 168, 1040, 182]
           Port                    6
           OutputWhenDisabled      "held"
@@ -3519,7 +3450,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 198, 1040, 212]
           Port                    7
           OutputWhenDisabled      "held"
@@ -3529,7 +3459,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI6"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 228, 1040, 242]
           Port                    8
           OutputWhenDisabled      "held"
@@ -3539,7 +3468,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI7"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 258, 1040, 272]
           Port                    9
           OutputWhenDisabled      "held"
@@ -3549,7 +3477,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI8"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 288, 1040, 302]
           Port                    10
           OutputWhenDisabled      "held"
@@ -3559,7 +3486,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI9"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 318, 1040, 332]
           Port                    11
           OutputWhenDisabled      "held"
@@ -3569,7 +3495,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI10"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 348, 1040, 362]
           Port                    12
           OutputWhenDisabled      "held"
@@ -3579,7 +3504,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI11"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 378, 1040, 392]
           Port                    13
           OutputWhenDisabled      "held"
@@ -3589,7 +3513,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 468, 1040, 482]
           Port                    14
           OutputWhenDisabled      "held"
@@ -3599,7 +3522,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 498, 1040, 512]
           Port                    15
           OutputWhenDisabled      "held"
@@ -3609,7 +3531,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 543, 1040, 557]
           Port                    16
           OutputWhenDisabled      "held"
@@ -3619,7 +3540,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 573, 1040, 587]
           Port                    17
           OutputWhenDisabled      "held"
@@ -3629,7 +3549,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 603, 1040, 617]
           Port                    18
           OutputWhenDisabled      "held"
@@ -3639,7 +3558,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1010, 633, 1040, 647]
           Port                    19
           OutputWhenDisabled      "held"
@@ -3649,7 +3567,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 798, 1105, 812]
           Port                    20
           OutputWhenDisabled      "held"
@@ -3659,7 +3576,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 823, 1105, 837]
           Port                    21
           OutputWhenDisabled      "held"
@@ -3669,7 +3585,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 848, 1105, 862]
           Port                    22
           OutputWhenDisabled      "held"
@@ -3679,7 +3594,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 873, 1105, 887]
           Port                    23
           OutputWhenDisabled      "held"
@@ -3689,7 +3603,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 898, 1105, 912]
           Port                    24
           OutputWhenDisabled      "held"
@@ -3699,7 +3612,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 923, 1105, 937]
           Port                    25
           OutputWhenDisabled      "held"
@@ -3709,7 +3621,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI6"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 953, 1105, 967]
           Port                    26
           OutputWhenDisabled      "held"
@@ -3719,7 +3630,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI7"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1075, 978, 1105, 992]
           Port                    27
           OutputWhenDisabled      "held"
@@ -3729,7 +3639,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1058, 1100, 1072]
           Port                    28
           OutputWhenDisabled      "held"
@@ -3739,7 +3648,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1088, 1100, 1102]
           Port                    29
           OutputWhenDisabled      "held"
@@ -3749,7 +3657,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_2_3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1248, 1100, 1262]
           Port                    30
           OutputWhenDisabled      "held"
@@ -3759,7 +3666,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_4_5_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1278, 1100, 1292]
           Port                    31
           OutputWhenDisabled      "held"
@@ -3769,7 +3675,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_6_9_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1308, 1100, 1322]
           Port                    32
           OutputWhenDisabled      "held"
@@ -3779,7 +3684,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_10_11_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1338, 1100, 1352]
           Port                    33
           OutputWhenDisabled      "held"
@@ -3789,7 +3693,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A0_A1_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1368, 1100, 1382]
           Port                    34
           OutputWhenDisabled      "held"
@@ -3799,7 +3702,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A2_A3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1398, 1100, 1412]
           Port                    35
           OutputWhenDisabled      "held"
@@ -3809,7 +3711,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "userRecv"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1070, 1428, 1100, 1442]
           Port                    36
           OutputWhenDisabled      "held"
@@ -4538,7 +4439,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_00_15"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 58, 55, 72]
           Port                    1
           PortWidth               -1
@@ -4551,7 +4451,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_16_31"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 88, 55, 102]
           Port                    2
           PortWidth               -1
@@ -4564,7 +4463,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_32_47"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 113, 55, 127]
           Port                    3
           PortWidth               -1
@@ -4577,7 +4475,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_48_53"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 138, 55, 152]
           Port                    4
           PortWidth               -1
@@ -4590,7 +4487,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A0_A15"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 163, 55, 177]
           Port                    5
           PortWidth               -1
@@ -4603,7 +4499,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWM_02_05"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 193, 55, 207]
           Port                    6
           PortWidth               -1
@@ -4616,7 +4511,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWM_06_09"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 223, 55, 237]
           Port                    7
           PortWidth               -1
@@ -4629,7 +4523,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWM_10_13"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 253, 55, 267]
           Port                    8
           PortWidth               -1
@@ -4642,7 +4535,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWM_44_46"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 283, 55, 297]
           Port                    9
           PortWidth               -1
@@ -4655,7 +4547,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 343, 55, 357]
           Port                    10
           PortWidth               -1
@@ -4668,7 +4559,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 373, 55, 387]
           Port                    11
           PortWidth               -1
@@ -4681,7 +4571,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 403, 55, 417]
           Port                    12
           PortWidth               -1
@@ -4694,7 +4583,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 433, 55, 447]
           Port                    13
           PortWidth               -1
@@ -4707,7 +4595,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "userSend"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [25, 553, 55, 567]
           Port                    14
           PortWidth               -1
@@ -4795,7 +4682,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
               Port                    1
               PortWidth               -1
@@ -4808,7 +4694,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 53, 50, 67]
               Port                    2
               PortWidth               -1
@@ -4821,7 +4706,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 78, 50, 92]
               Port                    3
               PortWidth               -1
@@ -4834,7 +4718,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 103, 50, 117]
               Port                    4
               PortWidth               -1
@@ -4858,7 +4741,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "cntCmd"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [215, 58, 245, 72]
               Port                    1
               OutputWhenDisabled      "held"
@@ -4933,7 +4815,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DI_00_31"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [25, 78, 55, 92]
               Port                    1
               PortWidth               -1
@@ -4946,7 +4827,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DI_32_63"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 198, 50, 212]
               Port                    2
               PortWidth               -1
@@ -4959,7 +4839,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DI_64_95"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [15, 308, 45, 322]
               Port                    3
               PortWidth               -1
@@ -5172,7 +5051,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DI_00_15"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [275, 23, 305, 37]
               Port                    1
               OutputWhenDisabled      "held"
@@ -5182,7 +5060,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DI_16_31"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [275, 68, 305, 82]
               Port                    2
               OutputWhenDisabled      "held"
@@ -5192,7 +5069,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DI_32_47"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [270, 138, 300, 152]
               Port                    3
               OutputWhenDisabled      "held"
@@ -5202,7 +5078,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DI_48_53"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [270, 183, 300, 197]
               Port                    4
               OutputWhenDisabled      "held"
@@ -5212,7 +5087,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DI_A0_A15"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [375, 263, 405, 277]
               Port                    5
               OutputWhenDisabled      "held"
@@ -5449,7 +5323,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DO_00_15"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
               Port                    1
               PortWidth               -1
@@ -5462,7 +5335,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DO_16_31"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 73, 50, 87]
               Port                    2
               PortWidth               -1
@@ -5475,7 +5347,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DO_32_47"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 123, 50, 137]
               Port                    3
               PortWidth               -1
@@ -5488,7 +5359,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DO_48_53"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 178, 50, 192]
               Port                    4
               PortWidth               -1
@@ -5501,7 +5371,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "DO_A0_A15"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 283, 50, 297]
               Port                    5
               PortWidth               -1
@@ -5744,7 +5613,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DO_00_31"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 78, 440, 92]
               Port                    1
               OutputWhenDisabled      "held"
@@ -5754,7 +5622,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DO_32_63"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
               Port                    2
               OutputWhenDisabled      "held"
@@ -5764,7 +5631,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "DO_64_95"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 293, 440, 307]
               Port                    3
               OutputWhenDisabled      "held"
@@ -6010,7 +5876,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -6143,7 +6008,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_code"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 93, 440, 107]
               Port                    1
               OutputWhenDisabled      "held"
@@ -6153,7 +6017,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_subcode"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 28, 440, 42]
               Port                    2
               OutputWhenDisabled      "held"
@@ -6163,7 +6026,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "status"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
               Port                    3
               OutputWhenDisabled      "held"
@@ -6173,7 +6035,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 203, 440, 217]
               Port                    4
               OutputWhenDisabled      "held"
@@ -6448,7 +6309,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "Y"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [65, 23, 95, 37]
               Port                    1
               OutputWhenDisabled      "held"
@@ -6467,7 +6327,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 398, 765, 412]
           Port                    1
           OutputWhenDisabled      "held"
@@ -6477,7 +6336,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_code"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 338, 765, 352]
           Port                    2
           OutputWhenDisabled      "held"
@@ -6487,7 +6345,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_subcode"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 368, 765, 382]
           Port                    3
           OutputWhenDisabled      "held"
@@ -6497,7 +6354,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_00_15"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [815, 33, 845, 47]
           Port                    4
           OutputWhenDisabled      "held"
@@ -6507,7 +6363,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_16_31"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [815, 63, 845, 77]
           Port                    5
           OutputWhenDisabled      "held"
@@ -6517,7 +6372,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_32_47"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [815, 93, 845, 107]
           Port                    6
           OutputWhenDisabled      "held"
@@ -6527,7 +6381,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_48_53"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [815, 123, 845, 137]
           Port                    7
           OutputWhenDisabled      "held"
@@ -6537,7 +6390,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A0_A15"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [815, 153, 845, 167]
           Port                    8
           OutputWhenDisabled      "held"
@@ -6547,7 +6399,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI_00_02"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 188, 765, 202]
           Port                    9
           OutputWhenDisabled      "held"
@@ -6557,7 +6408,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI_03_05"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 218, 765, 232]
           Port                    10
           OutputWhenDisabled      "held"
@@ -6567,7 +6417,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI_06_08"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 248, 765, 262]
           Port                    11
           OutputWhenDisabled      "held"
@@ -6577,7 +6426,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI_09_11"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 278, 765, 292]
           Port                    12
           OutputWhenDisabled      "held"
@@ -6587,7 +6435,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI_12_14"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 308, 765, 322]
           Port                    13
           OutputWhenDisabled      "held"
@@ -6597,7 +6444,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI15"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 428, 765, 442]
           Port                    14
           OutputWhenDisabled      "held"
@@ -6607,7 +6453,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_22_23_data_CNT2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 458, 765, 472]
           Port                    15
           OutputWhenDisabled      "held"
@@ -6617,7 +6462,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_24_25_data_CNT3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 488, 765, 502]
           Port                    16
           OutputWhenDisabled      "held"
@@ -6627,7 +6471,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_26_27_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 518, 765, 532]
           Port                    17
           OutputWhenDisabled      "held"
@@ -6637,7 +6480,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_28_29_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 548, 765, 562]
           Port                    18
           OutputWhenDisabled      "held"
@@ -6647,7 +6489,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_30_31_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 578, 765, 592]
           Port                    19
           OutputWhenDisabled      "held"
@@ -6657,7 +6498,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_32_33_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 608, 765, 622]
           Port                    20
           OutputWhenDisabled      "held"
@@ -6667,7 +6507,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "userRecv"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [735, 638, 765, 652]
           Port                    21
           OutputWhenDisabled      "held"
@@ -7103,9 +6942,9 @@ Model {
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|P"
 "in 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pi"
-"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin"
-" 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin 3 mode|Pin "
-"3 mode"
+"n 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin"
+" 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin 2 mode|Pin "
+"2 mode"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
@@ -7177,7 +7016,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO2"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
@@ -7190,7 +7028,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO3_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
@@ -7203,7 +7040,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO4"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
@@ -7216,7 +7052,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO5_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
@@ -7229,7 +7064,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO6_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
@@ -7242,7 +7076,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO9_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 318, 50, 332]
           Port                    6
           PortWidth               -1
@@ -7255,7 +7088,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO10_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 348, 50, 362]
           Port                    7
           PortWidth               -1
@@ -7268,7 +7100,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO11_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 378, 50, 392]
           Port                    8
           PortWidth               -1
@@ -7281,7 +7112,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO12"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 408, 50, 422]
           Port                    9
           PortWidth               -1
@@ -7294,7 +7124,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO13"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 438, 50, 452]
           Port                    10
           PortWidth               -1
@@ -7307,7 +7136,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A0"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 468, 50, 482]
           Port                    11
           PortWidth               -1
@@ -7320,7 +7148,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A1"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 498, 50, 512]
           Port                    12
           PortWidth               -1
@@ -7333,7 +7160,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A2"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 548, 50, 562]
           Port                    13
           PortWidth               -1
@@ -7346,7 +7172,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A3"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 578, 50, 592]
           Port                    14
           PortWidth               -1
@@ -7359,7 +7184,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A4"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 608, 50, 622]
           Port                    15
           PortWidth               -1
@@ -7372,7 +7196,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A5"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 638, 50, 652]
           Port                    16
           PortWidth               -1
@@ -7385,7 +7208,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1078, 45, 1092]
           Port                    17
           PortWidth               -1
@@ -7398,7 +7220,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1108, 45, 1122]
           Port                    18
           PortWidth               -1
@@ -7411,7 +7232,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1138, 45, 1152]
           Port                    19
           PortWidth               -1
@@ -7424,7 +7244,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1168, 45, 1182]
           Port                    20
           PortWidth               -1
@@ -7437,7 +7256,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "userSend"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1203, 45, 1217]
           Port                    21
           PortWidth               -1
@@ -7475,7 +7293,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -7558,7 +7375,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -7568,7 +7384,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -7578,7 +7393,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -7720,7 +7534,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -7803,7 +7616,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -7813,7 +7625,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -7823,7 +7634,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -8205,7 +8015,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
               Port                    1
               PortWidth               -1
@@ -8218,7 +8027,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 53, 50, 67]
               Port                    2
               PortWidth               -1
@@ -8231,7 +8039,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 78, 50, 92]
               Port                    3
               PortWidth               -1
@@ -8244,7 +8051,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 103, 50, 117]
               Port                    4
               PortWidth               -1
@@ -8267,7 +8073,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "cntCmd"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [215, 58, 245, 72]
               Port                    1
               OutputWhenDisabled      "held"
@@ -8342,7 +8147,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -8475,7 +8279,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_code"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 93, 440, 107]
               Port                    1
               OutputWhenDisabled      "held"
@@ -8485,7 +8288,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_subcode"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 28, 440, 42]
               Port                    2
               OutputWhenDisabled      "held"
@@ -8495,7 +8297,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "status"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
               Port                    3
               OutputWhenDisabled      "held"
@@ -8505,7 +8306,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 203, 440, 217]
               Port                    4
               OutputWhenDisabled      "held"
@@ -8780,6 +8580,7 @@ Model {
           p13                     "pinmodeA4"
           p14                     "pinmodeA5"
           p15                     1
+          FontSize                10
           #GUID                   af81b1de-06be-48da-aadf-feaef6ec8894
         }
         Block {
@@ -8820,7 +8621,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "Y"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [65, 23, 95, 37]
               Port                    1
               OutputWhenDisabled      "held"
@@ -8839,7 +8639,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1023, 1080, 1037]
           Port                    1
           OutputWhenDisabled      "held"
@@ -8849,7 +8648,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_code"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 963, 1080, 977]
           Port                    2
           OutputWhenDisabled      "held"
@@ -8859,7 +8657,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_subcode"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 993, 1080, 1007]
           Port                    3
           OutputWhenDisabled      "held"
@@ -8869,7 +8666,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 108, 1020, 122]
           Port                    4
           OutputWhenDisabled      "held"
@@ -8879,7 +8675,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 138, 1020, 152]
           Port                    5
           OutputWhenDisabled      "held"
@@ -8889,7 +8684,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 168, 1020, 182]
           Port                    6
           OutputWhenDisabled      "held"
@@ -8899,7 +8693,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 198, 1020, 212]
           Port                    7
           OutputWhenDisabled      "held"
@@ -8909,7 +8702,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI6"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 228, 1020, 242]
           Port                    8
           OutputWhenDisabled      "held"
@@ -8919,7 +8711,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI7"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 258, 1020, 272]
           Port                    9
           OutputWhenDisabled      "held"
@@ -8929,7 +8720,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI8"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 288, 1020, 302]
           Port                    10
           OutputWhenDisabled      "held"
@@ -8939,7 +8729,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI9"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 318, 1020, 332]
           Port                    11
           OutputWhenDisabled      "held"
@@ -8949,7 +8738,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI10"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 348, 1020, 362]
           Port                    12
           OutputWhenDisabled      "held"
@@ -8959,7 +8747,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI11"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 378, 1020, 392]
           Port                    13
           OutputWhenDisabled      "held"
@@ -8969,7 +8756,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 468, 1020, 482]
           Port                    14
           OutputWhenDisabled      "held"
@@ -8979,7 +8765,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 498, 1020, 512]
           Port                    15
           OutputWhenDisabled      "held"
@@ -8989,7 +8774,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 543, 1020, 557]
           Port                    16
           OutputWhenDisabled      "held"
@@ -8999,7 +8783,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 573, 1020, 587]
           Port                    17
           OutputWhenDisabled      "held"
@@ -9009,7 +8792,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 603, 1020, 617]
           Port                    18
           OutputWhenDisabled      "held"
@@ -9019,7 +8801,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 633, 1020, 647]
           Port                    19
           OutputWhenDisabled      "held"
@@ -9029,7 +8810,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 798, 1085, 812]
           Port                    20
           OutputWhenDisabled      "held"
@@ -9039,7 +8819,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 823, 1085, 837]
           Port                    21
           OutputWhenDisabled      "held"
@@ -9049,7 +8828,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 848, 1085, 862]
           Port                    22
           OutputWhenDisabled      "held"
@@ -9059,7 +8837,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 873, 1085, 887]
           Port                    23
           OutputWhenDisabled      "held"
@@ -9069,7 +8846,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 898, 1085, 912]
           Port                    24
           OutputWhenDisabled      "held"
@@ -9079,7 +8855,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 923, 1085, 937]
           Port                    25
           OutputWhenDisabled      "held"
@@ -9089,7 +8864,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1078, 1080, 1092]
           Port                    26
           OutputWhenDisabled      "held"
@@ -9099,7 +8873,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1108, 1080, 1122]
           Port                    27
           OutputWhenDisabled      "held"
@@ -9109,7 +8882,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_2_3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1163, 1080, 1177]
           Port                    28
           OutputWhenDisabled      "held"
@@ -9119,7 +8891,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_4_5_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1188, 1080, 1202]
           Port                    29
           OutputWhenDisabled      "held"
@@ -9129,7 +8900,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_6_9_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1218, 1080, 1232]
           Port                    30
           OutputWhenDisabled      "held"
@@ -9139,7 +8909,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_10_11_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1248, 1080, 1262]
           Port                    31
           OutputWhenDisabled      "held"
@@ -9149,7 +8918,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A0_A1_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1278, 1080, 1292]
           Port                    32
           OutputWhenDisabled      "held"
@@ -9159,7 +8927,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A2_A3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1308, 1080, 1322]
           Port                    33
           OutputWhenDisabled      "held"
@@ -9169,7 +8936,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "userRecv"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1338, 1080, 1352]
           Port                    34
           OutputWhenDisabled      "held"
@@ -9978,6 +9744,7 @@ Model {
       Ports                   [23, 39, 0, 0, 0]
       Position                [345, 461, 490, 859]
       ShowPortLabels          on
+      FontSize                10
       MaskType                "REX sequence"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin modes 0 to 7 (0 and 1 ignored)|Pin modes 8 to 13|Pin modes A0 t"
@@ -10016,7 +9783,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO2"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 108, 50, 122]
           Port                    1
           PortWidth               -1
@@ -10029,7 +9795,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO3_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 138, 50, 152]
           Port                    2
           PortWidth               -1
@@ -10042,7 +9807,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO4"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 168, 50, 182]
           Port                    3
           PortWidth               -1
@@ -10055,7 +9819,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO5_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 198, 50, 212]
           Port                    4
           PortWidth               -1
@@ -10068,7 +9831,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO6_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 228, 50, 242]
           Port                    5
           PortWidth               -1
@@ -10081,7 +9843,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO7"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 258, 50, 272]
           Port                    6
           PortWidth               -1
@@ -10094,7 +9855,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO8"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 288, 50, 302]
           Port                    7
           PortWidth               -1
@@ -10107,7 +9867,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO9_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 318, 50, 332]
           Port                    8
           PortWidth               -1
@@ -10120,7 +9879,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO10_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 348, 50, 362]
           Port                    9
           PortWidth               -1
@@ -10133,7 +9891,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO11_PWM"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 378, 50, 392]
           Port                    10
           PortWidth               -1
@@ -10146,7 +9903,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO12"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 408, 50, 422]
           Port                    11
           PortWidth               -1
@@ -10159,7 +9915,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO13"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 438, 50, 452]
           Port                    12
           PortWidth               -1
@@ -10172,7 +9927,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A0"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 468, 50, 482]
           Port                    13
           PortWidth               -1
@@ -10185,7 +9939,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A1"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 498, 50, 512]
           Port                    14
           PortWidth               -1
@@ -10198,7 +9951,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A2"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 548, 50, 562]
           Port                    15
           PortWidth               -1
@@ -10211,7 +9963,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A3"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 578, 50, 592]
           Port                    16
           PortWidth               -1
@@ -10224,7 +9975,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A4"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 608, 50, 622]
           Port                    17
           PortWidth               -1
@@ -10237,7 +9987,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "DO_A5"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [20, 638, 50, 652]
           Port                    18
           PortWidth               -1
@@ -10250,7 +9999,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1078, 45, 1092]
           Port                    19
           PortWidth               -1
@@ -10263,7 +10011,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT2E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1108, 45, 1122]
           Port                    20
           PortWidth               -1
@@ -10276,7 +10023,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3R"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1138, 45, 1152]
           Port                    21
           PortWidth               -1
@@ -10289,7 +10035,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "CNT3E"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1168, 45, 1182]
           Port                    22
           PortWidth               -1
@@ -10302,7 +10047,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "userSend"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 1203, 45, 1217]
           Port                    23
           PortWidth               -1
@@ -10340,7 +10084,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -10423,7 +10166,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -10433,7 +10175,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -10443,7 +10184,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -10585,7 +10325,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "AI_data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -10668,7 +10407,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata1"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 28, 355, 42]
               Port                    1
               OutputWhenDisabled      "held"
@@ -10678,7 +10416,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata2"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 108, 355, 122]
               Port                    2
               OutputWhenDisabled      "held"
@@ -10688,7 +10425,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata3"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [325, 173, 355, 187]
               Port                    3
               OutputWhenDisabled      "held"
@@ -11070,7 +10806,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 23, 50, 37]
               Port                    1
               PortWidth               -1
@@ -11083,7 +10818,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT2E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 53, 50, 67]
               Port                    2
               PortWidth               -1
@@ -11096,7 +10830,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3R"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 78, 50, 92]
               Port                    3
               PortWidth               -1
@@ -11109,7 +10842,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "CNT3E"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [20, 103, 50, 117]
               Port                    4
               PortWidth               -1
@@ -11132,7 +10864,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "cntCmd"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [215, 58, 245, 72]
               Port                    1
               OutputWhenDisabled      "held"
@@ -11207,7 +10938,6 @@ Model {
             Block {
               BlockType               Inport
               Name                    "data"
-              Ports                   [0, 1, 0, 0, 0]
               Position                [10, 23, 40, 37]
               Port                    1
               PortWidth               -1
@@ -11340,7 +11070,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_code"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 93, 440, 107]
               Port                    1
               OutputWhenDisabled      "held"
@@ -11350,7 +11079,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "err_subcode"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 28, 440, 42]
               Port                    2
               OutputWhenDisabled      "held"
@@ -11360,7 +11088,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "status"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 138, 440, 152]
               Port                    3
               OutputWhenDisabled      "held"
@@ -11370,7 +11097,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "AIdata"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [410, 203, 440, 217]
               Port                    4
               OutputWhenDisabled      "held"
@@ -11685,7 +11411,6 @@ Model {
             Block {
               BlockType               Outport
               Name                    "Y"
-              Ports                   [1, 0, 0, 0, 0]
               Position                [65, 23, 95, 37]
               Port                    1
               OutputWhenDisabled      "held"
@@ -11704,7 +11429,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "comm_status"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1023, 1080, 1037]
           Port                    1
           OutputWhenDisabled      "held"
@@ -11714,7 +11438,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_code"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 963, 1080, 977]
           Port                    2
           OutputWhenDisabled      "held"
@@ -11724,7 +11447,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "err_subcode"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 993, 1080, 1007]
           Port                    3
           OutputWhenDisabled      "held"
@@ -11734,7 +11456,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 108, 1020, 122]
           Port                    4
           OutputWhenDisabled      "held"
@@ -11744,7 +11465,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 138, 1020, 152]
           Port                    5
           OutputWhenDisabled      "held"
@@ -11754,7 +11474,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 168, 1020, 182]
           Port                    6
           OutputWhenDisabled      "held"
@@ -11764,7 +11483,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 198, 1020, 212]
           Port                    7
           OutputWhenDisabled      "held"
@@ -11774,7 +11492,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI6"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 228, 1020, 242]
           Port                    8
           OutputWhenDisabled      "held"
@@ -11784,7 +11501,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI7"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 258, 1020, 272]
           Port                    9
           OutputWhenDisabled      "held"
@@ -11794,7 +11510,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI8"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 288, 1020, 302]
           Port                    10
           OutputWhenDisabled      "held"
@@ -11804,7 +11519,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI9"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 318, 1020, 332]
           Port                    11
           OutputWhenDisabled      "held"
@@ -11814,7 +11528,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI10"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 348, 1020, 362]
           Port                    12
           OutputWhenDisabled      "held"
@@ -11824,7 +11537,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI11"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 378, 1020, 392]
           Port                    13
           OutputWhenDisabled      "held"
@@ -11834,7 +11546,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 408, 1020, 422]
           Port                    14
           OutputWhenDisabled      "held"
@@ -11844,7 +11555,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI12"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 438, 1020, 452]
           Port                    15
           OutputWhenDisabled      "held"
@@ -11854,7 +11564,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 468, 1020, 482]
           Port                    16
           OutputWhenDisabled      "held"
@@ -11864,7 +11573,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 498, 1020, 512]
           Port                    17
           OutputWhenDisabled      "held"
@@ -11874,7 +11582,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 543, 1020, 557]
           Port                    18
           OutputWhenDisabled      "held"
@@ -11884,7 +11591,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 573, 1020, 587]
           Port                    19
           OutputWhenDisabled      "held"
@@ -11894,7 +11600,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 603, 1020, 617]
           Port                    20
           OutputWhenDisabled      "held"
@@ -11904,7 +11609,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DI_A5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [990, 633, 1020, 647]
           Port                    21
           OutputWhenDisabled      "held"
@@ -11914,7 +11618,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI0"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 798, 1085, 812]
           Port                    22
           OutputWhenDisabled      "held"
@@ -11924,7 +11627,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 823, 1085, 837]
           Port                    23
           OutputWhenDisabled      "held"
@@ -11934,7 +11636,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 848, 1085, 862]
           Port                    24
           OutputWhenDisabled      "held"
@@ -11944,7 +11645,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 873, 1085, 887]
           Port                    25
           OutputWhenDisabled      "held"
@@ -11954,7 +11654,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 898, 1085, 912]
           Port                    26
           OutputWhenDisabled      "held"
@@ -11964,7 +11663,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "AI5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1055, 923, 1085, 937]
           Port                    27
           OutputWhenDisabled      "held"
@@ -11974,7 +11672,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1078, 1080, 1092]
           Port                    28
           OutputWhenDisabled      "held"
@@ -11984,7 +11681,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "CNT3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1108, 1080, 1122]
           Port                    29
           OutputWhenDisabled      "held"
@@ -11994,7 +11690,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_2_3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1163, 1080, 1177]
           Port                    30
           OutputWhenDisabled      "held"
@@ -12004,7 +11699,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_4_5_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1188, 1080, 1202]
           Port                    31
           OutputWhenDisabled      "held"
@@ -12014,7 +11708,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_6_7_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1218, 1080, 1232]
           Port                    32
           OutputWhenDisabled      "held"
@@ -12024,7 +11717,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_8_9_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1248, 1080, 1262]
           Port                    33
           OutputWhenDisabled      "held"
@@ -12034,7 +11726,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_10_11_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1278, 1080, 1292]
           Port                    34
           OutputWhenDisabled      "held"
@@ -12044,7 +11735,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_12_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1308, 1080, 1322]
           Port                    35
           OutputWhenDisabled      "held"
@@ -12054,7 +11744,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A0_A1_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1338, 1080, 1352]
           Port                    36
           OutputWhenDisabled      "held"
@@ -12064,7 +11753,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A2_A3_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1368, 1080, 1382]
           Port                    37
           OutputWhenDisabled      "held"
@@ -12074,7 +11762,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "OW_A4_A5_data"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1398, 1080, 1412]
           Port                    38
           OutputWhenDisabled      "held"
@@ -12084,7 +11771,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "userRecv"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [1050, 1428, 1080, 1442]
           Port                    39
           OutputWhenDisabled      "held"
@@ -12967,7 +12653,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "OW_data"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [10, 23, 40, 37]
           Port                    1
           PortWidth               -1
@@ -13130,7 +12815,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "branchA_Temp"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [350, 33, 380, 47]
           Port                    1
           OutputWhenDisabled      "held"
@@ -13140,7 +12824,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "branchA_nSensor"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [345, 138, 375, 152]
           Port                    2
           OutputWhenDisabled      "held"
@@ -13150,7 +12833,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "branchB_Temp"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [350, 93, 380, 107]
           Port                    3
           OutputWhenDisabled      "held"
@@ -13160,7 +12842,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "branchB_nSensor"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [345, 188, 375, 202]
           Port                    4
           OutputWhenDisabled      "held"
@@ -13367,7 +13048,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "Temp"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 12, 45, 28]
           Port                    1
           PortWidth               -1
@@ -13380,7 +13060,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "nSensor"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 57, 45, 73]
           Port                    2
           PortWidth               -1
@@ -13437,7 +13116,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor13"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 68, 485, 82]
           Port                    1
           OutputWhenDisabled      "held"
@@ -13447,7 +13125,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor14"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 124, 485, 136]
           Port                    2
           OutputWhenDisabled      "held"
@@ -13457,7 +13134,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor15"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 178, 485, 192]
           Port                    3
           OutputWhenDisabled      "held"
@@ -13571,7 +13247,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "Temp"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 12, 45, 28]
           Port                    1
           PortWidth               -1
@@ -13584,7 +13259,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "nSensor"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 57, 45, 73]
           Port                    2
           PortWidth               -1
@@ -13652,7 +13326,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor1"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 68, 485, 82]
           Port                    1
           OutputWhenDisabled      "held"
@@ -13662,7 +13335,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor2"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 124, 485, 136]
           Port                    2
           OutputWhenDisabled      "held"
@@ -13672,7 +13344,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor3"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 178, 485, 192]
           Port                    3
           OutputWhenDisabled      "held"
@@ -13682,7 +13353,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor4"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 233, 485, 247]
           Port                    4
           OutputWhenDisabled      "held"
@@ -13820,7 +13490,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "Temp"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 12, 45, 28]
           Port                    1
           PortWidth               -1
@@ -13833,7 +13502,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "nSensor"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 57, 45, 73]
           Port                    2
           PortWidth               -1
@@ -13901,7 +13569,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor5"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 68, 485, 82]
           Port                    1
           OutputWhenDisabled      "held"
@@ -13911,7 +13578,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor6"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 124, 485, 136]
           Port                    2
           OutputWhenDisabled      "held"
@@ -13921,7 +13587,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor7"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 178, 485, 192]
           Port                    3
           OutputWhenDisabled      "held"
@@ -13931,7 +13596,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor8"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 233, 485, 247]
           Port                    4
           OutputWhenDisabled      "held"
@@ -14069,7 +13733,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "Temp"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 12, 45, 28]
           Port                    1
           PortWidth               -1
@@ -14082,7 +13745,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "nSensor"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 57, 45, 73]
           Port                    2
           PortWidth               -1
@@ -14150,7 +13812,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor9"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 68, 485, 82]
           Port                    1
           OutputWhenDisabled      "held"
@@ -14160,7 +13821,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor10"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 124, 485, 136]
           Port                    2
           OutputWhenDisabled      "held"
@@ -14170,7 +13830,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor11"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 178, 485, 192]
           Port                    3
           OutputWhenDisabled      "held"
@@ -14180,7 +13839,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "Sensor12"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [455, 233, 485, 247]
           Port                    4
           OutputWhenDisabled      "held"
@@ -14318,7 +13976,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWMa"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 13, 45, 27]
           Port                    1
           PortWidth               -1
@@ -14331,7 +13988,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWMb"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 53, 45, 67]
           Port                    2
           PortWidth               -1
@@ -14344,7 +14000,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWMc"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 93, 45, 107]
           Port                    3
           PortWidth               -1
@@ -14357,7 +14012,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "PWMd"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [15, 133, 45, 147]
           Port                    4
           PortWidth               -1
@@ -14516,7 +14170,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "PWMdata"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [415, 28, 445, 42]
           Port                    1
           OutputWhenDisabled      "held"
@@ -14690,6 +14343,27 @@ Model {
       }
     }
     Annotation {
+      Position                [90, 890]
+      Text                    "Supporting blocks"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   45a000bb-1f6a-4533-b0fe-1a621186e6e2
+    }
+    Annotation {
+      Position                [25, 910]
+      Text                    "Use these blocks to compose/decompose data ente"
+"ring/leaving the blocks"
+      HorizontalAlignment     "left"
+      #GUID                   1349b079-261c-4055-a9fd-45140998b65b
+    }
+    Annotation {
+      Position                [95, 445]
+      Text                    "Hexadecimal masks"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   395d4f12-65ac-46fb-afc6-526e448c0f93
+    }
+    Annotation {
       Position                [65, 20]
       Text                    "Basic masks"
       FontSize                16
@@ -14697,58 +14371,43 @@ Model {
       #GUID                   5e0686c3-18b5-40af-9207-a99449f80e55
     }
     Annotation {
-      Position                [160, 135]
+      Position                [25, 245]
+      Text                    "Due to limited number of parameters:\npins 7 an"
+"d 8 are digital inputs with pull-up\npins 12 and 13 are digital outputs\npins "
+"A6 and A7 are analog inputs (MEGA only)\n(this can be changed in the REXduino_"
+"master.c file if needed)\n\nCommunication status:\n0: Arduino not connected\n1"
+": Serial port open\n2: Initialization, synchronization of pin modes\n3: Arduin"
+"o OK, data valid"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                10
+      #GUID                   c8c8fd1a-2796-4d9d-a414-b3c45d633736
+    }
+    Annotation {
+      Position                [25, 35]
       Text                    "PWM range 0..255\n\nAnalog input (AI) range 0.."
 "1023\n\n1-Wire bus must be enabled in the REXduino slave\nto allow switching p"
 "ins to 1-Wire mode\nUncomment the line //#define USE1WIRE\n(OneWire library fo"
 "r Arduino will be required)\n\nMax 15 1-Wire devices per branch\n\nIf I2C is e"
 "nabled in the REXduino slave, some pins \nmight be unusable\n\nSee REXduino.in"
-"o and REXduino_master.stl for error codes"
+"o and REXduino_master.c for error codes"
       HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                10
       #GUID                   cf451a1b-98fa-4326-b759-20cbbd2958b3
     }
     Annotation {
-      Position                [80, 445]
-      Text                    "Hexadecimal masks"
-      FontSize                16
-      FontWeight              "bold"
-      #GUID                   395d4f12-65ac-46fb-afc6-526e448c0f93
-    }
-    Annotation {
-      Position                [169, 555]
+      Position                [30, 460]
       Text                    "Pin modes are configured by HEX mask\n   (e.g. "
-"0x753A2900 in REX or hex2dec('753A2900') in Simulink)\n\nPin modes:\n0: Not co"
-"nnected\n1: Not connected\n2: Digital output\n3: Digital input\n4: Digital inp"
-"ut with internal pull-up\n5: Analog output (PWM) \n6: Analog input\n7: 1-Wire "
-"temperature\n8: Counter (only pins 2 and 3)\n9: Encoder A (only pins 2 and 3)"
-"\nA: Counter DIR / Encoder B (only pins 4 and 5)"
+"0x753A2900 in REXYGEN Studio)\n\nPin modes:\n0: Not connected\n1: Not connecte"
+"d\n2: Digital output\n3: Digital input\n4: Digital input with internal pull-up"
+"\n5: Analog output (PWM) \n6: Analog input\n7: 1-Wire temperature\n8: Counter "
+"(only pins 2 and 3)\n9: Encoder A (only pins 2 and 3)\nA: Counter DIR / Encode"
+"r B (only pins 4 and 5)"
       HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                10
       #GUID                   39fc57cb-f650-401d-8ebd-337801dc44d4
-    }
-    Annotation {
-      Position                [80, 890]
-      Text                    "Supporting blocks"
-      FontSize                16
-      FontWeight              "bold"
-      #GUID                   45a000bb-1f6a-4533-b0fe-1a621186e6e2
-    }
-    Annotation {
-      Position                [190, 915]
-      Text                    "Use these blocks to compose/decompose data ente"
-"ring/leaving the blocks"
-      HorizontalAlignment     "left"
-      #GUID                   1349b079-261c-4055-a9fd-45140998b65b
-    }
-    Annotation {
-      Position                [170, 315]
-      Text                    "Due to limited number of parameters:\npins 7 an"
-"d 8 are digital inputs with pull-up\npins 12 and 13 are digital outputs\npins "
-"A6 and A7 are analog inputs (MEGA only)\n(this can be changed in the REXduino_"
-"master.stl file if needed)\n\nCommunication status:\n0: Arduino not connected"
-"\n1: Serial port open\n2: Synchronization of pin modes\n3: Arduino OK, data va"
-"lid"
-      HorizontalAlignment     "left"
-      #GUID                   c8c8fd1a-2796-4d9d-a414-b3c45d633736
     }
   }
 }
