@@ -631,7 +631,8 @@ int main(void)
   long debugChange;
 	REXduinoError = 0;
 	sentCnt = 0; //counter of sent bytes
-  
+
+    Trace(3,"=== REXduino master main loop START ===");  
   TRACE_INCOMING = (debug>>2) & 1;
   TRACE_OUTGOING = (debug>>3) & 1;
   
@@ -1165,22 +1166,17 @@ int main(void)
   }
   if ((debugChange>>1) & 1) //print pinmodes to system log 
   {
-    Trace(555,5555.5);
+    TraceWarning(555,"Current modes of individual pins:");
     for (i=2;i<PIN_COUNT;i++)
     {
-      Trace(550,i);
-      Trace(551,pinModes_par[i]);
-      Trace(552,pinModes[i]);
+      TraceWarning(550,"Pin " + long2str(i) + ", desired mode " + long2str(pinModes_par[i]) + ", current mode " + long2str(pinModes[i]) + ".");
     }   
-    Trace(555,5555.5);
+    TraceWarning(555,"End of pin modes listing.");
   }
 
   debugLast = debug;
 
-if(TRACE_OUTGOING||TRACE_INCOMING)
-{
-	TraceVerbose(9999,"=== End of REXduino master (REXLANG) ===");
-}
+    Trace(3,"=== REXduino master main loop END ===");
 	return 0; //end main
 }
 
