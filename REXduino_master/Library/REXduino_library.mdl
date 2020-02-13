@@ -3138,6 +3138,8 @@ Library {
           p13                     "pinmodeA4"
           p14                     "pinmodeA5"
           p15                     3
+          #RTFlags                1025
+          FontSize                10
           #GUID                   95eadfeb-6116-4e9b-bdec-9124da0e2753
         }
         Block {
@@ -6066,6 +6068,8 @@ Library {
           p13                     0
           p14                     0
           p15                     4
+          #RTFlags                1025
+          FontSize                10
           #GUID                   21b668df-b01d-4e6c-9c8c-614b0c326ea1
         }
         Block {
@@ -8373,6 +8377,7 @@ Library {
           p14                     "pinmodeA5"
           p15                     1
           FontSize                10
+          #RTFlags                1025
           #GUID                   9e639fd1-af35-43ee-9067-8484520f6b9d
         }
         Block {
@@ -11160,6 +11165,8 @@ Library {
           p13                     0
           p14                     0
           p15                     2
+          #RTFlags                1025
+          FontSize                10
           #GUID                   5322da48-fa13-4e62-82fe-e7089994f505
         }
         Block {
