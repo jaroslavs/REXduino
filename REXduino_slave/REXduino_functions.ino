@@ -1,13 +1,13 @@
-/****************************************************
- *                                                   *
- *  Functions for REXduino slave                     *
- *  REX and Arduino communication over serial port   *
- *                                                   *
- *  (c) Jaroslav SOBOTA, 2013                        *
- *  email: jsobota@kky.zcu.cz                        *
- *                                                   *
- ****************************************************/
-
+/*********************************************************
+ *                                                       *
+ *  Functions for REXduino slave                         *
+ *  REXYGEN and Arduino communication over serial port   *
+ *                                                       *
+ *  Jaroslav SOBOTA, 2013-2020                           *
+ *  email: jsobota@ntis.zcu.cz                           *
+ *                                                       *
+ *********************************************************/
+ 
 // Convert an ASCII char to upper case ***************************************
 byte uppercase(byte str){
   if ((str >= 97) && (str <= 122)){
@@ -447,16 +447,3 @@ void ISRencoder3() {
   counter3 = counter3 + dir_lookup[(old_A << 2) | AB];
   old_A = (AB&2)>>1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

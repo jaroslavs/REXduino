@@ -1,13 +1,13 @@
-/****************************************************
- *                                                   *
- *  Commands for REXduino slave                      *
- *  REX and Arduino communication over serial port   *
- *                                                   *
- *  (c) Jaroslav SOBOTA, 2013                        *
- *  email: jsobota@kky.zcu.cz                        *
- *                                                   *
- ****************************************************/
-
+/*********************************************************
+ *                                                       *
+ *  Commands for REXduino slave                          *
+ *  REXYGEN and Arduino communication over serial port   *
+ *                                                       *
+ *  Jaroslav SOBOTA, 2013-2020                           *
+ *  email: jsobota@ntis.zcu.cz                           *
+ *                                                       *
+ *********************************************************/
+ 
 // Perform C command - initialize communication ***************************************
 void commandC(byte zero, byte verbose){
   if (verbose){
@@ -677,26 +677,3 @@ void commandU(byte microseconds, byte verbose){
     Serial.write(";");      
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,12 +1,12 @@
-/****************************************************
-*                                                   *
-*  REXduino master                                  *
-*  REX and Arduino communication over serial port   *
-*                                                   *
-*  Jaroslav SOBOTA, 2016                            *
-*  email: jsobota@kky.zcu.cz                        *
-*                                                   *
-****************************************************/
+/********************************************************
+*                                                       *
+*  REXduino master                                      *
+*  REXYGEN and Arduino communication over serial port   *
+*                                                       *
+*  Jaroslav SOBOTA, 2013-2020                           *
+*  email: jsobota@ntis.zcu.cz                           *
+*                                                       *
+*********************************************************/
 
 /*************************************************************************
 Permission is hereby granted, free of charge, to any person obtaining
@@ -48,8 +48,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define MASKTYPE_SEEED_MEGAV122       5 //Seeeduino Mega v1.22
 #define MASKTYPE_SEEED_MEGAV122hex    6 //Seeeduino Mega v1.22 hexadecimal mask
 
-#define STATUS_ONEWIRE_NOMOREDEVICES  50 //2 - must be the same as in REXduino.ino
-#define STATUS_ONEWIRE_TEMPCONV       52 //4 - must be the same as in REXduino.ino 
+#define STATUS_ONEWIRE_NOMOREDEVICES  50 //2 - must be the same as in REXduino_slave.ino
+#define STATUS_ONEWIRE_TEMPCONV       52 //4 - must be the same as in REXduino_slave.ino 
 
 #define ERROR_OPENING_PORT 14648 //err_code 57 (ASCII 9), err_subcode 56 (ASCII 8)
 #define ERROR_RESPONSE_INVALID 14649 //err_code 57 (ASCII 9), err_subcode 57 (ASCII 9)
@@ -540,77 +540,12 @@ int initPort(void)
 	{
 		pinModes[i] = PINMODE_NC;
 	}
-		if (SimulinkDetector)
-		{
-      switch (comPortNo)
-	{ //open COM port, returns handle>=0 if OK, otherwise REX error is returned (<0)
-	case 1:
-		handle = Open(CON_COM1,"",COM_BAUDRATE,0);
-    Trace(1,1); 
-		break;
-	case 2:
-		handle = Open(CON_COM2,"",COM_BAUDRATE,0); 
-		Trace(1,2);
-    break;
-	case 3:
-		handle = Open(CON_COM3,"",COM_BAUDRATE,0); 
-		break;
-	case 4:
-		handle = Open(CON_COM4,"",COM_BAUDRATE,0); 
-		break;
-	case 5:
-		handle = Open(CON_COM5,"",COM_BAUDRATE,0); 
-		break;
-	case 6:
-		handle = Open(CON_COM6,"",COM_BAUDRATE,0); 
-		break;
-	case 7:
-		handle = Open(CON_COM7,"",COM_BAUDRATE,0); 
-		break;
-	case 8:
-		handle = Open(CON_COM8,"",COM_BAUDRATE,0); 
-		break;
-	case 9:
-		handle = Open(CON_COM9,"",COM_BAUDRATE,0); 
-		break;
-	case 10:
-		handle = Open(CON_COM10,"",COM_BAUDRATE,0); 
-		Trace(1,10);
-    break;
-	case 11:
-		handle = Open(CON_COM11,"",COM_BAUDRATE,0);
-    Trace(1,11); 
-		break;
-	case 12:
-		handle = Open(CON_COM12,"",COM_BAUDRATE,0);
-    Trace(1,12); 
-		break;
-	case 13:
-		handle = Open(CON_COM13,"",COM_BAUDRATE,0);
-    Trace(1,13); 
-		break;
-	case 14:
-		handle = Open(CON_COM14,"",COM_BAUDRATE,0);
-    Trace(1,14); 
-		break;
-	case 15:
-		handle = Open(CON_COM15,"",COM_BAUDRATE,0);
-    Trace(1,15); 
-		break;
-	default:
-    handle = -1;
-    Trace(1,-1);	
-	} //end switch com_port
-
-    }
-    else
-    {
+    Trace(1,"Opening communication port " + comPort);
     handle = OpenCom(comPort,COM_BAUDRATE,0);
-    Trace(1,comPort);
-    } 
 	buffer[0] = 0;
   if(handle>=0)
 	{
+        Trace(1,"Communication port " + comPort + " opened.");
 		GetOptions(handle, buffer);   //read serial port parameters; for details see e.g. MSDN functions SetComState and SetCommTimeouts
 
 /*
@@ -644,28 +579,33 @@ int initPort(void)
 		dropData[0] = 0;
     while ((i=Recv(handle,dropData,1))>0)
 		{
-      Trace(2222,dropData[0]);
+      TraceVerbose(2222,"Purging communication buffer (byte " + long2str(dropData[0]) + ".");
     }
 	}
-	else REXduinoError = ERROR_OPENING_PORT;
+	else 
+    {
+        Trace(1,"Failed to open " + comPort + ".");
+        REXduinoError = ERROR_OPENING_PORT;
+    }
 	parchange(); //read pinmodes from parameters
 	return handle;
 }
 
 int closePort(long handle)
 {
-if(handle>=0) Close(handle);
-	Trace(2,0);
-				handle = -1;
-			initialized = 0;
-			portOpenTime = CurrentTime();
-			responseCnt = 0;         
+	Trace(3,"Closing communication port.");
+    if(handle>=0) Close(handle);
+	handle = -1;
+	initialized = 0;
+	portOpenTime = CurrentTime();
+	responseCnt = 0;         
 	return handle;
 }
 
 int init(void)
 {
 	// initialization commands executed once at startup of REXLANG
+    Trace(1,"REXduino master, version " + long2str(MAJORVERSION) + "." + long2str(MINORVERSION) + "." + long2str(REVISION)) ;
 	hCom = initPort(); //calls also parchange()
 	portOpenTime = CurrentTime();
 	lastSuccess = CurrentTime();
@@ -1234,21 +1174,12 @@ int main(void)
     }   
     Trace(555,5555.5);
   }
-  if ((debugChange>>4) & 1) //print REXduino master version to system log 
-  {
-    Trace(444,4444.4);
-    Trace(440,MAJORVERSION);
-    Trace(441,MINORVERSION);
-    Trace(442,REVISION);
-    Trace(442,COMMIT);
-    Trace(444,4444.4);
-  }
 
   debugLast = debug;
 
 if(TRACE_OUTGOING||TRACE_INCOMING)
 {
-	Trace(9999,999999.9);
+	TraceVerbose(9999,"=== End of REXduino master (REXLANG) ===");
 }
 	return 0; //end main
 }
