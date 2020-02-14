@@ -31,7 +31,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 5 //even number = release, odd number = development
-#define REVISION 2 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 4 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 #define COM_BAUDRATE 57600 //change this line according to desired baudrate
@@ -185,13 +185,14 @@ void sendData(long count)
     long i;  
     sent = -1;
     i=0;
-	while ( (sent!=count) && (i<20) )  //the serial line is not always ready (observed on Linux machines with non-FTDI devices, e.g. the original Arduino UNO)
+	while ( (sent!=count) && (i<20) )  //up to 20 attempts to send the command
     {
         sent = Send(hCom,commandData,count);
+        if (sent<=0) busyWait(0.0005); //the serial line is not always ready (observed on Linux machines with non-FTDI devices, e.g. the original Arduino UNO) - we simply wait in such a case
         if ((sent>0) && (sent<count)) TraceError(0, "INCOMPLETE DATA SENT, " + long2str(i)); //so far not observed, it seems the serial line either accepts all or nothing
-        busyWait(0.0005);
         i++;
     }
+    //if (i>1) TraceError(0, "Sending data took " + long2str(i) + " attempts!!!.");
     if (i==20) TraceError(0, "FAILED TO SEND COMMAND TO ARDUINO !!!."); 
 	sentCnt = sentCnt+count;
 	traceSentData(count);    

@@ -1,7 +1,7 @@
 Library {
   Name                    "REXduino_library"
   Version                 3.00
-  #RexVersion             "2.50.10 rev. 11478, Date 2020-02-03"
+  #RexVersion             "2.50.9 rev. 10649, Date 2020-02-03"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
