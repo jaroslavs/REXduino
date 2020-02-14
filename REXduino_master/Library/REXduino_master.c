@@ -158,75 +158,96 @@ long parameter(13) param13;
 long parameter(14) param14;
 long parameter(15) maskType;
 
+
 void traceSentData(long count)
 { //print to logfile the data which are sent to Arduino 
 	long i;
-if(TRACE_OUTGOING)
-{
 	for(i=0;i<count;i++)
 	{
-		Trace(11,commandData[i]);
+		TraceVerbose(11,commandData[i]);
 	}
-}
-else
-{
-	i=0;
-}
 return;
+}
+
+void busyWait(double waittime) 
+{ //dummy loop to wait until serial line is ready 
+	double starttime;
+    starttime = CurrentTime();
+    while(ElapsedTime(CurrentTime(), starttime) < waittime)
+	{
+		//just waiting...
+	}
+    return;
+}
+
+void sendData(long count)
+{ //send data to Arduino
+    long i;  
+    sent = -1;
+    i=0;
+	while ( (sent!=count) && (i<20) )  //the serial line is not always ready (observed on Linux machines with non-FTDI devices, e.g. the original Arduino UNO)
+    {
+        sent = Send(hCom,commandData,count);
+        if ((sent>0) && (sent<count)) TraceError(0, "INCOMPLETE DATA SENT, " + long2str(i)); //so far not observed, it seems the serial line either accepts all or nothing
+        busyWait(0.0005);
+        i++;
+    }
+    if (i==20) TraceError(0, "FAILED TO SEND COMMAND TO ARDUINO !!!."); 
+	sentCnt = sentCnt+count;
+	traceSentData(count);    
+    return;
 }
 
 void initCommunication(void)
 { //initialize communication with Arduino
-	commandData[0]='C';
+	Trace(0,"Sending initialization command.");
+    commandData[0]='C';
 	commandData[1]=0;
 	commandData[2]=';';
-	sent = Send(hCom,commandData,3);
-	sentCnt = sentCnt+3;
-	traceSentData(3);
+    sendData(3);
 return;
 }
 
 void setDigitalOutput(long pin, long data[])
 { //set digital output
-	commandData[0]='O';
+	Trace(0,"Setting digital output, pin " + long2str(pin) + ", value " + long2str(data[pin]) + ".");
+    commandData[0]='O';
 	commandData[1]=pin;
 	commandData[2]=data[pin];
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
 return;
 }
 
 void setDigitalOutputMulti(long mask[], long data[], long maskByteSize)
 { //multi-set digital output
 	long i;
-	commandData[0]=1;
+    Trace(0,"Setting multiple digital outputs.");	
+    commandData[0]=1;
 	for (i=0;i<maskByteSize;i++)
 	{
 		commandData[i+1]=mask[i];
 		commandData[i+maskByteSize+1]=data[i];
 	}
 	commandData[2*maskByteSize+1]=';';
-	sent = Send(hCom,commandData,2*maskByteSize+2);
-	traceSentData(2*maskByteSize+2);
+	sendData(2*maskByteSize+2);
 return;
 }
 
 void readDigitalInput(long pin)
 { //read digital input
-	commandData[0]='I';
+	Trace(0,"Reading digital input, pin " + long2str(pin) + ".");
+    commandData[0]='I';
 	commandData[1]=pin;
 	commandData[2]=';';
-	sent = Send(hCom,commandData,3);
-	sentCnt = sentCnt+3;
-	traceSentData(3);
+	sendData(3);
 return;
 }
 
 void readDigitalInputMulti(long mask[], long maskByteSize)
 { //multi-read digital input
 	long i;
+    Trace(0,"Reading multiple digital inputs.");
 	commandData[0]=2;
 	for (i=0;i<maskByteSize;i++)
 	{
@@ -240,35 +261,32 @@ return;
 
 void setAnalogOutput(long pin, long data[])
 { //set PWM (analog) output
+    Trace(0,"Setting PWM output, pin " + long2str(pin) + ".");
 	commandData[0]='P';
 	commandData[1]=pin;
 	commandData[2]=data[pin];
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
 return;
 }
 
 void readAnalogInput(long pin)
 { //read analog input
+    Trace(0,"Reading analog input, pin " + long2str(pin) + ".");
 	commandData[0]='A';
 	commandData[1]=pin;
 	commandData[2]=';';
-	sent = Send(hCom,commandData,3);
-	sentCnt = sentCnt+3;
-	traceSentData(3);
+	sendData(3);
 return;
 }
 
 void readOnewireTemp(long pin)
 { //read temperature from next 1-Wire device
+    Trace(0,"Reading 1-Wire temperature, pin " + long2str(pin) + ".");
 	commandData[0]='T';
 	commandData[1]=pin;
 	commandData[2]=';';
-	sent = Send(hCom,commandData,3);
-	sentCnt = sentCnt+3;
-	traceSentData(3);
+	sendData(3);
 return;
 }
 
@@ -288,13 +306,12 @@ return;
 
 void readCounter(long pin, long resetflag, long enableflag)
 { //read counter value
+    Trace(0,"Reading counter, pin " + long2str(pin) + ".");
 	commandData[0]='N';
 	commandData[1]=pin;
 	commandData[2]=resetflag*2+enableflag;
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
 return;
 }
 
@@ -311,7 +328,7 @@ return;
 }
 
 void disableCounter(long pin)
-{ //read counter value
+{ //disable counter
 	commandData[0]='N';
 	commandData[1]=pin;
 	commandData[2]='D';
@@ -361,6 +378,7 @@ return;
 
 void userCommand(long micros)
 { //user command
+    Trace(0,"Sending user data.");
 	commandData[0]='U';
 	if (micros!=0) {
 		commandData[1]=1;
@@ -369,9 +387,7 @@ void userCommand(long micros)
 		commandData[1]=0;
 	}
 	commandData[2]=';';
-	sent = Send(hCom,commandData,3);
-	sentCnt = sentCnt+3;
-	traceSentData(3);
+	sendData(3);
 return;
 }
 
