@@ -293,14 +293,14 @@ return;
 void readOnewireTempMulti(long mask[], long maskByteSize)
 { //multi-read temperature from next 1-Wire device
 	long i;
-	commandData[0]=3;
+	Trace(0,"Reading multiple 1-Wire temperature sensors.");
+    commandData[0]=3;
 	for (i=0;i<maskByteSize;i++)
 	{
 		commandData[i+1]=mask[i];
 	}
 	commandData[maskByteSize+1]=';';
-	sent = Send(hCom,commandData,maskByteSize+2);
-	traceSentData(maskByteSize+2);
+	sendData(maskByteSize+2);
 return;
 }
 
@@ -317,42 +317,40 @@ return;
 
 void enableCounter(long pin)
 { //enable counter
-	commandData[0]='N';
+	Trace(0,"Enabling counter, pin " + long2str(pin) + ".");
+    commandData[0]='N';
 	commandData[1]=pin;
 	commandData[2]='E';
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
 return;
 }
 
 void disableCounter(long pin)
 { //disable counter
+	Trace(0,"Disabling counter, pin " + long2str(pin) + ".");
 	commandData[0]='N';
 	commandData[1]=pin;
 	commandData[2]='D';
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+    sendData(4);
 return;
 }
 
 void resetCounter(long pin)
 { //reset counter value
-	commandData[0]='N';
+	Trace(0,"Resetting counter, pin " + long2str(pin) + ".");
+    commandData[0]='N';
 	commandData[1]=pin;
 	commandData[2]='R';
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
 return;
 }
 
 void setDigiPotentiometer(long addrI2C, long resistorValues)
 { //set DS1844 digital potentiometer
+    Trace(0,"Setting digital potentiometer, address " + long2str(addrI2C) + ", value " + long2str(resistorValues) + ".");
 	commandData[0]='R';
 	commandData[1]=addrI2C;
 	commandData[2]=resistorValues & 63;
@@ -360,19 +358,16 @@ void setDigiPotentiometer(long addrI2C, long resistorValues)
 	commandData[4]=resistorValues>>16 & 63;
 	commandData[5]=resistorValues>>24 & 63;
 	commandData[6]=';';
-	sent = Send(hCom,commandData,7);
-	sentCnt = sentCnt+7;
-	traceSentData(7);
+	sendData(7);
 return;
 }
 
 void readBarometer(void)
 { //read barometer
+    Trace(0,"Reading barometer.");
 	commandData[0]='B';
 	commandData[1]=';';
-	sent = Send(hCom,commandData,2);
-	sentCnt = sentCnt+2;
-	traceSentData(2);
+	sendData(2);
 return;
 }
 
@@ -391,52 +386,80 @@ void userCommand(long micros)
 return;
 }
 
+void userCommand2(long data, long data2)
+{ //user command 2
+    Trace(0,"Sending 8 bytes of user data.");
+	commandData[0]='V';
+	commandData[1]=data & 0xFF;
+	commandData[2]=data>>8 & 0xFF;
+	commandData[3]=data>>16 & 0xFF;
+	commandData[4]=data>>24 & 0xFF;
+    commandData[5]=data2 & 0xFF;
+    commandData[6]=data2>>8 & 0xFF;
+    commandData[7]=data2>>16 & 0xFF;
+    commandData[8]=data2>>24 & 0xFF;
+	commandData[9]=';';
+	sendData(10);
+return;
+}
+
 int initPin(long pin)
-{
-	commandData[0]='M';
+{ //send initialization command to set individual pin mode
+    string pinmodestr[50];
+    commandData[0]='M';
 	commandData[1]=pin;
 	switch (pinModes_par[pin]){
 	case PINMODE_NC:
 		commandData[2]='N';
-		break;
+		pinmodestr = "NC";
+        break;
 	case PINMODE_DI:
 		commandData[2]='I';
-		break;
+		pinmodestr = "Digital input";
+        break;
 	case PINMODE_DIP:
 		commandData[2]='J';
+        pinmodestr = "Digital input with pull-up";
 		break;
 	case PINMODE_DO:
 		if (digitalOut[pin]==0){
 			commandData[2]='O';
+            pinmodestr = "Digital output, initial LOW";
 		}
 		else      {  
 			commandData[2]='Q';
+            pinmodestr = "Digital output, initial HIGH";
 		}
 		break;
 	case PINMODE_AI:
 		commandData[2]='A';
+        pinmodestr = "Analog input";
 		break;
 	case PINMODE_PWM:
 		commandData[2]='P';
+        pinmodestr = "PWM (Analog output)";
 		break;
 	case PINMODE_OW:
 		commandData[2]='W';
 		oneWire[pin]=0;
-		break;
+		pinmodestr = "1-Wire";
+        break;
 	case PINMODE_CNT:
 		commandData[2]='C';
+        pinmodestr = "Counter";
 		break;
 	case PINMODE_ENC:
 		commandData[2]='E';
+        pinmodestr = "Encoder";
 		break;
 	case PINMODE_ENCB:
 		commandData[2]='B';
+        pinmodestr = "Counter DIR / Encoder B";
 		break;
 	}
 	commandData[3]=';';
-	sent = Send(hCom,commandData,4);
-	sentCnt = sentCnt+4;
-	traceSentData(4);
+	sendData(4);
+	Trace(0,"Initializing pin " + long2str(pin) + ", mode " + pinmodestr + ".");
 	return 0;
 }
 
