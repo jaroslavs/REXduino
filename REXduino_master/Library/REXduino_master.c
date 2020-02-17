@@ -35,7 +35,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define COMMIT 0	   //
 
 #define COM_BAUDRATE 57600		  //change this line according to desired baudrate
-#define COMMAND_LENGTH_MAX 8	  //maximum length of command
+#define COMMAND_LENGTH_MAX 20	 //maximum length of command
 #define RESPONSE_BUFFER_LENGTH 20 //buffer for responses
 #define COMM_INIT_INTERVAL 2000   //period of communication re-initialization [ms]
 #define COM_REOPEN_INTERVAL 5000  //period of re-opening the serial port [ms]
@@ -135,7 +135,7 @@ long input(7) input7;
 long input(9) comPortNo;
 long input(10) SimulinkDetector;
 long input(13) debug;
-long input(14) CNTcmd;
+long input(14) AUXcmd;
 long input(15) userSend;
 
 long output(0) output0;
@@ -388,39 +388,32 @@ void readBarometer(void)
 	return;
 }
 
-void userCommand(long micros)
+void userCommand4(long userData)
 { //user command
-	Trace(0, "Sending user data.");
+	Trace(0, "Sending 4 bytes of user data.");
 	commandData[0] = 'U';
-	if (micros != 0)
-	{
-		commandData[1] = 1;
-	}
-	else
-	{
-		commandData[1] = 0;
-	}
-	commandData[2] = ';';
-	sendData(3);
+	commandData[1] = userData & 0xFF;
+	commandData[2] = userData >> 8 & 0xFF;
+	commandData[3] = userData >> 16 & 0xFF;
+	commandData[4] = userData >> 24 & 0xFF;
+	commandData[5] = ';';
+	sendData(6);
 	return;
 }
 
-void userCommand2(long data, long data2)
-{ //user command 2
-	Trace(0, "Sending 8 bytes of user data.");
-	commandData[0] = 'V';
-	commandData[1] = data & 0xFF;
-	commandData[2] = data >> 8 & 0xFF;
-	commandData[3] = data >> 16 & 0xFF;
-	commandData[4] = data >> 24 & 0xFF;
-	commandData[5] = data2 & 0xFF;
-	commandData[6] = data2 >> 8 & 0xFF;
-	commandData[7] = data2 >> 16 & 0xFF;
-	commandData[8] = data2 >> 24 & 0xFF;
-	commandData[9] = ';';
-	sendData(10);
+/* void userCommand16(long data[])
+{ //user command
+	long j;
+	Trace(0, "Sending 16 bytes of user data.");
+	commandData[0] = 'W';
+	for (j = 0; j < 16; j++)
+	{
+		commandData[j + 1] = data[j];
+	}
+	commandData[17] = ';';
+	sendData(18);
 	return;
-}
+} */
 
 int initPin(long pin)
 { //send initialization command to set individual pin mode
@@ -692,6 +685,7 @@ int main(void)
 	long readTempMask[MAX_PINMASK_BYTESIZE];
 	long debugChange;
 	string pinmodestr[50];
+	long userCmdData[20];
 
 	REXduinoError = 0;
 	sentCnt = 0; //counter of sent bytes
@@ -1089,8 +1083,22 @@ int main(void)
 			}
 			if (pinsSync)
 			{
-				// put user-defined commands here *****************************************
-				userCommand(userSend);
+				// user-defined commands *****************************************
+				i = ((AUXcmd >> 8) & 0x03);
+				if (i == 2) //send 4 bytes defined by the userSend input
+				{
+					userCommand4(userSend);
+				}
+				/* else if (i == 3) //send 16 bytes from the userSendV input
+				{
+					for (i = 0; i < 16; i++)
+					{
+						k = GetExtLong(".INTSM_byte" + long2str(i) + ":n");
+						userCmdData[i] = (k)&0xFF;
+					}
+					userCommand16(userCmdData);
+				} */
+				//put your own commands here if necessary
 				//readBarometer();
 				//setDigiPotentiometer(0,userSend); //I2C address is 0, potentiometer values are given by the userSend input
 				// end of user-defined commands *******************************************
@@ -1125,7 +1133,7 @@ int main(void)
 						break;
 					case PINMODE_ENC:
 					case PINMODE_CNT:
-						readCounter(i, ((CNTcmd & (long)floor((pow(2, 2 * (i - 2))) + 0.5)) > 0 ? 1 : 0), ((CNTcmd & (long)floor((pow(2, 2 * (i - 2) + 1)) + 0.5)) > 0 ? 1 : 0)); // pin number, reset flag, enable flag
+						readCounter(i, ((AUXcmd & (long)floor((pow(2, 2 * (i - 2))) + 0.5)) > 0 ? 1 : 0), ((AUXcmd & (long)floor((pow(2, 2 * (i - 2) + 1)) + 0.5)) > 0 ? 1 : 0)); // pin number, reset flag, enable flag
 						break;
 					} //end switch pinModes[i]
 				}
