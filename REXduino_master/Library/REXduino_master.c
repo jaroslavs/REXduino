@@ -41,12 +41,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define COM_REOPEN_INTERVAL 5000  //period of re-opening the serial port [ms]
 #define TIMEOUT_FAC 5			  //timeout factor (timeout = TIMEOUT_FAC * task_period, task period is given by EXEC parameters)
 
-#define MASKTYPE_ARD_UNO 1				//Arduino UNO
-#define MASKTYPE_ARD_UNOhex 2			//Arduino UNO hexadecimal mask
-#define MASKTYPE_ARD_MEGA2560 3			//Arduino MEGA 2560
-#define MASKTYPE_ARD_MEGA2560hex 4		//Arduino MEGA 2560 hexadecimal mask
-#define MASKTYPE_SEEED_MEGAV122 5		//Seeeduino Mega v1.22
-#define MASKTYPE_SEEED_MEGAV122hex 6	//Seeeduino Mega v1.22 hexadecimal mask
+#define MASKTYPE_ARD_UNO 1			 //Arduino UNO
+#define MASKTYPE_ARD_UNOhex 2		 //Arduino UNO hexadecimal mask
+#define MASKTYPE_ARD_MEGA2560 3		 //Arduino MEGA 2560
+#define MASKTYPE_ARD_MEGA2560hex 4   //Arduino MEGA 2560 hexadecimal mask
+#define MASKTYPE_SEEED_MEGAV122 5	//Seeeduino Mega v1.22
+#define MASKTYPE_SEEED_MEGAV122hex 6 //Seeeduino Mega v1.22 hexadecimal mask
 
 #define STATUS_ONEWIRE_NOMOREDEVICES 50 //2 - must be the same as in REXduino_slave.ino
 #define STATUS_ONEWIRE_TEMPCONV 52		//4 - must be the same as in REXduino_slave.ino
@@ -401,7 +401,7 @@ void userCommand4(long userData)
 	return;
 }
 
-/* void userCommand16(long data[])
+void userCommand16(long data[])
 { //user command
 	long j;
 	Trace(0, "Sending 16 bytes of user data.");
@@ -413,7 +413,7 @@ void userCommand4(long userData)
 	commandData[17] = ';';
 	sendData(18);
 	return;
-} */
+}
 
 int initPin(long pin)
 { //send initialization command to set individual pin mode
@@ -1089,7 +1089,7 @@ int main(void)
 				{
 					userCommand4(userSend);
 				}
-				/* else if (i == 3) //send 16 bytes from the userSendV input
+				else if (i == 3) //send 16 bytes from the userSendV input
 				{
 					for (i = 0; i < 16; i++)
 					{
@@ -1097,7 +1097,7 @@ int main(void)
 						userCmdData[i] = (k)&0xFF;
 					}
 					userCommand16(userCmdData);
-				} */
+				}
 				//put your own commands here if necessary
 				//readBarometer();
 				//setDigiPotentiometer(0,userSend); //I2C address is 0, potentiometer values are given by the userSend input
