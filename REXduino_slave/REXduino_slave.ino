@@ -31,11 +31,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 5 //even number = release, odd number = development
-#define REVISION 1 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 5 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 //#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
 //#define USEI2C //uncomment this line to use I2C bus
+//#define USESERVO //uncomment this line to use RC servos
 
 // uncomment the line below to use watchdog timer (8s by default, see the setup() section)
 //     - works on Arduino UNO R2, R3
@@ -58,7 +59,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define COM_BAUDRATE 57600 //serial port baudrate
 #define COMM_TIMEOUT 3000 //timeout for receiving a complete and valid command (milliseconds)
-#define COMMAND_LENGTH_MAX 20 //maximum length of command 
+#define COMMAND_LENGTH_MAX 30 //maximum length of command 
 #define ONEWIRE_TEMPCONV_DELAY 800 //time required for 1-Wire temperature conversion
 #define BUTTON_DEBOUNCE_MILLIS 20 //debouncing interval for counting button presses
 
@@ -412,6 +413,23 @@ void loop()
         command_data_length = 0;
       }
       break; // 2 command
+    case 4: // process 16-bytes of user data
+      reqLength = (18); //expected length of command
+      if ((command_data_length==reqLength) && (master_active==1))
+      { //correctly terminated command of the expected length received
+#ifdef ENABLE_WDT
+        wdt_reset();
+#endif
+        command4(); //execute the command
+        command_data_length = 0;
+      }
+      else if (command_data_length>reqLength)
+      { //command too long
+        reportError(ERROR_COMMAND,ERROR_COMMAND_INVALID); 
+        command_data_length = 0;
+      }
+      break; // 4 command
+      
 #ifdef USE1WIRE
     case 't': // verbose version of the "read 1-Wire temperature" command
       verbose_command = 1;
@@ -489,13 +507,13 @@ void loop()
     case 'u': // verbose version of the "example user-defined function" command
       verbose_command = 1; 
     case 'U': // "example user-defined function" command
-      reqLength = 3;
+      reqLength = 6;
       if ((command_data_length==reqLength) && (master_active==1))
       { //correctly terminated command of the expected length received
 #ifdef ENABLE_WDT
         wdt_reset();
 #endif
-        commandU(command_data[1],verbose_command); //execute the command
+        commandU(verbose_command); //execute the command, it will operate with the global array command_data
         command_data_length = 0;
       }
       else if (command_data_length>reqLength)

@@ -36,7 +36,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define COM_BAUDRATE 57600		  //change this line according to desired baudrate
 #define COMMAND_LENGTH_MAX 20	 //maximum length of command
-#define RESPONSE_BUFFER_LENGTH 20 //buffer for responses
+#define RESPONSE_BUFFER_LENGTH 30 //buffer for responses
 #define COMM_INIT_INTERVAL 2000   //period of communication re-initialization [ms]
 #define COM_REOPEN_INTERVAL 5000  //period of re-opening the serial port [ms]
 #define TIMEOUT_FAC 5			  //timeout factor (timeout = TIMEOUT_FAC * task_period, task period is given by EXEC parameters)
@@ -390,7 +390,7 @@ void readBarometer(void)
 
 void userCommand4(long data[])
 { //user command
-	long j;	
+	long j;
 	Trace(0, "Sending 4 bytes of user data.");
 	commandData[0] = 'U';
 	for (j = 0; j < 4; j++)
@@ -406,7 +406,7 @@ void userCommand16(long data[])
 { //user command
 	long j;
 	Trace(0, "Sending 16 bytes of user data.");
-	commandData[0] = 'W';
+	commandData[0] = 4;
 	for (j = 0; j < 16; j++)
 	{
 		commandData[j + 1] = data[j];
@@ -995,11 +995,11 @@ int main(void)
 						Trace(99, S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
-				case 'W': //response to user-function call 2
+				case 4: //response to 16-byte user-function
 					if (responseCnt == 18)
 					{
 						Trace(0, "Received response to user command (16-byte version).");
-						TraceError(0, "Command W not implemented yet.");
+						Trace(0, "Command 4 not implemented yet.");
 						//TODO longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
 						lastSuccess = CurrentTime();
 						responseCnt = 0;

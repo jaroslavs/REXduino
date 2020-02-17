@@ -438,7 +438,7 @@ void command1(void){
       }
     }
   }
-}
+} // end of command 1
 
 // Perform command 2 - multi-read digital inputs ***************************************
 void command2(void){
@@ -453,7 +453,22 @@ void command2(void){
       }
     }
   }
-}
+} // end of command 2
+
+// Perform command 4 - process 16-bytes of user data ***************************************
+void command4(void){
+  byte i;
+  //user data is in global array command_data, LSB is in command_data[1], MSB is in command_data[16]
+  //process the incoming data here
+  //...  
+  //compose response - by default the data will be looped back
+  Serial.write(4);
+  for (i=0;i<16;i++)
+    {
+      Serial.write(command_data[i+1]);
+    }
+  Serial.write(';');  
+} // end of command 4
 
 #ifdef USE1WIRE
 // Perform T command - read 1-Wire temperature ***************************************
@@ -539,8 +554,7 @@ void command3(void){
       }
     }
   }
-}
-
+} //end of command 3
 #endif //USE1WIRE
 
 #ifdef USEI2C
@@ -645,13 +659,13 @@ void commandR(byte addr, byte pot0, byte pot1, byte pot2, byte pot3, byte verbos
 
 // Perform U command - an example of user-defined function ***************************************
 // returns uptime in miliseconds or microseconds
-void commandU(byte microseconds, byte verbose){
+void commandU(byte verbose){
   if (verbose){
-    microseconds = microseconds - 48; //convert from ASCII to number
+    command_data[1] = (command_data[1]&0xFF) - 48; //convert from ASCII to number
   }
   if (verbose){
     Serial.println();
-    if (microseconds==0){
+    if (command_data[1]==0){
       Serial.print("Uptime [ms]: "); 
       Serial.println(millis());
     }
@@ -662,7 +676,7 @@ void commandU(byte microseconds, byte verbose){
   }
   else {
     Serial.write('U');
-    if (microseconds==0){
+    if (command_data[1]==0){
       Serial.write((millis()&255));
       Serial.write((millis()>>8)&255);
       Serial.write((millis()>>16)&255);
