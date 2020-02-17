@@ -31,7 +31,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 5 //even number = release, odd number = development
-#define REVISION 4 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 5 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 #define COM_BAUDRATE 57600 //change this line according to desired baudrate
@@ -84,6 +84,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define PINMODE_CNT		8 //counter input (counting falling edges by default)
 #define PINMODE_ENC		9 //encoder input, signal A (evaluated on both edges of the A signal)
 #define PINMODE_ENCB	10 //encoder input, signal B (digital input but no data is polled) 
+
+#define S_PINMODE_NC0		"NC" //not connected (due to Simulink compatibility)
+#define S_PINMODE_NC		"NC" //not connected
+#define S_PINMODE_DO_HIGH		"Digital output, initial HIGH" //digital output
+#define S_PINMODE_DO_LOW		"Digital output, initial LOW" //digital output
+#define S_PINMODE_DI		"Digital input" //digital input
+#define S_PINMODE_DIP		"Digital input with pull-up" //digital input with internal 20k pull-up resistors 
+#define S_PINMODE_PWM		"PWM (Analog output)" //PWM output (analog output)
+#define S_PINMODE_AI		"Analog input" //analog input
+#define S_PINMODE_OW		"1-Wire" //1-wire bus gateway
+#define S_PINMODE_CNT		"Counter" //counter input (counting falling edges by default)
+#define S_PINMODE_ENC		"Encoder" //encoder input, signal A (evaluated on both edges of the A signal)
+#define S_PINMODE_ENCB	"Counter DIR / Encoder B" //encoder input, signal B (digital input but no data is polled) 
+#define S_INVALID_RESPONSE "Incomplete or invalid response."
 
 #define MAX_PIN_COUNT 96 //size of internal arrays, must be greater than number of pins on the most populated board
 #define MAX_PINMASK_BYTESIZE 12 // size of pinmask in bytes (1 byte..8 pins), i.e. ceil(MAX_PIN_COUNT/8.0)
@@ -412,50 +426,50 @@ int initPin(long pin)
 	switch (pinModes_par[pin]){
 	case PINMODE_NC:
 		commandData[2]='N';
-		pinmodestr = "NC";
+		pinmodestr = S_PINMODE_NC;
         break;
 	case PINMODE_DI:
 		commandData[2]='I';
-		pinmodestr = "Digital input";
+		pinmodestr = S_PINMODE_DI;
         break;
 	case PINMODE_DIP:
 		commandData[2]='J';
-        pinmodestr = "Digital input with pull-up";
+        pinmodestr = S_PINMODE_DIP;
 		break;
 	case PINMODE_DO:
 		if (digitalOut[pin]==0){
 			commandData[2]='O';
-            pinmodestr = "Digital output, initial LOW";
+            pinmodestr = S_PINMODE_DO_LOW;
 		}
 		else      {  
 			commandData[2]='Q';
-            pinmodestr = "Digital output, initial HIGH";
+            pinmodestr = S_PINMODE_DO_HIGH;
 		}
 		break;
 	case PINMODE_AI:
 		commandData[2]='A';
-        pinmodestr = "Analog input";
+        pinmodestr = S_PINMODE_AI;
 		break;
 	case PINMODE_PWM:
 		commandData[2]='P';
-        pinmodestr = "PWM (Analog output)";
+        pinmodestr = S_PINMODE_PWM;
 		break;
 	case PINMODE_OW:
 		commandData[2]='W';
 		oneWire[pin]=0;
-		pinmodestr = "1-Wire";
+		pinmodestr = S_PINMODE_OW;
         break;
 	case PINMODE_CNT:
 		commandData[2]='C';
-        pinmodestr = "Counter";
+        pinmodestr = S_PINMODE_CNT;
 		break;
 	case PINMODE_ENC:
 		commandData[2]='E';
-        pinmodestr = "Encoder";
+        pinmodestr = S_PINMODE_ENC;
 		break;
 	case PINMODE_ENCB:
 		commandData[2]='B';
-        pinmodestr = "Counter DIR / Encoder B";
+        pinmodestr = S_PINMODE_ENCB;
 		break;
 	}
 	commandData[3]=';';
@@ -669,6 +683,8 @@ int main(void)
 	long digitalOutMulti[MAX_PINMASK_BYTESIZE];
 	long readTempMask[MAX_PINMASK_BYTESIZE];
   long debugChange;
+    string pinmodestr[50];
+    
 	REXduinoError = 0;
 	sentCnt = 0; //counter of sent bytes
 
@@ -719,32 +735,23 @@ int main(void)
 		{ // first we process incoming serial data
 			responseCnt++;
 			responseData[responseCnt-1] = lastIn[0];
-      if (TRACE_INCOMING)
-      {
-			   Trace(88,lastIn[0]); //print all received data to logfile
-      }
+		   TraceVerbose(88,"Incoming byte: " + long2str(lastIn[0])); //print all received data to system log
 			if (lastIn[0]==';')
 			{
-				/*
-				for (i=0;i<responseCnt;i++) //print received data to logfile
-				{
-				Trace(33,responseData[i]);
-				}
-				Trace(222,99.9);
-				*/
 				switch (responseData[0])
 				{
 				case 'C': //connection confirmation
 					if ((responseCnt==3) && (responseData[1]==48)) //48 is the ASCII value of '0'
 					{      
-						initialized = 1;
+						Trace(0,"Received connection confirmation.");
+                        initialized = 1;
 						REXduinoError = 0;
 						responseCnt = 0;
 						lastSuccess=CurrentTime();
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,"Invalid confirmation."); //incomplete or invalid response
 					}
 					break;
 				case 'E': //error or warning message
@@ -752,8 +759,7 @@ int main(void)
 					{      
 						if (responseData[1]<48) 
 						{ //warning only
-							Trace(8,responseData[1]); //print warning to system log
-							Trace(8,responseData[2]); //print warning to system log
+							TraceWarning(8, "REXduino slave warning, code: " + long2str(responseData[1]) + " " + long2str(responseData[2])); //print warning to system log
 						}
 						else 
 						{ // error message
@@ -763,8 +769,7 @@ int main(void)
 							else
 							{
 								REXduinoError = (responseData[1]<<8)|responseData[2];
-								Trace(9,responseData[1]); //print error to system log
-								Trace(9,responseData[2]); //print error to system log
+								TraceError(8, "REXduino slave error, code: " + long2str(responseData[1]) + " " + long2str(responseData[2])); //print error to system log
 							}
 						}
 						responseCnt = 0;
@@ -772,7 +777,7 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,"Invalid error message."); //incomplete or invalid response
 					}
 					break;
 				case 'M':  //pin mode confirmation
@@ -784,37 +789,50 @@ int main(void)
 						{
 						case 'N':
 							pinModes[responseData[1]] = PINMODE_NC; 
+                            pinmodestr = S_PINMODE_NC;
 							break;
 						case 'I':
-							pinModes[responseData[1]] = PINMODE_DI; 
+							pinModes[responseData[1]] = PINMODE_DI;
+                            pinmodestr = S_PINMODE_DI; 
 							break;
 						case 'J':
 							pinModes[responseData[1]] = PINMODE_DIP; 
+                            pinmodestr = S_PINMODE_DIP;
 							break;
 						case 'O':
+							pinModes[responseData[1]] = PINMODE_DO;
+                            pinmodestr = S_PINMODE_DO_LOW; 
 						case 'Q':
-							pinModes[responseData[1]] = PINMODE_DO; 
+							pinModes[responseData[1]] = PINMODE_DO;
+                            pinmodestr = S_PINMODE_DO_HIGH; 
 							break;
 						case 'P':
 							pinModes[responseData[1]] = PINMODE_PWM; 
+                            pinmodestr = S_PINMODE_PWM;
 							break;
 						case 'A':
-							pinModes[responseData[1]] = PINMODE_AI; 
+							pinModes[responseData[1]] = PINMODE_AI;
+                            pinmodestr = S_PINMODE_AI; 
 							break;
 						case 'W':
-							pinModes[responseData[1]] = PINMODE_OW; 
+							pinModes[responseData[1]] = PINMODE_OW;
+                            pinmodestr = S_PINMODE_OW; 
 							break;
 						case 'C':
-							pinModes[responseData[1]] = PINMODE_CNT; 
+							pinModes[responseData[1]] = PINMODE_CNT;
+                            pinmodestr = S_PINMODE_CNT; 
 							break;
 						case 'E':
-							pinModes[responseData[1]] = PINMODE_ENC; 
+							pinModes[responseData[1]] = PINMODE_ENC;
+                            pinmodestr = S_PINMODE_ENC; 
 							break;
 						case 'B':
-							pinModes[responseData[1]] = PINMODE_ENCB; 
+							pinModes[responseData[1]] = PINMODE_ENCB;
+                            pinmodestr = S_PINMODE_ENCB; 
 							break;
 						}
-						lastSuccess=CurrentTime();
+						Trace(0,"Pin mode confirmed (pin " + long2str(responseData[1]) + ", " + pinmodestr);
+                        lastSuccess=CurrentTime();
             }
             else
             {
@@ -822,14 +840,14 @@ int main(void)
               REXduinoError = ERROR_RESPONSE_INVALID;
       					for (i=0;i<responseCnt;i++)
 			       		{
-						      Trace(7779,responseData[i]); //print error to system log          
+						      TraceError(7779,"Invalid confirmation of pin mode, pin " + long2str(responseData[i])); //print error to system log          
 					      }
             }
 						responseCnt = 0;
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,"Invalid confirmation of pin mode."); //incomplete or invalid response 
 					}
 					break;
 				case 'I':  //digital input
@@ -841,7 +859,7 @@ int main(void)
 					}		
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'A':  //analog input
@@ -853,7 +871,7 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'O':  //digital output
@@ -865,7 +883,7 @@ int main(void)
 					}		
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'T':  //1-Wire temperature
@@ -894,7 +912,7 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'N':  //counter or encoder value
@@ -918,7 +936,7 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'B':  //barometer data
@@ -936,7 +954,7 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'R':  //digital potentiometer
@@ -947,7 +965,7 @@ int main(void)
 					}		
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				case 'U':  //response to user-function call
@@ -959,14 +977,27 @@ int main(void)
 					}
 					else
 					{
-						//incomplete or invalid response
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
+					}
+					break;
+				case 'W':  //response to user-function call 2
+					if (responseCnt==10)
+					{
+						longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
+						lastSuccess=CurrentTime(); 
+						responseCnt = 0;
+					}
+					else
+					{
+						Trace(99,S_INVALID_RESPONSE); //incomplete or invalid response
 					}
 					break;
 				default: //unknown response
 					REXduinoError = ERROR_RESPONSE_INVALID;
 					for (i=0;i<responseCnt;i++)
 					{
-						Trace(7777,responseData[i]); //print error to system log          
+						Trace(7777,responseData[i]); //print error to system log
+                        Trace(99, "Unknown response from REXduino slave.");          
 					}
 					responseCnt = 0;
 				} //end switch responseData[0]
@@ -982,7 +1013,6 @@ int main(void)
 			}
 		} //while incoming data
 
-		// here j==0 might mean that Arduino is disconnected, but I'm not sure if it works on all platforms
 		//"Arduino disconnected" or no "valid response received within timeout period" or "opening of port succeeded but the communication initialization did not proceed"
 		if ( (ElapsedTime(CurrentTime(),lastSuccess)>(TIMEOUT_FAC*GetPeriod())) || ((ElapsedTime(CurrentTime(),portOpenTime)>COM_REOPEN_INTERVAL*0.001) && (!initialized)) )
 		{ 
