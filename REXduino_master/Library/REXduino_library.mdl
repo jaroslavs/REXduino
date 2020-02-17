@@ -6745,7 +6745,8 @@ Library {
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
 "in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
-"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode"
+"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode|Number of user-defi"
+"ned bytes to send"
       MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
 ": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
 " ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
@@ -6779,14 +6780,16 @@ Library {
 "put|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: Anal"
 "og input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Di"
 "gital input|4: Digital input with internal pull-up|5: --- N/A for this pin ---"
-"|6: Analog input|7: 1-Wire temperature)"
-      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskCallbackString      "||||||||||||||"
-      MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+"|6: Analog input|7: 1-Wire temperature),popup(1: No data|2: Four bytes|3: Sixt"
+"een bytes)"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||||||||||"
+      MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
 "pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
-"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15"
+"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15;usercmd=&1"
+"6"
       MaskIconFrame           on
       MaskIconOpaque          on
       MaskIconRotate          "none"
@@ -6794,7 +6797,7 @@ Library {
       MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
 "1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
-"Not connected|1: Not connected|1: Not connected"
+"Not connected|1: Not connected|1: Not connected|1: No data"
       #GUID                   0139119e-66ff-4eb1-a2b1-d0168ce6c748
       System {
         Name                    "Arduino_UNO"
@@ -7052,7 +7055,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "userSendV"
-          Position                [15, 1318, 45, 1332]
+          Position                [15, 1388, 45, 1402]
           Port                    21
           OutDataTypeStr          "Inherit: auto"
           FontSize                10
@@ -7684,7 +7687,7 @@ Library {
           BlockType               Reference
           Name                    "CNB_LOG_INCOMING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1703, 220, 1717]
+          Position                [200, 1773, 220, 1787]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           YCN                     off
@@ -7694,7 +7697,7 @@ Library {
           BlockType               Reference
           Name                    "CNB_LOG_OUTGOING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1733, 220, 1747]
+          Position                [200, 1803, 220, 1817]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           YCN                     off
@@ -7779,6 +7782,16 @@ Library {
           SourceType              "CNI"
           icn                     15
           #GUID                   36c64572-4dc8-4762-b8e9-105b6f528311
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_userCmdType"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 1228, 75, 1242]
+          SourceBlock             "mathlib/CNI"
+          icn                     "usercmd"
+          FontSize                10
+          #GUID                   955fdfc6-3963-4c19-a6ec-a929c7d129eb
         }
         Block {
           BlockType               SubSystem
@@ -8273,7 +8286,7 @@ Library {
           BlockType               Reference
           Name                    "IADD"
           Ports                   [2, 2, 0, 0, 0]
-          Position                [350, 1248, 375, 1272]
+          Position                [350, 1318, 375, 1342]
           SourceBlock             "mathlib/IADD"
           vtype                   "6: DWord (U32)"
           SAT                     off
@@ -8284,7 +8297,7 @@ Library {
           BlockType               Reference
           Name                    "IADD1"
           Ports                   [2, 2, 0, 0, 0]
-          Position                [350, 1288, 375, 1312]
+          Position                [350, 1358, 375, 1382]
           SourceBlock             "mathlib/IADD"
           vtype                   "6: DWord (U32)"
           SAT                     off
@@ -8295,7 +8308,7 @@ Library {
           BlockType               Reference
           Name                    "IADD2"
           Ports                   [2, 2, 0, 0, 0]
-          Position                [405, 1248, 430, 1272]
+          Position                [405, 1318, 430, 1342]
           SourceBlock             "mathlib/IADD"
           vtype                   "6: DWord (U32)"
           SAT                     off
@@ -8304,9 +8317,20 @@ Library {
         }
         Block {
           BlockType               Reference
+          Name                    "IADD3"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [290, 1218, 315, 1242]
+          SourceBlock             "mathlib/IADD"
+          vtype                   "6: DWord (U32)"
+          SAT                     off
+          FontSize                10
+          #GUID                   b02c0799-faf0-4a7e-b41f-7f3dff860438
+        }
+        Block {
+          BlockType               Reference
           Name                    "INTSM_byte0"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1248, 260, 1262]
+          Position                [235, 1318, 260, 1332]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8317,7 +8341,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte1"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1268, 315, 1282]
+          Position                [290, 1338, 315, 1352]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8328,7 +8352,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte10"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1483, 260, 1497]
+          Position                [235, 1553, 260, 1567]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8339,7 +8363,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte11"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1503, 315, 1517]
+          Position                [290, 1573, 315, 1587]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8350,7 +8374,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte12"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1523, 260, 1537]
+          Position                [235, 1593, 260, 1607]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8361,7 +8385,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte13"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1543, 315, 1557]
+          Position                [290, 1613, 315, 1627]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8372,7 +8396,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte14"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1563, 260, 1577]
+          Position                [235, 1633, 260, 1647]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8383,7 +8407,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte15"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1583, 315, 1597]
+          Position                [290, 1653, 315, 1667]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8394,7 +8418,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte2"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1288, 260, 1302]
+          Position                [235, 1358, 260, 1372]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8405,7 +8429,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte3"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1308, 315, 1322]
+          Position                [290, 1378, 315, 1392]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8416,7 +8440,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte4"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1328, 260, 1342]
+          Position                [235, 1398, 260, 1412]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8427,7 +8451,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte5"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1348, 315, 1362]
+          Position                [290, 1418, 315, 1432]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8438,7 +8462,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte6"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1368, 260, 1382]
+          Position                [235, 1438, 260, 1452]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8449,7 +8473,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte7"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1388, 315, 1402]
+          Position                [290, 1458, 315, 1472]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8460,7 +8484,7 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte8"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1443, 260, 1457]
+          Position                [235, 1513, 260, 1527]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
@@ -8471,12 +8495,23 @@ Library {
           BlockType               Reference
           Name                    "INTSM_byte9"
           Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1463, 315, 1477]
+          Position                [290, 1533, 315, 1547]
           SourceBlock             "logiclib/INTSM"
           shift                   0
           mask                    0xFF
           FontSize                10
           #GUID                   405763bf-7758-403a-a07b-cea146d7f66f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM_userCmdType"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [195, 1228, 220, 1242]
+          SourceBlock             "logiclib/INTSM"
+          shift                   -8
+          mask                    0x03
+          FontSize                10
+          #GUID                   686cd329-b24d-4329-8551-79643e7411a5
         }
         Block {
           BlockType               Reference
@@ -8491,7 +8526,7 @@ Library {
           BlockType               Reference
           Name                    "MP_FORCE_RECONNECT"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1643, 220, 1657]
+          Position                [205, 1713, 220, 1727]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8503,7 +8538,7 @@ Library {
           BlockType               Reference
           Name                    "MP_LOG_MASTER_VERSION"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1763, 220, 1777]
+          Position                [205, 1833, 220, 1847]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8515,7 +8550,7 @@ Library {
           BlockType               Reference
           Name                    "MP_LOG_PINMODES"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1673, 220, 1687]
+          Position                [205, 1743, 220, 1757]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8547,7 +8582,7 @@ Library {
           BlockType               Reference
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [295, 1633, 345, 1877]
+          Position                [295, 1703, 345, 1947]
           SourceBlock             "logiclib/BMOCT"
           SourceType              "BMOCT"
           shift                   0
@@ -8643,7 +8678,7 @@ Library {
           BlockType               Reference
           Name                    "VTOR"
           Ports                   [1, 8, 0, 0, 0]
-          Position                [120, 1242, 165, 1408]
+          Position                [120, 1312, 165, 1478]
           SourceBlock             "matrixlib/VTOR"
           n                       8
           offset                  0
@@ -8655,7 +8690,7 @@ Library {
           BlockType               Reference
           Name                    "VTOR1"
           Ports                   [1, 8, 0, 0, 0]
-          Position                [120, 1431, 165, 1609]
+          Position                [120, 1501, 165, 1679]
           SourceBlock             "matrixlib/VTOR"
           n                       8
           offset                  8
@@ -9239,6 +9274,13 @@ Library {
           #GUID                   b16e0dc3-7b8e-44fa-a5e7-cfa55f3268b7
         }
         Line {
+          SrcBlock                "CNI_userCmdType"
+          SrcPort                 1
+          DstBlock                "INTSM_userCmdType"
+          DstPort                 1
+          #GUID                   42a4aaa2-dbc6-4d46-b3b3-80ad70850f11
+        }
+        Line {
           SrcBlock                "CNT2E"
           SrcPort                 1
           DstBlock                "CNT_mux"
@@ -9272,10 +9314,20 @@ Library {
         Line {
           SrcBlock                "CNT_mux"
           SrcPort                 1
-          Points                  [275, 0; 0, -695]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 17
+          Points                  [45, 0]
           #GUID                   3d9faee7-4c78-4fe1-8f98-59f7f6667bcf
+          Branch {
+            Points                  [0, 105]
+            DstBlock                "IADD3"
+            DstPort                 1
+            #GUID                   adedbb3d-36ec-41a9-b358-efe61b64c714
+          }
+          Branch {
+            Points                  [230, 0; 0, -695]
+            DstBlock                "REXLANG_REXduino"
+            DstPort                 17
+            #GUID                   b637da45-0a20-4095-b9bd-10ce44c3a965
+          }
         }
         Line {
           SrcBlock                "DO10_PWM"
@@ -9581,7 +9633,7 @@ Library {
         Line {
           SrcBlock                "IADD2"
           SrcPort                 1
-          Points                  [60, 0; 0, -820]
+          Points                  [60, 0; 0, -890]
           DstBlock                "REXLANG_REXduino"
           DstPort                 18
           #GUID                   aa4367e2-ac2b-4ec2-bc7c-6ca857c2e4f4
@@ -9615,6 +9667,13 @@ Library {
           DstBlock                "IADD1"
           DstPort                 2
           #GUID                   1ff1ad41-e9be-4ddd-8e83-3a36a2dfbb71
+        }
+        Line {
+          SrcBlock                "INTSM_userCmdType"
+          SrcPort                 1
+          DstBlock                "IADD3"
+          DstPort                 2
+          #GUID                   8070a6d3-074f-4dbd-a062-6cfa71475e66
         }
         Line {
           SrcBlock                "ISSW"
@@ -9683,7 +9742,7 @@ Library {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [200, 0; 0, -1340]
+          Points                  [200, 0; 0, -1410]
           DstBlock                "REXLANG_REXduino"
           DstPort                 16
           #GUID                   2e72480c-de3a-4875-b711-76418d6e0e33
@@ -9936,6 +9995,19 @@ Library {
             DstPort                 1
             #GUID                   cae0da30-4a6c-41ee-9085-ef8f2fb39714
           }
+        }
+        Annotation {
+          Position                [50, 1260]
+          Text                    "1.. none\n2.. 4-byte\n3.. 16-byte"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   40648ea3-8574-402a-bad1-d177045c8eab
         }
       }
     }
