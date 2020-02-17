@@ -473,8 +473,8 @@ int initPin(long pin)
 		break;
 	}
 	commandData[3]=';';
-	sendData(4);
 	Trace(0,"Initializing pin " + long2str(pin) + ", mode " + pinmodestr + ".");
+	sendData(4);
 	return 0;
 }
 
@@ -633,7 +633,7 @@ int initPort(void)
 		dropData[0] = 0;
     while ((i=Recv(handle,dropData,1))>0)
 		{
-      TraceVerbose(2222,"Purging communication buffer (byte " + long2str(dropData[0]) + ".");
+      TraceVerbose(2222,"Purging communication buffer (byte " + long2str(dropData[0]) + ").");
     }
 	}
 	else 
@@ -731,7 +731,8 @@ int main(void)
 			lastSuccess = CurrentTime();
 		}
     lastIn[0] = 0;
-		while ((Recv(hCom,lastIn,1))>0)
+		Trace(0," = Processing incoming data =");
+        while ((Recv(hCom,lastIn,1))>0)
 		{ // first we process incoming serial data
 			responseCnt++;
 			responseData[responseCnt-1] = lastIn[0];
@@ -765,6 +766,7 @@ int main(void)
 						{ // error message
 							if ( (responseData[1]==52) && (responseData[2]==50) ){
 								//1-Wire bus busy, this error message is ignored
+                                TraceVerbose(8,"1-Wire bus busy, temperature conversion in progress.");
 							}
 							else
 							{
@@ -831,7 +833,7 @@ int main(void)
                             pinmodestr = S_PINMODE_ENCB; 
 							break;
 						}
-						Trace(0,"Pin mode confirmed (pin " + long2str(responseData[1]) + ", " + pinmodestr);
+						Trace(0,"Pin mode confirmed (pin " + long2str(responseData[1]) + ", " + pinmodestr + ")");
                         lastSuccess=CurrentTime();
             }
             else
@@ -853,7 +855,8 @@ int main(void)
 				case 'I':  //digital input
 					if (responseCnt==4)
 					{
-						digitalIn[responseData[1]] = responseData[2]; 
+						Trace(0,"Received status of digital input on pin " + long2str(responseData[1]) + "." );
+                        digitalIn[responseData[1]] = responseData[2]; 
 						lastSuccess=CurrentTime();
 						responseCnt = 0;
 					}		
@@ -865,7 +868,8 @@ int main(void)
 				case 'A':  //analog input
 					if (responseCnt==5)
 					{
-						analogIn[responseData[1]] = responseData[2]<<8 | responseData[3]; 
+						Trace(0,"Received analog input reading from pin " + long2str(responseData[1]) + "." );
+                        analogIn[responseData[1]] = responseData[2]<<8 | responseData[3]; 
 						lastSuccess=CurrentTime();
 						responseCnt = 0;
 					}
@@ -878,7 +882,8 @@ int main(void)
 				case 'P':  //analog output (PWM)
 					if (responseCnt==4)
 					{
-						lastSuccess=CurrentTime(); 
+						Trace(0,"Setting of output on pin " + long2str(responseData[1]) + " succeeded." );
+                        lastSuccess=CurrentTime(); 
 						responseCnt = 0;
 					}		
 					else
@@ -892,12 +897,14 @@ int main(void)
 						switch (responseData[2])
 						{
 						case STATUS_ONEWIRE_NOMOREDEVICES:
-							initPin(responseData[1]);
+							Trace(0,"There are no more 1-Wire devices on branch " + long2str(responseData[1]) + ". The pin will be reinitialized." );
+                            initPin(responseData[1]);
 							responseCnt = 0;
 							lastSuccess=CurrentTime();
 							break;
 						case STATUS_ONEWIRE_TEMPCONV:
-							responseCnt = 0;
+							Trace(0,"Temperature conversion started on branch " + long2str(responseData[1]) + "." );
+                            responseCnt = 0;
 							lastSuccess=CurrentTime();
 							break;
 						default:
@@ -906,7 +913,8 @@ int main(void)
 					}
 					else if (responseCnt==7)
 					{
-						oneWire[responseData[1]] = (responseData[3] & 15)<<12 | (responseData[5] & 15)<<8 | responseData[4];    
+						Trace(0,"Temperature reading received from branch " + long2str(responseData[1]) + "." );
+                        oneWire[responseData[1]] = (responseData[3] & 15)<<12 | (responseData[5] & 15)<<8 | responseData[4];    
 						responseCnt = 0;
 						lastSuccess=CurrentTime();
 					}
@@ -921,17 +929,19 @@ int main(void)
 						switch (responseData[1])
 						{
 						case 2:
-							longArray[2] = responseData[3]<<0 | responseData[4]<<8 | responseData[5]<<16 | responseData[6]<<24;    
+							Trace(0,"Received counter value, pin " + long2str(responseData[1]) + "." );
+                            longArray[2] = responseData[3]<<0 | responseData[4]<<8 | responseData[5]<<16 | responseData[6]<<24;    
 							responseCnt = 0;
 							lastSuccess=CurrentTime();
 							break;
 						case 3:
-							longArray[3] = responseData[3]<<0 | responseData[4]<<8 | responseData[5]<<16 | responseData[6]<<24;
+							Trace(0,"Received counter value, pin " + long2str(responseData[1]) + "." );
+                            longArray[3] = responseData[3]<<0 | responseData[4]<<8 | responseData[5]<<16 | responseData[6]<<24;
 							responseCnt = 0;
 							lastSuccess=CurrentTime();
 							break;
 						default:
-							//invalid counter ID, counters only on pins 2 and 3
+							TraceError(0,"Invalid counter ID, counters only on pins 2 and 3.");
 						}
 					}
 					else
@@ -971,6 +981,7 @@ int main(void)
 				case 'U':  //response to user-function call
 					if (responseCnt==6)
 					{
+                        Trace(0,"Received response to user command (4-byte version).");
 						longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
 						lastSuccess=CurrentTime(); 
 						responseCnt = 0;
@@ -981,9 +992,11 @@ int main(void)
 					}
 					break;
 				case 'W':  //response to user-function call 2
-					if (responseCnt==10)
+					if (responseCnt==18)
 					{
-						longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
+                        Trace(0,"Received response to user command (16-byte version).");
+                        TraceError(0,"Command W not implemented yet.");
+						//TODO longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
 						lastSuccess=CurrentTime(); 
 						responseCnt = 0;
 					}
@@ -1012,12 +1025,15 @@ int main(void)
 				responseCnt = 0; 
 			}
 		} //while incoming data
+        Trace(0," = Incoming data processed =");
 
 		//"Arduino disconnected" or no "valid response received within timeout period" or "opening of port succeeded but the communication initialization did not proceed"
 		if ( (ElapsedTime(CurrentTime(),lastSuccess)>(TIMEOUT_FAC*GetPeriod())) || ((ElapsedTime(CurrentTime(),portOpenTime)>COM_REOPEN_INTERVAL*0.001) && (!initialized)) )
 		{ 
 			hCom = closePort(hCom);
 		}
+
+        Trace(0," = Sending commands to REXduino slave device =");
 		if (initialized)
 		{ //if connection is established, we can initialize pins and/or send commands 
 			for (i=0;i<MAX_PINMASK_BYTESIZE;i++)
@@ -1122,6 +1138,7 @@ int main(void)
 				//no commands are sent, until all changes in pinmodes are confirmed by REXduino slave      
 			}
 		}        
+        Trace(0," = Finished sending commands to REXduino slave device =");
 	} //if-else hCom<0
 
 	if (hCom>=0)
