@@ -7007,7 +7007,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "CNT2R"
-          Position                [15, 1078, 45, 1092]
+          Position                [15, 1068, 45, 1082]
           Port                    17
           PortWidth               -1
           SampleTime              -1
@@ -7019,7 +7019,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "CNT2E"
-          Position                [15, 1108, 45, 1122]
+          Position                [15, 1098, 45, 1112]
           Port                    18
           PortWidth               -1
           SampleTime              -1
@@ -7031,7 +7031,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "CNT3R"
-          Position                [15, 1138, 45, 1152]
+          Position                [15, 1128, 45, 1142]
           Port                    19
           PortWidth               -1
           SampleTime              -1
@@ -7043,7 +7043,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "CNT3E"
-          Position                [15, 1168, 45, 1182]
+          Position                [15, 1158, 45, 1172]
           Port                    20
           PortWidth               -1
           SampleTime              -1
@@ -7055,7 +7055,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "userSendV"
-          Position                [15, 1388, 45, 1402]
+          Position                [30, 1658, 60, 1672]
           Port                    21
           OutDataTypeStr          "Inherit: auto"
           FontSize                10
@@ -7544,6 +7544,397 @@ Library {
           }
         }
         Block {
+          BlockType               SubSystem
+          Name                    "AUXdata"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [325, 1487, 420, 1518]
+          ShowPortLabels          on
+          FontSize                10
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   51544ba7-d3b7-4aab-9de8-47419e2c8239
+          System {
+            Name                    "AUXdata"
+            Location                [296, 319, 774, 825]
+            #GUID                   51544ba7-d3b7-4aab-9de8-47419e2c8239
+            Block {
+              BlockType               Inport
+              Name                    "iu"
+              Position                [20, 23, 50, 37]
+              Port                    1
+              OutDataTypeStr          "Inherit: auto"
+              FontSize                10
+              #GUID                   74d243c3-af7a-4e51-9a2f-40868dcbf95c
+            }
+            Block {
+              BlockType               Inport
+              Name                    "uVec"
+              Position                [25, 173, 55, 187]
+              Port                    2
+              OutDataTypeStr          "Inherit: auto"
+              FontSize                10
+              #GUID                   badbdbd7-7e3b-4dc4-bd36-ef9e62b1d0b6
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte0"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 103, 295, 117]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   07eedd76-a05e-4141-a17e-121e593ce10c
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte1"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 123, 350, 137]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   ae0a658d-a8a4-4b15-9174-55cd656c5c22
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte10"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 338, 295, 352]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   323e5d6a-bbb0-405b-a8dc-265e3e3db7bb
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte11"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 358, 350, 372]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   7786a004-51a4-4627-869b-1c8b7b3f3122
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte12"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 378, 295, 392]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   8b8ee070-ad33-447a-ac52-872ff819beb7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte13"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 398, 350, 412]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   9220d822-9d30-416a-82dc-bc2b99a08a59
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte14"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 418, 295, 432]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   4f2ca9fa-373c-42f3-9ced-17fb3e09ea13
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte15"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 438, 350, 452]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   5a4ac02b-0511-41ac-baf1-f73169d7963d
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte2"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 143, 295, 157]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   1d9a01dd-6972-4723-9992-9334ea559f56
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte3"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 163, 350, 177]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   45d10ebc-9c66-4b4a-b834-48c6b19cafcc
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte4"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 183, 295, 197]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   ec2dae37-f9d4-4bc9-9f5f-057954e8eff6
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte5"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 203, 350, 217]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   b3373983-5a19-4486-a0d5-33032c9bdfe6
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte6"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 223, 295, 237]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   c1586863-daaf-4f5b-b14f-0d8d747c9344
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte7"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 243, 350, 257]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   d401dfa3-0401-4354-b7ff-8a902c7d448e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte8"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [270, 298, 295, 312]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   8b6a46eb-b9b4-4a47-b04c-82be48007ea8
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTSM_byte9"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 318, 350, 332]
+              SourceBlock             "logiclib/INTSM"
+              shift                   0
+              mask                    0xFF
+              FontSize                10
+              #GUID                   7add4c88-e032-48e8-94a3-2cc8bc521e18
+            }
+            Block {
+              BlockType               Reference
+              Name                    "VTOR"
+              Ports                   [1, 8, 0, 0, 0]
+              Position                [155, 97, 200, 263]
+              SourceBlock             "matrixlib/VTOR"
+              n                       8
+              offset                  0
+              etype                   "8: Double (F64)"
+              FontSize                10
+              #GUID                   9f242536-c56d-47da-a4e8-eb1de4fa3953
+            }
+            Block {
+              BlockType               Reference
+              Name                    "VTOR1"
+              Ports                   [1, 8, 0, 0, 0]
+              Position                [155, 286, 200, 464]
+              SourceBlock             "matrixlib/VTOR"
+              n                       8
+              offset                  8
+              etype                   "8: Double (F64)"
+              FontSize                10
+              #GUID                   996f4122-7635-4365-ba1c-221e67ea27ab
+            }
+            Block {
+              BlockType               Outport
+              Name                    "iy"
+              Position                [415, 23, 445, 37]
+              Port                    1
+              OutDataTypeStr          "Inherit: auto"
+              FontSize                10
+              #GUID                   8e488e11-6c3d-4aff-ace7-1f8c7207a597
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 1
+              DstBlock                "INTSM_byte0"
+              DstPort                 1
+              #GUID                   faff9195-96c9-4f06-b1e0-f6ef0476ebfc
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 2
+              DstBlock                "INTSM_byte1"
+              DstPort                 1
+              #GUID                   1d6faedd-08d7-484e-bcc3-b87137039e8c
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 3
+              DstBlock                "INTSM_byte2"
+              DstPort                 1
+              #GUID                   174edc5f-b820-453e-b188-f10e1c534806
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 4
+              DstBlock                "INTSM_byte3"
+              DstPort                 1
+              #GUID                   55b8b0e1-3caf-41a3-b48b-7f2e730dc219
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 5
+              DstBlock                "INTSM_byte4"
+              DstPort                 1
+              #GUID                   129f9b36-05a7-417b-b7e6-cf70498f7245
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 6
+              DstBlock                "INTSM_byte5"
+              DstPort                 1
+              #GUID                   19037e4e-bbd7-4520-8cbf-d4bbf5c3ff56
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 7
+              DstBlock                "INTSM_byte6"
+              DstPort                 1
+              #GUID                   ebf939e9-e7a4-4e12-83c1-265321954699
+            }
+            Line {
+              SrcBlock                "VTOR"
+              SrcPort                 8
+              DstBlock                "INTSM_byte7"
+              DstPort                 1
+              #GUID                   d4b45f3b-60fe-476e-a39b-ac9bfc6065c2
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 1
+              DstBlock                "INTSM_byte8"
+              DstPort                 1
+              #GUID                   1c1a7f59-38ad-4970-9633-f34743b1b8c6
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 2
+              DstBlock                "INTSM_byte9"
+              DstPort                 1
+              #GUID                   f362c04e-a886-4366-85ca-dd71a76cf413
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 3
+              DstBlock                "INTSM_byte10"
+              DstPort                 1
+              #GUID                   6cd830f4-d70b-42ba-a145-e5087f9e732b
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 4
+              DstBlock                "INTSM_byte11"
+              DstPort                 1
+              #GUID                   3ad5bb05-869c-4bad-9700-64a92745d5e9
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 5
+              DstBlock                "INTSM_byte12"
+              DstPort                 1
+              #GUID                   3d7b0a63-d029-479f-93f8-c367d369d04b
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 6
+              DstBlock                "INTSM_byte13"
+              DstPort                 1
+              #GUID                   c673a39e-5450-48e7-84ec-63e8ea71d92a
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 7
+              DstBlock                "INTSM_byte14"
+              DstPort                 1
+              #GUID                   ab168336-b42a-4754-a53c-4dc632cc95dc
+            }
+            Line {
+              SrcBlock                "VTOR1"
+              SrcPort                 8
+              DstBlock                "INTSM_byte15"
+              DstPort                 1
+              #GUID                   4d7238e3-d8fd-4fe1-bba6-b99799e35e11
+            }
+            Line {
+              SrcBlock                "iu"
+              SrcPort                 1
+              DstBlock                "iy"
+              DstPort                 1
+              #GUID                   29ca5bef-2ad6-4d04-885a-ebf2fc1b525a
+            }
+            Line {
+              SrcBlock                "uVec"
+              SrcPort                 1
+              Points                  [65, 0]
+              #GUID                   a6f83210-479d-4c37-92ba-98b72067756d
+              Branch {
+                DstBlock                "VTOR"
+                DstPort                 1
+                #GUID                   fb1f3710-53b7-47b8-9ca4-662251cc8d46
+              }
+              Branch {
+                Points                  [0, 195]
+                DstBlock                "VTOR1"
+                DstPort                 1
+                #GUID                   5a61b5c9-07d1-45d2-a6c8-3ed2b8ee0f63
+              }
+            }
+          }
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BDOCT"
+          Ports                   [1, 8, 0, 0, 0]
+          Position                [240, 1206, 275, 1294]
+          SourceBlock             "logiclib/BDOCT"
+          shift                   0
+          #GUID                   88aad7ee-0ca2-4185-accd-5f7eabf6e5f8
+        }
+        Block {
           BlockType               Reference
           Name                    "BITOP"
           Ports                   [2, 1, 0, 0, 0]
@@ -7685,9 +8076,18 @@ Library {
         }
         Block {
           BlockType               Reference
+          Name                    "BMHEXD"
+          Ports                   [16, 1, 0, 0, 0]
+          Position                [325, 1126, 360, 1294]
+          SourceBlock             "logiclib/BMHEXD"
+          shift                   0
+          #GUID                   35026cbb-aa47-46a8-9615-8a98846c34cb
+        }
+        Block {
+          BlockType               Reference
           Name                    "CNB_LOG_INCOMING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1773, 220, 1787]
+          Position                [80, 1443, 100, 1457]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           YCN                     off
@@ -7697,7 +8097,7 @@ Library {
           BlockType               Reference
           Name                    "CNB_LOG_OUTGOING"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 1803, 220, 1817]
+          Position                [80, 1473, 100, 1487]
           SourceBlock             "mathlib/CNB"
           SourceType              "CNB"
           YCN                     off
@@ -7787,143 +8187,11 @@ Library {
           BlockType               Reference
           Name                    "CNI_userCmdType"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [55, 1228, 75, 1242]
+          Position                [55, 1243, 75, 1257]
           SourceBlock             "mathlib/CNI"
           icn                     "usercmd"
           FontSize                10
           #GUID                   955fdfc6-3963-4c19-a6ec-a929c7d129eb
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "CNT_mux"
-          Ports                   [4, 1, 0, 0, 0]
-          Position                [115, 1098, 205, 1142]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   db8cd537-e115-4169-a0ac-a0d23dcec9c1
-          System {
-            Name                    "CNT_mux"
-            Location                [193, 173, 465, 335]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "white"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   db8cd537-e115-4169-a0ac-a0d23dcec9c1
-            Block {
-              BlockType               Inport
-              Name                    "CNT2R"
-              Position                [20, 23, 50, 37]
-              Port                    1
-              PortWidth               -1
-              SampleTime              -1
-              DataType                "auto"
-              SignalType              "auto"
-              Interpolate             on
-              #GUID                   9f342cf2-c72a-4859-b776-b4cec1d82bde
-            }
-            Block {
-              BlockType               Inport
-              Name                    "CNT2E"
-              Position                [20, 53, 50, 67]
-              Port                    2
-              PortWidth               -1
-              SampleTime              -1
-              DataType                "auto"
-              SignalType              "auto"
-              Interpolate             on
-              #GUID                   45ca5ae5-dd97-4f00-8084-e4e1e50608d4
-            }
-            Block {
-              BlockType               Inport
-              Name                    "CNT3R"
-              Position                [20, 78, 50, 92]
-              Port                    3
-              PortWidth               -1
-              SampleTime              -1
-              DataType                "auto"
-              SignalType              "auto"
-              Interpolate             on
-              #GUID                   0bbc99d5-6ec2-47ca-a653-47d3e935988f
-            }
-            Block {
-              BlockType               Inport
-              Name                    "CNT3E"
-              Position                [20, 103, 50, 117]
-              Port                    4
-              PortWidth               -1
-              SampleTime              -1
-              DataType                "auto"
-              SignalType              "auto"
-              Interpolate             on
-              #GUID                   abc16984-26b1-4f63-b908-c0ae81397acf
-            }
-            Block {
-              BlockType               Reference
-              Name                    "OCTBM"
-              Ports                   [8, 1, 0, 0, 0]
-              Position                [135, 21, 170, 109]
-              SourceBlock             "logiclib/BMOCT"
-              SourceType              "BMOCT"
-              shift                   0
-              #GUID                   13dc0f68-d0cb-4a8f-8883-a689f3071528
-            }
-            Block {
-              BlockType               Outport
-              Name                    "cntCmd"
-              Position                [215, 58, 245, 72]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   cde7157b-1ca7-429a-abfe-386950861e8c
-            }
-            Line {
-              SrcBlock                "CNT2E"
-              SrcPort                 1
-              Points                  [20, 0; 0, -20]
-              DstBlock                "OCTBM"
-              DstPort                 2
-              #GUID                   f2263f5b-dea7-471a-9325-5b44365d6771
-            }
-            Line {
-              SrcBlock                "CNT2R"
-              SrcPort                 1
-              DstBlock                "OCTBM"
-              DstPort                 1
-              #GUID                   68856511-64c3-42e0-bb4e-b000aaf9f8ea
-            }
-            Line {
-              SrcBlock                "CNT3E"
-              SrcPort                 1
-              Points                  [45, 0; 0, -50]
-              DstBlock                "OCTBM"
-              DstPort                 4
-              #GUID                   c38638e8-19ae-4cda-9234-748cdc4fc9d5
-            }
-            Line {
-              SrcBlock                "CNT3R"
-              SrcPort                 1
-              Points                  [35, 0; 0, -35]
-              DstBlock                "OCTBM"
-              DstPort                 3
-              #GUID                   a2603691-b5e6-4118-85e5-636140a6e3c5
-            }
-            Line {
-              SrcBlock                "OCTBM"
-              SrcPort                 1
-              DstBlock                "cntCmd"
-              DstPort                 1
-              #GUID                   62548015-9dbb-4509-bcf5-e7fb80cdb13a
-            }
-          }
         }
         Block {
           BlockType               SubSystem
@@ -8284,237 +8552,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "IADD"
-          Ports                   [2, 2, 0, 0, 0]
-          Position                [350, 1318, 375, 1342]
-          SourceBlock             "mathlib/IADD"
-          vtype                   "6: DWord (U32)"
-          SAT                     off
-          FontSize                10
-          #GUID                   f8ba68f6-7ec0-44bb-a1a0-4266541ac389
-        }
-        Block {
-          BlockType               Reference
-          Name                    "IADD1"
-          Ports                   [2, 2, 0, 0, 0]
-          Position                [350, 1358, 375, 1382]
-          SourceBlock             "mathlib/IADD"
-          vtype                   "6: DWord (U32)"
-          SAT                     off
-          FontSize                10
-          #GUID                   e5a1dcf2-6cfb-43dd-ae9b-4521e5f269ff
-        }
-        Block {
-          BlockType               Reference
-          Name                    "IADD2"
-          Ports                   [2, 2, 0, 0, 0]
-          Position                [405, 1318, 430, 1342]
-          SourceBlock             "mathlib/IADD"
-          vtype                   "6: DWord (U32)"
-          SAT                     off
-          FontSize                10
-          #GUID                   5b10b6d3-4ce8-4bac-9913-6d235205746b
-        }
-        Block {
-          BlockType               Reference
-          Name                    "IADD3"
-          Ports                   [2, 2, 0, 0, 0]
-          Position                [290, 1218, 315, 1242]
-          SourceBlock             "mathlib/IADD"
-          vtype                   "6: DWord (U32)"
-          SAT                     off
-          FontSize                10
-          #GUID                   b02c0799-faf0-4a7e-b41f-7f3dff860438
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte0"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1318, 260, 1332]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   e08dd83c-684b-4a7e-9d60-8d26acb92b09
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte1"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1338, 315, 1352]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   aeafc334-e7e4-4324-83db-162130ffd16f
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte10"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1553, 260, 1567]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   e120bf68-ad25-4f5c-b97f-80e74ab161b3
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte11"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1573, 315, 1587]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   b559756d-9ff2-4428-9dfa-db3d66decf78
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte12"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1593, 260, 1607]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   a6591063-aba4-4f87-867d-e40c12fba06a
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte13"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1613, 315, 1627]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   81526709-91fe-474c-ac71-370535872b70
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte14"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1633, 260, 1647]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   664962c4-654c-42be-9726-e5406fd73ff7
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte15"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1653, 315, 1667]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   069c6ee4-0d11-48c8-b9ec-3b0886747021
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte2"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1358, 260, 1372]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   9180b948-af27-4308-ab77-6df54d6246aa
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte3"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1378, 315, 1392]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   ff02d44f-54dd-4666-826e-23dfa3e8da79
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte4"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1398, 260, 1412]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   c1940df1-c380-49dc-b8f3-579bfd6ba24b
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte5"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1418, 315, 1432]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   751aa61a-e096-4c80-be24-432f2db3be8c
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte6"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1438, 260, 1452]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   e1870ea9-a53e-4dbd-8c7b-c636bab27c80
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte7"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1458, 315, 1472]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   d891b652-30f6-41b9-b39c-73873b0c4a17
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte8"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [235, 1513, 260, 1527]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   92627ddf-85e6-443d-9206-164b07c42120
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_byte9"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [290, 1533, 315, 1547]
-          SourceBlock             "logiclib/INTSM"
-          shift                   0
-          mask                    0xFF
-          FontSize                10
-          #GUID                   405763bf-7758-403a-a07b-cea146d7f66f
-        }
-        Block {
-          BlockType               Reference
-          Name                    "INTSM_userCmdType"
-          Ports                   [1, 1, 0, 0, 0]
-          Position                [195, 1228, 220, 1242]
-          SourceBlock             "logiclib/INTSM"
-          shift                   -8
-          mask                    0x03
-          FontSize                10
-          #GUID                   686cd329-b24d-4329-8551-79643e7411a5
-        }
-        Block {
-          BlockType               Reference
           Name                    "ISSW"
           Ports                   [3, 1, 0, 0, 0]
           Position                [545, 368, 575, 402]
@@ -8526,7 +8563,7 @@ Library {
           BlockType               Reference
           Name                    "MP_FORCE_RECONNECT"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1713, 220, 1727]
+          Position                [85, 1383, 100, 1397]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8538,7 +8575,7 @@ Library {
           BlockType               Reference
           Name                    "MP_LOG_MASTER_VERSION"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1833, 220, 1847]
+          Position                [85, 1503, 100, 1517]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8550,7 +8587,7 @@ Library {
           BlockType               Reference
           Name                    "MP_LOG_PINMODES"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [205, 1743, 220, 1757]
+          Position                [85, 1413, 100, 1427]
           SourceBlock             "genlib/MP"
           SourceType              "MP"
           pwidth                  10
@@ -8582,7 +8619,7 @@ Library {
           BlockType               Reference
           Name                    "OCTBM_DEBUG"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [295, 1703, 345, 1947]
+          Position                [175, 1373, 225, 1617]
           SourceBlock             "logiclib/BMOCT"
           SourceType              "BMOCT"
           shift                   0
@@ -8673,30 +8710,6 @@ Library {
               #GUID                   7a24a8f6-26ec-48eb-b20a-7f4ecf90fc64
             }
           }
-        }
-        Block {
-          BlockType               Reference
-          Name                    "VTOR"
-          Ports                   [1, 8, 0, 0, 0]
-          Position                [120, 1312, 165, 1478]
-          SourceBlock             "matrixlib/VTOR"
-          n                       8
-          offset                  0
-          etype                   "8: Double (F64)"
-          FontSize                10
-          #GUID                   da587812-d449-4b06-bb30-0cbde1290322
-        }
-        Block {
-          BlockType               Reference
-          Name                    "VTOR1"
-          Ports                   [1, 8, 0, 0, 0]
-          Position                [120, 1501, 165, 1679]
-          SourceBlock             "matrixlib/VTOR"
-          n                       8
-          offset                  8
-          etype                   "8: Double (F64)"
-          FontSize                10
-          #GUID                   818c5674-a7ca-474c-994d-228dceaa9929
         }
         Block {
           BlockType               Outport
@@ -9051,6 +9064,28 @@ Library {
           #GUID                   c86a9855-8f5a-4a43-b5e9-c5abdffc862b
         }
         Line {
+          SrcBlock                "AUXdata"
+          SrcPort                 1
+          Points                  [125, 0; 0, -1090]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 16
+          #GUID                   f8ab1d6c-7abd-47a4-9a86-3966e42c00f0
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 1
+          DstBlock                "BMHEXD"
+          DstPort                 9
+          #GUID                   229c8162-735b-4133-ad52-99835e3cf9b1
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 2
+          DstBlock                "BMHEXD"
+          DstPort                 10
+          #GUID                   7929b51b-b607-480d-9154-303eca3477fc
+        }
+        Line {
           SrcBlock                "BITOP"
           SrcPort                 1
           DstBlock                "BITOP_6"
@@ -9153,6 +9188,14 @@ Library {
           DstBlock                "BITOP_11"
           DstPort                 2
           #GUID                   c7a87b02-5614-40a1-98c2-0755906716d4
+        }
+        Line {
+          SrcBlock                "BMHEXD"
+          SrcPort                 1
+          Points                  [120, 0; 0, -785]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 17
+          #GUID                   8dd3c05f-901f-4485-9c8c-c908fa259460
         }
         Line {
           SrcBlock                "CNB_LOG_INCOMING"
@@ -9276,58 +9319,40 @@ Library {
         Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
-          DstBlock                "INTSM_userCmdType"
+          DstBlock                "BDOCT"
           DstPort                 1
           #GUID                   42a4aaa2-dbc6-4d46-b3b3-80ad70850f11
         }
         Line {
           SrcBlock                "CNT2E"
           SrcPort                 1
-          DstBlock                "CNT_mux"
+          Points                  [60, 0; 0, 40]
+          DstBlock                "BMHEXD"
           DstPort                 2
           #GUID                   8d966fda-3f59-4afa-bd99-3b2cb36bfde1
         }
         Line {
           SrcBlock                "CNT2R"
           SrcPort                 1
-          Points                  [40, 0; 0, 20]
-          DstBlock                "CNT_mux"
+          Points                  [70, 0; 0, 60]
+          DstBlock                "BMHEXD"
           DstPort                 1
           #GUID                   26eccbab-88a5-4b63-aa48-d06c50189a66
         }
         Line {
           SrcBlock                "CNT3E"
           SrcPort                 1
-          Points                  [50, 0]
-          DstBlock                "CNT_mux"
+          DstBlock                "BMHEXD"
           DstPort                 4
           #GUID                   243d3fa6-6c54-4bd6-817f-7f5035022ff1
         }
         Line {
           SrcBlock                "CNT3R"
           SrcPort                 1
-          Points                  [40, 0; 0, -20]
-          DstBlock                "CNT_mux"
+          Points                  [50, 0; 0, 20]
+          DstBlock                "BMHEXD"
           DstPort                 3
           #GUID                   ac22d436-88db-4fd3-8bdd-def3352c1a00
-        }
-        Line {
-          SrcBlock                "CNT_mux"
-          SrcPort                 1
-          Points                  [45, 0]
-          #GUID                   3d9faee7-4c78-4fe1-8f98-59f7f6667bcf
-          Branch {
-            Points                  [0, 105]
-            DstBlock                "IADD3"
-            DstPort                 1
-            #GUID                   adedbb3d-36ec-41a9-b358-efe61b64c714
-          }
-          Branch {
-            Points                  [230, 0; 0, -695]
-            DstBlock                "REXLANG_REXduino"
-            DstPort                 17
-            #GUID                   b637da45-0a20-4095-b9bd-10ce44c3a965
-          }
         }
         Line {
           SrcBlock                "DO10_PWM"
@@ -9616,66 +9641,6 @@ Library {
           #GUID                   4b1569f7-3c09-4a57-9863-d7f8b6cca54e
         }
         Line {
-          SrcBlock                "IADD"
-          SrcPort                 1
-          DstBlock                "IADD2"
-          DstPort                 1
-          #GUID                   7328f9d5-27dd-4082-9ca0-dc6fba2a2665
-        }
-        Line {
-          SrcBlock                "IADD1"
-          SrcPort                 1
-          Points                  [10, 0]
-          DstBlock                "IADD2"
-          DstPort                 2
-          #GUID                   dcd781da-be85-4880-9e77-f8f3421ae10a
-        }
-        Line {
-          SrcBlock                "IADD2"
-          SrcPort                 1
-          Points                  [60, 0; 0, -890]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 18
-          #GUID                   aa4367e2-ac2b-4ec2-bc7c-6ca857c2e4f4
-        }
-        Line {
-          SrcBlock                "INTSM_byte0"
-          SrcPort                 1
-          DstBlock                "IADD"
-          DstPort                 1
-          #GUID                   0c52bbe9-eb98-4e64-8f65-0318b6356072
-        }
-        Line {
-          SrcBlock                "INTSM_byte1"
-          SrcPort                 1
-          Points                  [10, 0; 0, -10]
-          DstBlock                "IADD"
-          DstPort                 2
-          #GUID                   496157dd-dc27-4e4f-82a8-35714680c7da
-        }
-        Line {
-          SrcBlock                "INTSM_byte2"
-          SrcPort                 1
-          DstBlock                "IADD1"
-          DstPort                 1
-          #GUID                   0d57e351-4d36-4e4a-b75b-8a116a80eaa8
-        }
-        Line {
-          SrcBlock                "INTSM_byte3"
-          SrcPort                 1
-          Points                  [10, 0; 0, -10]
-          DstBlock                "IADD1"
-          DstPort                 2
-          #GUID                   1ff1ad41-e9be-4ddd-8e83-3a36a2dfbb71
-        }
-        Line {
-          SrcBlock                "INTSM_userCmdType"
-          SrcPort                 1
-          DstBlock                "IADD3"
-          DstPort                 2
-          #GUID                   8070a6d3-074f-4dbd-a062-6cfa71475e66
-        }
-        Line {
           SrcBlock                "ISSW"
           SrcPort                 1
           DstBlock                "REXLANG_REXduino"
@@ -9742,10 +9707,9 @@ Library {
         Line {
           SrcBlock                "OCTBM_DEBUG"
           SrcPort                 1
-          Points                  [200, 0; 0, -1410]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 16
-          #GUID                   2e72480c-de3a-4875-b711-76418d6e0e33
+          DstBlock                "AUXdata"
+          DstPort                 1
+          #GUID                   e05e4b6e-dd8f-49d7-bcde-8cb8165c3f57
         }
         Line {
           SrcBlock                "REXLANG_REXduino"
@@ -9868,136 +9832,15 @@ Library {
           #GUID                   494b33f3-fc21-41d0-a086-1a8d9f414540
         }
         Line {
-          SrcBlock                "VTOR"
-          SrcPort                 1
-          DstBlock                "INTSM_byte0"
-          DstPort                 1
-          #GUID                   b4bef7e5-71a7-4b73-8859-119277840c8f
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 2
-          DstBlock                "INTSM_byte1"
-          DstPort                 1
-          #GUID                   1c967394-7e39-43e3-ad49-2b2396571a74
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 3
-          DstBlock                "INTSM_byte2"
-          DstPort                 1
-          #GUID                   f00b52ef-e592-4449-be02-05787eeae63c
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 4
-          DstBlock                "INTSM_byte3"
-          DstPort                 1
-          #GUID                   6b817b6e-ac3d-4a6b-8878-03207db008e7
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 5
-          DstBlock                "INTSM_byte4"
-          DstPort                 1
-          #GUID                   8eb86928-5de6-4e69-9c14-d15611b220f2
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 6
-          DstBlock                "INTSM_byte5"
-          DstPort                 1
-          #GUID                   9dd3a1ce-ff45-4f0f-8f5a-fc3d0fc440e1
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 7
-          DstBlock                "INTSM_byte6"
-          DstPort                 1
-          #GUID                   1a957527-7363-4e0f-94bf-bbfee4620a9e
-        }
-        Line {
-          SrcBlock                "VTOR"
-          SrcPort                 8
-          DstBlock                "INTSM_byte7"
-          DstPort                 1
-          #GUID                   4455d0ab-cad2-4b64-9cdb-72e3fb2c2ebc
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 1
-          DstBlock                "INTSM_byte8"
-          DstPort                 1
-          #GUID                   8fa8e410-1758-42d0-a115-c704d0a43764
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 2
-          DstBlock                "INTSM_byte9"
-          DstPort                 1
-          #GUID                   06072640-8ca6-4374-9184-cf61f281c993
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 3
-          DstBlock                "INTSM_byte10"
-          DstPort                 1
-          #GUID                   aa673f45-3eb4-490e-abfd-953636e5f0f1
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 4
-          DstBlock                "INTSM_byte11"
-          DstPort                 1
-          #GUID                   9fbc561a-48f6-4901-9325-a67e583b6143
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 5
-          DstBlock                "INTSM_byte12"
-          DstPort                 1
-          #GUID                   6d9c9c31-142e-4c15-bfa3-da7c1882409a
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 6
-          DstBlock                "INTSM_byte13"
-          DstPort                 1
-          #GUID                   28637dfb-30fd-4676-b9fd-1be827a5608e
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 7
-          DstBlock                "INTSM_byte14"
-          DstPort                 1
-          #GUID                   34f5d663-6dda-4ddc-9311-8fe18d35a0d0
-        }
-        Line {
-          SrcBlock                "VTOR1"
-          SrcPort                 8
-          DstBlock                "INTSM_byte15"
-          DstPort                 1
-          #GUID                   04a0d1a8-44a7-43f8-9268-33255d5ca571
-        }
-        Line {
           SrcBlock                "userSendV"
           SrcPort                 1
-          Points                  [40, 0]
-          #GUID                   7d73f7b3-043b-4411-be4b-e4ca9d4cb4bb
-          Branch {
-            DstBlock                "VTOR"
-            DstPort                 1
-            #GUID                   c357e302-f0cf-442f-a22f-8fa88f593971
-          }
-          Branch {
-            Points                  [0, 195]
-            DstBlock                "VTOR1"
-            DstPort                 1
-            #GUID                   cae0da30-4a6c-41ee-9085-ef8f2fb39714
-          }
+          Points                  [225, 0; 0, -155]
+          DstBlock                "AUXdata"
+          DstPort                 2
+          #GUID                   9d5c59f3-d5d7-44eb-8b22-c9fe1dd0723d
         }
         Annotation {
-          Position                [50, 1260]
+          Position                [50, 1275]
           Text                    "1.. none\n2.. 4-byte\n3.. 16-byte"
           HorizontalAlignment     "left"
           VerticalAlignment       "top"

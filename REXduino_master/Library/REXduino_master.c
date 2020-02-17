@@ -388,14 +388,15 @@ void readBarometer(void)
 	return;
 }
 
-void userCommand4(long userData)
+void userCommand4(long data[])
 { //user command
+	long j;	
 	Trace(0, "Sending 4 bytes of user data.");
 	commandData[0] = 'U';
-	commandData[1] = userData & 0xFF;
-	commandData[2] = userData >> 8 & 0xFF;
-	commandData[3] = userData >> 16 & 0xFF;
-	commandData[4] = userData >> 24 & 0xFF;
+	for (j = 0; j < 4; j++)
+	{
+		commandData[j + 1] = data[j];
+	}
 	commandData[5] = ';';
 	sendData(6);
 	return;
@@ -1087,13 +1088,18 @@ int main(void)
 				i = ((AUXcmd >> 8) & 0x03);
 				if (i == 2) //send 4 bytes defined by the userSend input
 				{
-					userCommand4(userSend);
+					for (i = 0; i < 4; i++)
+					{
+						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
+						userCmdData[i] = (k)&0xFF;
+					}
+					userCommand4(userCmdData);
 				}
 				else if (i == 3) //send 16 bytes from the userSendV input
 				{
 					for (i = 0; i < 16; i++)
 					{
-						k = GetExtLong(".INTSM_byte" + long2str(i) + ":n");
+						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
 						userCmdData[i] = (k)&0xFF;
 					}
 					userCommand16(userCmdData);
