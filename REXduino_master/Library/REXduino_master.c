@@ -1004,7 +1004,7 @@ int main(void)
 						Trace(0, "Received response to user command (16-byte version).");
 					for (i = 0; i < 16; i++)
 					{
-						SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":n",responseData[i+1]);
+						SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":icn",responseData[i+1]);
 }
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
