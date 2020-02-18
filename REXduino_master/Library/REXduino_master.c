@@ -1084,31 +1084,7 @@ int main(void)
 			}
 			if (pinsSync)
 			{
-				// user-defined commands *****************************************
-				i = ((AUXcmd >> 8) & 0x03);
-				if (i == 2) //send 4 bytes defined by the userSend input
-				{
-					for (i = 0; i < 4; i++)
-					{
-						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
-						userCmdData[i] = (k)&0xFF;
-					}
-					userCommand4(userCmdData);
-				}
-				else if (i == 3) //send 16 bytes from the userSendV input
-				{
-					for (i = 0; i < 16; i++)
-					{
-						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
-						userCmdData[i] = (k)&0xFF;
-					}
-					userCommand16(userCmdData);
-				}
-				//put your own commands here if necessary
-				//readBarometer();
-				//setDigiPotentiometer(0,userSend); //I2C address is 0, potentiometer values are given by the userSend input
-				// end of user-defined commands *******************************************
-				for (i = 2; i < PIN_COUNT; i++) //and now we send commands
+				for (i = 2; i < PIN_COUNT; i++) //first we send commands
 				{
 					switch (pinModes[i])
 					{
@@ -1155,6 +1131,31 @@ int main(void)
 				{
 					readOnewireTempMulti(readTempMask, PINMASK_BYTESIZE);
 				}
+				// user-defined commands *****************************************
+				i = ((AUXcmd >> 8) & 0x03);
+				if (i == 2) //send 4 bytes defined by the userSend input
+				{
+					for (i = 0; i < 4; i++)
+					{
+						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
+						userCmdData[i] = (k)&0xFF;
+					}
+					userCommand4(userCmdData);
+				}
+				else if (i == 3) //send 16 bytes from the userSendV input
+				{
+					for (i = 0; i < 16; i++)
+					{
+						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
+						userCmdData[i] = (k)&0xFF;
+					}
+					userCommand16(userCmdData);
+				}
+				//put your own commands here if necessary
+				//readBarometer();
+				//setDigiPotentiometer(0,userSend); //I2C address is 0, potentiometer values are given by the userSend input
+				// end of user-defined commands *******************************************
+
 			}
 			else //pinmodes on master and slave do not match
 			{
