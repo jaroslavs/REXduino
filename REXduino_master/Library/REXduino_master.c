@@ -31,7 +31,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 5 //even number = release, odd number = development
-#define REVISION 6	 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 7	 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0	   //
 
 #define COM_BAUDRATE 57600		  //change this line according to desired baudrate
@@ -986,7 +986,10 @@ int main(void)
 					if (responseCnt == 6)
 					{
 						Trace(0, "Received response to user command (4-byte version).");
-						longArray[0] = responseData[1] + (responseData[2] << 8) + (responseData[3] << 16) + (responseData[4] << 24);
+					for (i = 0; i < 4; i++)
+					{
+						SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":n",responseData[i+1]);
+}
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
 					}
@@ -999,8 +1002,10 @@ int main(void)
 					if (responseCnt == 18)
 					{
 						Trace(0, "Received response to user command (16-byte version).");
-						Trace(0, "Command 4 not implemented yet.");
-						//TODO longArray[0] = responseData[1] + (responseData[2]<<8) + (responseData[3]<<16) + (responseData[4]<<24);
+					for (i = 0; i < 16; i++)
+					{
+						SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":n",responseData[i+1]);
+}
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
 					}
