@@ -10696,6 +10696,238 @@ Library {
     }
     Block {
       BlockType               SubSystem
+      Name                    "byte2long"
+      Ports                   [4, 1, 0, 0, 0]
+      Position                [20, 1232, 115, 1278]
+      ShowPortLabels          on
+      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
+#"rary\\REXduino_library.mdl"
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   700d5ae6-e8a3-4606-8b01-8b4f0bb231bf
+      System {
+        Name                    "byte2long"
+        Location                [211, 219, 681, 409]
+        Open                    off
+        ModelBrowserVisibility  off
+        ModelBrowserWidth       200
+        ScreenColor             "white"
+        PaperOrientation        "landscape"
+        PaperPositionMode       "auto"
+        PaperType               "A4"
+        PaperUnits              "centimeters"
+        AutoZoom                on
+        #GUID                   700d5ae6-e8a3-4606-8b01-8b4f0bb231bf
+        Block {
+          BlockType               Inport
+          Name                    "byte0"
+          Position                [15, 28, 45, 42]
+          Port                    1
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          FontSize                10
+          #GUID                   54d7ad86-e4a1-4639-80c2-6e6c9b2fd0f6
+        }
+        Block {
+          BlockType               Inport
+          Name                    "byte1"
+          Position                [15, 58, 45, 72]
+          Port                    2
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          FontSize                10
+          #GUID                   5073b34d-00e4-47db-92f0-c5d62ba5c566
+        }
+        Block {
+          BlockType               Inport
+          Name                    "byte2"
+          Position                [15, 88, 45, 102]
+          Port                    3
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          FontSize                10
+          #GUID                   7c0fa542-a141-4920-b842-44d64afb0bbe
+        }
+        Block {
+          BlockType               Inport
+          Name                    "byte3"
+          Position                [15, 118, 45, 132]
+          Port                    4
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          FontSize                10
+          #GUID                   f8e67abb-9220-4ac3-9e59-cf5b66eb2caf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "IADD"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [215, 28, 240, 52]
+          SourceBlock             "mathlib/IADD"
+          vtype                   "4: Long (I32)"
+          SAT                     off
+          FontSize                10
+          #GUID                   dc0b085e-87bc-40fb-859a-dd38f12bcb5e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "IADD1"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [215, 78, 240, 102]
+          SourceBlock             "mathlib/IADD"
+          vtype                   "4: Long (I32)"
+          SAT                     off
+          #GUID                   2cfbbe62-3adf-4f9b-b119-039aaa5ca440
+        }
+        Block {
+          BlockType               Reference
+          Name                    "IADD2"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [300, 28, 325, 52]
+          SourceBlock             "mathlib/IADD"
+          vtype                   "4: Long (I32)"
+          SAT                     off
+          FontSize                10
+          #GUID                   8ae5c336-1aca-461c-bc8d-bf4908a527eb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [140, 38, 165, 52]
+          SourceBlock             "logiclib/INTSM"
+          shift                   -8
+          mask                    0xFF00
+          FontSize                10
+          #GUID                   ec2642aa-6176-457a-8c5b-77d8bb3bfedb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM2"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [140, 78, 165, 92]
+          SourceBlock             "logiclib/INTSM"
+          shift                   -16
+          mask                    0xFF0000
+          FontSize                10
+          #GUID                   f154f598-5cc4-4297-b872-1293cd8d3e4b
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM3"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [140, 103, 165, 117]
+          SourceBlock             "logiclib/INTSM"
+          shift                   -24
+          mask                    0xFF000000
+          FontSize                10
+          #GUID                   50c6bb0d-c3ea-43d2-a73c-8dca5bcdaba3
+        }
+        Block {
+          BlockType               Outport
+          Name                    "iy"
+          Position                [415, 28, 445, 42]
+          Port                    1
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          FontSize                10
+          #GUID                   ec9c2a92-5ff5-4e32-8e89-cd56f1e334cd
+        }
+        Line {
+          SrcBlock                "IADD"
+          SrcPort                 1
+          DstBlock                "IADD2"
+          DstPort                 1
+          #GUID                   62b33dde-c37e-4a3f-ace8-b84133312bba
+        }
+        Line {
+          SrcBlock                "IADD1"
+          SrcPort                 1
+          Points                  [40, 0]
+          DstBlock                "IADD2"
+          DstPort                 2
+          #GUID                   31c53e44-5d81-49bf-9662-77ea5a88d83a
+        }
+        Line {
+          SrcBlock                "IADD2"
+          SrcPort                 1
+          DstBlock                "iy"
+          DstPort                 1
+          #GUID                   92830318-4c86-4de6-85bb-4c7ed90c7e6c
+        }
+        Line {
+          SrcBlock                "INTSM1"
+          SrcPort                 1
+          DstBlock                "IADD"
+          DstPort                 2
+          #GUID                   1d65f838-c0e8-466f-be27-8c16eb208300
+        }
+        Line {
+          SrcBlock                "INTSM2"
+          SrcPort                 1
+          DstBlock                "IADD1"
+          DstPort                 1
+          #GUID                   5dd5d0bd-fbac-4709-b574-5ab13aa5f43c
+        }
+        Line {
+          SrcBlock                "INTSM3"
+          SrcPort                 1
+          Points                  [30, 0]
+          DstBlock                "IADD1"
+          DstPort                 2
+          #GUID                   7e927bb3-8489-489d-a718-d68c81a172a4
+        }
+        Line {
+          SrcBlock                "byte0"
+          SrcPort                 1
+          DstBlock                "IADD"
+          DstPort                 1
+          #GUID                   cdde697b-2729-4e6d-b131-e97eaf8a316e
+        }
+        Line {
+          SrcBlock                "byte1"
+          SrcPort                 1
+          Points                  [20, 0; 0, -20]
+          DstBlock                "INTSM1"
+          DstPort                 1
+          #GUID                   d56bbd24-926b-453e-adf9-661f05d2baef
+        }
+        Line {
+          SrcBlock                "byte2"
+          SrcPort                 1
+          Points                  [30, 0; 0, -10]
+          DstBlock                "INTSM2"
+          DstPort                 1
+          #GUID                   77ad5414-3147-4aa8-bbf7-b603a27cf2d2
+        }
+        Line {
+          SrcBlock                "byte3"
+          SrcPort                 1
+          Points                  [40, 0; 0, -15]
+          DstBlock                "INTSM3"
+          DstPort                 1
+          #GUID                   fc2fcbbe-8344-4067-9209-0ff30513744b
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
       Name                    "userRecvHEXD"
       Ports                   [1, 16, 0, 0, 0]
       Position                [595, 1146, 690, 1314]
