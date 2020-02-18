@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.10 rev. 11179, Date 2019-11-10"
+  #RexVersion             "2.50.10 rev. 11508, Date 2020-02-14"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -428,6 +428,7 @@ Model {
       Position                [270, 26, 415, 374]
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
+      FontSize                10
       comPort                 "/dev/ttyACM0"
       pinmode2                "1: Not connected"
       pinmode3                "1: Not connected"
@@ -443,7 +444,7 @@ Model {
       pinmodeA3               "1: Not connected"
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
-      FontSize                10
+      usercmd                 "2: Four bytes"
       #GUID                   53c12946-5703-425b-a545-2effd570635e
     }
     Block {
@@ -530,6 +531,62 @@ Model {
       bEdit                   off
       FontSize                10
       #GUID                   de726812-c9c4-4307-bd4a-8638aaccfbde
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [520, 23, 600, 47]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b5593d64-8209-484e-8e30-5ef23e40c976
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [520, 48, 600, 72]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   fa37b60f-e07a-4917-a78c-4ab48363121b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [520, 73, 600, 97]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   4930dbd8-8989-4ffc-9e22-ce8aa5ef8eb2
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   541ee10c-b8e9-44ea-ae09-58f57b3ac3fa
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 2
+      Points                  [75, 0; 0, 15]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   a47a5f2c-8289-42b3-a233-b8134dcdbe87
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 3
+      Points                  [65, 0; 0, 30]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   bbc22840-5e3e-47b9-916a-72f3d637ac9b
     }
     Line {
       SrcBlock                "BIS_BLINK_GREEN"
