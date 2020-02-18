@@ -31,10 +31,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define MAJORVERSION 1
 #define MINORVERSION 5 //even number = release, odd number = development
-#define REVISION 5 //for hotfixes, even number = hotfix applied, odd number = development
+#define REVISION 6 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
-//#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
+#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
 //#define USEI2C //uncomment this line to use I2C bus
 //#define USESERVO //uncomment this line to use RC servos
 
