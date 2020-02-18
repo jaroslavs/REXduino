@@ -1146,7 +1146,7 @@ int main(void)
 				{
 					for (i = 0; i < 16; i++)
 					{
-						k = GetExtLong(".AUXdata.INTSM_byte" + long2str(i) + ":n");
+						k = GetExtLong(".AUXdata_in.INTSM_byte" + long2str(i) + ":n");
 						userCmdData[i] = (k)&0xFF;
 					}
 					userCommand16(userCmdData);
