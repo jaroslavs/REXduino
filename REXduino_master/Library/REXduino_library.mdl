@@ -1033,7 +1033,7 @@ Library {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_MEGA2560"
-      Ports                   [23, 36, 0, 0, 0]
+      Ports                   [21, 36, 0, 0, 0]
       Position                [525, 31, 675, 399]
       ShowPortLabels          on
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
@@ -1098,7 +1098,7 @@ Library {
       #GUID                   76129db7-01da-4a04-8215-d430238a64da
       System {
         Name                    "Arduino_MEGA2560"
-        Location                [406, 64, 1626, 831]
+        Location                [85, 26, 1305, 793]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -1299,61 +1299,66 @@ Library {
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   9f3d447f-0026-4e0d-b3a3-bce3a3fdaa2c
         }
         Block {
           BlockType               Inport
           Name                    "CNT2R"
           Position                [35, 1063, 65, 1077]
-          Port                    19
+          Port                    17
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   efcc84bf-93ae-4220-b5c6-7f05b27cc6b2
         }
         Block {
           BlockType               Inport
           Name                    "CNT2E"
           Position                [35, 1088, 65, 1102]
-          Port                    20
+          Port                    18
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   8c03747b-60cb-487a-8072-bef23d2f69e9
         }
         Block {
           BlockType               Inport
           Name                    "CNT3R"
           Position                [35, 1113, 65, 1127]
-          Port                    21
+          Port                    19
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   f7d0f7f4-4b6f-4bb6-a442-77e40ff74279
         }
         Block {
           BlockType               Inport
           Name                    "CNT3E"
           Position                [35, 1138, 65, 1152]
-          Port                    22
+          Port                    20
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   4165b277-9499-46ed-b2f2-8e0f62efc49d
         }
         Block {
           BlockType               Inport
           Name                    "userSendV"
           Position                [10, 1563, 40, 1577]
-          Port                    23
+          Port                    21
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
@@ -2847,8 +2852,8 @@ Library {
     Block {
       BlockType               SubSystem
       Name                    "Arduino_MEGA2560hex"
-      Ports                   [23, 21, 0, 0, 0]
-      Position                [520, 506, 705, 854]
+      Ports                   [14, 21, 0, 0, 0]
+      Position                [520, 533, 700, 857]
       ShowPortLabels          on
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
@@ -2998,55 +3003,59 @@ Library {
           BlockType               Inport
           Name                    "CNT2R"
           Position                [25, 348, 55, 362]
-          Port                    19
+          Port                    10
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   2c3cd041-2a7a-41ff-b475-6f167445acc2
         }
         Block {
           BlockType               Inport
           Name                    "CNT2E"
           Position                [25, 373, 55, 387]
-          Port                    20
+          Port                    11
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   c90b98c8-48e2-4a13-a1ae-efab4a7d55e4
         }
         Block {
           BlockType               Inport
           Name                    "CNT3R"
           Position                [25, 398, 55, 412]
-          Port                    21
+          Port                    12
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   595fd91d-e9d0-48a6-9f97-e741f696788a
         }
         Block {
           BlockType               Inport
           Name                    "CNT3E"
           Position                [25, 423, 55, 437]
-          Port                    22
+          Port                    13
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
           SignalType              "auto"
           Interpolate             on
+          FontSize                10
           #GUID                   0509840a-403e-44ab-a70e-1ce995f04492
         }
         Block {
           BlockType               Inport
           Name                    "userSendV"
           Position                [25, 848, 55, 862]
-          Port                    23
+          Port                    14
           PortWidth               -1
           SampleTime              -1
           DataType                "auto"
@@ -10694,8 +10703,6 @@ Library {
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -11335,13 +11342,11 @@ Library {
       BlockType               SubSystem
       Name                    "userRecvOCT"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [465, 1222, 560, 1313]
+      Position                [465, 1224, 560, 1316]
       ShowPortLabels          on
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -11684,8 +11689,6 @@ Library {
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -11883,13 +11886,11 @@ Library {
       BlockType               SubSystem
       Name                    "userSendHEXD"
       Ports                   [16, 1, 0, 0, 0]
-      Position                [595, 936, 690, 1104]
+      Position                [600, 936, 695, 1104]
       ShowPortLabels          on
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -12305,8 +12306,6 @@ Library {
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -12531,8 +12530,6 @@ Library {
       Ports                   [4, 1, 0, 0, 0]
       Position                [470, 937, 565, 983]
       ShowPortLabels          on
-      #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
-#"rary\\REXduino_library.mdl"
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       FontSize                10
