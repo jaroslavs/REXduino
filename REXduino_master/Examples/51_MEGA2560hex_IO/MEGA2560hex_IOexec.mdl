@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:35:33 2013"
   ModelVersionFormat      "1.%<AutoIncrement:49>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -271,6 +271,19 @@ Model {
       ShowName                on
       FontSize                10
       #GUID                   0a6e2b0b-db0a-4bf2-af37-eee605f1212a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PROJECT"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [10, 293, 55, 312]
+      SourceBlock             "execlib/PROJECT"
+      CompileParams           ""
+      SourcesOnTarget         off
+      TargetURL               ""
+      LibraryPath             "..\\..\\Library"
+      FontSize                10
+      #GUID                   9d9f3daa-ce01-470c-a7c6-ec968e734546
     }
     Line {
       SrcBlock                "EXEC"

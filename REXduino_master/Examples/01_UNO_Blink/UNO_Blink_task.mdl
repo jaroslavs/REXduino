@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.10 rev. 11508, Date 2020-02-14"
+  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -409,7 +409,7 @@ Model {
   }
   System {
     Name                    "UNO_Blink_task"
-    Location                [213, 33, 1031, 559]
+    Location                [213, 33, 1281, 539]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -444,7 +444,7 @@ Model {
       pinmodeA3               "1: Not connected"
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
-      usercmd                 "2: Four bytes"
+      usercmd                 "1: No data"
       #GUID                   53c12946-5703-425b-a545-2effd570635e
     }
     Block {

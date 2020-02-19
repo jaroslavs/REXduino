@@ -82,7 +82,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
   MdlSubVersion           0
   SaveDefaultBlockParams  on
   SampleTimeColors        off
@@ -233,6 +233,7 @@ Model {
       Position                [460, 266, 645, 614]
       SourceBlock             "REXduino_library/Arduino_MEGA2560hex"
       ShowPortLabels          on
+      FontSize                10
       comPort                 "/dev/ttyACM0"
       pinmodes_00_07          0x320A0800
       pinmodes_08_15          0x00200554
@@ -243,7 +244,7 @@ Model {
       pinmodes_48_53          0
       pinmodes_A0_A7          0x00006000
       pinmodes_A8_A15         0
-      FontSize                10
+      usercmd                 "1: No data"
       #GUID                   6f09661d-79e6-4ed9-b630-157558864aaf
     }
     Block {

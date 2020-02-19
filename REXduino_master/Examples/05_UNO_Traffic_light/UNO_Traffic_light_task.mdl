@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -248,6 +248,7 @@ Model {
       Position                [200, 46, 345, 394]
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
+      FontSize                10
       comPort                 "/dev/ttyACM0"
       pinmode2                "4: Digital input with internal pull-up"
       pinmode3                "1: Not connected"
@@ -263,7 +264,7 @@ Model {
       pinmodeA3               "1: Not connected"
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
-      FontSize                10
+      usercmd                 "1: No data"
       #GUID                   854de7bf-4b65-42f6-bf9d-91545362876f
     }
     Block {

@@ -82,7 +82,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
   MdlSubVersion           0
   SaveDefaultBlockParams  on
   SampleTimeColors        off
@@ -691,6 +691,7 @@ Model {
       Position                [445, 301, 630, 649]
       SourceBlock             "REXduino_library/Arduino_MEGA2560hex"
       ShowPortLabels          on
+      FontSize                10
       comPort                 "/dev/ttyACM0"
       pinmodes_00_07          0x320A0800
       pinmodes_08_15          0x00200554
@@ -701,7 +702,7 @@ Model {
       pinmodes_48_53          0
       pinmodes_A0_A7          0x00006606
       pinmodes_A8_A15         0
-      FontSize                10
+      usercmd                 "2: Four bytes"
       #GUID                   11022e51-6055-4c73-b8b5-44bb58d140c5
     }
     Block {
@@ -723,6 +724,15 @@ Model {
       t8                      8
       RPT                     on
       #GUID                   740f956b-3744-49f6-aeac-13138dbbdd2e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [985, 658, 1005, 672]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   61481f8b-259f-43d8-b4d5-38c7759e2bfa
     }
     Block {
       BlockType               Reference
@@ -767,6 +777,16 @@ Model {
       NamePlacement           ""
       YCN                     on
       #GUID                   e1cbde2a-e711-433f-8d63-fa222ca7cb6f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [245, 618, 265, 632]
+      SourceBlock             "mathlib/CNI"
+      icn                     1
+      FontSize                10
+      #GUID                   5ee1c8f0-e356-498c-980c-edac00cb6e2f
     }
     Block {
       BlockType               Reference
@@ -1805,6 +1825,28 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "TRND1"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [1030, 613, 1075, 687]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double (F64)"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      0
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      ViewConfig              ""
+      #GUID                   f6b0282c-3df6-42e3-8759-d57028f2fb6f
+    }
+    Block {
+      BlockType               Reference
       Name                    "TRND_ERROR"
       Ports                   [6, 5, 0, 0, 0]
       Position                [1065, 138, 1110, 212]
@@ -1825,6 +1867,51 @@ Model {
       Title                   "ERROR trend"
       timesrc                 1
       #GUID                   3d2ff2b7-5cb3-4aef-b32f-50aa394139b7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "byte2long"
+      Ports                   [4, 1, 0, 0, 0]
+      Position                [850, 602, 945, 648]
+      SourceBlock             "REXduino_library/byte2long"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   ba93b322-fdbd-4bd1-a144-38c2d46ad95c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userRecvQUAD"
+      Ports                   [1, 4, 0, 0, 0]
+      Position                [685, 602, 780, 648]
+      SourceBlock             "REXduino_library/userRecvQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   0e8b00ba-9ddd-4dc0-85b3-030a15fe7144
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userSendQUAD"
+      Ports                   [4, 1, 0, 0, 0]
+      Position                [300, 617, 395, 663]
+      SourceBlock             "REXduino_library/userSendQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   755884e2-56a7-455e-a6da-be27fec7e028
     }
     Line {
       SrcBlock                "AI_demux1"
@@ -1936,11 +2023,25 @@ Model {
       #GUID                   4f2903be-9e0a-43bc-a109-849db9e785ef
     }
     Line {
+      SrcBlock                "Arduino_MEGA2560hex"
+      SrcPort                 21
+      DstBlock                "userRecvQUAD"
+      DstPort                 1
+      #GUID                   6f76e31f-053f-4197-92b3-a3bd0a8f6d55
+    }
+    Line {
       SrcBlock                "BIS_BLINK_DO13"
       SrcPort                 1
       DstBlock                "HEXDBM_DO_02_15"
       DstPort                 14
       #GUID                   2ab2cf82-9337-4ad8-be93-bcee3c0f1f5b
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND1"
+      DstPort                 5
+      #GUID                   376d268f-aef6-45d8-9e3b-443d9ce8db68
     }
     Line {
       SrcBlock                "CNB_CNT2_ENABLE"
@@ -1971,6 +2072,13 @@ Model {
       DstBlock                "Goto_10"
       DstPort                 1
       #GUID                   37d41d42-d230-42d2-a406-6bdbc6b46bd8
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      DstBlock                "userSendQUAD"
+      DstPort                 1
+      #GUID                   b739bdf9-0cf7-4cdc-8a1e-d8fd95f6063c
     }
     Line {
       SrcBlock                "CNI_PWM10"
@@ -2094,6 +2202,48 @@ Model {
       DstBlock                "Arduino_MEGA2560hex"
       DstPort                 8
       #GUID                   cbdecaf0-badd-4514-b940-205a6d252888
+    }
+    Line {
+      SrcBlock                "byte2long"
+      SrcPort                 1
+      DstBlock                "TRND1"
+      DstPort                 1
+      #GUID                   26023317-4e7e-4d3d-a4d8-60e8505d08d6
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 1
+      DstBlock                "byte2long"
+      DstPort                 1
+      #GUID                   38dc8cee-5eab-4077-a5f3-9c9c808a8829
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 2
+      DstBlock                "byte2long"
+      DstPort                 2
+      #GUID                   a14835de-e267-4e22-aa5b-7991e9cfe01e
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 3
+      DstBlock                "byte2long"
+      DstPort                 3
+      #GUID                   f2fc48fd-5679-47f2-a90a-d331705ff563
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 4
+      DstBlock                "byte2long"
+      DstPort                 4
+      #GUID                   832991c8-6a21-4750-84c3-087d692e799e
+    }
+    Line {
+      SrcBlock                "userSendQUAD"
+      SrcPort                 1
+      DstBlock                "Arduino_MEGA2560hex"
+      DstPort                 14
+      #GUID                   cb38638f-ae80-435c-9cf2-52258490cee2
     }
     Annotation {
       Position                [430, 90]
