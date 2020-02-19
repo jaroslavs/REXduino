@@ -9,14 +9,16 @@
  *********************************************************/
 
 // Perform C command - initialize communication ***************************************
-void commandC(byte zero, byte verbose) {
+void commandC(byte ver, byte verbose) {
   if (verbose) {
-    zero = zero - 48; //convert from ASCII to number
+    ver = ver - 48; //convert from ASCII to number
   }
-  if (zero == 0)
+  if (ver == MAJORVERSION)
   {
     master_active = 1;
-    Serial.print("C0;");
+    Serial.print("C");
+    Serial.write(48+MAJORVERSION); //48 is the ASCII code of "0"
+    Serial.print(";");
 #ifdef ENABLE_WDT
     wdt_reset();
 #endif

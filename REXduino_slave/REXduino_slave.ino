@@ -30,7 +30,7 @@
 **************************************************************************/
 
 #define MAJORVERSION 1
-#define MINORVERSION 6 //even number = release, odd number = development
+#define MINORVERSION 99 //even number = release, odd number = development
 #define REVISION 0 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 

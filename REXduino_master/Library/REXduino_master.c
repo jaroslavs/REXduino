@@ -30,7 +30,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **************************************************************************/
 
 #define MAJORVERSION 1
-#define MINORVERSION 6 //even number = release, odd number = development
+#define MINORVERSION 99 //even number = release, odd number = development
 #define REVISION 0	 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0	   //
 
@@ -219,7 +219,7 @@ void initCommunication(void)
 { //initialize communication with Arduino
 	Trace(0, "Sending initialization command.");
 	commandData[0] = 'C';
-	commandData[1] = 0;
+	commandData[1] = MAJORVERSION;
 	commandData[2] = ';';
 	sendData(3);
 	return;
@@ -745,7 +745,7 @@ int main(void)
 				switch (responseData[0])
 				{
 				case 'C':											   //connection confirmation
-					if ((responseCnt == 3) && (responseData[1] == 48)) //48 is the ASCII value of '0'
+					if ((responseCnt == 3) && (responseData[1] == (48+MAJORVERSION) )) //48 is the ASCII value of '0'
 					{
 						Trace(0, "Received connection confirmation.");
 						initialized = 1;
@@ -755,7 +755,7 @@ int main(void)
 					}
 					else
 					{
-						Trace(99, "Invalid confirmation."); //incomplete or invalid response
+						Trace(99, "Invalid confirmation. Maybe an incompatible REXduino slave device (version mismatch)?"); //incomplete or invalid response
 					}
 					break;
 				case 'E': //error or warning message
