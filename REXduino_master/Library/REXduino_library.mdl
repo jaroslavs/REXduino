@@ -1094,7 +1094,7 @@ Library {
       MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
 "1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
-"Not connected|1: Not connected|1: Not connected|2: Four bytes"
+"Not connected|1: Not connected|1: Not connected|1: No data"
       #GUID                   76129db7-01da-4a04-8215-d430238a64da
       System {
         Name                    "Arduino_MEGA2560"
@@ -2876,7 +2876,7 @@ Library {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      MaskValueString         "/dev/ttyACM0|0|0|0|0|0|0|0|0|0|2: Four bytes"
+      MaskValueString         "/dev/ttyACM0|0|0|0|0|0|0|0|0|0|1: No data"
       #GUID                   55ca73f8-e5ae-4a17-87ef-509aa0176452
       System {
         Name                    "Arduino_MEGA2560hex"
@@ -5136,7 +5136,7 @@ Library {
       MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
 "1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
 "nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
-"Not connected|1: Not connected|1: Not connected|2: Four bytes"
+"Not connected|1: Not connected|1: Not connected|1: No data"
       #GUID                   0139119e-66ff-4eb1-a2b1-d0168ce6c748
       System {
         Name                    "Arduino_UNO"
@@ -6832,7 +6832,7 @@ Library {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      MaskValueString         "/dev/ttyACM0|0|0|0|2: Four bytes"
+      MaskValueString         "/dev/ttyACM0|0|0|0|1: No data"
       #GUID                   019cad75-96a3-4c92-b62c-be9f840fc5aa
       System {
         Name                    "Arduino_UNOhex"
