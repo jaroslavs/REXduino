@@ -1,5 +1,5 @@
 Model {
-  Name                    "UNO_Generic_exec"
+  Name                    "myproject_exec"
   Version                 3.00
   #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
   SavedCharacterEncoding  "UTF-8"
@@ -33,8 +33,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "UNO_Generic_exec"
-    Location                [11, 34, 218, 433]
+    Name                    "myproject_exec"
+    Location                [11, 34, 218, 497]
     #GUID                   7b2cda49-bf13-4c88-88bc-97161021a8bb
     Block {
       BlockType               Reference
@@ -60,18 +60,18 @@ Model {
       BlockType               Reference
       Name                    "PROJECT"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [25, 328, 70, 347]
+      Position                [25, 323, 70, 342]
       SourceBlock             "execlib/PROJECT"
       CompileParams           ""
       SourcesOnTarget         off
       TargetURL               ""
       LibraryPath             "..\\..\\Library"
       FontSize                10
-      #GUID                   bb4e0367-ba87-48d6-afc0-a93d196cc87b
+      #GUID                   be834d99-7deb-411a-b171-f97d140aca55
     }
     Block {
       BlockType               Reference
-      Name                    "UNO_Generic_task"
+      Name                    "myproject_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [115, 177, 165, 193]
       SourceBlock             "execlib/TASK"
@@ -84,12 +84,13 @@ Model {
       MDLOPEN                 on
       bEdit                   off
       FontSize                10
+      #RTFlags                5
       #GUID                   415fb099-109e-4b03-b646-bfd1131e5750
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "UNO_Generic_task"
+      DstBlock                "myproject_task"
       DstPort                 1
       #GUID                   bcc822fb-617f-4c0e-9a3d-ec665e0c4335
     }

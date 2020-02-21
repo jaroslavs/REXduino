@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -409,7 +409,7 @@ Model {
   }
   System {
     Name                    "UNO_Blink_task"
-    Location                [213, 33, 1281, 539]
+    Location                [222, 34, 846, 439]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -618,16 +618,6 @@ Model {
       DstBlock                "Arduino_UNO"
       DstPort                 10
       #GUID                   71330547-4298-46fc-96fa-13e84b8fda16
-    }
-    Annotation {
-      Position                [35, 425]
-      Text                    "See UNO_Blink.png for wiring diagram.\n\nSee UN"
-"O_Blink.avi for video."
-      FontWeight              "bold"
-      FontSize                16
-      HorizontalAlignment     "left"
-      VerticalAlignment       "top"
-      #GUID                   79f2c066-3557-40dc-a140-da3759485415
     }
   }
 }

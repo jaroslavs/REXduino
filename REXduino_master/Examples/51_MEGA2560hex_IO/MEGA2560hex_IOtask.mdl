@@ -82,7 +82,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
   MdlSubVersion           0
   SaveDefaultBlockParams  on
   SampleTimeColors        off

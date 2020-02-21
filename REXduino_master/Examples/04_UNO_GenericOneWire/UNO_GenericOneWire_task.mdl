@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.10 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -221,7 +221,7 @@ Model {
   }
   System {
     Name                    "UNO_GenericOneWire_task"
-    Location                [262, 35, 1285, 668]
+    Location                [-194, 35, 867, 668]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -429,50 +429,78 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto_2"
-      Position                [905, 333, 995, 347]
+      Position                [915, 323, 1005, 337]
       ShowName                off
-      GotoTag                 "temperature1"
+      GotoTag                 "temp_6_1"
       TagVisibility           "local"
+      FontSize                10
       #GUID                   f7945b2d-4e09-4c14-8c43-25db90ea9fb2
     }
     Block {
       BlockType               Goto
       Name                    "Goto_3"
-      Position                [905, 353, 995, 367]
+      Position                [915, 343, 1005, 357]
       ShowName                off
-      GotoTag                 "temperature2"
+      GotoTag                 "temp_6_2"
       TagVisibility           "local"
+      FontSize                10
       #GUID                   2f501dcc-f4a7-4e89-b157-0dc12167d006
     }
     Block {
       BlockType               Goto
       Name                    "Goto_4"
-      Position                [600, 328, 690, 342]
+      Position                [915, 363, 1005, 377]
       ShowName                off
-      GotoTag                 "CNT2"
+      GotoTag                 "temp_6_3"
       TagVisibility           "local"
-      #GUID                   9d93e54f-b6b5-4872-8ad2-acfb38cf2825
-    }
-    Block {
-      BlockType               Reference
-      Name                    "OW_branch1"
-      Ports                   [2, 4, 0, 0, 0]
-      Position                [785, 412, 875, 458]
-      SourceBlock             "REXduino_library/OW_sensors_1_4"
-      ShowPortLabels          on
-      MaskType                "REX sequence"
-      MaskIconFrame           on
-      MaskIconOpaque          on
-      MaskIconRotate          "none"
-      MaskIconUnits           "autoscale"
       FontSize                10
-      #GUID                   99652859-bf3f-44fa-88fb-1cc6a0998c63
+      #GUID                   38e02a35-b455-4192-847e-12d2170185d4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_5"
+      Position                [915, 403, 1005, 417]
+      ShowName                off
+      GotoTag                 "temp_9_1"
+      TagVisibility           "local"
+      FontSize                10
+      #GUID                   76a55016-c021-4cee-9a50-7cae70617fff
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_6"
+      Position                [915, 423, 1005, 437]
+      ShowName                off
+      GotoTag                 "temp_9_2"
+      TagVisibility           "local"
+      FontSize                10
+      #GUID                   55bbd487-9ce4-4dfd-bf8f-4da0f348cbdc
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_7"
+      Position                [915, 443, 1005, 457]
+      ShowName                off
+      GotoTag                 "temp_9_3"
+      TagVisibility           "local"
+      FontSize                10
+      #GUID                   fde9bb04-bb00-4e85-9b2e-5ddb539194f6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_8"
+      Position                [915, 463, 1005, 477]
+      ShowName                off
+      GotoTag                 "temp_9_4"
+      TagVisibility           "local"
+      FontSize                10
+      #GUID                   0578374e-bc34-435f-b842-eed28aab891a
     }
     Block {
       BlockType               Reference
-      Name                    "OW_branch10"
+      Name                    "OW_branch6"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [785, 342, 875, 388]
+      Position                [785, 332, 875, 378]
       SourceBlock             "REXduino_library/OW_sensors_1_4"
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -485,9 +513,24 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "OW_branch9"
+      Ports                   [2, 4, 0, 0, 0]
+      Position                [785, 402, 875, 448]
+      SourceBlock             "REXduino_library/OW_sensors_1_4"
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      FontSize                10
+      #GUID                   99652859-bf3f-44fa-88fb-1cc6a0998c63
+    }
+    Block {
+      BlockType               Reference
       Name                    "OW_decompose"
       Ports                   [1, 4, 0, 0, 0]
-      Position                [585, 362, 725, 408]
+      Position                [585, 352, 725, 398]
       SourceBlock             "REXduino_library/OW_decompose"
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -552,17 +595,10 @@ Model {
     }
     Line {
       SrcBlock                "Arduino_UNO"
-      SrcPort                 26
-      DstBlock                "Goto_4"
-      DstPort                 1
-      #GUID                   dd1b5959-b7ca-44c7-ba39-8f2aef8f9fc3
-    }
-    Line {
-      SrcBlock                "Arduino_UNO"
-      SrcPort                 31
+      SrcPort                 30
       DstBlock                "OW_decompose"
       DstPort                 1
-      #GUID                   c1d2b489-9dbf-4b0b-bf61-a7ae4a467763
+      #GUID                   5c053fb4-19a2-49dd-b90a-e8af47a5f22c
     }
     Line {
       SrcBlock                "BIS_HEARTBEAT"
@@ -570,21 +606,6 @@ Model {
       DstBlock                "Arduino_UNO"
       DstPort                 10
       #GUID                   cd8b6691-ea56-4e93-8abb-8234ad087655
-    }
-    Line {
-      SrcBlock                "CNB_CNT2_ENABLE"
-      SrcPort                 1
-      Points                  [40, 0; 0, -10]
-      DstBlock                "Arduino_UNO"
-      DstPort                 18
-      #GUID                   07e9106f-4359-48eb-97f8-6dc493abb87d
-    }
-    Line {
-      SrcBlock                "CNB_CNT2_RESET"
-      SrcPort                 1
-      DstBlock                "Arduino_UNO"
-      DstPort                 17
-      #GUID                   8a4e8040-5e8f-48ea-9ff7-c20f87f02eca
     }
     Line {
       SrcBlock                "CNB_DO5"
@@ -643,32 +664,71 @@ Model {
       #GUID                   3a02cd0d-acb5-4a1c-b7ec-ebb44e59ca2a
     }
     Line {
-      SrcBlock                "OW_branch10"
+      SrcBlock                "OW_branch6"
       SrcPort                 1
-      Points                  [10, 0]
+      Points                  [20, 0]
       DstBlock                "Goto_2"
       DstPort                 1
       #GUID                   6b0a212e-1b2d-4bb6-82c1-6366befc5476
     }
     Line {
-      SrcBlock                "OW_branch10"
+      SrcBlock                "OW_branch6"
       SrcPort                 2
       DstBlock                "Goto_3"
       DstPort                 1
       #GUID                   8c748e57-a41a-4149-a49e-65780f05cdf7
     }
     Line {
+      SrcBlock                "OW_branch6"
+      SrcPort                 3
+      Points                  [20, 0]
+      DstBlock                "Goto_4"
+      DstPort                 1
+      #GUID                   df62dd3a-9ff5-4c5c-8ed6-9a4daeff8c8d
+    }
+    Line {
+      SrcBlock                "OW_branch9"
+      SrcPort                 1
+      DstBlock                "Goto_5"
+      DstPort                 1
+      #GUID                   fc0fae14-02d9-4f49-9558-afa2fd172cde
+    }
+    Line {
+      SrcBlock                "OW_branch9"
+      SrcPort                 2
+      Points                  [20, 0]
+      DstBlock                "Goto_6"
+      DstPort                 1
+      #GUID                   6ec0c120-87b2-4e79-bef8-ae0e2e64c7f5
+    }
+    Line {
+      SrcBlock                "OW_branch9"
+      SrcPort                 3
+      Points                  [15, 0; 0, 20]
+      DstBlock                "Goto_7"
+      DstPort                 1
+      #GUID                   712e30dc-152e-4e75-bab2-ba56160214b4
+    }
+    Line {
+      SrcBlock                "OW_branch9"
+      SrcPort                 4
+      Points                  [10, 0; 0, 30]
+      DstBlock                "Goto_8"
+      DstPort                 1
+      #GUID                   c975471d-e5ae-4d07-a5fd-d95172200152
+    }
+    Line {
       SrcBlock                "OW_decompose"
       SrcPort                 1
       Points                  [30, 0; 0, -15]
-      DstBlock                "OW_branch10"
+      DstBlock                "OW_branch6"
       DstPort                 1
       #GUID                   803256d7-bfa0-4bb8-bae1-48541a229c8b
     }
     Line {
       SrcBlock                "OW_decompose"
       SrcPort                 2
-      DstBlock                "OW_branch10"
+      DstBlock                "OW_branch6"
       DstPort                 2
       #GUID                   4990dbaf-0b8a-4cd6-8313-2ba252e5b555
     }
@@ -676,7 +736,7 @@ Model {
       SrcBlock                "OW_decompose"
       SrcPort                 3
       Points                  [40, 0]
-      DstBlock                "OW_branch1"
+      DstBlock                "OW_branch9"
       DstPort                 1
       #GUID                   3881308a-751b-449f-b482-c5573cf07c53
     }
@@ -684,7 +744,7 @@ Model {
       SrcBlock                "OW_decompose"
       SrcPort                 4
       Points                  [30, 0; 0, 50]
-      DstBlock                "OW_branch1"
+      DstBlock                "OW_branch9"
       DstPort                 2
       #GUID                   0c8573dd-49bd-4631-b2cd-0e303f05b6e9
     }
