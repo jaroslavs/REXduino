@@ -1,5 +1,4 @@
-
-#REXduino (REXYGEN master and Arduino slave)#
+# REXduino (REXYGEN master and Arduino slave) #
 
 *Last tested with:* [REXYGEN 2.50.9](http://www.rexygen.com) and [Arduino IDE 1.8.12](http://www.arduino.cc)
 
