@@ -29,8 +29,8 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **************************************************************************/
 
-#define MAJORVERSION 1
-#define MINORVERSION 99 //even number = release, odd number = development
+#define MAJORVERSION 2
+#define MINORVERSION 0 //even number = release, odd number = development
 #define REVISION 0	 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0	   //
 
