@@ -1,194 +1,7 @@
 Model {
   Name                    "UNO_GenericOneWire_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "Jarda"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:87>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "Jarda"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:87>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
+  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -203,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -214,30 +27,20 @@ Model {
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "UNO_GenericOneWire_task"
-    Location                [-194, 35, 867, 668]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   56b1ca65-dfbb-4cb8-9b4c-c53d1799e388
+    Location                [255, 34, 1288, 672]
+    #GUID                   d20dcd90-66ca-4ec5-be24-2b557685237d
     Block {
       BlockType               Reference
       Name                    "Arduino_UNO"
       Ports                   [21, 34, 0, 0, 0]
-      Position                [400, 76, 545, 424]
+      Position                [320, 66, 465, 414]
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
@@ -257,13 +60,13 @@ Model {
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
       usercmd                 "1: No data"
-      #GUID                   118927d3-1b57-435b-886c-e98b79d76a64
+      #GUID                   d495047e-ea88-4bd3-83d8-2d0123d27018
     }
     Block {
       BlockType               Reference
       Name                    "BIS_HEARTBEAT"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [265, 228, 280, 252]
+      Position                [185, 218, 200, 242]
       SourceBlock             "genlib/BIS"
       NamePlacement           "alternate"
       SourceType              "BIS"
@@ -279,228 +82,185 @@ Model {
       RPT                     on
       bEdit                   off
       FontSize                10
-      #GUID                   a87af328-ab6b-49a1-911f-dc4fe5b86b05
+      #GUID                   ca784d5a-2a42-4033-96a7-c17cf93b9e91
     }
     Block {
       BlockType               Reference
       Name                    "CNB_CNT2_ENABLE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [230, 358, 255, 372]
+      Position                [150, 348, 175, 362]
       SourceBlock             "mathlib/CNB"
       SourceType              "CNB"
       YCN                     on
-      #GUID                   92319f47-320f-4e0d-a7ed-db6bf2221d70
+      #GUID                   bf5a1706-2ad9-4896-9620-1efb7275341f
     }
     Block {
       BlockType               Reference
       Name                    "CNB_CNT2_RESET"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [230, 334, 255, 346]
+      Position                [150, 324, 175, 336]
       SourceBlock             "mathlib/CNB"
       SourceType              "CNB"
       YCN                     off
-      #GUID                   dc592833-91a2-4472-9b21-e24eaf8b3828
+      #GUID                   77512061-17f3-4b47-95fe-58c648241257
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [260, 136, 280, 154]
+      Position                [180, 126, 200, 144]
       SourceBlock             "mathlib/CNB"
       SourceType              "CNB"
       YCN                     on
       NamePlacement           ""
       ShowName                on
-      #GUID                   b7195ee2-8afe-44cd-ab54-a8503dec2bb6
+      #GUID                   6b56c70c-1bb0-443e-ab15-2a89d4380eb3
     }
     Block {
       BlockType               Reference
       Name                    "CNB_TRND_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [200, 499, 220, 511]
+      Position                [120, 489, 140, 501]
       SourceBlock             "mathlib/CNB"
       SourceType              "CNB"
       YCN                     on
       NamePlacement           ""
       ShowName                on
-      #GUID                   38394b29-055b-4993-bbcf-8110ffbeab3e
+      #GUID                   6ec97302-d051-439e-9b1d-32cc850fcbc7
     }
     Block {
       BlockType               Reference
       Name                    "CNI_PWM"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [260, 167, 285, 183]
+      Position                [180, 157, 205, 173]
       SourceBlock             "mathlib/CNI"
       SourceType              "CNI"
       icn                     128
-      #GUID                   f6ef5215-3f2d-45be-ae7c-40c1502b8098
+      #GUID                   62f7ad4f-2e61-4869-a77b-a774b01e537e
     }
     Block {
       BlockType               Display
       Name                    "Display"
-      Position                [580, 43, 660, 67]
+      Position                [500, 33, 580, 57]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   3b331009-4fa2-465e-bef5-88f1ebbf91e2
+      #GUID                   6039ce98-7d68-4b42-8596-4eb917f48cc3
     }
     Block {
       BlockType               Display
       Name                    "Display1"
-      Position                [675, 63, 755, 87]
+      Position                [595, 53, 675, 77]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   cfbada05-d8f7-4c1e-a44a-acb5dc7a827b
+      #GUID                   163e41cd-c440-49c4-8c2d-7584c9644190
     }
     Block {
       BlockType               Display
       Name                    "Display2"
-      Position                [675, 93, 755, 117]
+      Position                [595, 83, 675, 107]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   9f2562b5-85eb-42a0-a171-979d3df0e1ab
+      #GUID                   01cb9fc7-2606-42ba-abbd-3190c487486d
     }
     Block {
       BlockType               From
       Name                    "From_1"
-      Position                [255, 568, 345, 582]
+      Position                [175, 558, 265, 572]
       ShowName                off
       GotoTag                 "CNT2"
-      #GUID                   48549901-bceb-4a2f-81a9-4f43f4db8fb3
+      #GUID                   cdb6cee8-ccbd-4272-83bc-2520a1f4c400
     }
     Block {
       BlockType               From
       Name                    "From_2"
-      Position                [160, 538, 250, 552]
+      Position                [80, 528, 170, 542]
       ShowName                off
       GotoTag                 "temperature1"
-      #GUID                   62df99c5-d6e1-4686-a358-08074b85c48b
+      #GUID                   d83f4c74-901e-48a1-ac20-cc78eb1b24b5
     }
     Block {
       BlockType               From
       Name                    "From_3"
-      Position                [255, 548, 345, 562]
+      Position                [175, 538, 265, 552]
       ShowName                off
       GotoTag                 "temperature2"
-      #GUID                   08d7c1c9-bc22-4162-934e-631a1df65564
+      #GUID                   250d1293-3771-4265-a84b-6d8c6b2d3f95
     }
     Block {
       BlockType               From
       Name                    "From_6"
-      Position                [160, 578, 250, 592]
+      Position                [80, 568, 170, 582]
       ShowName                off
       GotoTag                 "TRND_RUN"
-      #GUID                   0396bc0c-97c6-496a-bb3d-19e6e2cfb734
+      #GUID                   e8e4d8a8-2db1-4b6d-bbc7-2492801716ad
     }
     Block {
       BlockType               From
       Name                    "From_7"
-      Position                [160, 558, 250, 572]
+      Position                [80, 548, 170, 562]
       ShowName                off
       GotoTag                 "AI1"
-      #GUID                   f6857365-57a3-40e3-897b-d96b95e0af27
+      #GUID                   5bfb56f2-cbbf-4100-b04c-49d105dfe0b0
     }
     Block {
       BlockType               Goto
       Name                    "Goto_1"
-      Position                [600, 278, 690, 292]
+      Position                [520, 268, 610, 282]
       ShowName                off
       GotoTag                 "AI1"
       TagVisibility           "local"
-      #GUID                   788227be-e7e3-4edf-8a0b-4efaa513dc3f
+      #GUID                   c95c47b4-edc2-4070-9ee8-ed9ab8529d97
     }
     Block {
       BlockType               Goto
       Name                    "Goto_10"
-      Position                [290, 498, 380, 512]
+      Position                [210, 488, 300, 502]
       ShowName                off
       GotoTag                 "TRND_RUN"
       TagVisibility           "local"
-      #GUID                   190a66a2-8ee9-4a6f-88a9-3a60693b547b
+      #GUID                   b6ab92d8-0bdd-4c98-b240-4a090d37b1fb
     }
     Block {
       BlockType               Goto
       Name                    "Goto_2"
-      Position                [915, 323, 1005, 337]
+      Position                [825, 323, 915, 337]
       ShowName                off
-      GotoTag                 "temp_6_1"
+      GotoTag                 "temperature1"
       TagVisibility           "local"
-      FontSize                10
-      #GUID                   f7945b2d-4e09-4c14-8c43-25db90ea9fb2
+      #GUID                   b258fb90-3199-4858-97cc-0523dc27cb61
     }
     Block {
       BlockType               Goto
       Name                    "Goto_3"
-      Position                [915, 343, 1005, 357]
+      Position                [825, 343, 915, 357]
       ShowName                off
-      GotoTag                 "temp_6_2"
+      GotoTag                 "temperature2"
       TagVisibility           "local"
-      FontSize                10
-      #GUID                   2f501dcc-f4a7-4e89-b157-0dc12167d006
+      #GUID                   4ccae940-41fb-4f6f-a08c-c181296cf097
     }
     Block {
       BlockType               Goto
       Name                    "Goto_4"
-      Position                [915, 363, 1005, 377]
+      Position                [520, 318, 610, 332]
       ShowName                off
-      GotoTag                 "temp_6_3"
+      GotoTag                 "CNT2"
       TagVisibility           "local"
-      FontSize                10
-      #GUID                   38e02a35-b455-4192-847e-12d2170185d4
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto_5"
-      Position                [915, 403, 1005, 417]
-      ShowName                off
-      GotoTag                 "temp_9_1"
-      TagVisibility           "local"
-      FontSize                10
-      #GUID                   76a55016-c021-4cee-9a50-7cae70617fff
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto_6"
-      Position                [915, 423, 1005, 437]
-      ShowName                off
-      GotoTag                 "temp_9_2"
-      TagVisibility           "local"
-      FontSize                10
-      #GUID                   55bbd487-9ce4-4dfd-bf8f-4da0f348cbdc
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto_7"
-      Position                [915, 443, 1005, 457]
-      ShowName                off
-      GotoTag                 "temp_9_3"
-      TagVisibility           "local"
-      FontSize                10
-      #GUID                   fde9bb04-bb00-4e85-9b2e-5ddb539194f6
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto_8"
-      Position                [915, 463, 1005, 477]
-      ShowName                off
-      GotoTag                 "temp_9_4"
-      TagVisibility           "local"
-      FontSize                10
-      #GUID                   0578374e-bc34-435f-b842-eed28aab891a
+      #GUID                   fe792c8e-5922-4efb-96af-eb278918651f
     }
     Block {
       BlockType               Reference
-      Name                    "OW_branch6"
+      Name                    "OW_branch1"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [785, 332, 875, 378]
+      Position                [705, 402, 795, 448]
       SourceBlock             "REXduino_library/OW_sensors_1_4"
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -509,13 +269,13 @@ Model {
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
       FontSize                10
-      #GUID                   1026ee6b-8ad7-47ca-8a9f-77c1c67b5318
+      #GUID                   83e2b649-aa6d-43d5-885c-f9e06b14033e
     }
     Block {
       BlockType               Reference
-      Name                    "OW_branch9"
+      Name                    "OW_branch10"
       Ports                   [2, 4, 0, 0, 0]
-      Position                [785, 402, 875, 448]
+      Position                [705, 332, 795, 378]
       SourceBlock             "REXduino_library/OW_sensors_1_4"
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -524,13 +284,13 @@ Model {
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
       FontSize                10
-      #GUID                   99652859-bf3f-44fa-88fb-1cc6a0998c63
+      #GUID                   449dc473-1bfb-48c8-b90f-ae9dcbc77592
     }
     Block {
       BlockType               Reference
       Name                    "OW_decompose"
       Ports                   [1, 4, 0, 0, 0]
-      Position                [585, 352, 725, 398]
+      Position                [505, 352, 645, 398]
       SourceBlock             "REXduino_library/OW_decompose"
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -539,13 +299,13 @@ Model {
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
       FontSize                10
-      #GUID                   41d7a09d-c168-4bee-aa3b-52e8f9bab5f5
+      #GUID                   d8e6e99a-9853-4f65-9ef8-8ba7c1b7b39f
     }
     Block {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [430, 533, 475, 607]
+      Position                [350, 523, 395, 597]
       SourceBlock             "arclib/TRND"
       SourceType              "TRND"
       n                       4
@@ -561,7 +321,7 @@ Model {
       id                      1
       Title                   "Data trend"
       timesrc                 1
-      #GUID                   bc038324-43d9-4fb0-9ae7-9313bb831e78
+      #GUID                   0baf00e7-c74d-41c5-a7e2-e087d25d4504
     }
     Line {
       SrcBlock                "Arduino_UNO"
@@ -569,7 +329,7 @@ Model {
       Points                  [10, 0; 0, -30]
       DstBlock                "Display"
       DstPort                 1
-      #GUID                   1156946b-740d-4f1e-8981-eb9c4ae72889
+      #GUID                   6a9236f7-9226-41b3-a498-bfaeca20f037
     }
     Line {
       SrcBlock                "Arduino_UNO"
@@ -577,186 +337,169 @@ Model {
       Points                  [20, 0; 0, -20]
       DstBlock                "Display1"
       DstPort                 1
-      #GUID                   5560d830-93cf-43ee-bc45-b6e3b186c61b
+      #GUID                   f640f41f-f7af-4133-9bd7-3af67381a6ef
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 3
       DstBlock                "Display2"
       DstPort                 1
-      #GUID                   112f2897-c5a0-4199-ad66-d7e9f05ba6ac
+      #GUID                   f2d8b0fc-2d59-4e08-8458-d49def7a5e28
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 21
       DstBlock                "Goto_1"
       DstPort                 1
-      #GUID                   ff050c79-2e5f-4590-9261-0c403568c223
+      #GUID                   f37e7b57-1f82-49b1-ab0a-9791a2e8a7f8
     }
     Line {
       SrcBlock                "Arduino_UNO"
-      SrcPort                 30
+      SrcPort                 26
+      DstBlock                "Goto_4"
+      DstPort                 1
+      #GUID                   56b0b45a-6b81-47b3-9576-8941f49de74e
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 31
       DstBlock                "OW_decompose"
       DstPort                 1
-      #GUID                   5c053fb4-19a2-49dd-b90a-e8af47a5f22c
+      #GUID                   e319cc62-113f-4d27-8de9-5a08fcc2ffa9
     }
     Line {
       SrcBlock                "BIS_HEARTBEAT"
       SrcPort                 1
       DstBlock                "Arduino_UNO"
       DstPort                 10
-      #GUID                   cd8b6691-ea56-4e93-8abb-8234ad087655
+      #GUID                   20817d7f-7b62-4a99-8e02-0e7be77ffe49
+    }
+    Line {
+      SrcBlock                "CNB_CNT2_ENABLE"
+      SrcPort                 1
+      Points                  [40, 0; 0, -10]
+      DstBlock                "Arduino_UNO"
+      DstPort                 18
+      #GUID                   899d67fa-d2b0-4bb1-baea-05f4f7cada79
+    }
+    Line {
+      SrcBlock                "CNB_CNT2_RESET"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 17
+      #GUID                   39a30b12-1a38-4e11-91a4-91fd877e4dd0
     }
     Line {
       SrcBlock                "CNB_DO5"
       SrcPort                 1
       DstBlock                "Arduino_UNO"
       DstPort                 4
-      #GUID                   6bed7415-3654-429a-98f8-6b73ebca63f2
+      #GUID                   d06e1d3c-ad21-426b-8cfe-d86f5275fc48
     }
     Line {
       SrcBlock                "CNB_TRND_RUN"
       SrcPort                 1
       DstBlock                "Goto_10"
       DstPort                 1
-      #GUID                   e99d7bce-7630-4c9d-86d1-76c976f482a4
+      #GUID                   f8d821f5-74b6-4fa6-922a-378144214e74
     }
     Line {
       SrcBlock                "CNI_PWM"
       SrcPort                 1
       DstBlock                "Arduino_UNO"
       DstPort                 6
-      #GUID                   dba0f749-2431-46a4-a737-b1edcce369aa
+      #GUID                   ab1fd0ac-779a-4712-bdae-ad2fbe990c9f
     }
     Line {
       SrcBlock                "From_1"
       SrcPort                 1
       DstBlock                "TRND"
       DstPort                 4
-      #GUID                   f90c43a1-97c1-45f0-a362-b7bb376182c1
+      #GUID                   0ef69632-2dc7-452c-abc7-6aeb01d8395e
     }
     Line {
       SrcBlock                "From_2"
       SrcPort                 1
       DstBlock                "TRND"
       DstPort                 1
-      #GUID                   3edf5307-a258-45df-9598-b6307f3df4a4
+      #GUID                   2cce0a28-5ffd-4bb9-b265-3d5a7ed33087
     }
     Line {
       SrcBlock                "From_3"
       SrcPort                 1
       DstBlock                "TRND"
       DstPort                 2
-      #GUID                   2647ec43-c1fb-4d64-93a5-3e8c14c0cfe7
+      #GUID                   a5eb9a8c-6d7d-4b2a-af74-3fd0d476fea3
     }
     Line {
       SrcBlock                "From_6"
       SrcPort                 1
       DstBlock                "TRND"
       DstPort                 5
-      #GUID                   c415f039-c801-488d-9aee-0a09bed5b0e4
+      #GUID                   45ecb8d2-6456-40c4-b4b8-c6127ab3e85d
     }
     Line {
       SrcBlock                "From_7"
       SrcPort                 1
       DstBlock                "TRND"
       DstPort                 3
-      #GUID                   3a02cd0d-acb5-4a1c-b7ec-ebb44e59ca2a
+      #GUID                   7f66e5e6-adeb-4d16-9152-e65160264162
     }
     Line {
-      SrcBlock                "OW_branch6"
+      SrcBlock                "OW_branch10"
       SrcPort                 1
-      Points                  [20, 0]
+      Points                  [10, 0]
       DstBlock                "Goto_2"
       DstPort                 1
-      #GUID                   6b0a212e-1b2d-4bb6-82c1-6366befc5476
+      #GUID                   21d23d30-b035-4d7b-a8c5-95c0e7e8b61e
     }
     Line {
-      SrcBlock                "OW_branch6"
+      SrcBlock                "OW_branch10"
       SrcPort                 2
       DstBlock                "Goto_3"
       DstPort                 1
-      #GUID                   8c748e57-a41a-4149-a49e-65780f05cdf7
-    }
-    Line {
-      SrcBlock                "OW_branch6"
-      SrcPort                 3
-      Points                  [20, 0]
-      DstBlock                "Goto_4"
-      DstPort                 1
-      #GUID                   df62dd3a-9ff5-4c5c-8ed6-9a4daeff8c8d
-    }
-    Line {
-      SrcBlock                "OW_branch9"
-      SrcPort                 1
-      DstBlock                "Goto_5"
-      DstPort                 1
-      #GUID                   fc0fae14-02d9-4f49-9558-afa2fd172cde
-    }
-    Line {
-      SrcBlock                "OW_branch9"
-      SrcPort                 2
-      Points                  [20, 0]
-      DstBlock                "Goto_6"
-      DstPort                 1
-      #GUID                   6ec0c120-87b2-4e79-bef8-ae0e2e64c7f5
-    }
-    Line {
-      SrcBlock                "OW_branch9"
-      SrcPort                 3
-      Points                  [15, 0; 0, 20]
-      DstBlock                "Goto_7"
-      DstPort                 1
-      #GUID                   712e30dc-152e-4e75-bab2-ba56160214b4
-    }
-    Line {
-      SrcBlock                "OW_branch9"
-      SrcPort                 4
-      Points                  [10, 0; 0, 30]
-      DstBlock                "Goto_8"
-      DstPort                 1
-      #GUID                   c975471d-e5ae-4d07-a5fd-d95172200152
+      #GUID                   bd09dada-e7d6-4801-b336-84d522ce151b
     }
     Line {
       SrcBlock                "OW_decompose"
       SrcPort                 1
       Points                  [30, 0; 0, -15]
-      DstBlock                "OW_branch6"
+      DstBlock                "OW_branch10"
       DstPort                 1
-      #GUID                   803256d7-bfa0-4bb8-bae1-48541a229c8b
+      #GUID                   519406aa-22ff-4a11-b18d-750dd6af5173
     }
     Line {
       SrcBlock                "OW_decompose"
       SrcPort                 2
-      DstBlock                "OW_branch6"
+      DstBlock                "OW_branch10"
       DstPort                 2
-      #GUID                   4990dbaf-0b8a-4cd6-8313-2ba252e5b555
+      #GUID                   1d01d2f4-bc30-4279-a96a-ab83fc1fdedc
     }
     Line {
       SrcBlock                "OW_decompose"
       SrcPort                 3
       Points                  [40, 0]
-      DstBlock                "OW_branch9"
+      DstBlock                "OW_branch1"
       DstPort                 1
-      #GUID                   3881308a-751b-449f-b482-c5573cf07c53
+      #GUID                   b42a93d2-53b1-4744-b77d-e45e45a1c4fa
     }
     Line {
       SrcBlock                "OW_decompose"
       SrcPort                 4
       Points                  [30, 0; 0, 50]
-      DstBlock                "OW_branch9"
+      DstBlock                "OW_branch1"
       DstPort                 2
-      #GUID                   0c8573dd-49bd-4631-b2cd-0e303f05b6e9
+      #GUID                   80ae825e-184a-4764-898b-7b20a8cdae6a
     }
     Annotation {
-      Position                [785, 180]
+      Position                [705, 170]
       Text                    "MAKE SURE TO ENABLE THE 1-WIRE BUS IN\nTHE REXD"
 "UINO SLAVE SKETCH FOR ARDUINO !!!\n\nUNCOMMENT THE LINE //#define USE1WIRE\nTH"
 "E ONEWIRE LIBRARY FOR ARDUINO IS REQUIRED !!!"
       FontWeight              "bold"
       FontSize                16
       BackgroundColor         "yellow"
-      #GUID                   23da8c0a-b913-414c-a08b-aa45706f1638
+      #GUID                   dcc4d15a-f1c7-4a50-8420-c1ac7a44c130
     }
   }
 }
