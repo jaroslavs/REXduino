@@ -134,7 +134,7 @@ long input(6) input6;
 long input(7) input7;
 long input(9) comPortNo;
 long input(10) SimulinkDetector;
-long input(13) debug;
+long input(13) inputDebug;
 long input(14) AUXcmd;
 long input(15) userSend;
 
@@ -692,8 +692,8 @@ int main(void)
 	sentCnt = 0; //counter of sent bytes
 
 	Trace(3, "=== REXduino master main loop START ===");
-	TRACE_INCOMING = (debug >> 2) & 1;
-	TRACE_OUTGOING = (debug >> 3) & 1;
+	TRACE_INCOMING = (inputDebug >> 2) & 1;
+	TRACE_OUTGOING = (inputDebug >> 3) & 1;
 
 	//first we demux the data entering REXLANG (data for Arduino outputs)
 	for (i = 0; i < 32; i++)
@@ -1274,7 +1274,7 @@ int main(void)
 	}
 	userRecv = longArray[0]; //output available for user data
 
-	debugChange = debug & ~debugLast; //detection of rising edge (bitwise)
+	debugChange = inputDebug & ~debugLast; //detection of rising edge (bitwise)
 	if (debugChange & 1)			  //force reconnect by closing the serial port
 	{
 		hCom = closePort(hCom);
@@ -1289,7 +1289,7 @@ int main(void)
 		TraceWarning(555, "End of pin modes listing.");
 	}
 
-	debugLast = debug;
+	debugLast = inputDebug;
 
 	Trace(3, "=== REXduino master main loop END ===");
 	return 0; //end main
