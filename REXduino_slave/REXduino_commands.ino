@@ -45,10 +45,10 @@ void commandV(byte verbose) {
   else
   {
     Serial.print("V");
-    Serial.write(MAJORVERSION);
-    Serial.write(MINORVERSION);
-    Serial.write(REVISION);
-    Serial.write(COMMIT);
+    Serial.write((byte)MAJORVERSION);
+    Serial.write((byte)MINORVERSION);
+    Serial.write((byte)REVISION);
+    Serial.write((byte)COMMIT);
     Serial.print(";");
   }
 }
