@@ -332,6 +332,7 @@ void readOnewireTemp(byte pin, byte verbose) {
    256	122.0703125
   1024	30.517578125
 */
+/*
 void setPwmFrequency(int pin, int divisor) {
   byte mode;
   if (pin == 5 || pin == 6 || pin == 9 || pin == 10) {
@@ -390,6 +391,7 @@ void setPwmFrequency(int pin, int divisor) {
     TCCR2B = TCCR2B & 0b11111000 | mode;
   }
 }
+*/
 
 // Counter on pin 2 ****************************************************
 void ISRcounter2() {

@@ -169,7 +169,7 @@ void setup()
   //Base frequency on pins 9 and 10 is 31250 Hz
   //The divisors available on pins 9 and 10 are: 1 (=31.25 KHz), 8 (~ 3.9 KHz), 64 (~ 488 Hz), 256 (~ 122 Hz), and 1024 (~ 30 Hz).
   //BEWARE, changing the PWM timing conflicts with the Servo library !!!
-  //setPwmFrequency(9, 8); //for Arduino UNO
+  //setPwmFrequency(9, 8); //for Arduino UNO, make sure to uncomment also the function itself in REXduino_functions.ino
   //For Arduino MEGA2560 - change PWM frequency of pins 9 and 10 on MEGA2560
   //Prescalers available on pins 9 and 10 are: 1 (=31.25 KHz), 2 (~ 3.9 KHz), 3 (~ 488 Hz), 4 (~ 122 Hz), and 5 (~ 30 Hz).
   //int myPrescaler = 2;
