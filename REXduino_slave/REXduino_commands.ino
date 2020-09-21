@@ -561,7 +561,7 @@ void command3(void) {
 
 #ifdef USEI2C
 // Perform B command - read MPL115A2 barometer ***************************************
-void commandB(byte verbose) {
+void commandBarometer(byte verbose) {
   byte i = 0;
   byte data[12];
   byte result = 0;

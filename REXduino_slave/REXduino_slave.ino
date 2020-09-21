@@ -478,7 +478,7 @@ void loop()
 #ifdef ENABLE_WDT
           wdt_reset();
 #endif
-          commandB(verbose_command); //execute the command
+          commandBarometer(verbose_command); //execute the command
           command_data_length = 0;
         }
         else if (command_data_length > reqLength)
