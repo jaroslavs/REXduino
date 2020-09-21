@@ -720,19 +720,16 @@ void commandU(byte verbose) {
     }
   }
   else {
+#ifdef USESERVO
+    myServoA.write(command_data[1]);
+    myServoB.write(command_data[2]);
+    myServoC.write(command_data[3]);
+#endif
     Serial.write('U');
-    if (command_data[1] == 0) {
-      Serial.write((millis() & 255));
-      Serial.write((millis() >> 8) & 255);
-      Serial.write((millis() >> 16) & 255);
-      Serial.write((millis() >> 24) & 255);
-    }
-    else {
-      Serial.write((micros() & 255));
-      Serial.write((micros() >> 8) & 255);
-      Serial.write((micros() >> 16) & 255);
-      Serial.write((micros() >> 24) & 255);
-    }
+    Serial.write(command_data[1] & 255);
+    Serial.write(command_data[2] & 255);
+    Serial.write(command_data[3] & 255);
+    Serial.write(command_data[4] & 255);
     Serial.write(";");
   }
 }

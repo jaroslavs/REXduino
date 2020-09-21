@@ -1,0 +1,1428 @@
+Model {
+  Name                    "Leonardo_Servo_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "Jarda"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:87>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "Jarda"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "XPMUser"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
+  ModelVersionFormat      "1.%<AutoIncrement:87>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.10 rev. 11508 - REXCONV, Date 2020-2-14"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "Leonardo_Servo_task"
+    Location                [244, 34, 1471, 942]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   56b1ca65-dfbb-4cb8-9b4c-c53d1799e388
+    Block {
+      BlockType               Reference
+      Name                    "AND_3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [545, 853, 580, 877]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   466246fe-f34a-4adc-a977-6a56f77033a0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_4"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [545, 848, 580, 872]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   754ce3ed-fb23-47bf-876d-d4e05ac54701
+    }
+    Block {
+      BlockType               Reference
+      Name                    "Arduino_Leonardo"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [595, 36, 740, 384]
+      SourceBlock             "REXduino_library/Arduino_Leonardo"
+      ShowPortLabels          on
+      FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
+      comPort                 "COM3"
+      pinmode2                "1: Not connected"
+      pinmode3                "1: Not connected"
+      pinmode4                "1: Not connected"
+      pinmode5                "1: Not connected"
+      pinmode6                "1: Not connected"
+      pinmode9                "1: Not connected"
+      pinmode10               "1: Not connected"
+      pinmode11               "1: Not connected"
+      pinmodeA0               "1: Not connected"
+      pinmodeA1               "1: Not connected"
+      pinmodeA2               "1: Not connected"
+      pinmodeA3               "1: Not connected"
+      pinmodeA4               "1: Not connected"
+      pinmodeA5               "1: Not connected"
+      usercmd                 "2: Four bytes"
+      #GUID                   e90426c7-e46e-4b15-8a44-237299fe0113
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_HEARTBEAT"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [430, 188, 445, 212]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.7"
+      t2                      "0.8"
+      t3                      "0.9"
+      t4                      "1.0"
+      t5                      0
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      FontSize                10
+      #GUID                   c3c96b2e-f258-4576-b42a-c4f7eb4af6a2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 173, 320, 187]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      FontSize                10
+      #GUID                   b14064ac-a058-42bf-966d-09cd9c343773
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [495, 863, 510, 877]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   af871679-52ce-46dc-80db-a7a73fcd5e4c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_servo10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [140, 358, 170, 372]
+      SourceBlock             "mathlib/CNI"
+      icn                     170
+      FontSize                10
+      #GUID                   5039643a-615f-4167-9bb1-ae095d9e264f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_servo9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [145, 328, 165, 342]
+      SourceBlock             "mathlib/CNI"
+      icn                     0
+      FontSize                10
+      #GUID                   3bb9364c-2a3f-440a-bc7a-e258bb204c6c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 608, 285, 632]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   b1efe27b-c7d0-4a0c-8fc8-cb4acb133610
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 653, 285, 677]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   cb468fdf-d9e5-440d-83a3-84e9b9861a48
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV2"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 698, 285, 722]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   56cb17af-961b-47a7-a215-1c41135d717a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 743, 285, 767]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   e763cf31-708b-492d-aec2-b0b1de468b7f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV4"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 1113, 285, 1137]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   d78892dd-fc2e-47ac-ab79-af6fd538a59a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV5"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 1068, 285, 1092]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   0092819b-19af-4ae3-bac4-88a988d6e9f4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV6"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 1158, 285, 1182]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   5cc4121c-49f3-48ea-afc0-109dd88be7a6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV7"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 1208, 285, 1232]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   8c2b8914-ce62-465c-9387-e50bd9dd5f79
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV8"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 1253, 285, 1277]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      FontSize                10
+      #GUID                   8d47b189-9aa8-4e6b-b401-1cf0d3f7fa4f
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [860, 33, 940, 57]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   baf026c6-a65e-4c66-b01c-76fed48207e3
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [860, 58, 940, 82]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   eef97617-ea8f-4335-968a-b26c7135fdc0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display10"
+      Position                [460, 973, 540, 997]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   368f0a06-7919-42e4-9a70-9011974c76a0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display11"
+      Position                [460, 1063, 540, 1087]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   14c0ea57-8c36-4b5c-9395-874ffd02e0f9
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display12"
+      Position                [460, 1108, 540, 1132]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   a288f422-0805-425b-a232-7acf6c89c5c9
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display13"
+      Position                [460, 1153, 540, 1177]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   431ecf86-2387-49ec-add5-342390d1b05a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display14"
+      Position                [460, 1203, 540, 1227]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   44dde44d-3e40-43c2-8c42-87d1957fd4d6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display15"
+      Position                [460, 1248, 540, 1272]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   a7c0ee7b-82c0-4d44-b965-47cf347029f4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [860, 83, 940, 107]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   cef11fe7-ea46-4919-9f27-c00f7c7f25a0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Position                [460, 603, 540, 627]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   457fe977-4dbe-48a1-80fd-473c62333ed2
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Position                [460, 693, 540, 717]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   abca0f54-e1d0-496b-99c4-a4bc3ec8d35c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display6"
+      Position                [460, 648, 540, 672]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   07c81f96-cd3c-43df-a469-cb0ad5238580
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display7"
+      Position                [460, 738, 540, 762]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   111c830d-96d1-4a79-9493-0816443865c6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display8"
+      Position                [460, 928, 540, 952]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " ms"
+      DispValue               ""
+      FontSize                10
+      #GUID                   d0155353-463b-4bb1-9656-f3dd88cbc7d7
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display9"
+      Position                [460, 1018, 540, 1042]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   0acf258d-4290-4e90-b453-2f03bc0fd21c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 933, 375, 947]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   2a08fbaf-b1bf-4b46-b121-d4fe48c5a1f1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN10"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 1253, 375, 1267]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   82397b87-c6dc-49d5-a369-f29029d50c03
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [345, 608, 370, 622]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   9bb6a2c4-b0a9-4ecb-b3a4-2e52083406ad
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [345, 653, 370, 667]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   d200c3d3-efcc-4aff-ac78-e21522a2e15b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [345, 698, 370, 712]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   4b90e67e-3464-45b5-b720-1629d8eff0d9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [345, 743, 370, 757]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   8291ac75-801b-4ff1-a31a-5d4e4162ba1a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN6"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 1068, 375, 1082]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   bfe5acba-2543-412c-8eeb-3a50cf291bad
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN7"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 1113, 375, 1127]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   c72744fe-152a-4d5e-a293-023cb729cee2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN8"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 1158, 375, 1172]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   940f04ef-630b-478d-bf15-e2e536eaf9e7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN9"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 1208, 375, 1222]
+      SourceBlock             "mathlib/GAIN"
+      k                       1000
+      FontSize                10
+      #GUID                   20376471-2889-4270-9fe3-626a53dc1b39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_dmstart"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1208, 185, 1232]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:dmstart"
+      GETF                    off
+      FontSize                10
+      #GUID                   c63af10c-eb23-4ee8-af1c-8eeb584bb915
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_dmstop"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1253, 185, 1277]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:dmstop"
+      GETF                    off
+      FontSize                10
+      #GUID                   3fe9be3d-209d-481c-9ec8-9b1af045e5b3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_dstart"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1113, 185, 1137]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:dstart"
+      GETF                    off
+      FontSize                10
+      #GUID                   9026eede-453e-40e2-9f6e-0ab53b28079a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_dstop"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1158, 185, 1182]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:dstop"
+      GETF                    off
+      FontSize                10
+      #GUID                   05db0a1b-b017-4ac0-8dea-af23e7097893
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_perf"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [145, 563, 180, 587]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:perf"
+      GETF                    off
+      FontSize                10
+      #GUID                   c4815036-72ef-4eaf-b3b7-d64f877943ce
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_start"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 978, 185, 1002]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:start"
+      GETF                    off
+      FontSize                10
+      #GUID                   2302982d-4b39-4794-9d7d-e480bceecb77
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_stop"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1023, 185, 1047]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:stop"
+      GETF                    off
+      FontSize                10
+      #GUID                   48318ca4-6271-4271-9d92-2a3f93937b1c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_tavg"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [145, 653, 180, 677]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:tavg"
+      GETF                    off
+      FontSize                10
+      #GUID                   824c8b77-255c-4d08-8382-1ca5b9b7c5c3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_tlast"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [145, 743, 180, 767]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:tlast"
+      GETF                    off
+      FontSize                10
+      #GUID                   28c759b0-642c-4657-90c0-557a6ab1552d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_tmax"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [145, 608, 180, 632]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:tmax"
+      GETF                    off
+      FontSize                10
+      #GUID                   c0c74939-a6b5-45e6-bac9-cb5647b69ddd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_tmin"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [145, 698, 180, 722]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:tmin"
+      GETF                    off
+      FontSize                10
+      #GUID                   5779d216-43ff-4736-abd4-63030a1c6c45
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPI_tmover"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 1068, 185, 1092]
+      SourceBlock             "paramlib/GETPI"
+      sc                      ".:tmover"
+      GETF                    off
+      FontSize                10
+      #GUID                   02666ccb-87dc-445d-bce3-310aad04dcb0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GETPR_period"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [150, 933, 185, 957]
+      SourceBlock             "paramlib/GETPR"
+      sc                      ".:period"
+      GETF                    off
+      FontSize                10
+      #GUID                   27460d93-772d-4bfe-afc4-ea8ea62ee793
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_servo11"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [145, 393, 170, 407]
+      SourceBlock             "mathlib/LIN"
+      u1                      -1
+      y1                      0
+      u2                      1
+      y2                      180
+      FontSize                10
+      #GUID                   30e553d0-3968-4dbf-843b-b171f3257a6e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 393, 70, 407]
+      SourceBlock             "genlib/SG"
+      isig                    "3: SAWTOOTH"
+      amp                     1
+      freq                    "0.1"
+      phase                   0
+      offset                  0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      FontSize                10
+      #GUID                   9d82aac1-41c9-472a-a125-adfdefd91a9e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND4"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [540, 818, 585, 892]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       15000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Execution times"
+      timesrc                 "3: RTC"
+      FontSize                10
+      ViewConfig              ""
+      #GUID                   d79d54c9-278c-4edf-9f35-e79e9d973820
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userRecvQUAD"
+      Ports                   [1, 4, 0, 0, 0]
+      Position                [800, 352, 895, 398]
+      SourceBlock             "REXduino_library/userRecvQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   92424148-18db-4a67-a3ea-bad283227c22
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userSendQUAD"
+      Ports                   [4, 1, 0, 0, 0]
+      Position                [435, 337, 530, 383]
+      SourceBlock             "REXduino_library/userSendQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   07d0c583-2ecc-4da9-b3f1-918e23b1d3a0
+    }
+    Line {
+      SrcBlock                "Arduino_Leonardo"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   cfc970fa-161a-445d-b631-27a658a879e5
+    }
+    Line {
+      SrcBlock                "Arduino_Leonardo"
+      SrcPort                 2
+      Points                  [90, 0; 0, 15]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   abfaffe0-e684-4d01-a3e0-7a90fa6bbaa8
+    }
+    Line {
+      SrcBlock                "Arduino_Leonardo"
+      SrcPort                 3
+      Points                  [80, 0; 0, 30]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   48a45eec-7be9-4fda-b960-7c6f9ecad9a1
+    }
+    Line {
+      SrcBlock                "Arduino_Leonardo"
+      SrcPort                 34
+      DstBlock                "userRecvQUAD"
+      DstPort                 1
+      #GUID                   fa843dbf-3da2-4687-b424-5ab1e0d6a191
+    }
+    Line {
+      SrcBlock                "BIS_HEARTBEAT"
+      SrcPort                 1
+      DstBlock                "Arduino_Leonardo"
+      DstPort                 10
+      #GUID                   2e7a5ecc-cb22-4571-a68a-e6e33e8629a7
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "Arduino_Leonardo"
+      DstPort                 9
+      #GUID                   8af035ea-25f7-49a6-944f-0cbab60a15a0
+    }
+    Line {
+      SrcBlock                "CNB_4"
+      SrcPort                 1
+      DstBlock                "TRND4"
+      DstPort                 5
+      #GUID                   c2dfc8b8-ca05-4556-b79f-b2ee2ea1e0ac
+    }
+    Line {
+      SrcBlock                "CNI_servo10"
+      SrcPort                 1
+      Points                  [0, -10]
+      DstBlock                "userSendQUAD"
+      DstPort                 2
+      #GUID                   12a937d8-acbb-4954-b406-f1e5f9b41423
+    }
+    Line {
+      SrcBlock                "CNI_servo9"
+      SrcPort                 1
+      Points                  [145, 0; 0, 10]
+      DstBlock                "userSendQUAD"
+      DstPort                 1
+      #GUID                   3fd11ce9-d60c-49db-8547-510947878f9b
+    }
+    Line {
+      SrcBlock                "DIV"
+      SrcPort                 1
+      DstBlock                "GAIN2"
+      DstPort                 1
+      #GUID                   112de4f0-0ec8-4ab9-83e1-9fa07e255d50
+    }
+    Line {
+      SrcBlock                "DIV1"
+      SrcPort                 1
+      DstBlock                "GAIN3"
+      DstPort                 1
+      #GUID                   9922be3c-c7a7-48eb-93e8-3725606174d7
+    }
+    Line {
+      SrcBlock                "DIV2"
+      SrcPort                 1
+      DstBlock                "GAIN4"
+      DstPort                 1
+      #GUID                   8057fd6a-7c0c-44e1-a135-d32a349bb949
+    }
+    Line {
+      SrcBlock                "DIV3"
+      SrcPort                 1
+      DstBlock                "GAIN5"
+      DstPort                 1
+      #GUID                   a79f41b1-75d5-4ef2-b1d4-b9f886510547
+    }
+    Line {
+      SrcBlock                "DIV4"
+      SrcPort                 1
+      DstBlock                "GAIN7"
+      DstPort                 1
+      #GUID                   8209e636-7890-4bfc-b33b-f6bdd63f80b7
+    }
+    Line {
+      SrcBlock                "DIV5"
+      SrcPort                 1
+      DstBlock                "GAIN6"
+      DstPort                 1
+      #GUID                   1e8dfe7c-fd19-46ba-85dd-d25dae2cb61c
+    }
+    Line {
+      SrcBlock                "DIV6"
+      SrcPort                 1
+      DstBlock                "GAIN8"
+      DstPort                 1
+      #GUID                   fb5bddaa-1f35-4a6a-9f6c-92c7f60a8095
+    }
+    Line {
+      SrcBlock                "DIV7"
+      SrcPort                 1
+      DstBlock                "GAIN9"
+      DstPort                 1
+      #GUID                   64baa499-7010-470c-a29e-287cb2e3fae9
+    }
+    Line {
+      SrcBlock                "DIV8"
+      SrcPort                 1
+      DstBlock                "GAIN10"
+      DstPort                 1
+      #GUID                   7812a7ee-f8ed-4a90-80dc-5e5d3ee5bba7
+    }
+    Line {
+      SrcBlock                "GAIN1"
+      SrcPort                 1
+      DstBlock                "Display8"
+      DstPort                 1
+      #GUID                   1cfc93cf-2e03-4165-8322-96e2ace8fea2
+    }
+    Line {
+      SrcBlock                "GAIN10"
+      SrcPort                 1
+      DstBlock                "Display15"
+      DstPort                 1
+      #GUID                   62333c09-aa2c-4810-b39d-4fd5695c5e64
+    }
+    Line {
+      SrcBlock                "GAIN2"
+      SrcPort                 1
+      Points                  [55, 0]
+      #GUID                   3e4c5074-ca71-440b-a6a3-2ad048af8aa4
+      Branch {
+        DstBlock                "Display4"
+        DstPort                 1
+        #GUID                   7003b608-65d6-4820-bd64-3ebb032cbc53
+      }
+      Branch {
+        Points                  [0, 215]
+        DstBlock                "TRND4"
+        DstPort                 1
+        #GUID                   fe120371-df0c-4465-a5ba-1402bc822c9e
+      }
+    }
+    Line {
+      SrcBlock                "GAIN3"
+      SrcPort                 1
+      Points                  [45, 0]
+      #GUID                   e672410e-76f3-44e9-a54e-c4dae1fcd2ea
+      Branch {
+        DstBlock                "Display6"
+        DstPort                 1
+        #GUID                   5518ffa2-c31c-40e6-94e9-06c47fb2ad4c
+      }
+      Branch {
+        Points                  [0, 180]
+        DstBlock                "TRND4"
+        DstPort                 2
+        #GUID                   d922de45-0547-49eb-9f36-b972984d94d3
+      }
+    }
+    Line {
+      SrcBlock                "GAIN4"
+      SrcPort                 1
+      Points                  [35, 0]
+      #GUID                   4fac3ab2-31ba-49e2-9a46-97c9a175a681
+      Branch {
+        DstBlock                "Display5"
+        DstPort                 1
+        #GUID                   9dfd5c8a-9a35-4c40-8c16-f2d30f41c216
+      }
+      Branch {
+        Points                  [0, 145]
+        DstBlock                "TRND4"
+        DstPort                 3
+        #GUID                   34418e44-536f-42db-be51-27c6e0522e11
+      }
+    }
+    Line {
+      SrcBlock                "GAIN5"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   1a5b97a3-3fb0-4871-8dbc-33079a8374ef
+      Branch {
+        DstBlock                "Display7"
+        DstPort                 1
+        #GUID                   bf9354e2-7832-4d30-88c1-5a916dc2ffe1
+      }
+      Branch {
+        Points                  [0, 110]
+        DstBlock                "TRND4"
+        DstPort                 4
+        #GUID                   160253b5-9585-43e3-8bd6-cf4daa4d5de7
+      }
+    }
+    Line {
+      SrcBlock                "GAIN6"
+      SrcPort                 1
+      DstBlock                "Display11"
+      DstPort                 1
+      #GUID                   46e75f07-ce6b-48c1-8fcb-7ce081c0fdf0
+    }
+    Line {
+      SrcBlock                "GAIN7"
+      SrcPort                 1
+      DstBlock                "Display12"
+      DstPort                 1
+      #GUID                   cd6d499a-3240-4331-90ed-5d8b1bf1e2a4
+    }
+    Line {
+      SrcBlock                "GAIN8"
+      SrcPort                 1
+      DstBlock                "Display13"
+      DstPort                 1
+      #GUID                   37bfb41c-0409-47fb-9f08-4fce96a99f97
+    }
+    Line {
+      SrcBlock                "GAIN9"
+      SrcPort                 1
+      DstBlock                "Display14"
+      DstPort                 1
+      #GUID                   1bb698bf-76cb-4e80-8443-222627be3bd4
+    }
+    Line {
+      SrcBlock                "GETPI_dmstart"
+      SrcPort                 1
+      DstBlock                "DIV7"
+      DstPort                 1
+      #GUID                   dd02785b-3bb7-4008-b2a6-798f4cc52971
+    }
+    Line {
+      SrcBlock                "GETPI_dmstop"
+      SrcPort                 1
+      DstBlock                "DIV8"
+      DstPort                 1
+      #GUID                   a1485932-456b-4755-91be-e5a34f7c08e8
+    }
+    Line {
+      SrcBlock                "GETPI_dstart"
+      SrcPort                 1
+      DstBlock                "DIV4"
+      DstPort                 1
+      #GUID                   866aff76-5579-4ff6-8884-d21c5490ad57
+    }
+    Line {
+      SrcBlock                "GETPI_dstop"
+      SrcPort                 1
+      DstBlock                "DIV6"
+      DstPort                 1
+      #GUID                   5003fd16-49e0-4b99-b75f-90e5146a584f
+    }
+    Line {
+      SrcBlock                "GETPI_perf"
+      SrcPort                 1
+      Points                  [40, 0; 0, 55]
+      #GUID                   56ca8d4a-9b6e-4db6-97e0-4a38b5656d71
+      Branch {
+        DstBlock                "DIV"
+        DstPort                 2
+        #GUID                   18748456-38ae-4bdf-8f56-a60ef998ddcf
+      }
+      Branch {
+        Points                  [0, 45]
+        #GUID                   1b02c778-326b-46f3-8f87-5d697c90caab
+        Branch {
+          DstBlock                "DIV1"
+          DstPort                 2
+          #GUID                   90e0f7ab-e586-41d4-a3d5-ee577dc28389
+        }
+        Branch {
+          Points                  [0, 45]
+          #GUID                   4cbcf070-5c0a-42d3-b558-1365b676c61d
+          Branch {
+            DstBlock                "DIV2"
+            DstPort                 2
+            #GUID                   9386df9d-0f31-4c9d-8e39-d4576137fc24
+          }
+          Branch {
+            Points                  [0, 45]
+            #GUID                   d7f20f91-f806-470a-812d-0e63e1be3350
+            Branch {
+              DstBlock                "DIV3"
+              DstPort                 2
+              #GUID                   4a3d8286-f8ad-4058-8f13-8c3d1f4413ed
+            }
+            Branch {
+              Points                  [0, 325]
+              #GUID                   5f3342a0-a705-4e20-b2f2-ca648c884370
+              Branch {
+                DstBlock                "DIV5"
+                DstPort                 2
+                #GUID                   a997f805-98b6-43e3-9926-ef0850866951
+              }
+              Branch {
+                Points                  [0, 45]
+                #GUID                   cd61f21f-68e1-4671-819d-135ebb46da2d
+                Branch {
+                  DstBlock                "DIV4"
+                  DstPort                 2
+                  #GUID                   0439264b-31ef-4fd6-93e5-0683da858418
+                }
+                Branch {
+                  Points                  [0, 45]
+                  #GUID                   a2c216d6-6ef2-4960-b155-32ccffa84c49
+                  Branch {
+                    DstBlock                "DIV6"
+                    DstPort                 2
+                    #GUID                   "a3c7b5fd-eaa3-48e3-8a8f-7a89cecd9"
+#"497"
+                  }
+                  Branch {
+                    Points                  [0, 50]
+                    #GUID                   "2d2a9c55-0d03-45f4-ac64-41249ae47"
+#"46c"
+                    Branch {
+                      DstBlock                "DIV7"
+                      DstPort                 2
+                      #GUID                   "aac8e587-f1fb-42ae-9663-02ef16b"
+#"f256e"
+                    }
+                    Branch {
+                      Points                  [0, 45]
+                      DstBlock                "DIV8"
+                      DstPort                 2
+                      #GUID                   "6844904a-ab55-4288-b082-cc776a5"
+#"65622"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    Line {
+      SrcBlock                "GETPI_start"
+      SrcPort                 1
+      DstBlock                "Display10"
+      DstPort                 1
+      #GUID                   c57d3fae-e374-47b5-bec7-eac7be89f783
+    }
+    Line {
+      SrcBlock                "GETPI_stop"
+      SrcPort                 1
+      DstBlock                "Display9"
+      DstPort                 1
+      #GUID                   c521271c-5da5-4b97-8745-ab5a225ac4c2
+    }
+    Line {
+      SrcBlock                "GETPI_tavg"
+      SrcPort                 1
+      DstBlock                "DIV1"
+      DstPort                 1
+      #GUID                   aa35432e-42ef-4365-b94d-c246ea8fa9f7
+    }
+    Line {
+      SrcBlock                "GETPI_tlast"
+      SrcPort                 1
+      DstBlock                "DIV3"
+      DstPort                 1
+      #GUID                   d5fab285-ec8b-4dd8-bc3e-dd7b90b53e4d
+    }
+    Line {
+      SrcBlock                "GETPI_tmax"
+      SrcPort                 1
+      DstBlock                "DIV"
+      DstPort                 1
+      #GUID                   7bee84e8-c363-4581-91bf-f7988201410a
+    }
+    Line {
+      SrcBlock                "GETPI_tmin"
+      SrcPort                 1
+      DstBlock                "DIV2"
+      DstPort                 1
+      #GUID                   6e45e094-b725-4a9f-9d45-84edc3dbd27c
+    }
+    Line {
+      SrcBlock                "GETPI_tmover"
+      SrcPort                 1
+      DstBlock                "DIV5"
+      DstPort                 1
+      #GUID                   69c3c1bb-3a7c-4725-bb19-822c07a9072e
+    }
+    Line {
+      SrcBlock                "GETPR_period"
+      SrcPort                 1
+      DstBlock                "GAIN1"
+      DstPort                 1
+      #GUID                   fb947f9d-00ed-4e0b-98fd-4ff44bdfabdf
+    }
+    Line {
+      SrcBlock                "LIN_servo11"
+      SrcPort                 1
+      Points                  [140, 0; 0, -35]
+      DstBlock                "userSendQUAD"
+      DstPort                 3
+      #GUID                   312aa811-55ee-4f20-bbcb-2f34a526d27d
+    }
+    Line {
+      SrcBlock                "SG1"
+      SrcPort                 1
+      DstBlock                "LIN_servo11"
+      DstPort                 1
+      #GUID                   f5c878e7-99fd-4ef1-8f1d-8f3aad908e85
+    }
+    Line {
+      SrcBlock                "userSendQUAD"
+      SrcPort                 1
+      DstBlock                "Arduino_Leonardo"
+      DstPort                 21
+      #GUID                   b2423c33-3b66-4177-b746-7eaf6b10e67c
+    }
+    Annotation {
+      Position                [80, 1105]
+      Text                    "TASK diag:\nperf\nperiod\nnblocks\nstack\nexfac"
+"\nstart\nstop\nerrblk\nerrno\nexcnt\ntlast\ntmin\ntmax\ntsum\ntavg\ndstart\nds"
+"top\ntover\ndmstart\ndmstop\ntmover"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Helvetica"
+      FontWeight              "normal"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   d45a6529-e5c2-4161-83c3-7fdb39814a37
+    }
+    Annotation {
+      Position                [30, 535]
+      Text                    "Diagnostika:"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Arial"
+      FontWeight              "bold"
+      FontAngle               "normal"
+      FontSize                14
+      #GUID                   1324c785-fcbb-49d1-8275-fafc6f79d7be
+    }
+    Annotation {
+      Position                [240, 325]
+      Text                    "0..180"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Arial"
+      FontWeight              "normal"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   1e298d58-ce7b-4232-9afe-4956349fd5e5
+    }
+    Annotation {
+      Position                [240, 345]
+      Text                    "0..180"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Arial"
+      FontWeight              "normal"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   5d1c9834-e95d-409d-9bdb-0235c2eda357
+    }
+    Annotation {
+      Position                [30, 15]
+      Text                    "Use of servo library must be enabled in REXduin"
+"o slave!!!"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                14
+      #GUID                   59279f1e-766d-4e45-8ec6-3f1ead078f41
+    }
+  }
+}

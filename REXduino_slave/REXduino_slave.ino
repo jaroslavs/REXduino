@@ -30,13 +30,13 @@
 **************************************************************************/
 
 #define MAJORVERSION 2
-#define MINORVERSION 1 //even number = release, odd number = development
-#define REVISION 2 //for hotfixes, even number = hotfix applied, odd number = development
+#define MINORVERSION 99 //even number = release, odd number = development
+#define REVISION 0 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 //#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
 //#define USEI2C //uncomment this line to use I2C bus
-//#define USESERVO //uncomment this line to use RC servos
+#define USESERVO //uncomment this line to use RC servos
 
 // uncomment the line below to use watchdog timer (8s by default, see the setup() section)
 //     - works on Arduino UNO R2, R3
@@ -51,6 +51,15 @@
 
 #ifdef USEI2C
 #include <Wire.h>
+#endif
+
+#ifdef USESERVO
+#include <Servo.h>
+#define servopinA 9
+#define servopinB 10
+#define servopinC 11
+
+Servo myServoA, myServoB, myServoC;
 #endif
 
 #ifdef ENABLE_WDT
@@ -193,9 +202,17 @@ void setup()
 #ifdef USEI2C
   Wire.begin(); // join i2c bus
 #endif
+
+#ifdef USESERVO
+  myServoA.attach(servopinA);
+  myServoB.attach(servopinB);
+  myServoC.attach(servopinC);
+#endif
+
 #ifdef ENABLE_WDT
   wdt_enable(WDTO_8S);  // reset after 8 seconds, if no commands received
 #endif
+
   for (i = 0; i < COMMAND_LENGTH_MAX; i++)
   { //initialize the buffer for command data
     command_data[i] = 0;
