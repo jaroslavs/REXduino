@@ -47,6 +47,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define MASKTYPE_ARD_MEGA2560hex 4   //Arduino MEGA 2560 hexadecimal mask
 #define MASKTYPE_SEEED_MEGAV122 5	//Seeeduino Mega v1.22
 #define MASKTYPE_SEEED_MEGAV122hex 6 //Seeeduino Mega v1.22 hexadecimal mask
+#define MASKTYPE_ARD_LEONARDO 7 //Arduino Leonardo
+#define MASKTYPE_ARD_LEONARDOhex 8 //Arduino Leonardo hexadecimal mask
 
 #define STATUS_ONEWIRE_NOMOREDEVICES 50 //2 - must be the same as in REXduino_slave.ino
 #define STATUS_ONEWIRE_TEMPCONV 52		//4 - must be the same as in REXduino_slave.ino
@@ -512,6 +514,43 @@ int parchange(void)
 		break;
 	case MASKTYPE_ARD_UNOhex:
 		PIN_COUNT = 20; //digital+analog pins
+		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
+		for (i = 0; i < 8; i++)
+		{															   //
+			pinModes_par[i] = (param1 & (15 << (4 * i))) >> 4 * i;	 //pins 0 and 1 are overwritten below
+			pinModes_par[i + 8] = (param2 & (15 << (4 * i))) >> 4 * i; //analog pins (14 and up) are overwritten below
+		}
+		pinModes_par[0] = PINMODE_NC;
+		pinModes_par[1] = PINMODE_NC;
+		for (i = 0; i < 8; i++)
+		{ //analog pins A0 to A5 must be in separate for cycle (pin A0 = pin 14, which is not a multiple of 8)
+			pinModes_par[i + 14] = (param3 & (15 << (4 * i))) >> 4 * i;
+		}
+		break;
+	case MASKTYPE_ARD_LEONARDO:
+		PIN_COUNT = 31; //digital+analog pins
+		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
+		pinModes_par[2] = param1;
+		pinModes_par[3] = param2;
+		pinModes_par[4] = param3;
+		pinModes_par[5] = param4;
+		pinModes_par[6] = param5;
+		pinModes_par[7] = PINMODE_DIP;
+		pinModes_par[8] = PINMODE_DIP;
+		pinModes_par[9] = param6;
+		pinModes_par[10] = param7;
+		pinModes_par[11] = param8;
+		pinModes_par[12] = PINMODE_DO;
+		pinModes_par[13] = PINMODE_DO;
+		pinModes_par[14] = param9;
+		pinModes_par[15] = param10;
+		pinModes_par[16] = param11;
+		pinModes_par[17] = param12;
+		pinModes_par[18] = param13;
+		pinModes_par[19] = param14;
+		break;
+	case MASKTYPE_ARD_LEONARDOhex:
+		PIN_COUNT = 31; //digital+analog pins
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		for (i = 0; i < 8; i++)
 		{															   //
