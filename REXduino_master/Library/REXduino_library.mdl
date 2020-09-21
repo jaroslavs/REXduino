@@ -1,7 +1,7 @@
 Library {
   Name                    "REXduino_library"
   Version                 3.00
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12428, Date 2020-07-31"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -1040,6 +1040,7 @@ Library {
 #"rary\\REXduino_library.mdl"
       FontSize                10
       MaskType                "REX sequence"
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
 "in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
@@ -2859,6 +2860,7 @@ Library {
 #"rary\\REXduino_library.mdl"
       FontSize                10
       MaskType                "REX sequence"
+      #MaskTypeString         "string,,,,,,,,,,"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin modes 7 to 0 (0 and 1 ignored)|Pin modes 15 to 8|Pin modes 23 t"
 "o 16|Pin modes 31 to 24|Pin modes 39 to 32|Pin modes 47 to 40|Pin modes 53 to "
@@ -5081,51 +5083,49 @@ Library {
 #"rary\\REXduino_library.mdl"
       FontSize                10
       MaskType                "REX sequence"
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
 "in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
 "e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode|Number of user-defi"
 "ned bytes to send"
-      MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
-": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
-" ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
+      MaskStyleString         "edit,edit,popup(1: Not connected|2: Digital out"
+"put|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog out"
+"put)|6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A"
 "),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input w"
-"ith internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-W"
-"ire temperature|8: Counter|9: Encoder A),popup(1: Not connected|2: Digital out"
-"put|3: Digital input|4: Digital input with internal pull-up|5: --- N/A for thi"
-"s pin ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for thi"
-"s pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: No"
-"t connected|2: Digital output|3: Digital input|4: Digital input with internal "
-"pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperatu"
-"re|8: --- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / E"
-"ncoder B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital"
-" input with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin --"
-"-|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital i"
-"nput|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A "
-"for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital outp"
-"ut|3: Digital input|4: Digital input with internal pull-up|5: PWM (analog outp"
-"ut)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|"
-"2: Digital output|3: Digital input|4: Digital input with internal pull-up|5: P"
-"WM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1:"
-" Not connected|2: Digital output|3: Digital input|4: Digital input with intern"
-"al pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),"
-"popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input wit"
-"h internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire tempe"
-"rature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital i"
-"nput with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wi"
+"ith internal pull-up|5: --- N/A for this pin ---|6: --- N/A for this pin ---|7"
+": 1-Wire temperature|8: --- N/A for this pin ---|9: --- N/A for this pin ---|1"
+"0: Counter DIR / Encoder B),popup(1: Not connected|2: Digital output|3: Digita"
+"l input|4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N"
+"/A for this pin ---|7: 1-Wire temperature|8: --- N/A for this pin ---|9: --- N"
+"/A for this pin ---|10: Counter DIR / Encoder B),popup(1: Not connected|2: Dig"
+"ital output|3: Digital input|4: Digital input with internal pull-up|5: PWM (an"
+"alog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not c"
+"onnected|2: Digital output|3: Digital input|4: Digital input with internal pul"
+"l-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature)"
+",popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input wi"
+"th internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wi"
 "re temperature),popup(1: Not connected|2: Digital output|3: Digital input|4: D"
-"igital input with internal pull-up|5: --- N/A for this pin ---|6: Analog input"
-"|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital in"
-"put|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: Anal"
-"og input|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Di"
-"gital input|4: Digital input with internal pull-up|5: --- N/A for this pin ---"
-"|6: Analog input|7: 1-Wire temperature),popup(1: No data|2: Four bytes|3: Sixt"
-"een bytes)"
+"igital input with internal pull-up|5: PWM (analog output)|6: --- N/A for this "
+"pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Dig"
+"ital input|4: Digital input with internal pull-up|5: --- N/A for this pin ---|"
+"6: Analog input|7: 1-Wire temperature),popup(1: Not connected|2: Digital outpu"
+"t|3: Digital input|4: Digital input with internal pull-up|5: --- N/A for this "
+"pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not connected|2: Digit"
+"al output|3: Digital input|4: Digital input with internal pull-up|5: --- N/A f"
+"or this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not connected|"
+"2: Digital output|3: Digital input|4: Digital input with internal pull-up|5: -"
+"-- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup(1: Not co"
+"nnected|2: Digital output|3: Digital input|4: Digital input with internal pull"
+"-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup(1"
+": Not connected|2: Digital output|3: Digital input|4: Digital input with inter"
+"nal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature)"
+",popup(1: No data|2: Four bytes|3: Sixteen bytes)"
       MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskCallbackString      "|||||||||||||||"
       MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
+      MaskVariables           "comPort=@1;pinmode2=@2;pinmode3=&3;pinmode4=&4;"
 "pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
 "nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15;usercmd=&1"
 "6"
@@ -6817,6 +6817,7 @@ Library {
       #LibraryFile            "D:\\01GIT\\REXduinoGitHub\\REXduino_master\\Lib"
 #"rary\\REXduino_library.mdl"
       MaskType                "REX sequence"
+      #MaskTypeString         "string,,,,"
       MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
 "yUSB0 etc.|Pin modes 7 to 0 (0 and 1 ignored)|Pin modes 13 to 8|Pin modes A5 t"
 "o A0|Number of user-defined bytes to send"
@@ -13383,15 +13384,6 @@ Library {
       #GUID                   d682514a-f4b8-4099-8787-436a652b2b80
     }
     Annotation {
-      Position                [15, 1380]
-      Text                    "Internal blocks"
-      FontSize                16
-      FontWeight              "bold"
-      HorizontalAlignment     "left"
-      VerticalAlignment       "top"
-      #GUID                   f8cbb164-d637-45fa-8310-9d8119307ddd
-    }
-    Annotation {
       Position                [20, 1405]
       Text                    "These block are used internally and are not mea"
 "nt for the end user."
@@ -13399,6 +13391,15 @@ Library {
       VerticalAlignment       "top"
       FontSize                10
       #GUID                   72609b5f-e48f-4048-8635-b2f940e8dbf8
+    }
+    Annotation {
+      Position                [15, 1380]
+      Text                    "Blocks for internal use"
+      FontSize                16
+      FontWeight              "bold"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   f8cbb164-d637-45fa-8310-9d8119307ddd
     }
   }
 }
