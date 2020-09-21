@@ -431,6 +431,24 @@ void loop()
           command_data_length = 0;
         }
         break; // 4 command
+      case 'b': // verbose version of the "board info" command
+        verbose_command = 1;
+      case 'B': // "board info" command
+        reqLength = 2;
+        if ((command_data_length == reqLength) && (master_active == 1))
+        { //correctly terminated command of the expected length received
+#ifdef ENABLE_WDT
+          wdt_reset();
+#endif
+          commandB(verbose_command); //execute the command
+          command_data_length = 0;
+        }
+        else if (command_data_length > reqLength)
+        { //command too long
+          reportError(ERROR_COMMAND, ERROR_COMMAND_INVALID);
+          command_data_length = 0;
+        }
+        break; // 'B' command
 
 #ifdef USE1WIRE
       case 't': // verbose version of the "read 1-Wire temperature" command
@@ -468,6 +486,7 @@ void loop()
         }
         break; // command 3
 #endif //USE1WIRE
+/*
 #ifdef USEI2C
       case 'b': // verbose version of the "read Freescale MPL115A2 barometer" command
         verbose_command = 1;
@@ -506,6 +525,7 @@ void loop()
         }
         break; // 'R' command
 #endif //USEI2C
+*/
       case 'u': // verbose version of the "example user-defined function" command
         verbose_command = 1;
       case 'U': // "example user-defined function" command

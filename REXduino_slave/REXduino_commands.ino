@@ -53,6 +53,23 @@ void commandV(byte verbose) {
   }
 }
 
+// Perform B command - board info ***************************************
+void commandB(byte verbose) {
+  if (verbose)
+  {
+    Serial.print("Num.DI: ");
+    Serial.println(NUM_DIGITAL_PINS);
+    Serial.print("Num.AI: ");
+    Serial.println(NUM_ANALOG_INPUTS);
+    Serial.print("Pin mask size: ");
+    Serial.println(PINMASK_BYTESIZE);
+  }
+  else
+  {
+    // N/A
+  }
+}
+
 // Perform M command - change pin mode ***************************************
 void commandM(byte pin, byte mode, byte verbose) {
   if (verbose) {
