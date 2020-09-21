@@ -12728,7 +12728,7 @@ Library {
       System {
         Name                    "status"
         __CopyByReference       off
-        Location                [162, 149, 770, 745]
+        Location                [162, 149, 990, 826]
         #GUID                   60ec3d60-e904-45c2-8ae8-59114bd67ef8
         Block {
           BlockType               Inport
@@ -12742,7 +12742,7 @@ Library {
         Block {
           BlockType               Inport
           Name                    "err_code"
-          Position                [30, 273, 60, 287]
+          Position                [30, 298, 60, 312]
           Port                    2
           OutDataTypeStr          "Inherit: auto"
           FontSize                10
@@ -12761,7 +12761,7 @@ Library {
           BlockType               Reference
           Name                    "CNI"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [85, 283, 105, 297]
+          Position                [85, 308, 105, 322]
           SourceBlock             "mathlib/CNI"
           icn                     48
           FontSize                10
@@ -12815,9 +12815,9 @@ Library {
           BlockType               Reference
           Name                    "CNS4"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [305, 253, 335, 267]
+          Position                [490, 253, 520, 267]
           SourceBlock             "stringlib/CNS"
-          scv                     "N/A"
+          scv                     "Right now"
           nmax                    0
           FontSize                10
           #GUID                   845be5cc-9d83-48b3-8cf2-c9d26bebbb9e
@@ -12826,9 +12826,9 @@ Library {
           BlockType               Reference
           Name                    "CNS5"
           Ports                   [0, 1, 0, 0, 0]
-          Position                [310, 423, 340, 437]
+          Position                [495, 423, 525, 437]
           SourceBlock             "stringlib/CNS"
-          scv                     "N/A"
+          scv                     "no error"
           nmax                    0
           FontSize                10
           #GUID                   08d3852b-ce45-4fa2-909f-8fe1f7abf582
@@ -12837,7 +12837,7 @@ Library {
           BlockType               Reference
           Name                    "CONCAT"
           Ports                   [8, 1, 0, 0, 0]
-          Position                [445, 345, 505, 435]
+          Position                [630, 345, 690, 435]
           SourceBlock             "stringlib/CONCAT"
           ptrn                    "%1, %2. %3%4"
           nmax                    0
@@ -12847,7 +12847,7 @@ Library {
         Block {
           BlockType               Display
           Name                    "Display"
-          Position                [215, 268, 295, 292]
+          Position                [335, 268, 415, 292]
           ShowName                off
           Format                  "Best fit"
           Decimation              1
@@ -12858,7 +12858,7 @@ Library {
         Block {
           BlockType               Display
           Name                    "Display1"
-          Position                [215, 463, 295, 487]
+          Position                [335, 438, 415, 462]
           ShowName                off
           Format                  "Best fit"
           Decimation              1
@@ -12868,9 +12868,25 @@ Library {
         }
         Block {
           BlockType               Reference
+          Name                    "ISSW"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [205, 263, 235, 297]
+          SourceBlock             "logiclib/ISSW"
+          #GUID                   45d2780a-6ec5-4d6c-abd0-d87230fa58cb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ISSW1"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [205, 433, 235, 467]
+          SourceBlock             "logiclib/ISSW"
+          #GUID                   68682962-2461-4139-b946-bdb54c70d447
+        }
+        Block {
+          BlockType               Reference
           Name                    "ISUB"
           Ports                   [2, 2, 0, 0, 0]
-          Position                [135, 273, 160, 297]
+          Position                [135, 298, 160, 322]
           SourceBlock             "mathlib/ISUB"
           vtype                   "4: Long (I32)"
           SAT                     off
@@ -12901,7 +12917,7 @@ Library {
           BlockType               Reference
           Name                    "SELSOCT1"
           Ports                   [12, 1, 0, 0, 0]
-          Position                [370, 250, 410, 380]
+          Position                [555, 250, 595, 380]
           SourceBlock             "stringlib/SELSOCT"
           BINF                    off
           nmax                    0
@@ -12911,7 +12927,7 @@ Library {
           BlockType               Reference
           Name                    "SELSOCT2"
           Ports                   [12, 1, 0, 0, 0]
-          Position                [370, 420, 410, 550]
+          Position                [555, 420, 595, 550]
           SourceBlock             "stringlib/SELSOCT"
           BINF                    off
           nmax                    0
@@ -12929,7 +12945,7 @@ Library {
         Block {
           BlockType               Outport
           Name                    "err_message"
-          Position                [550, 383, 580, 397]
+          Position                [735, 383, 765, 397]
           Port                    2
           OutDataTypeStr          "Inherit: auto"
           FontSize                10
@@ -12946,7 +12962,7 @@ Library {
             #GUID                   ec278e0e-932d-4728-aa0d-bb6478167265
           }
           Branch {
-            Points                  [0, 195]
+            Points                  [0, 170]
             DstBlock                "ISUB1"
             DstPort                 2
             #GUID                   7fc165ee-1681-4b08-a9f3-5bbc9789332b
@@ -13006,10 +13022,10 @@ Library {
           #GUID                   345fe0ea-3e96-4c78-876b-d47b79af7f9e
         }
         Line {
-          SrcBlock                "ISUB"
+          SrcBlock                "ISSW"
           SrcPort                 1
-          Points                  [20, 0]
-          #GUID                   23f1b8a9-fa35-420a-b2de-c7d5c49713c1
+          Points                  [65, 0]
+          #GUID                   bfb09cac-d686-4793-9cce-50f12f39133f
           Branch {
             DstBlock                "Display"
             DstPort                 1
@@ -13023,21 +13039,37 @@ Library {
           }
         }
         Line {
-          SrcBlock                "ISUB1"
+          SrcBlock                "ISSW1"
           SrcPort                 1
-          Points                  [20, 0]
-          #GUID                   83bf9c49-a585-44f9-a675-9406cfa6dc45
+          Points                  [65, 0]
+          #GUID                   24e5f5c7-3605-4a66-b723-5e933335b02d
           Branch {
             DstBlock                "Display1"
             DstPort                 1
             #GUID                   5b4d4466-db94-4be7-a1d0-3a456dea26f0
           }
           Branch {
-            Points                  [0, 35]
+            Points                  [0, 60]
             DstBlock                "SELSOCT2"
             DstPort                 9
             #GUID                   f8d80419-dc64-421a-b48a-63c57dd37535
           }
+        }
+        Line {
+          SrcBlock                "ISUB"
+          SrcPort                 1
+          Points                  [15, 0; 0, -25]
+          DstBlock                "ISSW"
+          DstPort                 2
+          #GUID                   f29f399c-bc43-4314-950f-f91aa980b342
+        }
+        Line {
+          SrcBlock                "ISUB1"
+          SrcPort                 1
+          Points                  [15, 0; 0, -25]
+          DstBlock                "ISSW1"
+          DstPort                 2
+          #GUID                   96cd03c5-4e4b-48bf-965e-07dea207d124
         }
         Line {
           SrcBlock                "SELSOCT"
@@ -13072,16 +13104,36 @@ Library {
         Line {
           SrcBlock                "err_code"
           SrcPort                 1
-          DstBlock                "ISUB"
-          DstPort                 1
+          Points                  [50, 0]
           #GUID                   553c00af-9dbd-4c30-94a2-bfa558153ff7
+          Branch {
+            Points                  [0, -15]
+            DstBlock                "ISSW"
+            DstPort                 3
+            #GUID                   a904b97c-6cfb-4fb4-a0e7-f933458d2997
+          }
+          Branch {
+            DstBlock                "ISUB"
+            DstPort                 1
+            #GUID                   b524e30b-d458-48e2-82fe-daec447e0cbb
+          }
         }
         Line {
           SrcBlock                "err_subcode"
           SrcPort                 1
-          DstBlock                "ISUB1"
-          DstPort                 1
+          Points                  [20, 0]
           #GUID                   fd041999-61c2-4256-a45a-4bec0d4cba35
+          Branch {
+            Points                  [0, -15]
+            DstBlock                "ISSW1"
+            DstPort                 3
+            #GUID                   d0fac0cc-fcd8-483f-8808-35767eecbd57
+          }
+          Branch {
+            DstBlock                "ISUB1"
+            DstPort                 1
+            #GUID                   81f2206b-3ecf-431f-ac45-ef8457806b4c
+          }
         }
       }
     }
