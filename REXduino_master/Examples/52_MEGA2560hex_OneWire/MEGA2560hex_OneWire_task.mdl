@@ -82,7 +82,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   MdlSubVersion           0
   SaveDefaultBlockParams  on
   SampleTimeColors        off
@@ -234,6 +234,7 @@ Model {
       SourceBlock             "REXduino_library/Arduino_MEGA2560hex"
       ShowPortLabels          on
       FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,"
       comPort                 "/dev/ttyACM0"
       pinmodes_00_07          0x320A0800
       pinmodes_08_15          0x00200554
@@ -332,6 +333,28 @@ Model {
       NamePlacement           ""
       icn                     128
       #GUID                   37c76e42-4832-44fd-93fb-e66d6f5c331b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [915, 33, 1110, 57]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   85e7a0f6-6ad2-4c60-bdd5-7a841914e0db
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [915, 63, 1110, 87]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   55b459d5-8242-4d38-93d8-4d17abbcff29
     }
     Block {
       BlockType               From
@@ -694,6 +717,21 @@ Model {
       timesrc                 1
       #GUID                   3d2ff2b7-5cb3-4aef-b32f-50aa394139b7
     }
+    Block {
+      BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [730, 36, 860, 74]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   33695b76-c2f8-4818-b88e-404eef31a1d6
+    }
     Line {
       SrcBlock                "AI_demux"
       SrcPort                 1
@@ -705,25 +743,52 @@ Model {
       SrcBlock                "Arduino_MEGA2560hex"
       SrcPort                 1
       Points                  [30, 0; 0, -175]
-      DstBlock                "TRND_ERROR"
-      DstPort                 1
       #GUID                   0571cd93-1a98-490e-87c2-d99ddc0292ae
+      Branch {
+        DstBlock                "TRND_ERROR"
+        DstPort                 1
+        #GUID                   4d63b894-7dca-4994-8a12-52a7d595b58e
+      }
+      Branch {
+        Points                  [0, -70]
+        DstBlock                "status"
+        DstPort                 1
+        #GUID                   b3f1585d-a140-4e58-b5bf-a269aa1f8d55
+      }
     }
     Line {
       SrcBlock                "Arduino_MEGA2560hex"
       SrcPort                 2
       Points                  [40, 0; 0, -180]
-      DstBlock                "TRND_ERROR"
-      DstPort                 2
       #GUID                   2a8f414d-13d0-41ee-8ac6-1879c9d4d53c
+      Branch {
+        DstBlock                "TRND_ERROR"
+        DstPort                 2
+        #GUID                   7777c9c3-7465-4e51-86ad-fd0ad0de8af0
+      }
+      Branch {
+        Points                  [0, -70]
+        DstBlock                "status"
+        DstPort                 2
+        #GUID                   785fa310-26e0-4b22-82ad-2e81e678d90e
+      }
     }
     Line {
       SrcBlock                "Arduino_MEGA2560hex"
       SrcPort                 3
       Points                  [50, 0; 0, -185]
-      DstBlock                "TRND_ERROR"
-      DstPort                 3
       #GUID                   03f75cbe-1956-4a12-a637-f6fba848adad
+      Branch {
+        DstBlock                "TRND_ERROR"
+        DstPort                 3
+        #GUID                   9cd2dcdf-7ee4-46d0-b7f7-76cb034bb379
+      }
+      Branch {
+        Points                  [0, -70]
+        DstBlock                "status"
+        DstPort                 3
+        #GUID                   763f90c5-242b-44c3-bf53-d204500ba191
+      }
     }
     Line {
       SrcBlock                "Arduino_MEGA2560hex"
@@ -1015,6 +1080,21 @@ Model {
       DstBlock                "Arduino_MEGA2560hex"
       DstPort                 8
       #GUID                   06db0105-e83a-40ae-8da8-f1890361aaee
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   0c1fcd46-cf38-41d3-aeeb-e247ce05c08b
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [35, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   e0c51d14-43e0-4344-87b2-3348f8226c34
     }
     Annotation {
       Position                [225, 50]

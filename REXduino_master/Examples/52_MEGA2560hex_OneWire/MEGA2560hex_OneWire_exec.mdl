@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:35:33 2013"
   ModelVersionFormat      "1.%<AutoIncrement:49>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off

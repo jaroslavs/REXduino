@@ -1,7 +1,7 @@
 Model {
   Name                    "UNO_GenericOneWire_task"
   Version                 3.00
-  #RexVersion             "2.50.9 rev. 10649, Date 2019-04-20"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -44,6 +44,7 @@ Model {
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
       comPort                 "/dev/ttyACM0"
       pinmode2                "8: Counter"
       pinmode3                "1: Not connected"
@@ -141,35 +142,24 @@ Model {
     Block {
       BlockType               Display
       Name                    "Display"
-      Position                [500, 33, 580, 57]
+      Position                [690, 63, 885, 87]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   6039ce98-7d68-4b42-8596-4eb917f48cc3
+      #GUID                   7f69cdd1-56dd-4d7e-a95c-6e495289407c
     }
     Block {
       BlockType               Display
       Name                    "Display1"
-      Position                [595, 53, 675, 77]
+      Position                [690, 93, 885, 117]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   163e41cd-c440-49c4-8c2d-7584c9644190
-    }
-    Block {
-      BlockType               Display
-      Name                    "Display2"
-      Position                [595, 83, 675, 107]
-      ShowName                off
-      Format                  "Best fit"
-      Decimation              1
-      Suffix                  ""
-      DispValue               ""
-      #GUID                   01cb9fc7-2606-42ba-abbd-3190c487486d
+      #GUID                   c12c9d14-0e98-449e-9e26-0a34b42ceb99
     }
     Block {
       BlockType               From
@@ -323,28 +313,41 @@ Model {
       timesrc                 1
       #GUID                   0baf00e7-c74d-41c5-a7e2-e087d25d4504
     }
+    Block {
+      BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [505, 66, 635, 104]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   68954909-b624-48e7-806f-0cbd14474898
+    }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 1
-      Points                  [10, 0; 0, -30]
-      DstBlock                "Display"
+      DstBlock                "status"
       DstPort                 1
-      #GUID                   6a9236f7-9226-41b3-a498-bfaeca20f037
+      #GUID                   d7e590be-6aaf-4e1a-9b84-5ed66a176f5a
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 2
-      Points                  [20, 0; 0, -20]
-      DstBlock                "Display1"
-      DstPort                 1
-      #GUID                   f640f41f-f7af-4133-9bd7-3af67381a6ef
+      DstBlock                "status"
+      DstPort                 2
+      #GUID                   7099352f-72d6-4e76-9b54-d4501f29bd41
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 3
-      DstBlock                "Display2"
-      DstPort                 1
-      #GUID                   f2d8b0fc-2d59-4e08-8458-d49def7a5e28
+      DstBlock                "status"
+      DstPort                 3
+      #GUID                   77c86b5d-0c63-4dd8-9ab2-1801b95554c3
     }
     Line {
       SrcBlock                "Arduino_UNO"
@@ -491,8 +494,23 @@ Model {
       DstPort                 2
       #GUID                   80ae825e-184a-4764-898b-7b20a8cdae6a
     }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   32313a91-a37f-4b08-ac00-fb125c45dd7d
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [35, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   eb78e8c2-ba13-45f3-93d3-7d586691a16b
+    }
     Annotation {
-      Position                [705, 170]
+      Position                [705, 175]
       Text                    "MAKE SURE TO ENABLE THE 1-WIRE BUS IN\nTHE REXD"
 "UINO SLAVE SKETCH FOR ARDUINO !!!\n\nUNCOMMENT THE LINE //#define USE1WIRE\nTH"
 "E ONEWIRE LIBRARY FOR ARDUINO IS REQUIRED !!!"

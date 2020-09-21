@@ -1,7 +1,7 @@
 Model {
   Name                    "UNO_Generic_task"
   Version                 3.00
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -44,7 +44,8 @@ Model {
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
-      comPort                 "/dev/ttyACM0"
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
+      comPort                 "COM3"
       pinmode2                "8: Counter"
       pinmode3                "1: Not connected"
       pinmode4                "10: Counter DIR / Encoder B"
@@ -161,35 +162,24 @@ Model {
     Block {
       BlockType               Display
       Name                    "Display"
-      Position                [470, 33, 550, 57]
+      Position                [675, 63, 870, 87]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   bc3006ec-98d6-4899-b1ab-dad752171ed6
+      #GUID                   1b0f19cc-258a-401e-9bb5-26e7c27bba39
     }
     Block {
       BlockType               Display
       Name                    "Display1"
-      Position                [565, 53, 645, 77]
+      Position                [675, 93, 870, 117]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   14b8b4bc-1789-4f03-8c9f-857d5b356412
-    }
-    Block {
-      BlockType               Display
-      Name                    "Display2"
-      Position                [565, 83, 645, 107]
-      ShowName                off
-      Format                  "Best fit"
-      Decimation              1
-      Suffix                  ""
-      DispValue               ""
-      #GUID                   3d5cbbe1-f950-482f-87b6-052403a5b273
+      #GUID                   82999996-dca3-4d83-a305-b3713d64fae1
     }
     Block {
       BlockType               From
@@ -320,6 +310,21 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [490, 66, 620, 104]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   b09fbd1d-7460-4d35-b290-95312f7936ee
+    }
+    Block {
+      BlockType               Reference
       Name                    "userRecvQUAD"
       Ports                   [1, 4, 0, 0, 0]
       Position                [525, 452, 620, 498]
@@ -351,25 +356,23 @@ Model {
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 1
-      Points                  [5, 0; 0, -30]
-      DstBlock                "Display"
+      DstBlock                "status"
       DstPort                 1
-      #GUID                   6253810d-1c00-4b41-b867-8802416781ed
+      #GUID                   1f4e0c32-cb43-418e-a9e5-219210636668
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 2
-      Points                  [15, 0; 0, -20]
-      DstBlock                "Display1"
-      DstPort                 1
-      #GUID                   e183ecbd-069c-4422-a6ae-b561098ae638
+      DstBlock                "status"
+      DstPort                 2
+      #GUID                   0c59251e-7644-46bb-a084-889792a12699
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 3
-      DstBlock                "Display2"
-      DstPort                 1
-      #GUID                   a0edcd96-a2eb-49d3-9949-772cb4cee478
+      DstBlock                "status"
+      DstPort                 3
+      #GUID                   214e4615-b846-40af-9d76-b90767cf4c80
     }
     Line {
       SrcBlock                "Arduino_UNO"
@@ -499,6 +502,21 @@ Model {
       DstBlock                "TRND1"
       DstPort                 1
       #GUID                   20c3e7b4-fb45-45b0-98aa-cce2fc6fc2cf
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   3e60f294-fcab-41ed-a80f-35c8a86b3c92
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [35, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   3fe45f64-2111-41d6-b992-d14834ffbc6e
     }
     Line {
       SrcBlock                "userRecvQUAD"

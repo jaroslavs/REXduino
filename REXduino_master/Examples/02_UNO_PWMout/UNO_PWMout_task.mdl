@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -221,7 +221,7 @@ Model {
   }
   System {
     Name                    "UNO_PWMout_task"
-    Location                [223, 34, 1137, 561]
+    Location                [223, 34, 1280, 561]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -241,6 +241,7 @@ Model {
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
       comPort                 "/dev/ttyACM0"
       pinmode2                "1: Not connected"
       pinmode3                "1: Not connected"
@@ -322,35 +323,24 @@ Model {
     Block {
       BlockType               Display
       Name                    "Display"
-      Position                [650, 8, 730, 32]
+      Position                [840, 38, 1035, 62]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   b518c2ff-96ea-4834-97b6-49e6e49df858
+      #GUID                   d3a1bf57-1e53-4d27-a0e1-33d53f4411e1
     }
     Block {
       BlockType               Display
       Name                    "Display1"
-      Position                [745, 28, 825, 52]
+      Position                [840, 68, 1035, 92]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   ca7d927e-58a2-4ae1-9073-c0952f98b2a6
-    }
-    Block {
-      BlockType               Display
-      Name                    "Display2"
-      Position                [745, 58, 825, 82]
-      ShowName                off
-      Format                  "Best fit"
-      Decimation              1
-      Suffix                  ""
-      DispValue               ""
-      #GUID                   bc08a70f-28a9-4b1a-beba-c084c859902c
+      #GUID                   285a133b-977b-4fc8-94e2-f6bcc657114d
     }
     Block {
       BlockType               Reference
@@ -407,28 +397,41 @@ Model {
       offset                  0
       #GUID                   3b8666b3-8300-4766-b73e-6944b975b99f
     }
+    Block {
+      BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [655, 41, 785, 79]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   946b4364-db6c-47aa-852a-3ece0d1fe03d
+    }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 1
-      Points                  [10, 0; 0, -30]
-      DstBlock                "Display"
+      DstBlock                "status"
       DstPort                 1
-      #GUID                   f4f4eff7-4d41-409a-aa26-b5fe88e0ec4c
+      #GUID                   3e76ed2a-81af-471b-ac56-3986f11ac2d4
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 2
-      Points                  [25, 0; 0, -20]
-      DstBlock                "Display1"
-      DstPort                 1
-      #GUID                   e73832fc-b2b7-433f-a1f4-8adc609dc778
+      DstBlock                "status"
+      DstPort                 2
+      #GUID                   660a7079-8566-4a1d-815a-8b17f2b22de1
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 3
-      DstBlock                "Display2"
-      DstPort                 1
-      #GUID                   af52e13e-1a86-457a-b310-1f0a6c445a5e
+      DstBlock                "status"
+      DstPort                 3
+      #GUID                   fb9812df-7645-4258-a29e-36466508dff2
     }
     Line {
       SrcBlock                "CNDR1"
@@ -547,6 +550,21 @@ Model {
           }
         }
       }
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   90ea06b8-5a9e-4890-98bb-abfffcc94112
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [35, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   7d719d1b-e8ac-487f-8f00-94fb5a36242e
     }
     Annotation {
       Position                [30, 445]

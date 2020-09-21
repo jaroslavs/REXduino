@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Thu Apr 04 19:30:46 2013"
   ModelVersionFormat      "1.%<AutoIncrement:87>"
   ConfigurationManager    "none"
-  #RexVersion             "2.50.9 rev. 11514, Date 2020-02-18"
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
   SimParamPage            "Solver"
   SampleTimeColors        off
   InvariantConstants      off
@@ -221,7 +221,7 @@ Model {
   }
   System {
     Name                    "UNO_Traffic_light_task"
-    Location                [233, 35, 966, 620]
+    Location                [233, 35, 1047, 620]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -237,7 +237,7 @@ Model {
       BlockType               Reference
       Name                    "AND_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [620, 43, 655, 67]
+      Position                [620, 123, 655, 147]
       SourceBlock             "logiclib/AND_"
       #GUID                   5576ce2d-7e03-401c-a6d3-503c0f5525e4
     }
@@ -249,6 +249,7 @@ Model {
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
       comPort                 "/dev/ttyACM0"
       pinmode2                "4: Digital input with internal pull-up"
       pinmode3                "1: Not connected"
@@ -325,11 +326,33 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [430, 38, 450, 52]
+      Position                [430, 118, 450, 132]
       SourceBlock             "mathlib/CNI"
       icn                     3
       NamePlacement           "alternate"
       #GUID                   06da2a5f-a5be-47cd-84e4-7f49c2e278e7
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [575, 43, 770, 67]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   5c001e86-309a-45bc-bcd4-15dab41afaef
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [575, 73, 770, 97]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   32ed1458-d2bc-48d8-bb60-42b69c102bf4
     }
     Block {
       BlockType               Reference
@@ -345,7 +368,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [455, 88, 480, 102]
+      Position                [455, 168, 480, 182]
       SourceBlock             "logiclib/NOT_"
       #GUID                   9fc18cf6-484c-469e-a346-b9c41e1a711d
     }
@@ -353,7 +376,7 @@ Model {
       BlockType               Reference
       Name                    "REL"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [470, 38, 495, 62]
+      Position                [470, 118, 495, 142]
       SourceBlock             "mathlib/REL"
       irel                    "1: equality (==)"
       NamePlacement           "alternate"
@@ -363,17 +386,32 @@ Model {
       BlockType               Reference
       Name                    "TIMER_"
       Ports                   [3, 3, 0, 0, 0]
-      Position                [530, 43, 570, 77]
+      Position                [530, 123, 570, 157]
       SourceBlock             "logiclib/TIMER_"
       mode                    "2: Delayed ON"
       pt                      1
       FontSize                10
       #GUID                   2e68ef10-147a-4677-9e35-488c1a3d1eb3
     }
+    Block {
+      BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [390, 46, 520, 84]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   f8b1733a-1b5a-493f-a4cf-1d6c56c3ddf5
+    }
     Line {
       SrcBlock                "AND_"
       SrcPort                 1
-      Points                  [25, 0; 0, 400]
+      Points                  [25, 0; 0, 320]
       DstBlock                "LPBRK"
       DstPort                 1
       #GUID                   33c484f9-3524-40db-b85f-ebd85e1cb414
@@ -381,14 +419,38 @@ Model {
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 1
-      DstBlock                "REL"
+      Points                  [20, 0]
+      #GUID                   77693574-04e1-4f0c-ae68-affa2eedd8f2
+      Branch {
+        Points                  [0, 80]
+        DstBlock                "REL"
+        DstPort                 2
+        #GUID                   5729bcdd-1ce2-454e-8f18-1115705a5396
+      }
+      Branch {
+        DstBlock                "status"
+        DstPort                 1
+        #GUID                   507281b1-4d85-4840-9a1a-f8744c9293b5
+      }
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 2
+      DstBlock                "status"
       DstPort                 2
-      #GUID                   001ec908-ab68-43b7-a087-35d7625a5e37
+      #GUID                   272bdc9b-2907-400d-8593-1754cc2a4373
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 3
+      DstBlock                "status"
+      DstPort                 3
+      #GUID                   56c8c03a-7ed2-462b-8df2-377feb9ecea3
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 4
-      Points                  [75, 0; 0, 10]
+      Points                  [10, 0; 0, 90]
       DstBlock                "NOT_"
       DstPort                 1
       #GUID                   016c83c7-0c95-4e0c-a4a6-41691ace31d2
@@ -470,6 +532,21 @@ Model {
       DstBlock                "AND_"
       DstPort                 1
       #GUID                   43bd3790-30dd-46b5-8ad8-11b7c076cd96
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   e828ad9d-b982-48e3-a6e4-e14d80201f21
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [35, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   1434ac4f-7248-4eee-80f2-68d39006085e
     }
     Annotation {
       Position                [20, 500]
