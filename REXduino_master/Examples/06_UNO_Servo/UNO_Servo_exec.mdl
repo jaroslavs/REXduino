@@ -1,0 +1,98 @@
+Model {
+  Name                    "UNO_Servo_exec"
+  Version                 3.00
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "UNO_Servo_exec"
+    Location                [11, 34, 197, 405]
+    #GUID                   e64cd9e7-a5ae-4d1c-8de5-83021eb37d16
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [15, 15, 60, 275]
+      SourceBlock             "execlib/EXEC"
+      SourceType              "EXEC"
+      target                  "Generic target device"
+      tick                    "0.005"
+      ntick0                  10
+      ntick1                  12
+      ntick2                  15
+      ntick3                  20
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      FontSize                10
+      #GUID                   bba23d0d-0e98-45fb-8001-adf03e5d8c33
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PROJECT"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [15, 303, 60, 322]
+      SourceBlock             "execlib/PROJECT"
+      CompileParams           ""
+      SourcesOnTarget         off
+      TargetURL               ""
+      LibraryPath             "..\\..\\Library"
+      FontSize                10
+      #GUID                   4dd91c9c-88a7-4a1a-ab57-a7fa61bc437b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNO_Servo_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 152, 155, 168]
+      SourceBlock             "execlib/TASK"
+      SourceType              "TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      bEdit                   off
+      FontSize                10
+      #RTFlags                5
+      #GUID                   202fc2e8-21cd-4b5a-8367-737f87d6f088
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "UNO_Servo_task"
+      DstPort                 1
+      #GUID                   4b37eb90-87db-4234-a7eb-13278fe09c10
+    }
+  }
+}

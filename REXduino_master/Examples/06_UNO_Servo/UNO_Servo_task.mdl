@@ -1,0 +1,424 @@
+Model {
+  Name                    "UNO_Servo_task"
+  Version                 3.00
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "UNO_Servo_task"
+    Location                [218, 34, 1405, 551]
+    #GUID                   85d93bc1-959e-4c5a-a4bc-6cbfa05dfdd8
+    Block {
+      BlockType               Reference
+      Name                    "Arduino_UNO"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [590, 61, 735, 409]
+      SourceBlock             "REXduino_library/Arduino_UNO"
+      ShowPortLabels          on
+      FontSize                10
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
+      comPort                 "/dev/ttyACM0"
+      pinmode2                "1: Not connected"
+      pinmode3                "1: Not connected"
+      pinmode4                "1: Not connected"
+      pinmode5                "1: Not connected"
+      pinmode6                "1: Not connected"
+      pinmode9                "1: Not connected"
+      pinmode10               "1: Not connected"
+      pinmode11               "1: Not connected"
+      pinmodeA0               "1: Not connected"
+      pinmodeA1               "1: Not connected"
+      pinmodeA2               "1: Not connected"
+      pinmodeA3               "1: Not connected"
+      pinmodeA4               "1: Not connected"
+      pinmodeA5               "1: Not connected"
+      usercmd                 "2: Four bytes"
+      #GUID                   a10c5abe-0b0f-40fc-95f8-ba9b69ab77ae
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_HEARTBEAT"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [425, 213, 440, 237]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.7"
+      t2                      "0.8"
+      t3                      "0.9"
+      t4                      "1.0"
+      t5                      0
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      FontSize                10
+      #GUID                   428f3e05-8c9e-4f4d-98e1-68f0f0fc8ff4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 198, 315, 212]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   adf415f2-912e-4c97-968c-231e8e49834a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_servo10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 383, 165, 397]
+      SourceBlock             "mathlib/CNI"
+      icn                     111
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   6db7e7fd-0b41-4044-82f3-cc7049a5229f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_servo9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [140, 353, 160, 367]
+      SourceBlock             "mathlib/CNI"
+      icn                     90
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   71eda522-47be-4ce9-be63-990e24d53015
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [960, 58, 1155, 82]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a59f73e2-b6ca-4748-8d47-44ae1270964d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [960, 88, 1155, 112]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   afe061a8-17e5-4963-ab4a-57e951b01f1c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display16"
+      Position                [955, 423, 1035, 447]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   e71b2305-1826-4e4e-bd4e-c8421d85281c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display17"
+      Position                [955, 448, 1035, 472]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   352b71fa-1c7a-43d8-80f8-800291d0c440
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [955, 373, 1035, 397]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   5577662a-3b4f-4ea4-bded-164e8530077c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Position                [955, 398, 1035, 422]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   0bf73289-b730-4172-8624-74614476aa6d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_servo11"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [140, 418, 165, 432]
+      SourceBlock             "mathlib/LIN"
+      u1                      -1
+      y1                      0
+      u2                      1
+      y2                      180
+      FontSize                10
+      #GUID                   b161355f-fb78-4eae-8324-66b7d8e5f573
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 418, 65, 432]
+      SourceBlock             "genlib/SG"
+      isig                    "3: SAWTOOTH"
+      amp                     1
+      freq                    "0.1"
+      phase                   0
+      offset                  0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      FontSize                10
+      #GUID                   e7039f4f-7cd0-4ca7-b11d-062bd8b22a39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "status"
+      Ports                   [3, 2, 0, 0, 0]
+      Position                [775, 61, 905, 99]
+      SourceBlock             "REXduino_library/status"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   0e6c7e22-303a-467c-8b49-e918f025af4b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userRecvQUAD"
+      Ports                   [1, 4, 0, 0, 0]
+      Position                [795, 377, 890, 423]
+      SourceBlock             "REXduino_library/userRecvQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   929ca05b-9e26-4d61-bcf6-29dafe832639
+    }
+    Block {
+      BlockType               Reference
+      Name                    "userSendQUAD"
+      Ports                   [4, 1, 0, 0, 0]
+      Position                [430, 362, 525, 408]
+      SourceBlock             "REXduino_library/userSendQUAD"
+      ShowPortLabels          on
+      FontSize                10
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   dc472c65-40ae-4074-9396-df999561cb10
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 1
+      DstBlock                "status"
+      DstPort                 1
+      #GUID                   d4f42cc8-3853-44ce-a54f-fe30ca6f7b9b
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 2
+      DstBlock                "status"
+      DstPort                 2
+      #GUID                   957a03f9-27f0-4706-8e63-caf5819cac91
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 3
+      DstBlock                "status"
+      DstPort                 3
+      #GUID                   763dc5e0-0e1b-444b-a3d1-522a56e1db1f
+    }
+    Line {
+      SrcBlock                "Arduino_UNO"
+      SrcPort                 34
+      DstBlock                "userRecvQUAD"
+      DstPort                 1
+      #GUID                   3a92956a-256b-4049-818b-0f16fb255f5b
+    }
+    Line {
+      SrcBlock                "BIS_HEARTBEAT"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 10
+      #GUID                   aed88844-87eb-4235-83a6-01db3a09431a
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 9
+      #GUID                   44511a2d-3125-4d33-a6c7-3b8c07ba4310
+    }
+    Line {
+      SrcBlock                "CNI_servo10"
+      SrcPort                 1
+      Points                  [0, -10]
+      DstBlock                "userSendQUAD"
+      DstPort                 2
+      #GUID                   546c673c-57ca-4c94-a44f-c8f24b4fb7b2
+    }
+    Line {
+      SrcBlock                "CNI_servo9"
+      SrcPort                 1
+      Points                  [145, 0; 0, 10]
+      DstBlock                "userSendQUAD"
+      DstPort                 1
+      #GUID                   47632bf2-2285-4e61-add9-8b0aa007b49a
+    }
+    Line {
+      SrcBlock                "LIN_servo11"
+      SrcPort                 1
+      Points                  [140, 0; 0, -35]
+      DstBlock                "userSendQUAD"
+      DstPort                 3
+      #GUID                   e275b038-cd80-44dc-9886-816ff82f9d68
+    }
+    Line {
+      SrcBlock                "SG1"
+      SrcPort                 1
+      DstBlock                "LIN_servo11"
+      DstPort                 1
+      #GUID                   d572855d-60d8-4192-8007-233e8b028819
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   d0ead819-82d3-440a-889e-3f37ae4a5571
+    }
+    Line {
+      SrcBlock                "status"
+      SrcPort                 2
+      Points                  [15, 0; 0, 10]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   d8d7f262-8bbf-49a2-bfa0-15b00efad8ed
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   c1062c37-bd22-4b1e-94d9-e67a5816b43f
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 2
+      Points                  [30, 0; 0, 15]
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   368dde3f-490e-41ec-aa81-e0b06f75739f
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 3
+      Points                  [20, 0; 0, 30]
+      DstBlock                "Display16"
+      DstPort                 1
+      #GUID                   ee1f63a8-b1fd-4818-9861-0d6f02fc8ee0
+    }
+    Line {
+      SrcBlock                "userRecvQUAD"
+      SrcPort                 4
+      Points                  [10, 0; 0, 45]
+      DstBlock                "Display17"
+      DstPort                 1
+      #GUID                   63fe02d3-98ec-4312-85c4-46180edbf8e5
+    }
+    Line {
+      SrcBlock                "userSendQUAD"
+      SrcPort                 1
+      DstBlock                "Arduino_UNO"
+      DstPort                 21
+      #GUID                   afb784d2-ce22-4cc0-a7ac-8bc8c0689c5c
+    }
+    Annotation {
+      Position                [235, 350]
+      Text                    "0..180"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Arial"
+      FontWeight              "normal"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   fd3c892e-42a9-4e6f-b568-9d2fc2433c17
+    }
+    Annotation {
+      Position                [235, 370]
+      Text                    "0..180"
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      BackgroundColor         "white"
+      ForegroundColor         "black"
+      FontName                "Arial"
+      FontWeight              "normal"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   15f55563-8fa5-45d3-896b-e6a228920aeb
+    }
+    Annotation {
+      Position                [15, 15]
+      Text                    "Use of servo library must be enabled in REXduin"
+"o slave!!!\n\nPins 9, 10, 11 must be set to \"Not connected\", these are contr"
+"olled by userSend data."
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                14
+      #GUID                   65d24bfe-f10d-4f75-b9de-6ffd185db97e
+    }
+  }
+}
