@@ -1,194 +1,7 @@
 Model {
   Name                    "UNO_Traffic_light_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "Jarda"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:87>"
-  ConfigurationManager    "none"
   #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "Jarda"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:30:46 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:87>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -203,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -214,38 +27,28 @@ Model {
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "UNO_Traffic_light_task"
-    Location                [233, 35, 1047, 620]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   56b1ca65-dfbb-4cb8-9b4c-c53d1799e388
+    Location                [247, 34, 1047, 615]
+    #GUID                   c746188c-b979-432d-95fa-b2d3e4445ed3
     Block {
       BlockType               Reference
       Name                    "AND_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [620, 123, 655, 147]
+      Position                [620, 118, 655, 142]
       SourceBlock             "logiclib/AND_"
-      #GUID                   5576ce2d-7e03-401c-a6d3-503c0f5525e4
+      #GUID                   d7d1ba9d-78bf-46eb-956e-3d8d7183f373
     }
     Block {
       BlockType               Reference
       Name                    "Arduino_UNO"
       Ports                   [21, 34, 0, 0, 0]
-      Position                [200, 46, 345, 394]
+      Position                [200, 41, 345, 389]
       SourceBlock             "REXduino_library/Arduino_UNO"
       ShowPortLabels          on
       FontSize                10
@@ -266,13 +69,13 @@ Model {
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
       usercmd                 "1: No data"
-      #GUID                   854de7bf-4b65-42f6-bf9d-91545362876f
+      #GUID                   eaa5680e-63d1-4ce7-8dfc-1afd91fdfe01
     }
     Block {
       BlockType               Reference
       Name                    "BINS_GREEN"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 138, 115, 162]
+      Position                [65, 133, 115, 157]
       SourceBlock             "genlib/BINS"
       Y0                      on
       t1                      0
@@ -284,13 +87,13 @@ Model {
       t7                      7
       t8                      8
       RPT                     off
-      #GUID                   fc7aa78b-59d5-495f-ace5-a6e608ff6568
+      #GUID                   e571b26f-2f2c-4b0e-b2c7-339edd473060
     }
     Block {
       BlockType               Reference
       Name                    "BINS_RED"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 228, 115, 252]
+      Position                [65, 223, 115, 247]
       SourceBlock             "genlib/BINS"
       Y0                      off
       t1                      2
@@ -302,13 +105,13 @@ Model {
       t7                      7
       t8                      8
       RPT                     off
-      #GUID                   db08773c-c4f1-48e8-b5bc-b708524d85e8
+      #GUID                   8104400e-2e1b-40a3-822e-fc422f711303
     }
     Block {
       BlockType               Reference
       Name                    "BINS_YELLOW"
       Ports                   [1, 2, 0, 0, 0]
-      Position                [65, 183, 115, 207]
+      Position                [65, 178, 115, 202]
       SourceBlock             "genlib/BINS"
       Y0                      off
       t1                      0
@@ -320,84 +123,84 @@ Model {
       t7                      7
       t8                      8
       RPT                     off
-      #GUID                   db10c1e7-90a0-453e-a493-f42c5dffa5cb
+      #GUID                   29033838-dd14-44c6-a30d-9f8aa94748d7
     }
     Block {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [430, 118, 450, 132]
+      Position                [430, 113, 450, 127]
       SourceBlock             "mathlib/CNI"
       icn                     3
       NamePlacement           "alternate"
-      #GUID                   06da2a5f-a5be-47cd-84e4-7f49c2e278e7
+      #GUID                   d4c6dd67-ef4b-484f-b232-7d5ef49f03f1
     }
     Block {
       BlockType               Display
       Name                    "Display"
-      Position                [575, 43, 770, 67]
+      Position                [575, 38, 770, 62]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   5c001e86-309a-45bc-bcd4-15dab41afaef
+      #GUID                   c7d9e2cc-a4b9-444b-9b36-4de3e1e05ae6
     }
     Block {
       BlockType               Display
       Name                    "Display1"
-      Position                [575, 73, 770, 97]
+      Position                [575, 68, 770, 92]
       ShowName                off
       Format                  "Best fit"
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   32ed1458-d2bc-48d8-bb60-42b69c102bf4
+      #GUID                   95ad37a2-d703-43d2-8542-b3e15acf2ae4
     }
     Block {
       BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [285, 445, 295, 455]
+      Position                [285, 440, 295, 450]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
-      #GUID                   ee2da0af-45db-4e0a-96a9-13a4893eef5e
+      #GUID                   35ec73f0-b317-4513-90c7-b4d9d316389f
     }
     Block {
       BlockType               Reference
       Name                    "NOT_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [455, 168, 480, 182]
+      Position                [455, 163, 480, 177]
       SourceBlock             "logiclib/NOT_"
-      #GUID                   9fc18cf6-484c-469e-a346-b9c41e1a711d
+      #GUID                   d9451d94-2f83-41e6-9389-29c4efd75735
     }
     Block {
       BlockType               Reference
       Name                    "REL"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [470, 118, 495, 142]
+      Position                [470, 113, 495, 137]
       SourceBlock             "mathlib/REL"
       irel                    "1: equality (==)"
       NamePlacement           "alternate"
-      #GUID                   53255b87-7205-4bf0-85e8-622be88e935a
+      #GUID                   d2618594-6993-4af0-8ef7-690e4aa7ef1e
     }
     Block {
       BlockType               Reference
       Name                    "TIMER_"
       Ports                   [3, 3, 0, 0, 0]
-      Position                [530, 123, 570, 157]
+      Position                [530, 118, 570, 152]
       SourceBlock             "logiclib/TIMER_"
       mode                    "2: Delayed ON"
       pt                      1
       FontSize                10
-      #GUID                   2e68ef10-147a-4677-9e35-488c1a3d1eb3
+      #GUID                   78036211-201f-4c22-b6da-61d5796e1c3f
     }
     Block {
       BlockType               Reference
       Name                    "status"
       Ports                   [3, 2, 0, 0, 0]
-      Position                [390, 46, 520, 84]
+      Position                [390, 41, 520, 79]
       SourceBlock             "REXduino_library/status"
       ShowPortLabels          on
       FontSize                10
@@ -406,7 +209,7 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      #GUID                   f8b1733a-1b5a-493f-a4cf-1d6c56c3ddf5
+      #GUID                   3d17dd69-11bb-448c-aa0d-3779035f5ea1
     }
     Line {
       SrcBlock                "AND_"
@@ -414,23 +217,23 @@ Model {
       Points                  [25, 0; 0, 320]
       DstBlock                "LPBRK"
       DstPort                 1
-      #GUID                   33c484f9-3524-40db-b85f-ebd85e1cb414
+      #GUID                   cf7bea43-7cbd-496c-893b-1ee9708eacf1
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 1
       Points                  [20, 0]
-      #GUID                   77693574-04e1-4f0c-ae68-affa2eedd8f2
+      #GUID                   7032d356-c807-4ec4-ab2d-b3b7bd956943
       Branch {
         Points                  [0, 80]
         DstBlock                "REL"
         DstPort                 2
-        #GUID                   5729bcdd-1ce2-454e-8f18-1115705a5396
+        #GUID                   9476a094-d012-4d73-ae63-c424506feb78
       }
       Branch {
         DstBlock                "status"
         DstPort                 1
-        #GUID                   507281b1-4d85-4840-9a1a-f8744c9293b5
+        #GUID                   ff59dbc0-847b-4c1b-ba24-5680dd2aeb28
       }
     }
     Line {
@@ -438,14 +241,14 @@ Model {
       SrcPort                 2
       DstBlock                "status"
       DstPort                 2
-      #GUID                   272bdc9b-2907-400d-8593-1754cc2a4373
+      #GUID                   6e4c943f-dda6-49b4-8f3a-523707aed549
     }
     Line {
       SrcBlock                "Arduino_UNO"
       SrcPort                 3
       DstBlock                "status"
       DstPort                 3
-      #GUID                   56c8c03a-7ed2-462b-8df2-377feb9ecea3
+      #GUID                   df83047c-6947-4860-b135-9d30804ae896
     }
     Line {
       SrcBlock                "Arduino_UNO"
@@ -453,14 +256,14 @@ Model {
       Points                  [10, 0; 0, 90]
       DstBlock                "NOT_"
       DstPort                 1
-      #GUID                   016c83c7-0c95-4e0c-a4a6-41691ace31d2
+      #GUID                   a634443c-08f9-4cc2-aa11-3017c053ff14
     }
     Line {
       SrcBlock                "BINS_GREEN"
       SrcPort                 1
       DstBlock                "Arduino_UNO"
       DstPort                 6
-      #GUID                   ef4889fa-4ca4-4886-b9cd-01490edc8f51
+      #GUID                   01967a69-64ce-4fde-8c62-333bf473d80c
     }
     Line {
       SrcBlock                "BINS_RED"
@@ -468,7 +271,7 @@ Model {
       Points                  [35, 0; 0, -60]
       DstBlock                "Arduino_UNO"
       DstPort                 8
-      #GUID                   f129a1db-27c8-4584-9e7c-1d7a6486f371
+      #GUID                   d32289a3-c2e3-4e39-ba27-1ab4fd97931f
     }
     Line {
       SrcBlock                "BINS_YELLOW"
@@ -476,38 +279,38 @@ Model {
       Points                  [25, 0; 0, -30]
       DstBlock                "Arduino_UNO"
       DstPort                 7
-      #GUID                   3ccaa1c0-bf70-4557-be18-980e42657e7e
+      #GUID                   848aeeda-af8d-4441-a8ae-5b2a9a5f68dc
     }
     Line {
       SrcBlock                "CNI"
       SrcPort                 1
       DstBlock                "REL"
       DstPort                 1
-      #GUID                   685b976a-2ff8-41b6-a25d-0186f5697737
+      #GUID                   ae839b32-7848-4d3e-aa53-8b9d2e7ae0ef
     }
     Line {
       SrcBlock                "LPBRK"
       SrcPort                 1
       Points                  [-245, 0; 0, -210]
-      #GUID                   ffe34695-d561-4119-9ae9-b9bb273fe2fa
+      #GUID                   604a61d6-e495-4848-92ab-d67e4033bb31
       Branch {
         DstBlock                "BINS_RED"
         DstPort                 1
-        #GUID                   516db45c-1d22-4232-a836-395964aebf4a
+        #GUID                   2449154d-bb6a-4774-8a91-3e34effd7082
       }
       Branch {
         Points                  [0, -45]
-        #GUID                   cb5a075f-7e2d-4e81-9c7f-b5e78dc7dde5
+        #GUID                   a67c1768-62cc-4611-8c74-0b46440663c2
         Branch {
           Points                  [0, -45]
           DstBlock                "BINS_GREEN"
           DstPort                 1
-          #GUID                   003d06b3-c6cd-402a-8081-2dca0c9e4e17
+          #GUID                   34177a95-ebfc-488e-813d-336ef97404dd
         }
         Branch {
           DstBlock                "BINS_YELLOW"
           DstPort                 1
-          #GUID                   43c3eb8f-db89-4f33-af85-9408dfd5e3ed
+          #GUID                   352aa940-efb0-4907-9b43-0616362a491e
         }
       }
     }
@@ -517,28 +320,28 @@ Model {
       Points                  [120, 0]
       DstBlock                "AND_"
       DstPort                 2
-      #GUID                   b8d6b74c-f383-4ed4-abaa-734a27e1d547
+      #GUID                   9c0eebf3-6440-4cf4-85a0-cf4ff3f09b15
     }
     Line {
       SrcBlock                "REL"
       SrcPort                 1
       DstBlock                "TIMER_"
       DstPort                 1
-      #GUID                   e9266940-a4b1-4e2a-9baa-a6799c377214
+      #GUID                   768d0333-6044-4677-887d-3af807c6673c
     }
     Line {
       SrcBlock                "TIMER_"
       SrcPort                 1
       DstBlock                "AND_"
       DstPort                 1
-      #GUID                   43bd3790-30dd-46b5-8ad8-11b7c076cd96
+      #GUID                   9a49e1cc-e6b5-4b36-b593-276f9fe79d71
     }
     Line {
       SrcBlock                "status"
       SrcPort                 1
       DstBlock                "Display"
       DstPort                 1
-      #GUID                   e828ad9d-b982-48e3-a6e4-e14d80201f21
+      #GUID                   8bc2ebcc-5ae4-4554-925e-4498e5b5310e
     }
     Line {
       SrcBlock                "status"
@@ -546,10 +349,10 @@ Model {
       Points                  [35, 0]
       DstBlock                "Display1"
       DstPort                 1
-      #GUID                   1434ac4f-7248-4eee-80f2-68d39006085e
+      #GUID                   679e3ea2-2e56-44b4-80f5-4669347ddc83
     }
     Annotation {
-      Position                [20, 500]
+      Position                [20, 495]
       Text                    "Red-yellow-green sequence is triggered by a pus"
 "h button connected to IO pin 2.\n\nSee UNO_Traffic_light.png for wiring diagra"
 "m."
@@ -557,7 +360,7 @@ Model {
       FontSize                16
       HorizontalAlignment     "left"
       VerticalAlignment       "top"
-      #GUID                   3cec10fb-7887-4f2f-9a54-f2c2a6090c7b
+      #GUID                   70ac727b-1722-48b7-b1a1-0f5d942f8888
     }
   }
 }

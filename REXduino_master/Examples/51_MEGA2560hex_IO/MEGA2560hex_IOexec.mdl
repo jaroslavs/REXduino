@@ -1,194 +1,7 @@
 Model {
   Name                    "MEGA2560hex_IOexec"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:35:33 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:49>"
-  ConfigurationManager    "None"
   #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:35:33 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:49>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -203,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -214,25 +27,15 @@ Model {
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "MEGA2560hex_IOexec"
-    Location                [11, 34, 213, 380]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   1b73db3d-389a-4e0d-a8d6-1238169a6cc4
+    Location                [11, 34, 214, 383]
+    #GUID                   604943d1-e11a-4f67-91fe-e44d18dfbe17
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -251,7 +54,7 @@ Model {
       pri2                    13
       pri3                    18
       FontSize                10
-      #GUID                   03696ac2-e4da-4bc8-8be0-7232cc634eab
+      #GUID                   db12c645-7fae-49d7-a026-76bbc6a139f3
     }
     Block {
       BlockType               Reference
@@ -270,7 +73,7 @@ Model {
       NamePlacement           ""
       ShowName                on
       FontSize                10
-      #GUID                   0a6e2b0b-db0a-4bf2-af37-eee605f1212a
+      #GUID                   4ff6c8bd-4e99-405b-ae92-2a2a9986e18f
     }
     Block {
       BlockType               Reference
@@ -283,14 +86,14 @@ Model {
       TargetURL               ""
       LibraryPath             "..\\..\\Library"
       FontSize                10
-      #GUID                   9d9f3daa-ce01-470c-a7c6-ec968e734546
+      #GUID                   7c59f7ea-ac4f-466a-bdbd-f13c51efbf72
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "MEGA2560hex_IOtask"
       DstPort                 1
-      #GUID                   3654cad9-52e7-4ed7-97aa-91d0bd80bcf5
+      #GUID                   8517d982-b6f4-46b7-bef7-ad41715dbb15
     }
   }
 }

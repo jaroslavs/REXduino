@@ -1,194 +1,7 @@
 Model {
   Name                    "UNO_Traffic_light_exec"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:50>"
-  ConfigurationManager    "None"
   #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:50>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.1 rev. 7567 - REXCONV, Date 2016-11-7"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -203,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -214,25 +27,15 @@ Model {
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "UNO_Traffic_light_exec"
-    Location                [10, 35, 212, 406]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   63c7994b-3fc3-4f92-9bb1-30218746ab4a
+    Location                [11, 34, 227, 406]
+    #GUID                   1ff26119-1e7a-49da-9665-2834547d0830
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -251,7 +54,7 @@ Model {
       pri2                    13
       pri3                    18
       FontSize                10
-      #GUID                   3f932883-bab7-425a-a354-dd3921bb557a
+      #GUID                   92fd0a4e-ae98-4885-acd3-20a4bbe47859
     }
     Block {
       BlockType               Reference
@@ -264,7 +67,7 @@ Model {
       TargetURL               ""
       LibraryPath             "..\\..\\Library"
       FontSize                10
-      #GUID                   0fe180a2-0143-437b-8ab8-57ea99f6e6f6
+      #GUID                   2a9f4a9f-f098-45db-94b0-12a756de2c61
     }
     Block {
       BlockType               Reference
@@ -281,14 +84,14 @@ Model {
       MDLOPEN                 on
       bEdit                   off
       FontSize                10
-      #GUID                   5e3a4ae0-7321-4050-aedc-1e37b156bede
+      #GUID                   8a947014-4624-4aa3-9a6d-d71655d6d97a
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "UNO_Traffic_light_task"
       DstPort                 1
-      #GUID                   045e8092-5517-46ae-95cd-17b385aee420
+      #GUID                   52e5058f-9b99-4234-ab89-7b51ca09c378
     }
   }
 }
