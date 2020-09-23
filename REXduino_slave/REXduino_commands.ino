@@ -61,8 +61,17 @@ void commandB(byte verbose) {
     Serial.println(NUM_DIGITAL_PINS);
     Serial.print("Num.AI: ");
     Serial.println(NUM_ANALOG_INPUTS);
-    Serial.print("Pin mask size: ");
-    Serial.println(PINMASK_BYTESIZE);
+    Serial.print("Lib: -");
+#ifdef USE1WIRE
+    Serial.print("W");
+#endif
+#ifdef USESERVO
+    Serial.print("S");
+#endif
+#ifdef USEI2C
+    Serial.print("I");
+#endif
+    Serial.println();
   }
   else
   {
