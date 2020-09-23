@@ -34,7 +34,7 @@ Library {
   }
   System {
     Name                    "REXduino_library"
-    Location                [12, 35, 1281, 883]
+    Location                [12, 35, 1423, 883]
     #GUID                   fd2d6f01-c962-4748-8c7a-cbcd621915e7
     Block {
       BlockType               SubSystem
@@ -1034,7 +1034,7 @@ Library {
       BlockType               SubSystem
       Name                    "Arduino_Leonardo"
       Ports                   [21, 34, 0, 0, 0]
-      Position                [715, 51, 860, 399]
+      Position                [910, 51, 1055, 399]
       ShowPortLabels          on
       #LibraryFile            "D:\\01GIT\\REXduino\\REXduino_master\\Library\\"
 #"REXduino_library.mdl"
@@ -6809,6 +6809,3481 @@ Library {
           FontAngle               "normal"
           FontSize                10
           #GUID                   3548c021-754c-44c0-adbd-250056069631
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "Arduino_Micro"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [1100, 51, 1245, 399]
+      ShowPortLabels          on
+      #LibraryFile            "D:\\01GIT\\REXduino\\REXduino_master\\Library\\"
+#"REXduino_library.mdl"
+      FontSize                10
+      MaskType                "REX sequence"
+      #MaskTypeString         "string,int32,int32,int32,int32,int32,int32,int3"
+#"2,int32,int32,int32,int32,int32,int32,int32,int32"
+      MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
+"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
+"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode|Number of user-defi"
+"ned bytes to send"
+      MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
+"6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A),pop"
+"up(1: Not connected|2: Digital output|3: Digital input|4: Digital input with i"
+"nternal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire t"
+"emperature|8: Counter|9: Encoder A),popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
+" ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for this pin"
+" ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: Not con"
+"nected|2: Digital output|3: Digital input|4: Digital input with internal pull-"
+"up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature|8:"
+" --- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encode"
+"r B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital inpu"
+"t with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: "
+"1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|"
+"4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A for t"
+"his pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3:"
+" Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|6"
+": --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Di"
+"gital output|3: Digital input|4: Digital input with internal pull-up|5: PWM (a"
+"nalog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not "
+"connected|2: Digital output|3: Digital input|4: Digital input with internal pu"
+"ll-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup"
+"(1: Not connected|2: Digital output|3: Digital input|4: Digital input with int"
+"ernal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperatur"
+"e),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input "
+"with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire te"
+"mperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digita"
+"l input with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1"
+"-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|4"
+": Digital input with internal pull-up|5: --- N/A for this pin ---|6: Analog in"
+"put|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital"
+" input|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: A"
+"nalog input|7: 1-Wire temperature),popup(1: No data|2: Four bytes|3: Sixteen b"
+"ytes)"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||||||||||"
+      MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
+"pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
+"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15;usercmd=&1"
+"6"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
+"1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
+"nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
+"Not connected|1: Not connected|1: Not connected|1: No data"
+      #GUID                   0ead4c24-c612-4320-a326-047154821fd9
+      System {
+        Name                    "Arduino_Micro"
+        Location                [311, 181, 1639, 948]
+        Open                    off
+        ModelBrowserVisibility  off
+        ModelBrowserWidth       200
+        ScreenColor             "white"
+        PaperOrientation        "landscape"
+        PaperPositionMode       "auto"
+        PaperType               "usletter"
+        PaperUnits              "inches"
+        AutoZoom                on
+        #GUID                   0ead4c24-c612-4320-a326-047154821fd9
+        Block {
+          BlockType               Inport
+          Name                    "DO2"
+          Position                [20, 108, 50, 122]
+          Port                    1
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   04afb10c-82db-4ec0-8869-2514de7643a7
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO3_PWM"
+          Position                [20, 138, 50, 152]
+          Port                    2
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   a087af8e-3206-4c4a-b405-c658635effd0
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO4"
+          Position                [20, 168, 50, 182]
+          Port                    3
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   e35c0b2e-1b39-4466-807c-03b54551f336
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO5_PWM"
+          Position                [20, 198, 50, 212]
+          Port                    4
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   2bb8ab9d-7fc6-42c2-85cc-3a2bd517b404
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO6_PWM"
+          Position                [20, 228, 50, 242]
+          Port                    5
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   f45810fc-b6d2-44eb-929a-1bc116424ae7
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO9_PWM"
+          Position                [20, 318, 50, 332]
+          Port                    6
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   41a9985a-8ee7-455f-8cd4-c87cd7645da2
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO10_PWM"
+          Position                [20, 348, 50, 362]
+          Port                    7
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   415ae63b-9714-403a-98b7-d09ce2e804bc
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO11_PWM"
+          Position                [20, 378, 50, 392]
+          Port                    8
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   08179d08-639d-4ccc-a1fd-37c105c38e8b
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO12"
+          Position                [20, 408, 50, 422]
+          Port                    9
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   3756d720-a340-4f17-9908-f2264aaa09d1
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO13"
+          Position                [20, 438, 50, 452]
+          Port                    10
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   f60f734f-0124-4415-bfd2-f09192053218
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A0"
+          Position                [20, 468, 50, 482]
+          Port                    11
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   ee83193e-7917-4684-9a20-179d0c3b374a
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A1"
+          Position                [20, 498, 50, 512]
+          Port                    12
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   0e4cd411-9eb7-4622-87af-2e5c783775d3
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A2"
+          Position                [20, 548, 50, 562]
+          Port                    13
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   ab19accb-c237-4601-891e-82b453fe8895
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A3"
+          Position                [20, 578, 50, 592]
+          Port                    14
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   51ba2ecb-7e5f-4f72-9a8f-dfbe44fd2810
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A4"
+          Position                [20, 608, 50, 622]
+          Port                    15
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   b62cb20b-3b53-40af-9d78-7e65e5cde705
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A5"
+          Position                [20, 638, 50, 652]
+          Port                    16
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   ad8ed75d-2885-40c8-bc14-945b6f60cd2c
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT2R"
+          Position                [15, 1068, 45, 1082]
+          Port                    17
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   836b7299-2bce-41f6-99bd-7fb9f00cc013
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT2E"
+          Position                [15, 1098, 45, 1112]
+          Port                    18
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   ff38d6e0-3651-4332-8bfd-27d9a9ac31a0
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT3R"
+          Position                [15, 1128, 45, 1142]
+          Port                    19
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   532b896d-8632-4581-bfcb-9856c13d0617
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT3E"
+          Position                [15, 1158, 45, 1172]
+          Port                    20
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   2e0239a3-8b76-4434-9a4d-e8f75e5f26ce
+        }
+        Block {
+          BlockType               Inport
+          Name                    "userSendV"
+          Position                [30, 1658, 60, 1672]
+          Port                    21
+          OutDataTypeStr          "Inherit: auto"
+          FontSize                10
+          #GUID                   b503ac01-f46a-4c5b-af79-9c1c07f42b7d
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AI_demux"
+          Ports                   [1, 3, 0, 0, 0]
+          Position                [905, 798, 975, 832]
+          SourceBlock             "REXduino_library/AI_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   329dee02-2c7c-4009-bd93-0bf368edc43c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AI_demux1"
+          Ports                   [1, 3, 0, 0, 0]
+          Position                [905, 873, 975, 907]
+          SourceBlock             "REXduino_library/AI_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   59993883-d23d-4fb3-8201-d45d1c3768d1
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AUXdata_in"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [285, 1649, 380, 1681]
+          SourceBlock             "REXduino_library/AUXdata_in"
+          ShowPortLabels          on
+          FontSize                10
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   5ca1a94e-07b6-4b12-a695-f996550864d4
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AUXdata_out"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [860, 1339, 955, 1371]
+          SourceBlock             "REXduino_library/AUXdata_out"
+          ShowPortLabels          on
+          FontSize                10
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   5135a1aa-56c9-4d27-b2c3-25883851e2c5
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BDOCT"
+          Ports                   [1, 8, 0, 0, 0]
+          Position                [240, 1206, 275, 1294]
+          SourceBlock             "logiclib/BDOCT"
+          shift                   0
+          #GUID                   372fdb49-d786-4197-b363-38d87a2f00dd
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BITOP_10"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [295, 273, 320, 297]
+          SourceBlock             "logiclib/BITOP"
+          SourceType              "BITOP"
+          iop                     "2: Bit OR"
+          #GUID                   107c9f3d-dbf6-4544-a063-df58a496cee7
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BMHEXD"
+          Ports                   [16, 1, 0, 0, 0]
+          Position                [325, 1126, 360, 1294]
+          SourceBlock             "logiclib/BMHEXD"
+          shift                   0
+          #GUID                   61d62ac3-5dee-4fea-901e-d049ff478549
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNB_LOG_INCOMING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [80, 1443, 100, 1457]
+          SourceBlock             "mathlib/CNB"
+          SourceType              "CNB"
+          YCN                     off
+          #GUID                   c04ad80d-f2c9-4310-8817-aab41a5c6931
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNB_LOG_OUTGOING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [80, 1473, 100, 1487]
+          SourceBlock             "mathlib/CNB"
+          SourceType              "CNB"
+          YCN                     off
+          #GUID                   faba725b-7e1e-4a09-ad26-6202bc0183d3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI0"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [425, 368, 445, 382]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     0
+          #GUID                   676eeda8-3efa-4790-9948-ad85b7bc961d
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [450, 378, 470, 392]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     1
+          #GUID                   eae74781-c82c-4c19-a54d-29d4511c74cd
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_comPortNo"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [490, 338, 515, 352]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     15
+          #GUID                   48f51a6d-6bfb-46c8-8ed5-c0d49cf09084
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_userCmdType"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 1243, 75, 1257]
+          SourceBlock             "mathlib/CNI"
+          icn                     "usercmd"
+          FontSize                10
+          #GUID                   2bb1aa1e-9afc-481d-a6df-4485ecc9a3bf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ERR_demux"
+          Ports                   [1, 4, 0, 0, 0]
+          Position                [900, 962, 1000, 1008]
+          SourceBlock             "REXduino_library/ERR_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   a59f062a-8d6d-4e67-9ca4-18f58443371c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "HEXDBD"
+          Ports                   [1, 16, 0, 0, 0]
+          Position                [915, 46, 960, 514]
+          SourceBlock             "logiclib/BDHEXD"
+          SourceType              "BDHEXD"
+          shift                   0
+          #GUID                   2fc3713d-1c6c-460f-9c31-d69982cfa138
+        }
+        Block {
+          BlockType               Reference
+          Name                    "HEXDBM"
+          Ports                   [16, 1, 0, 0, 0]
+          Position                [165, 47, 215, 513]
+          SourceBlock             "logiclib/BMHEXD"
+          SourceType              "BMHEXD"
+          shift                   0
+          #GUID                   49d72ac4-c1fb-4dbd-a63e-f37eb6d5b8fa
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ISSW"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [545, 368, 575, 402]
+          SourceBlock             "logiclib/ISSW"
+          SourceType              "ISSW"
+          #GUID                   4554221b-275a-431b-9075-cade46173001
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_FORCE_RECONNECT"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1383, 100, 1397]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   1cbc209c-590d-48b4-a20b-4b97b8560c8c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_LOG_MASTER_VERSION"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1503, 100, 1517]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   d32c7811-8e9e-4079-882c-60e84e99da21
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_LOG_PINMODES"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1413, 100, 1427]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   dd3f8127-82e7-4634-87c2-5a9ed62b92d6
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBD"
+          Ports                   [1, 8, 0, 0, 0]
+          Position                [915, 538, 960, 772]
+          SourceBlock             "logiclib/BDOCT"
+          SourceType              "BDOCT"
+          shift                   16
+          #GUID                   d270156b-4606-42fb-bc25-3c49f365adca
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBM"
+          Ports                   [8, 1, 0, 0, 0]
+          Position                [165, 538, 215, 782]
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
+          shift                   16
+          #GUID                   1ec5804e-923c-4548-80dd-45909f2e2376
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBM_DEBUG"
+          Ports                   [8, 1, 0, 0, 0]
+          Position                [175, 1373, 225, 1617]
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
+          shift                   0
+          #GUID                   786eb4f7-6627-4b06-9682-4935a8a0fff6
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_10_13"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 967, 305, 1013]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   b7609a38-bb34-45aa-9e49-b9607bef82f9
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_2_5"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 832, 305, 878]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   ba9bbe91-f38f-424f-98e8-72ebe163491e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_6_9"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 902, 305, 948]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   67855790-d662-44b2-b2c6-3757127985b1
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REXLANG_REXduino"
+          Ports                   [18, 17, 0, 0, 0]
+          Position                [600, 260, 650, 440]
+          SourceBlock             "speclib/REXLANG"
+          strs                    0
+          SourceType              "REXLANG"
+          tab_matlab              "MORE"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
+          stack                   0
+          debug                   "1: No check"
+          p0                      "comPort"
+          p1                      "pinmode2"
+          p2                      "pinmode3"
+          p3                      "pinmode4"
+          p4                      "pinmode5"
+          p5                      "pinmode6"
+          p6                      "pinmode9"
+          p7                      "pinmode10"
+          p8                      "pinmode11"
+          p9                      "pinmodeA0"
+          p10                     "pinmodeA1"
+          p11                     "pinmodeA2"
+          p12                     "pinmodeA3"
+          p13                     "pinmodeA4"
+          p14                     "pinmodeA5"
+          p15                     7
+          FontSize                10
+          #RTFlags                1025
+          #GUID                   1980b049-1340-4108-a0fc-60e7aa483204
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Simulation_Detector"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [475, 387, 490, 403]
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   153333b0-eb21-47be-b80d-ffe6412b7743
+          System {
+            Name                    "Simulation_Detector"
+            Location                [50, 69, 1224, 553]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "automatic"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "usletter"
+            PaperUnits              "inches"
+            AutoZoom                on
+            #GUID                   153333b0-eb21-47be-b80d-ffe6412b7743
+            Block {
+              BlockType               Reference
+              Name                    "CNI3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [20, 23, 40, 37]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              icn                     1
+              #GUID                   9483a6c5-7030-45bb-9a4c-932e10d75517
+            }
+            Block {
+              BlockType               Outport
+              Name                    "Y"
+              Position                [65, 23, 95, 37]
+              Port                    1
+              OutputWhenDisabled      "held"
+              InitialOutput           []
+              #GUID                   1ffb1678-32f3-4d31-9794-7b707157c5f7
+            }
+            Line {
+              SrcBlock                "CNI3"
+              SrcPort                 1
+              DstBlock                "Y"
+              DstPort                 1
+              #GUID                   3b3f5442-5046-4026-bcd2-f62248676e97
+            }
+          }
+        }
+        Block {
+          BlockType               Outport
+          Name                    "comm_status"
+          Position                [1050, 1023, 1080, 1037]
+          Port                    1
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   a4cc47c7-457e-4d0b-9bca-98bf6ebadbf2
+        }
+        Block {
+          BlockType               Outport
+          Name                    "err_code"
+          Position                [1050, 963, 1080, 977]
+          Port                    2
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   60b96ebe-2687-4f66-89aa-7329835e1cc5
+        }
+        Block {
+          BlockType               Outport
+          Name                    "err_subcode"
+          Position                [1050, 993, 1080, 1007]
+          Port                    3
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   13ffe26a-e083-43c0-9751-67f01cea6be5
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI2"
+          Position                [990, 108, 1020, 122]
+          Port                    4
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   6bae08d7-0307-49b2-b1ae-8ada4fd9440d
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI3"
+          Position                [990, 138, 1020, 152]
+          Port                    5
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   861cc07b-845a-44c8-90db-b0eb408d8bc5
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI4"
+          Position                [990, 168, 1020, 182]
+          Port                    6
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   9ca4daae-223f-499d-b5fc-e417b9bcd1a0
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI5"
+          Position                [990, 198, 1020, 212]
+          Port                    7
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d4994bab-cad4-4023-9f13-fe4a0ffc686b
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI6"
+          Position                [990, 228, 1020, 242]
+          Port                    8
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   0f8aa8a1-43da-46a9-a8bb-24c39aee6e60
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI7"
+          Position                [990, 258, 1020, 272]
+          Port                    9
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   088c3068-d051-4c5b-affd-098484acb446
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI8"
+          Position                [990, 288, 1020, 302]
+          Port                    10
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   572a2a09-dcd4-43c3-9ef0-51329bd12c40
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI9"
+          Position                [990, 318, 1020, 332]
+          Port                    11
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   94207f82-d5a4-48f9-b308-0586f8a2ab9a
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI10"
+          Position                [990, 348, 1020, 362]
+          Port                    12
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   4042e023-11bf-47dd-9e07-0137c5fdec89
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI11"
+          Position                [990, 378, 1020, 392]
+          Port                    13
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   1e488b90-fe2a-47cf-8847-d0d05463289f
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A0"
+          Position                [990, 468, 1020, 482]
+          Port                    14
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   2b85b347-5d05-4554-a762-34eb863885a1
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A1"
+          Position                [990, 498, 1020, 512]
+          Port                    15
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   9f713cef-3d44-45e0-b5dd-1109f7e46d6e
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A2"
+          Position                [990, 543, 1020, 557]
+          Port                    16
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   dde0b8a8-c060-4bcf-9961-0485e8d4977f
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A3"
+          Position                [990, 573, 1020, 587]
+          Port                    17
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   2df114b9-f0a8-41bb-91e6-dfe2e53c9f49
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A4"
+          Position                [990, 603, 1020, 617]
+          Port                    18
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   25d10c5b-4a1a-4cb3-9c4a-ed9b9fb4983d
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A5"
+          Position                [990, 633, 1020, 647]
+          Port                    19
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   bf072116-05ad-4019-93bc-c52d68803228
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI0"
+          Position                [1055, 798, 1085, 812]
+          Port                    20
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   687fcd33-44d3-4efc-a38b-467497c949ed
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI1"
+          Position                [1055, 823, 1085, 837]
+          Port                    21
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   282b92a3-06b7-4732-b1d1-47eb3444c365
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI2"
+          Position                [1055, 848, 1085, 862]
+          Port                    22
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   a57cc5a2-29aa-4200-a723-c37568685ba0
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI3"
+          Position                [1055, 873, 1085, 887]
+          Port                    23
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   292f0638-9ffd-424f-a02e-3fd8d3035a43
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI4"
+          Position                [1055, 898, 1085, 912]
+          Port                    24
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   33f9b9c4-6c2e-4314-bae7-a466a4621657
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI5"
+          Position                [1055, 923, 1085, 937]
+          Port                    25
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   08bed9d2-b91e-4f17-a8d1-8eb5e8af9685
+        }
+        Block {
+          BlockType               Outport
+          Name                    "CNT2"
+          Position                [1050, 1078, 1080, 1092]
+          Port                    26
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   a28faf2a-015c-4f46-9917-6a4696e508d4
+        }
+        Block {
+          BlockType               Outport
+          Name                    "CNT3"
+          Position                [1050, 1108, 1080, 1122]
+          Port                    27
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d7e12e2b-8fcf-4257-aca6-7732b689b1b4
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_2_3_data"
+          Position                [1050, 1163, 1080, 1177]
+          Port                    28
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   a232c0fd-db1b-48c8-a329-0cd09c5dcc8e
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_4_5_data"
+          Position                [1050, 1188, 1080, 1202]
+          Port                    29
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   515414b0-29cb-4beb-b4d8-91767b6032bc
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_6_9_data"
+          Position                [1050, 1218, 1080, 1232]
+          Port                    30
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   b221de37-53ec-444b-88ab-31ec1dbd5f43
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_10_11_data"
+          Position                [1050, 1248, 1080, 1262]
+          Port                    31
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   7a90cfac-1330-489a-8fb5-0d400740d3bf
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_A0_A1_data"
+          Position                [1050, 1278, 1080, 1292]
+          Port                    32
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   4030b46c-0c87-4978-ba5f-008bcc48ca95
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_A2_A3_data"
+          Position                [1050, 1308, 1080, 1322]
+          Port                    33
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   f63a47d2-32fb-4fd3-91d8-3814c0028441
+        }
+        Block {
+          BlockType               Outport
+          Name                    "userRecvV"
+          Position                [1050, 1348, 1080, 1362]
+          Port                    34
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          FontSize                10
+          #GUID                   e2a32303-57e3-4e56-b8d0-d61eea774c3f
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 1
+          DstBlock                "AI0"
+          DstPort                 1
+          #GUID                   fca77da5-484d-4009-a460-a71ab54f3f57
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 2
+          Points                  [55, 0; 0, 15]
+          DstBlock                "AI1"
+          DstPort                 1
+          #GUID                   b2f933db-fe89-4bb2-95d8-147cbe9296c3
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 3
+          Points                  [45, 0; 0, 30]
+          DstBlock                "AI2"
+          DstPort                 1
+          #GUID                   9c7161dd-b632-4ffd-902d-adc0536c8b28
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 1
+          DstBlock                "AI3"
+          DstPort                 1
+          #GUID                   2e1d0a51-9faf-4519-9dd5-e447d330ed70
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 2
+          Points                  [55, 0; 0, 15]
+          DstBlock                "AI4"
+          DstPort                 1
+          #GUID                   abdc5172-25e3-48c3-bf0a-5f8f686d2962
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 3
+          Points                  [45, 0; 0, 30]
+          DstBlock                "AI5"
+          DstPort                 1
+          #GUID                   93b7fc72-ded6-4bd8-9497-212d3f74ebff
+        }
+        Line {
+          SrcBlock                "AUXdata_in"
+          SrcPort                 1
+          Points                  [175, 0; 0, -1230]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 18
+          #GUID                   17e8d00e-b426-4600-9616-b18bd0c63301
+        }
+        Line {
+          SrcBlock                "AUXdata_out"
+          SrcPort                 1
+          DstBlock                "userRecvV"
+          DstPort                 1
+          #GUID                   15d38c38-958f-4fb1-b2c9-11a52923c533
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 1
+          DstBlock                "BMHEXD"
+          DstPort                 9
+          #GUID                   e870da98-3789-4aec-86ef-f6ad3e2ff60c
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 2
+          DstBlock                "BMHEXD"
+          DstPort                 10
+          #GUID                   92c0737b-baef-493f-8c9a-3050b6d2ea27
+        }
+        Line {
+          SrcBlock                "BITOP_10"
+          SrcPort                 1
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 3
+          #GUID                   7f637866-1b7f-4e1d-8da4-37dc295fea56
+        }
+        Line {
+          SrcBlock                "BMHEXD"
+          SrcPort                 1
+          Points                  [120, 0; 0, -785]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 17
+          #GUID                   ab876c72-2304-48fa-ac33-b2deb388096a
+        }
+        Line {
+          SrcBlock                "CNB_LOG_INCOMING"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 3
+          #GUID                   4929f691-99ff-4e0d-892f-c33fb7103bae
+        }
+        Line {
+          SrcBlock                "CNB_LOG_OUTGOING"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 4
+          #GUID                   c167a36f-8649-4fbd-9a0e-cc155662a708
+        }
+        Line {
+          SrcBlock                "CNI0"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 1
+          #GUID                   9c321c79-0a13-41ad-a37a-15ae5bb0fd78
+        }
+        Line {
+          SrcBlock                "CNI1"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 2
+          #GUID                   4ac129d4-c302-42a5-b582-1ea80d1d8a60
+        }
+        Line {
+          SrcBlock                "CNI_comPortNo"
+          SrcPort                 1
+          Points                  [65, 0]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 12
+          #GUID                   9533ce33-4ec9-4430-8e2c-822b3b1bac81
+        }
+        Line {
+          SrcBlock                "CNI_userCmdType"
+          SrcPort                 1
+          DstBlock                "BDOCT"
+          DstPort                 1
+          #GUID                   3c763488-60c9-496b-bf3c-d7a0c69c2cd5
+        }
+        Line {
+          SrcBlock                "CNT2E"
+          SrcPort                 1
+          Points                  [60, 0; 0, 40]
+          DstBlock                "BMHEXD"
+          DstPort                 2
+          #GUID                   1a4f06f1-d902-4ccf-8922-ccd510a500f6
+        }
+        Line {
+          SrcBlock                "CNT2R"
+          SrcPort                 1
+          Points                  [70, 0; 0, 60]
+          DstBlock                "BMHEXD"
+          DstPort                 1
+          #GUID                   21921512-9f22-4a14-92c4-f0a058040ba4
+        }
+        Line {
+          SrcBlock                "CNT3E"
+          SrcPort                 1
+          DstBlock                "BMHEXD"
+          DstPort                 4
+          #GUID                   63fb8a7c-3b94-4c1f-a4d8-30595d25e579
+        }
+        Line {
+          SrcBlock                "CNT3R"
+          SrcPort                 1
+          Points                  [50, 0; 0, 20]
+          DstBlock                "BMHEXD"
+          DstPort                 3
+          #GUID                   38965688-61e0-4b51-b166-404d129baa7f
+        }
+        Line {
+          SrcBlock                "DO10_PWM"
+          SrcPort                 1
+          Points                  [35, 0]
+          #GUID                   1c0dcbe3-4379-4692-b31b-3bf1672d31cb
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 11
+            #GUID                   99b8d4fd-2d80-45fe-a250-d22cd72ca863
+          }
+          Branch {
+            Points                  [0, 620]
+            DstBlock                "PWM_mux_10_13"
+            DstPort                 1
+            #GUID                   d154453e-37fb-4284-bb8f-432bcbfeb38c
+          }
+        }
+        Line {
+          SrcBlock                "DO11_PWM"
+          SrcPort                 1
+          Points                  [25, 0]
+          #GUID                   2110af5c-99a1-45d4-9efa-357375ffd749
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 12
+            #GUID                   a9f782ba-9c51-4eb1-9ba3-03924c264fda
+          }
+          Branch {
+            Points                  [0, 600]
+            DstBlock                "PWM_mux_10_13"
+            DstPort                 2
+            #GUID                   d94d4a22-e5ed-48ac-8277-c1a32f05436d
+          }
+        }
+        Line {
+          SrcBlock                "DO12"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 13
+          #GUID                   b0d05a82-149b-476a-93c7-3f23cef08b3e
+        }
+        Line {
+          SrcBlock                "DO13"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 14
+          #GUID                   d90b8ff7-7cf4-49a7-96b7-d85b94e2e8a1
+        }
+        Line {
+          SrcBlock                "DO2"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 3
+          #GUID                   2d01e565-b5b6-428e-b24c-472c492484fa
+        }
+        Line {
+          SrcBlock                "DO3_PWM"
+          SrcPort                 1
+          Points                  [75, 0]
+          #GUID                   35733bd2-88c6-4866-b6c5-6d73a2572ad5
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 4
+            #GUID                   235696fb-cf10-488d-80d0-a4b8304f2825
+          }
+          Branch {
+            Points                  [0, 705]
+            DstBlock                "PWM_mux_2_5"
+            DstPort                 2
+            #GUID                   b2dd426c-bba4-4a01-8fe6-0981074dba4c
+          }
+        }
+        Line {
+          SrcBlock                "DO4"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 5
+          #GUID                   0d9edef7-92b7-4580-b2ec-41cf91dfcd90
+        }
+        Line {
+          SrcBlock                "DO5_PWM"
+          SrcPort                 1
+          Points                  [65, 0]
+          #GUID                   1cc710dc-f7e4-4883-97ce-4448d582afaf
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 6
+            #GUID                   584cd13c-6d33-40d2-b770-16a35690de37
+          }
+          Branch {
+            Points                  [0, 665]
+            DstBlock                "PWM_mux_2_5"
+            DstPort                 4
+            #GUID                   49b7edac-b1b6-4388-b55e-845f97a57dee
+          }
+        }
+        Line {
+          SrcBlock                "DO6_PWM"
+          SrcPort                 1
+          Points                  [55, 0]
+          #GUID                   b57cf4bb-c62c-4f96-8453-929ebf5009b0
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 7
+            #GUID                   9e5fdc64-f99a-42e9-a095-41cca4a1eb1b
+          }
+          Branch {
+            Points                  [0, 675]
+            DstBlock                "PWM_mux_6_9"
+            DstPort                 1
+            #GUID                   31b4e32e-ad64-44c2-9131-75f71f536fcb
+          }
+        }
+        Line {
+          SrcBlock                "DO9_PWM"
+          SrcPort                 1
+          Points                  [45, 0]
+          #GUID                   98eef357-758a-4d59-87ec-5fd42ff4f3d7
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 10
+            #GUID                   155e83d5-e188-4e2a-b42d-df2d3a14b036
+          }
+          Branch {
+            Points                  [0, 615]
+            DstBlock                "PWM_mux_6_9"
+            DstPort                 4
+            #GUID                   87417866-af40-4b2d-b15b-f9875d545a13
+          }
+        }
+        Line {
+          SrcBlock                "DO_A0"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 15
+          #GUID                   725a12b9-0f83-4dda-aedb-bb24cbc432e2
+        }
+        Line {
+          SrcBlock                "DO_A1"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 16
+          #GUID                   6e232263-c33d-4c76-be3c-51cab0aec1e7
+        }
+        Line {
+          SrcBlock                "DO_A2"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 1
+          #GUID                   8987aba1-f061-4f1d-a5f5-fc8c023b0357
+        }
+        Line {
+          SrcBlock                "DO_A3"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 2
+          #GUID                   c699f352-34dc-43c4-8002-3ef9fdf0b26b
+        }
+        Line {
+          SrcBlock                "DO_A4"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 3
+          #GUID                   4cc35d86-15bc-4842-a010-5034ed716970
+        }
+        Line {
+          SrcBlock                "DO_A5"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 4
+          #GUID                   7d9cf823-4581-464a-988a-23168a289db0
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 1
+          DstBlock                "err_code"
+          DstPort                 1
+          #GUID                   7b05d867-afef-4418-bf14-85f4c86f8729
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 2
+          Points                  [30, 0]
+          DstBlock                "err_subcode"
+          DstPort                 1
+          #GUID                   d8d82148-b71b-4fa0-9f22-c5094d47f1ea
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 3
+          Points                  [20, 0; 0, 40]
+          DstBlock                "comm_status"
+          DstPort                 1
+          #GUID                   7a6b01f8-42ae-4065-9397-cf4876e720bd
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 3
+          DstBlock                "DI2"
+          DstPort                 1
+          #GUID                   27a31e67-6e65-4f58-8242-45d81b4c71fe
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 4
+          DstBlock                "DI3"
+          DstPort                 1
+          #GUID                   2ad4c64f-4a2b-4eac-9ed4-53a99e27d96d
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 5
+          DstBlock                "DI4"
+          DstPort                 1
+          #GUID                   90d18f11-93a8-4981-925b-ad42ca767b59
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 6
+          DstBlock                "DI5"
+          DstPort                 1
+          #GUID                   204e0426-7094-40f4-aaf4-0502790834f3
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 7
+          DstBlock                "DI6"
+          DstPort                 1
+          #GUID                   1e0db9ad-aca8-4a66-b736-b7716e39af2c
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 8
+          DstBlock                "DI7"
+          DstPort                 1
+          #GUID                   2fe27c00-ab39-409e-8af3-5b2462f21026
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 9
+          DstBlock                "DI8"
+          DstPort                 1
+          #GUID                   678cffd8-e25c-4a4d-9ba1-9cbdd483873e
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 10
+          DstBlock                "DI9"
+          DstPort                 1
+          #GUID                   e307c69a-b470-495a-801a-f140f8d47bf2
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 11
+          DstBlock                "DI10"
+          DstPort                 1
+          #GUID                   3d675716-c34d-47f6-9149-b796977e1e45
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 12
+          DstBlock                "DI11"
+          DstPort                 1
+          #GUID                   049038ad-3b74-4873-b3c4-1ddce36b494f
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 15
+          DstBlock                "DI_A0"
+          DstPort                 1
+          #GUID                   befd378c-8a82-43b0-b27b-da2d2e98289f
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 16
+          DstBlock                "DI_A1"
+          DstPort                 1
+          #GUID                   1d8586f8-8646-4a16-936e-2158227f4253
+        }
+        Line {
+          SrcBlock                "HEXDBM"
+          SrcPort                 1
+          DstBlock                "BITOP_10"
+          DstPort                 1
+          #GUID                   a44c81ee-1230-4008-b54d-107b81f39632
+        }
+        Line {
+          SrcBlock                "ISSW"
+          SrcPort                 1
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 13
+          #GUID                   c835d802-ca5b-4e89-be4e-515acdb9d6d0
+        }
+        Line {
+          SrcBlock                "MP_FORCE_RECONNECT"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 1
+          #GUID                   4cb06ecf-1ad4-4f6f-bb63-45cd33839e03
+        }
+        Line {
+          SrcBlock                "MP_LOG_MASTER_VERSION"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 5
+          #GUID                   8ed80e41-4b56-4f49-9182-43b3fa029397
+        }
+        Line {
+          SrcBlock                "MP_LOG_PINMODES"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 2
+          #GUID                   88e33793-1546-4dfb-8f51-a1201cf2d1c1
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 1
+          DstBlock                "DI_A2"
+          DstPort                 1
+          #GUID                   d4732bdc-6767-4707-a531-13db524cab19
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 2
+          DstBlock                "DI_A3"
+          DstPort                 1
+          #GUID                   31a671e0-66e6-47d5-8e57-4e5b09c1c024
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 3
+          DstBlock                "DI_A4"
+          DstPort                 1
+          #GUID                   35e74502-d630-4adf-adda-b7cdf9a62f0e
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 4
+          DstBlock                "DI_A5"
+          DstPort                 1
+          #GUID                   3d2cafe7-4f03-4fc0-a5f3-f87b0bc07722
+        }
+        Line {
+          SrcBlock                "OCTBM"
+          SrcPort                 1
+          Points                  [35, 0; 0, -370]
+          DstBlock                "BITOP_10"
+          DstPort                 2
+          #GUID                   04aba919-5cea-4818-801f-4bb620035a6f
+        }
+        Line {
+          SrcBlock                "OCTBM_DEBUG"
+          SrcPort                 1
+          Points                  [320, 0; 0, -1080]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 16
+          #GUID                   faac39d4-fd6c-4521-b54b-210e60db2fd2
+        }
+        Line {
+          SrcBlock                "PWM_mux_10_13"
+          SrcPort                 1
+          Points                  [90, 0; 0, -655]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 8
+          #GUID                   38944241-9846-41fb-9f5b-bf5d3b1200ce
+        }
+        Line {
+          SrcBlock                "PWM_mux_2_5"
+          SrcPort                 1
+          Points                  [70, 0; 0, -540]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 6
+          #GUID                   62957a00-4270-4c93-984f-0e529df7da36
+        }
+        Line {
+          SrcBlock                "PWM_mux_6_9"
+          SrcPort                 1
+          Points                  [80, 0; 0, -600]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 7
+          #GUID                   c5efb4fc-3690-4815-a40b-d05dfb995d09
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 2
+          Points                  [235, 0]
+          #GUID                   ad905abd-10ae-41c0-b560-30ca081e8647
+          Branch {
+            DstBlock                "HEXDBD"
+            DstPort                 1
+            #GUID                   55fb478f-ce31-4389-9016-6d44a18c5787
+          }
+          Branch {
+            Points                  [0, 375]
+            DstBlock                "OCTBD"
+            DstPort                 1
+            #GUID                   ddc92477-ddd2-40c4-b23c-47b09084f06c
+          }
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 5
+          Points                  [225, 0; 0, 505]
+          DstBlock                "AI_demux"
+          DstPort                 1
+          #GUID                   393504e9-6472-4410-bb1b-64c38ad64a7b
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 6
+          Points                  [215, 0; 0, 570]
+          DstBlock                "AI_demux1"
+          DstPort                 1
+          #GUID                   baa05fc7-0813-4eb5-9b90-cbfdd0544f06
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 8
+          Points                  [160, 0; 0, 745]
+          DstBlock                "CNT2"
+          DstPort                 1
+          #GUID                   1ba2372f-c434-4cfb-b122-7d0c847fd91f
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 9
+          Points                  [150, 0; 0, 765]
+          DstBlock                "CNT3"
+          DstPort                 1
+          #GUID                   6693fbc4-c27e-43ed-8f2a-a0c5b727867d
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 10
+          Points                  [205, 0; 0, 625]
+          DstBlock                "ERR_demux"
+          DstPort                 1
+          #GUID                   0e924c73-7208-48eb-95a2-08aff32f13c4
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 11
+          Points                  [100, 0; 0, 800]
+          DstBlock                "OW_2_3_data"
+          DstPort                 1
+          #GUID                   e5f4f373-b0b9-43aa-8899-1549d3106883
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 12
+          Points                  [90, 0; 0, 815]
+          DstBlock                "OW_4_5_data"
+          DstPort                 1
+          #GUID                   c65de165-3f1b-43f2-ba40-bb920fe1d838
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 13
+          Points                  [80, 0; 0, 835]
+          DstBlock                "OW_6_9_data"
+          DstPort                 1
+          #GUID                   f46c5f57-74e3-48fd-954b-67506309a13d
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 14
+          Points                  [70, 0; 0, 855]
+          DstBlock                "OW_10_11_data"
+          DstPort                 1
+          #GUID                   23ef5ce5-f722-400b-89ea-dc83c2d86b00
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 15
+          Points                  [60, 0; 0, 875]
+          DstBlock                "OW_A0_A1_data"
+          DstPort                 1
+          #GUID                   362a801d-b595-41bf-8906-e63c277bd7cc
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 16
+          Points                  [50, 0; 0, 895]
+          DstBlock                "OW_A2_A3_data"
+          DstPort                 1
+          #GUID                   aeb85a8c-bcfe-4316-9746-b54b41273da6
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 17
+          Points                  [40, 0; 0, 925]
+          DstBlock                "AUXdata_out"
+          DstPort                 1
+          #GUID                   37f154e2-c7e7-4155-bc43-0a4d9c95e88b
+        }
+        Line {
+          SrcBlock                "Simulation_Detector"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 3
+          #GUID                   ec5d8b6a-4b7d-4ed7-8888-ccc2de7360e2
+        }
+        Line {
+          SrcBlock                "userSendV"
+          SrcPort                 1
+          DstBlock                "AUXdata_in"
+          DstPort                 1
+          #GUID                   fb17364c-2e8e-4537-b888-a26cc58b1422
+        }
+        Annotation {
+          Position                [50, 1275]
+          Text                    "1.. none\n2.. 4-byte\n3.. 16-byte"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   50e1e3cf-4cfd-4a20-961c-b6c547f8fd6c
+        }
+        Annotation {
+          Position                [440, 1650]
+          Text                    "just a dummy signal"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   2558fb75-f99e-448b-82c3-c35a2fef31d3
+        }
+        Annotation {
+          Position                [720, 1340]
+          Text                    "just a dummy signal"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   ffd1d9b6-1f80-40a5-9eeb-1c78c60ce8c5
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "Arduino_Nano"
+      Ports                   [21, 34, 0, 0, 0]
+      Position                [720, 51, 865, 399]
+      ShowPortLabels          on
+      #LibraryFile            "D:\\01GIT\\REXduino\\REXduino_master\\Library\\"
+#"REXduino_library.mdl"
+      FontSize                10
+      MaskType                "REX sequence"
+      #MaskTypeString         "string,,,,,,,,,,,,,,,"
+      MaskPromptString        "Serial device, e.g. COM7, /dev/ttyACM0, /dev/tt"
+"yUSB0 etc.|Pin 2 mode|Pin 3 mode|Pin 4 mode|Pin 5 mode|Pin 6 mode|Pin 9 mode|P"
+"in 10 mode|Pin 11 mode|Analog pin A0 mode|Analog pin A1 mode|Analog pin A2 mod"
+"e|Analog pin A3 mode|Analog pin A4 mode|Analog pin A5 mode|Number of user-defi"
+"ned bytes to send"
+      MaskStyleString         "edit,popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|"
+"6: --- N/A for this pin ---|7: 1-Wire temperature|8: Counter|9: Encoder A),pop"
+"up(1: Not connected|2: Digital output|3: Digital input|4: Digital input with i"
+"nternal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire t"
+"emperature|8: Counter|9: Encoder A),popup(1: Not connected|2: Digital output|3"
+": Digital input|4: Digital input with internal pull-up|5: --- N/A for this pin"
+" ---|6: --- N/A for this pin ---|7: 1-Wire temperature|8: --- N/A for this pin"
+" ---|9: --- N/A for this pin ---|10: Counter DIR / Encoder B),popup(1: Not con"
+"nected|2: Digital output|3: Digital input|4: Digital input with internal pull-"
+"up|5: PWM (analog output)|6: --- N/A for this pin ---|7: 1-Wire temperature|8:"
+" --- N/A for this pin ---|9: --- N/A for this pin ---|10: Counter DIR / Encode"
+"r B),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital inpu"
+"t with internal pull-up|5: PWM (analog output)|6: --- N/A for this pin ---|7: "
+"1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|"
+"4: Digital input with internal pull-up|5: PWM (analog output)|6: --- N/A for t"
+"his pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3:"
+" Digital input|4: Digital input with internal pull-up|5: PWM (analog output)|6"
+": --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not connected|2: Di"
+"gital output|3: Digital input|4: Digital input with internal pull-up|5: PWM (a"
+"nalog output)|6: --- N/A for this pin ---|7: 1-Wire temperature),popup(1: Not "
+"connected|2: Digital output|3: Digital input|4: Digital input with internal pu"
+"ll-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperature),popup"
+"(1: Not connected|2: Digital output|3: Digital input|4: Digital input with int"
+"ernal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire temperatur"
+"e),popup(1: Not connected|2: Digital output|3: Digital input|4: Digital input "
+"with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1-Wire te"
+"mperature),popup(1: Not connected|2: Digital output|3: Digital input|4: Digita"
+"l input with internal pull-up|5: --- N/A for this pin ---|6: Analog input|7: 1"
+"-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital input|4"
+": Digital input with internal pull-up|5: --- N/A for this pin ---|6: Analog in"
+"put|7: 1-Wire temperature),popup(1: Not connected|2: Digital output|3: Digital"
+" input|4: Digital input with internal pull-up|5: --- N/A for this pin ---|6: A"
+"nalog input|7: 1-Wire temperature),popup(1: No data|2: Four bytes|3: Sixteen b"
+"ytes)"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||||||||||"
+      MaskEnableString        "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables           "comPort=@1;pinmode2=&2;pinmode3=&3;pinmode4=&4;"
+"pinmode5=&5;pinmode6=&6;pinmode9=&7;pinmode10=&8;pinmode11=&9;pinmodeA0=&10;pi"
+"nmodeA1=&11;pinmodeA2=&12;pinmodeA3=&13;pinmodeA4=&14;pinmodeA5=&15;usercmd=&1"
+"6"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "/dev/ttyACM0|1: Not connected|1: Not connected|"
+"1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: Not con"
+"nected|1: Not connected|1: Not connected|1: Not connected|1: Not connected|1: "
+"Not connected|1: Not connected|1: Not connected|1: No data"
+      #GUID                   971d80a5-8c0e-4168-bff7-076f783dbbd9
+      System {
+        Name                    "Arduino_Nano"
+        Location                [311, 181, 1639, 948]
+        Open                    off
+        ModelBrowserVisibility  off
+        ModelBrowserWidth       200
+        ScreenColor             "white"
+        PaperOrientation        "landscape"
+        PaperPositionMode       "auto"
+        PaperType               "usletter"
+        PaperUnits              "inches"
+        AutoZoom                on
+        #GUID                   971d80a5-8c0e-4168-bff7-076f783dbbd9
+        Block {
+          BlockType               Inport
+          Name                    "DO2"
+          Position                [20, 108, 50, 122]
+          Port                    1
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   da11cc79-b957-4e2b-b187-0881cddb8d72
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO3_PWM"
+          Position                [20, 138, 50, 152]
+          Port                    2
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   4f32bf66-573a-4435-befb-b4ab1c530e8e
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO4"
+          Position                [20, 168, 50, 182]
+          Port                    3
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   ab453a82-a3c3-412a-8024-f0548b6e63ab
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO5_PWM"
+          Position                [20, 198, 50, 212]
+          Port                    4
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   b4869a20-577a-47af-82dd-a5633864bc95
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO6_PWM"
+          Position                [20, 228, 50, 242]
+          Port                    5
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   1c82d56c-bc9b-481b-be52-332bdb960db0
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO9_PWM"
+          Position                [20, 318, 50, 332]
+          Port                    6
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   15f07c38-e3cb-4188-acdd-3e04f914a86c
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO10_PWM"
+          Position                [20, 348, 50, 362]
+          Port                    7
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   87311179-9e80-4dc4-a859-e3b7569a93f7
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO11_PWM"
+          Position                [20, 378, 50, 392]
+          Port                    8
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   470eedb6-4317-4022-918d-e6106fe9cd40
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO12"
+          Position                [20, 408, 50, 422]
+          Port                    9
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   8d46c46d-5b5a-44c9-ab1b-28e3a656e09a
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO13"
+          Position                [20, 438, 50, 452]
+          Port                    10
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   a8ecaec0-9b2e-4448-8a25-9bc8430a2e84
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A0"
+          Position                [20, 468, 50, 482]
+          Port                    11
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   57d08409-c969-4d8e-8c9a-72ec71483baf
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A1"
+          Position                [20, 498, 50, 512]
+          Port                    12
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   63bfe837-eaa9-4aba-b5f3-23ebe543f84e
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A2"
+          Position                [20, 548, 50, 562]
+          Port                    13
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   bab4d2a8-eb48-4ff6-a8eb-2d690633498c
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A3"
+          Position                [20, 578, 50, 592]
+          Port                    14
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   d11a4651-5e03-42f4-a391-b6b405c1e233
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A4"
+          Position                [20, 608, 50, 622]
+          Port                    15
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   9cfad82d-df2b-49de-bd71-27a1f77f8aa1
+        }
+        Block {
+          BlockType               Inport
+          Name                    "DO_A5"
+          Position                [20, 638, 50, 652]
+          Port                    16
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   a242eaea-6c5e-4c0b-a2e7-e8944503e2e9
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT2R"
+          Position                [15, 1068, 45, 1082]
+          Port                    17
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   d28cca2a-7f90-46e9-abc3-25c396e3d296
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT2E"
+          Position                [15, 1098, 45, 1112]
+          Port                    18
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   1cf1db1f-4d4b-4273-8a7b-52810ee197d3
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT3R"
+          Position                [15, 1128, 45, 1142]
+          Port                    19
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   dcc02d7f-4d4b-4fff-a973-93e7a5ea43c8
+        }
+        Block {
+          BlockType               Inport
+          Name                    "CNT3E"
+          Position                [15, 1158, 45, 1172]
+          Port                    20
+          PortWidth               -1
+          SampleTime              -1
+          DataType                "auto"
+          SignalType              "auto"
+          Interpolate             on
+          #GUID                   99df9a02-c999-4a84-aeb5-880053e5d290
+        }
+        Block {
+          BlockType               Inport
+          Name                    "userSendV"
+          Position                [30, 1658, 60, 1672]
+          Port                    21
+          OutDataTypeStr          "Inherit: auto"
+          FontSize                10
+          #GUID                   0a8bddef-131b-4bcd-bf04-aa9ff50725fd
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AI_demux"
+          Ports                   [1, 3, 0, 0, 0]
+          Position                [905, 798, 975, 832]
+          SourceBlock             "REXduino_library/AI_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   bf91ed69-4e90-4947-8c17-6a1f4140f2ea
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AI_demux1"
+          Ports                   [1, 3, 0, 0, 0]
+          Position                [905, 873, 975, 907]
+          SourceBlock             "REXduino_library/AI_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   13706bef-d6a3-4e8f-b99d-3da9136eebdb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AUXdata_in"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [285, 1649, 380, 1681]
+          SourceBlock             "REXduino_library/AUXdata_in"
+          ShowPortLabels          on
+          FontSize                10
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   7b225c6e-6aa7-4848-94c9-df89b7dec6b2
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AUXdata_out"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [860, 1339, 955, 1371]
+          SourceBlock             "REXduino_library/AUXdata_out"
+          ShowPortLabels          on
+          FontSize                10
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   87289855-7743-43fa-87d8-dd56640f8e0c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BDOCT"
+          Ports                   [1, 8, 0, 0, 0]
+          Position                [240, 1206, 275, 1294]
+          SourceBlock             "logiclib/BDOCT"
+          shift                   0
+          #GUID                   61ad1a5a-9f8f-4da7-8a43-e5002db074f9
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BITOP_10"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [295, 273, 320, 297]
+          SourceBlock             "logiclib/BITOP"
+          SourceType              "BITOP"
+          iop                     "2: Bit OR"
+          #GUID                   67b1c6ab-9a1f-4179-b355-a8ce65b049d4
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BMHEXD"
+          Ports                   [16, 1, 0, 0, 0]
+          Position                [325, 1126, 360, 1294]
+          SourceBlock             "logiclib/BMHEXD"
+          shift                   0
+          #GUID                   29c6db34-502e-471f-8715-a1fc86865afe
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNB_LOG_INCOMING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [80, 1443, 100, 1457]
+          SourceBlock             "mathlib/CNB"
+          SourceType              "CNB"
+          YCN                     off
+          #GUID                   18032ea1-7a1c-4854-ba70-0098a011a176
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNB_LOG_OUTGOING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [80, 1473, 100, 1487]
+          SourceBlock             "mathlib/CNB"
+          SourceType              "CNB"
+          YCN                     off
+          #GUID                   17dfea41-2e46-4fcf-aafe-58dfbb126a5c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI0"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [425, 368, 445, 382]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     0
+          #GUID                   23b54705-6cd4-4e5e-b418-d474b31e6642
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [450, 378, 470, 392]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     1
+          #GUID                   988eec8e-4f39-44f7-b9bc-841911f4f772
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_comPortNo"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [490, 338, 515, 352]
+          SourceBlock             "mathlib/CNI"
+          SourceType              "CNI"
+          icn                     15
+          #GUID                   0836a2a4-82fb-4c6f-ae74-52614ed5d73c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_userCmdType"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 1243, 75, 1257]
+          SourceBlock             "mathlib/CNI"
+          icn                     "usercmd"
+          FontSize                10
+          #GUID                   798e3ecd-34aa-4236-acb0-1d1bd05834f3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ERR_demux"
+          Ports                   [1, 4, 0, 0, 0]
+          Position                [900, 962, 1000, 1008]
+          SourceBlock             "REXduino_library/ERR_demux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   f36b3419-3116-4beb-9c12-94f92626af4f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "HEXDBD"
+          Ports                   [1, 16, 0, 0, 0]
+          Position                [915, 46, 960, 514]
+          SourceBlock             "logiclib/BDHEXD"
+          SourceType              "BDHEXD"
+          shift                   0
+          #GUID                   8d7b5e50-e267-42b2-89fb-80a52ecc528f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "HEXDBM"
+          Ports                   [16, 1, 0, 0, 0]
+          Position                [165, 47, 215, 513]
+          SourceBlock             "logiclib/BMHEXD"
+          SourceType              "BMHEXD"
+          shift                   0
+          #GUID                   f32ae6ed-d0c7-450d-b5bf-495010548e88
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ISSW"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [545, 368, 575, 402]
+          SourceBlock             "logiclib/ISSW"
+          SourceType              "ISSW"
+          #GUID                   f1588b68-50cc-4b67-a7fb-58b47dae8ed3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_FORCE_RECONNECT"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1383, 100, 1397]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   463b07be-3e12-4cef-ac48-b786908631f7
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_LOG_MASTER_VERSION"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1503, 100, 1517]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   4f5987ee-8fc4-43a9-990c-7b1ca6dc0321
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MP_LOG_PINMODES"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [85, 1413, 100, 1427]
+          SourceBlock             "genlib/MP"
+          SourceType              "MP"
+          pwidth                  10
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   be8915c9-31fa-431b-bd13-4ecd0166ae01
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBD"
+          Ports                   [1, 8, 0, 0, 0]
+          Position                [915, 538, 960, 772]
+          SourceBlock             "logiclib/BDOCT"
+          SourceType              "BDOCT"
+          shift                   16
+          #GUID                   e8abb3ce-57b8-4e5f-b35b-77d2b8b74d5e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBM"
+          Ports                   [8, 1, 0, 0, 0]
+          Position                [165, 538, 215, 782]
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
+          shift                   16
+          #GUID                   49f53d95-8ee0-427d-bebb-18aa53cc8c55
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OCTBM_DEBUG"
+          Ports                   [8, 1, 0, 0, 0]
+          Position                [175, 1373, 225, 1617]
+          SourceBlock             "logiclib/BMOCT"
+          SourceType              "BMOCT"
+          shift                   0
+          #GUID                   3eb5f81b-5cc3-4c93-80c4-e3c365037192
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_10_13"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 967, 305, 1013]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   d814f549-d465-4e3d-b175-8b55d4ffa4bf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_2_5"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 832, 305, 878]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   adc4507c-182b-4180-87e5-439dc99658db
+        }
+        Block {
+          BlockType               Reference
+          Name                    "PWM_mux_6_9"
+          Ports                   [4, 1, 0, 0, 0]
+          Position                [210, 902, 305, 948]
+          SourceBlock             "REXduino_library/PWM_mux"
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          FontSize                10
+          #GUID                   6ad10015-2223-4d23-94ae-2ab0aa4e452e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REXLANG_REXduino"
+          Ports                   [18, 17, 0, 0, 0]
+          Position                [600, 260, 650, 440]
+          SourceBlock             "speclib/REXLANG"
+          strs                    0
+          SourceType              "REXLANG"
+          tab_matlab              "MORE"
+          srcname                 "REXduino_master.c"
+          srctype                 "1: C-like"
+          stack                   0
+          debug                   "1: No check"
+          p0                      "comPort"
+          p1                      "pinmode2"
+          p2                      "pinmode3"
+          p3                      "pinmode4"
+          p4                      "pinmode5"
+          p5                      "pinmode6"
+          p6                      "pinmode9"
+          p7                      "pinmode10"
+          p8                      "pinmode11"
+          p9                      "pinmodeA0"
+          p10                     "pinmodeA1"
+          p11                     "pinmodeA2"
+          p12                     "pinmodeA3"
+          p13                     "pinmodeA4"
+          p14                     "pinmodeA5"
+          p15                     1
+          FontSize                10
+          #RTFlags                1025
+          #GUID                   2a5e7ce6-7e12-44c3-9b14-c176acd79410
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Simulation_Detector"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [475, 387, 490, 403]
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   08eb274e-4b36-43fb-b0cb-b48e35508642
+          System {
+            Name                    "Simulation_Detector"
+            Location                [50, 69, 1224, 553]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "automatic"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "usletter"
+            PaperUnits              "inches"
+            AutoZoom                on
+            #GUID                   08eb274e-4b36-43fb-b0cb-b48e35508642
+            Block {
+              BlockType               Reference
+              Name                    "CNI3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [20, 23, 40, 37]
+              SourceBlock             "mathlib/CNI"
+              SourceType              "CNI"
+              icn                     1
+              #GUID                   08b9aa2c-2c0e-41f1-b372-54d2d1101fc7
+            }
+            Block {
+              BlockType               Outport
+              Name                    "Y"
+              Position                [65, 23, 95, 37]
+              Port                    1
+              OutputWhenDisabled      "held"
+              InitialOutput           []
+              #GUID                   9133efff-f76c-4520-8e1c-4b53eaca99da
+            }
+            Line {
+              SrcBlock                "CNI3"
+              SrcPort                 1
+              DstBlock                "Y"
+              DstPort                 1
+              #GUID                   1e8ca26f-d8b3-4e26-8b31-1baa29c4d529
+            }
+          }
+        }
+        Block {
+          BlockType               Outport
+          Name                    "comm_status"
+          Position                [1050, 1023, 1080, 1037]
+          Port                    1
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   bc266081-f96e-41db-95e6-0b8763b68652
+        }
+        Block {
+          BlockType               Outport
+          Name                    "err_code"
+          Position                [1050, 963, 1080, 977]
+          Port                    2
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   f1610782-6462-4a5b-9e8f-3174422cfa0c
+        }
+        Block {
+          BlockType               Outport
+          Name                    "err_subcode"
+          Position                [1050, 993, 1080, 1007]
+          Port                    3
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   a4e29f4c-d94e-4274-bab3-445793bafac8
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI2"
+          Position                [990, 108, 1020, 122]
+          Port                    4
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   b2f18d91-1a86-47c9-ba39-198127842abb
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI3"
+          Position                [990, 138, 1020, 152]
+          Port                    5
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   1e9af7f3-d3ad-4c7b-8843-dd00c1defe12
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI4"
+          Position                [990, 168, 1020, 182]
+          Port                    6
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   c116402c-f5c4-4bc3-b5bf-8d04b6b5d4fb
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI5"
+          Position                [990, 198, 1020, 212]
+          Port                    7
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d9ea96d5-285f-4447-8b85-85584dd597e9
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI6"
+          Position                [990, 228, 1020, 242]
+          Port                    8
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d416d8fc-e652-4b3b-828d-4f6c39202dd9
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI7"
+          Position                [990, 258, 1020, 272]
+          Port                    9
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   3034e2d8-1fec-4ba7-8893-537821b71a5e
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI8"
+          Position                [990, 288, 1020, 302]
+          Port                    10
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   52a88a49-01ff-4b23-b9eb-78c9dd28ef51
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI9"
+          Position                [990, 318, 1020, 332]
+          Port                    11
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   389bd909-de7e-4abb-adde-53efd6244546
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI10"
+          Position                [990, 348, 1020, 362]
+          Port                    12
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   344cd2a7-4f4f-4e53-be29-bb9f49327e07
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI11"
+          Position                [990, 378, 1020, 392]
+          Port                    13
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   f9397088-882c-49c6-8e15-7adfd52bb58e
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A0"
+          Position                [990, 468, 1020, 482]
+          Port                    14
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   e9f6716e-4e66-4fc8-88d2-a3e6da93cc8c
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A1"
+          Position                [990, 498, 1020, 512]
+          Port                    15
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   501f8c9e-c33f-42ad-9907-a4551256bb1f
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A2"
+          Position                [990, 543, 1020, 557]
+          Port                    16
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   c7e77600-0be3-4081-9c5f-afb18cad65e8
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A3"
+          Position                [990, 573, 1020, 587]
+          Port                    17
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   b18bba5b-220b-4688-8e9c-66e2beb077e9
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A4"
+          Position                [990, 603, 1020, 617]
+          Port                    18
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d9884295-c1f5-464a-8e20-230ae7044b05
+        }
+        Block {
+          BlockType               Outport
+          Name                    "DI_A5"
+          Position                [990, 633, 1020, 647]
+          Port                    19
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   51be279d-f497-4f85-8cc9-23fbbd6213f9
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI0"
+          Position                [1055, 798, 1085, 812]
+          Port                    20
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   2ee831a5-541b-4eb2-aad1-cff6a73f9bd8
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI1"
+          Position                [1055, 823, 1085, 837]
+          Port                    21
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   27a38f14-fb4a-402e-a913-f6af39ad1f2c
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI2"
+          Position                [1055, 848, 1085, 862]
+          Port                    22
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   f070bbf1-d9b7-41fc-aca5-f2ba993da00c
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI3"
+          Position                [1055, 873, 1085, 887]
+          Port                    23
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   f2330832-99bb-4284-9926-c9446e13fde7
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI4"
+          Position                [1055, 898, 1085, 912]
+          Port                    24
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   ea1135a9-c14f-4ecf-80ad-b892702bb5c7
+        }
+        Block {
+          BlockType               Outport
+          Name                    "AI5"
+          Position                [1055, 923, 1085, 937]
+          Port                    25
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   2a2c4e15-5917-4a60-9226-daf59aeb1e23
+        }
+        Block {
+          BlockType               Outport
+          Name                    "CNT2"
+          Position                [1050, 1078, 1080, 1092]
+          Port                    26
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   adf02579-9933-471d-b0c0-3837cab773dc
+        }
+        Block {
+          BlockType               Outport
+          Name                    "CNT3"
+          Position                [1050, 1108, 1080, 1122]
+          Port                    27
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   05f58501-6e55-4858-a384-7869faece1bc
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_2_3_data"
+          Position                [1050, 1163, 1080, 1177]
+          Port                    28
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   076cdb60-c469-4ebf-87ff-333971b16afe
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_4_5_data"
+          Position                [1050, 1188, 1080, 1202]
+          Port                    29
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   d6b071fb-8949-42ea-8390-1df173fdd857
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_6_9_data"
+          Position                [1050, 1218, 1080, 1232]
+          Port                    30
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   ce95ceec-d758-43e8-8a64-2fcadfb6cf8d
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_10_11_data"
+          Position                [1050, 1248, 1080, 1262]
+          Port                    31
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   15286bea-87e9-4dcf-b911-e648eb30a1f3
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_A0_A1_data"
+          Position                [1050, 1278, 1080, 1292]
+          Port                    32
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   ba6f4457-9d68-4872-83c8-1bc9de69e872
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OW_A2_A3_data"
+          Position                [1050, 1308, 1080, 1322]
+          Port                    33
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          #GUID                   dbfdb1b2-0ab9-481b-b2d7-110c805f8544
+        }
+        Block {
+          BlockType               Outport
+          Name                    "userRecvV"
+          Position                [1050, 1348, 1080, 1362]
+          Port                    34
+          OutputWhenDisabled      "held"
+          InitialOutput           []
+          FontSize                10
+          #GUID                   091124b3-e49d-4b09-9ce5-8f4948ab01b3
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 1
+          DstBlock                "AI0"
+          DstPort                 1
+          #GUID                   9d7152a1-9764-4167-a946-eed48845a3be
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 2
+          Points                  [55, 0; 0, 15]
+          DstBlock                "AI1"
+          DstPort                 1
+          #GUID                   c46ff71d-5aec-4897-9419-26e8a4142152
+        }
+        Line {
+          SrcBlock                "AI_demux"
+          SrcPort                 3
+          Points                  [45, 0; 0, 30]
+          DstBlock                "AI2"
+          DstPort                 1
+          #GUID                   c0f19ecf-6e5b-4d57-ae00-a4c8118f59a9
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 1
+          DstBlock                "AI3"
+          DstPort                 1
+          #GUID                   f55dfb12-695e-4b99-8d5a-68457240c623
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 2
+          Points                  [55, 0; 0, 15]
+          DstBlock                "AI4"
+          DstPort                 1
+          #GUID                   fc537f4a-0f5c-442b-bbf5-c4d227aeb247
+        }
+        Line {
+          SrcBlock                "AI_demux1"
+          SrcPort                 3
+          Points                  [45, 0; 0, 30]
+          DstBlock                "AI5"
+          DstPort                 1
+          #GUID                   82941bf7-7185-44bf-b84e-a6a8e18386de
+        }
+        Line {
+          SrcBlock                "AUXdata_in"
+          SrcPort                 1
+          Points                  [175, 0; 0, -1230]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 18
+          #GUID                   28d8be85-6d49-4836-86d2-ff2574b5752f
+        }
+        Line {
+          SrcBlock                "AUXdata_out"
+          SrcPort                 1
+          DstBlock                "userRecvV"
+          DstPort                 1
+          #GUID                   cbdd1ccc-60bf-4e87-be53-0e04e9a6851e
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 1
+          DstBlock                "BMHEXD"
+          DstPort                 9
+          #GUID                   e71e5468-b8e7-4822-a680-ce5b9216c106
+        }
+        Line {
+          SrcBlock                "BDOCT"
+          SrcPort                 2
+          DstBlock                "BMHEXD"
+          DstPort                 10
+          #GUID                   016718f7-41a6-4f2b-8c07-1ae07952e835
+        }
+        Line {
+          SrcBlock                "BITOP_10"
+          SrcPort                 1
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 3
+          #GUID                   faaed5cd-b0b8-4555-abcf-c7ab34d125ec
+        }
+        Line {
+          SrcBlock                "BMHEXD"
+          SrcPort                 1
+          Points                  [120, 0; 0, -785]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 17
+          #GUID                   c0bf7aa4-05f5-4236-90e4-e41a7dc5bb8a
+        }
+        Line {
+          SrcBlock                "CNB_LOG_INCOMING"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 3
+          #GUID                   850ebfd8-bcbc-450c-9cb4-679e58229dbe
+        }
+        Line {
+          SrcBlock                "CNB_LOG_OUTGOING"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 4
+          #GUID                   311321cc-6e36-40a7-a9b4-f25b80b3e695
+        }
+        Line {
+          SrcBlock                "CNI0"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 1
+          #GUID                   b0cbd744-601e-4d35-b877-909a467768fa
+        }
+        Line {
+          SrcBlock                "CNI1"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 2
+          #GUID                   f2548f2b-167c-4745-9989-97ad0b6a6571
+        }
+        Line {
+          SrcBlock                "CNI_comPortNo"
+          SrcPort                 1
+          Points                  [65, 0]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 12
+          #GUID                   f7a19c64-9079-4373-868d-2139ef4844b4
+        }
+        Line {
+          SrcBlock                "CNI_userCmdType"
+          SrcPort                 1
+          DstBlock                "BDOCT"
+          DstPort                 1
+          #GUID                   faa66fee-ab9b-4def-a638-f9aac8d577fc
+        }
+        Line {
+          SrcBlock                "CNT2E"
+          SrcPort                 1
+          Points                  [60, 0; 0, 40]
+          DstBlock                "BMHEXD"
+          DstPort                 2
+          #GUID                   fd847f64-7cae-426c-a202-27db88b82652
+        }
+        Line {
+          SrcBlock                "CNT2R"
+          SrcPort                 1
+          Points                  [70, 0; 0, 60]
+          DstBlock                "BMHEXD"
+          DstPort                 1
+          #GUID                   a8c6d4fa-6c24-4535-99da-821b7eb7ac60
+        }
+        Line {
+          SrcBlock                "CNT3E"
+          SrcPort                 1
+          DstBlock                "BMHEXD"
+          DstPort                 4
+          #GUID                   4e81ee4f-8cf3-4644-a85d-50ac12c43672
+        }
+        Line {
+          SrcBlock                "CNT3R"
+          SrcPort                 1
+          Points                  [50, 0; 0, 20]
+          DstBlock                "BMHEXD"
+          DstPort                 3
+          #GUID                   995ac42b-d96a-4d28-9c05-867bed02ea33
+        }
+        Line {
+          SrcBlock                "DO10_PWM"
+          SrcPort                 1
+          Points                  [35, 0]
+          #GUID                   2878c778-7bf9-46d2-89c2-5cd3f7675f96
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 11
+            #GUID                   3951d628-0f5d-4f86-8ed6-0d4d9adb37bc
+          }
+          Branch {
+            Points                  [0, 620]
+            DstBlock                "PWM_mux_10_13"
+            DstPort                 1
+            #GUID                   5671629a-a265-497d-a64e-25d0fa2c6307
+          }
+        }
+        Line {
+          SrcBlock                "DO11_PWM"
+          SrcPort                 1
+          Points                  [25, 0]
+          #GUID                   2e7fc9aa-33df-4772-85bc-620a05b4b48e
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 12
+            #GUID                   73e54312-487e-467b-bfef-48d7e2182f83
+          }
+          Branch {
+            Points                  [0, 600]
+            DstBlock                "PWM_mux_10_13"
+            DstPort                 2
+            #GUID                   f68df5fc-234c-4109-9afd-589e9ed13884
+          }
+        }
+        Line {
+          SrcBlock                "DO12"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 13
+          #GUID                   1768d3d6-314f-4843-a14a-061b1e9d692e
+        }
+        Line {
+          SrcBlock                "DO13"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 14
+          #GUID                   20973c61-4028-4698-83d8-0121391c9549
+        }
+        Line {
+          SrcBlock                "DO2"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 3
+          #GUID                   c86a39c7-aab8-4fb4-a771-d10d69275b55
+        }
+        Line {
+          SrcBlock                "DO3_PWM"
+          SrcPort                 1
+          Points                  [75, 0]
+          #GUID                   25ea0147-aa14-49ac-b4e4-5c60b8ba5254
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 4
+            #GUID                   13d6ed4d-3250-4eea-9338-8aafdca2b2ba
+          }
+          Branch {
+            Points                  [0, 705]
+            DstBlock                "PWM_mux_2_5"
+            DstPort                 2
+            #GUID                   31af77d7-464a-418c-b12f-9095483c9259
+          }
+        }
+        Line {
+          SrcBlock                "DO4"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 5
+          #GUID                   5f7d22af-00a4-4387-a6d0-08c89de60f3c
+        }
+        Line {
+          SrcBlock                "DO5_PWM"
+          SrcPort                 1
+          Points                  [65, 0]
+          #GUID                   c5539b48-79eb-413a-9f1c-e3fbab736713
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 6
+            #GUID                   4478f929-6015-4f2d-8fda-a795162b4907
+          }
+          Branch {
+            Points                  [0, 665]
+            DstBlock                "PWM_mux_2_5"
+            DstPort                 4
+            #GUID                   6f2e53ff-da00-48e9-a29e-5a518a2a6c81
+          }
+        }
+        Line {
+          SrcBlock                "DO6_PWM"
+          SrcPort                 1
+          Points                  [55, 0]
+          #GUID                   d2dd5eba-a9a7-4085-9b71-e5afd4887839
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 7
+            #GUID                   b4d146bb-5e8f-4f90-972a-32534017ba9e
+          }
+          Branch {
+            Points                  [0, 675]
+            DstBlock                "PWM_mux_6_9"
+            DstPort                 1
+            #GUID                   70bc4cb8-c9b0-421e-9b85-6551447c0baf
+          }
+        }
+        Line {
+          SrcBlock                "DO9_PWM"
+          SrcPort                 1
+          Points                  [45, 0]
+          #GUID                   2ee52a5d-3c88-46ea-9b1f-ccb2d92cb229
+          Branch {
+            DstBlock                "HEXDBM"
+            DstPort                 10
+            #GUID                   773ff6dd-4e75-492c-969c-9a7398a81956
+          }
+          Branch {
+            Points                  [0, 615]
+            DstBlock                "PWM_mux_6_9"
+            DstPort                 4
+            #GUID                   6d81005e-efe6-4cd6-b021-3949314821f6
+          }
+        }
+        Line {
+          SrcBlock                "DO_A0"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 15
+          #GUID                   a190db3f-444e-4b0a-b53e-03298bce24ae
+        }
+        Line {
+          SrcBlock                "DO_A1"
+          SrcPort                 1
+          DstBlock                "HEXDBM"
+          DstPort                 16
+          #GUID                   bc0957dc-bc59-4508-bbe3-4c3ae3d09582
+        }
+        Line {
+          SrcBlock                "DO_A2"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 1
+          #GUID                   8f69ab9b-7898-4bd8-9279-db89823381c9
+        }
+        Line {
+          SrcBlock                "DO_A3"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 2
+          #GUID                   29721249-87d2-4467-94ea-cf790fa18f14
+        }
+        Line {
+          SrcBlock                "DO_A4"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 3
+          #GUID                   fed93e84-f63f-4ee8-8b8d-39c12df8f780
+        }
+        Line {
+          SrcBlock                "DO_A5"
+          SrcPort                 1
+          DstBlock                "OCTBM"
+          DstPort                 4
+          #GUID                   16d9f04e-fc70-4c70-9543-76c70165e629
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 1
+          DstBlock                "err_code"
+          DstPort                 1
+          #GUID                   87443f47-416e-4b43-97bd-523930d88577
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 2
+          Points                  [30, 0]
+          DstBlock                "err_subcode"
+          DstPort                 1
+          #GUID                   0edbadf7-a6b6-4956-901e-a8eefa4cdd7f
+        }
+        Line {
+          SrcBlock                "ERR_demux"
+          SrcPort                 3
+          Points                  [20, 0; 0, 40]
+          DstBlock                "comm_status"
+          DstPort                 1
+          #GUID                   69cd3b3d-8c67-42d4-9b4d-390c166db36f
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 3
+          DstBlock                "DI2"
+          DstPort                 1
+          #GUID                   f04d09db-47de-446e-a4be-28cb15d04f34
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 4
+          DstBlock                "DI3"
+          DstPort                 1
+          #GUID                   7a6fde26-b9d2-4770-b5ec-2baf78f6095a
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 5
+          DstBlock                "DI4"
+          DstPort                 1
+          #GUID                   4b157773-dcc6-45d9-afc0-47c1354a58cc
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 6
+          DstBlock                "DI5"
+          DstPort                 1
+          #GUID                   ea49d61d-c446-452e-844a-4ce09ffcc5f8
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 7
+          DstBlock                "DI6"
+          DstPort                 1
+          #GUID                   aeacdd72-1fba-4e79-b394-9594534e8660
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 8
+          DstBlock                "DI7"
+          DstPort                 1
+          #GUID                   a279872c-6881-48bb-b600-d51ba1dc4ab9
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 9
+          DstBlock                "DI8"
+          DstPort                 1
+          #GUID                   8f2295eb-d9ed-4cd7-93c2-a6b07b7293bc
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 10
+          DstBlock                "DI9"
+          DstPort                 1
+          #GUID                   3b5cbd75-4cea-47d4-b1ff-cd1dc839e4db
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 11
+          DstBlock                "DI10"
+          DstPort                 1
+          #GUID                   fdf357d7-ca43-4dbe-b320-e2d69b51f635
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 12
+          DstBlock                "DI11"
+          DstPort                 1
+          #GUID                   183a3b87-9c5d-404a-9244-f019da64d90b
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 15
+          DstBlock                "DI_A0"
+          DstPort                 1
+          #GUID                   5e28c081-aaa4-46d4-a0be-f2fd2e546a38
+        }
+        Line {
+          SrcBlock                "HEXDBD"
+          SrcPort                 16
+          DstBlock                "DI_A1"
+          DstPort                 1
+          #GUID                   fa49fe11-4e70-42da-8343-7579bc27a43b
+        }
+        Line {
+          SrcBlock                "HEXDBM"
+          SrcPort                 1
+          DstBlock                "BITOP_10"
+          DstPort                 1
+          #GUID                   795e822d-f985-4012-90b6-31122a5f8c5f
+        }
+        Line {
+          SrcBlock                "ISSW"
+          SrcPort                 1
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 13
+          #GUID                   762e446e-f44d-4727-8134-78959431573a
+        }
+        Line {
+          SrcBlock                "MP_FORCE_RECONNECT"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 1
+          #GUID                   3969efc3-7e7c-481a-b76f-694d0830a1bb
+        }
+        Line {
+          SrcBlock                "MP_LOG_MASTER_VERSION"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 5
+          #GUID                   8fbef820-bcdf-477b-a733-37b0f9f677f8
+        }
+        Line {
+          SrcBlock                "MP_LOG_PINMODES"
+          SrcPort                 1
+          DstBlock                "OCTBM_DEBUG"
+          DstPort                 2
+          #GUID                   0dc6a020-471f-40e1-bfeb-d9c6e312156a
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 1
+          DstBlock                "DI_A2"
+          DstPort                 1
+          #GUID                   2e6924e5-7697-4838-8627-1f4bd05abc3a
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 2
+          DstBlock                "DI_A3"
+          DstPort                 1
+          #GUID                   5f119a2a-adb3-41f5-a582-4611c6ef0dd8
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 3
+          DstBlock                "DI_A4"
+          DstPort                 1
+          #GUID                   adf09a72-c0f7-424a-8db9-bb16e38308bb
+        }
+        Line {
+          SrcBlock                "OCTBD"
+          SrcPort                 4
+          DstBlock                "DI_A5"
+          DstPort                 1
+          #GUID                   e8a3fdbd-0eac-439c-b159-0b332fbf946d
+        }
+        Line {
+          SrcBlock                "OCTBM"
+          SrcPort                 1
+          Points                  [35, 0; 0, -370]
+          DstBlock                "BITOP_10"
+          DstPort                 2
+          #GUID                   69aa9257-4340-4c25-a897-74e1d8d010a8
+        }
+        Line {
+          SrcBlock                "OCTBM_DEBUG"
+          SrcPort                 1
+          Points                  [320, 0; 0, -1080]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 16
+          #GUID                   24b9aa51-1b6f-45ef-98fd-9c505ac51e15
+        }
+        Line {
+          SrcBlock                "PWM_mux_10_13"
+          SrcPort                 1
+          Points                  [90, 0; 0, -655]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 8
+          #GUID                   6467be5a-a998-40ec-bc77-f0342908dcf2
+        }
+        Line {
+          SrcBlock                "PWM_mux_2_5"
+          SrcPort                 1
+          Points                  [70, 0; 0, -540]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 6
+          #GUID                   642dc6c1-7acc-4132-aac4-68baca80cca9
+        }
+        Line {
+          SrcBlock                "PWM_mux_6_9"
+          SrcPort                 1
+          Points                  [80, 0; 0, -600]
+          DstBlock                "REXLANG_REXduino"
+          DstPort                 7
+          #GUID                   5b92ddd7-666d-4afa-90ce-0d1bf1fbfb93
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 2
+          Points                  [235, 0]
+          #GUID                   acc3c9ce-b841-411f-ad3d-32b0a16aa4f8
+          Branch {
+            DstBlock                "HEXDBD"
+            DstPort                 1
+            #GUID                   d8999742-4704-49dd-8dc2-e1ba377b6903
+          }
+          Branch {
+            Points                  [0, 375]
+            DstBlock                "OCTBD"
+            DstPort                 1
+            #GUID                   9d39173e-e3b3-4e9b-b6d1-12de33c6176b
+          }
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 5
+          Points                  [225, 0; 0, 505]
+          DstBlock                "AI_demux"
+          DstPort                 1
+          #GUID                   c2a920f3-ad2c-4402-9800-71c79b29a1d8
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 6
+          Points                  [215, 0; 0, 570]
+          DstBlock                "AI_demux1"
+          DstPort                 1
+          #GUID                   f8a4e427-61ff-4994-832c-dcb5e171fdf5
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 8
+          Points                  [160, 0; 0, 745]
+          DstBlock                "CNT2"
+          DstPort                 1
+          #GUID                   6cca6338-5af7-4c98-802d-6d5c7ad6d058
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 9
+          Points                  [150, 0; 0, 765]
+          DstBlock                "CNT3"
+          DstPort                 1
+          #GUID                   c2418cde-52a9-4316-936b-67c7b807fa73
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 10
+          Points                  [205, 0; 0, 625]
+          DstBlock                "ERR_demux"
+          DstPort                 1
+          #GUID                   6722484d-2b3f-41e9-8045-3932bf351c1c
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 11
+          Points                  [100, 0; 0, 800]
+          DstBlock                "OW_2_3_data"
+          DstPort                 1
+          #GUID                   e1050dcf-0a5a-4071-9e1a-3120463f4765
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 12
+          Points                  [90, 0; 0, 815]
+          DstBlock                "OW_4_5_data"
+          DstPort                 1
+          #GUID                   b5ce432b-588e-4aad-b0ee-6caa5825aefb
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 13
+          Points                  [80, 0; 0, 835]
+          DstBlock                "OW_6_9_data"
+          DstPort                 1
+          #GUID                   93be0386-9e71-475d-ad5c-02456b9cf0b4
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 14
+          Points                  [70, 0; 0, 855]
+          DstBlock                "OW_10_11_data"
+          DstPort                 1
+          #GUID                   cc037bbd-3196-446d-aad3-b2c87cbc63de
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 15
+          Points                  [60, 0; 0, 875]
+          DstBlock                "OW_A0_A1_data"
+          DstPort                 1
+          #GUID                   da385fdd-aecc-47f3-bd29-3dbdd55e8c18
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 16
+          Points                  [50, 0; 0, 895]
+          DstBlock                "OW_A2_A3_data"
+          DstPort                 1
+          #GUID                   76bed06c-4b28-4224-b6ec-ced5c0ea2497
+        }
+        Line {
+          SrcBlock                "REXLANG_REXduino"
+          SrcPort                 17
+          Points                  [40, 0; 0, 925]
+          DstBlock                "AUXdata_out"
+          DstPort                 1
+          #GUID                   82196c9b-96cb-4bd1-909a-8e908078cd91
+        }
+        Line {
+          SrcBlock                "Simulation_Detector"
+          SrcPort                 1
+          DstBlock                "ISSW"
+          DstPort                 3
+          #GUID                   d3ec395d-cd58-4ee1-b8b7-f979d22c7151
+        }
+        Line {
+          SrcBlock                "userSendV"
+          SrcPort                 1
+          DstBlock                "AUXdata_in"
+          DstPort                 1
+          #GUID                   92bed360-8613-484d-b2dd-029084c27f13
+        }
+        Annotation {
+          Position                [50, 1275]
+          Text                    "1.. none\n2.. 4-byte\n3.. 16-byte"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   57c0c4ba-9fbf-49e7-9e54-2a466c586a45
+        }
+        Annotation {
+          Position                [440, 1650]
+          Text                    "just a dummy signal"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   561b8c16-d2d3-4f3e-a89b-7010798c4a31
+        }
+        Annotation {
+          Position                [720, 1340]
+          Text                    "just a dummy signal"
+          HorizontalAlignment     "left"
+          VerticalAlignment       "top"
+          BackgroundColor         "white"
+          ForegroundColor         "black"
+          FontName                "Arial"
+          FontWeight              "normal"
+          FontAngle               "normal"
+          FontSize                10
+          #GUID                   9c128f43-9d11-48c9-8856-8715fd0f03f5
         }
       }
     }
@@ -15194,6 +18669,22 @@ Library {
       HorizontalAlignment     "left"
       VerticalAlignment       "top"
       #GUID                   f8cbb164-d637-45fa-8310-9d8119307ddd
+    }
+    Annotation {
+      Position                [790, 35]
+      Text                    "Just a clone of Arduino UNO..."
+      HorizontalAlignment     "center"
+      VerticalAlignment       "top"
+      FontSize                10
+      #GUID                   82407e34-1f62-42f3-b416-b682a43cee9f
+    }
+    Annotation {
+      Position                [1175, 35]
+      Text                    "Just a clone of Arduino Leonardo..."
+      HorizontalAlignment     "center"
+      VerticalAlignment       "top"
+      FontSize                10
+      #GUID                   9273dab8-17fc-4a21-9533-77a88a272f4d
     }
   }
 }
