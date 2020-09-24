@@ -486,46 +486,46 @@ void loop()
         }
         break; // command 3
 #endif //USE1WIRE
-/*
-#ifdef USEI2C
-      case 'b': // verbose version of the "read Freescale MPL115A2 barometer" command
-        verbose_command = 1;
-      case 'B': // "read Freescale MPL115A2 barometer" command
-        reqLength = 2;
-        if ((command_data_length == reqLength) && (master_active == 1))
-        { //correctly terminated command of the expected length received
-#ifdef ENABLE_WDT
-          wdt_reset();
-#endif
-          commandBarometer(verbose_command); //execute the command
-          command_data_length = 0;
-        }
-        else if (command_data_length > reqLength)
-        { //command too long
-          reportError(ERROR_COMMAND, ERROR_COMMAND_INVALID);
-          command_data_length = 0;
-        }
-        break; // 'B' command
-      case 'r': // verbose version of the "set DS1844 digital potentiometer wipers" command
-        verbose_command = 1;
-      case 'R': // "set DS1844 digital potentiometer wipers" command
-        reqLength = 7;
-        if ((command_data_length == reqLength) && (master_active == 1))
-        { //correctly terminated command of the expected length received
-#ifdef ENABLE_WDT
-          wdt_reset();
-#endif
-          commandR(command_data[1], command_data[2], command_data[3], command_data[4], command_data[5], verbose_command); //execute the command
-          command_data_length = 0;
-        }
-        else if (command_data_length > reqLength)
-        { //command too long
-          reportError(ERROR_COMMAND, ERROR_COMMAND_INVALID);
-          command_data_length = 0;
-        }
-        break; // 'R' command
-#endif //USEI2C
-*/
+      /*
+        #ifdef USEI2C
+            case 'b': // verbose version of the "read Freescale MPL115A2 barometer" command
+              verbose_command = 1;
+            case 'B': // "read Freescale MPL115A2 barometer" command
+              reqLength = 2;
+              if ((command_data_length == reqLength) && (master_active == 1))
+              { //correctly terminated command of the expected length received
+        #ifdef ENABLE_WDT
+                wdt_reset();
+        #endif
+                commandBarometer(verbose_command); //execute the command
+                command_data_length = 0;
+              }
+              else if (command_data_length > reqLength)
+              { //command too long
+                reportError(ERROR_COMMAND, ERROR_COMMAND_INVALID);
+                command_data_length = 0;
+              }
+              break; // 'B' command
+            case 'r': // verbose version of the "set DS1844 digital potentiometer wipers" command
+              verbose_command = 1;
+            case 'R': // "set DS1844 digital potentiometer wipers" command
+              reqLength = 7;
+              if ((command_data_length == reqLength) && (master_active == 1))
+              { //correctly terminated command of the expected length received
+        #ifdef ENABLE_WDT
+                wdt_reset();
+        #endif
+                commandR(command_data[1], command_data[2], command_data[3], command_data[4], command_data[5], verbose_command); //execute the command
+                command_data_length = 0;
+              }
+              else if (command_data_length > reqLength)
+              { //command too long
+                reportError(ERROR_COMMAND, ERROR_COMMAND_INVALID);
+                command_data_length = 0;
+              }
+              break; // 'R' command
+        #endif //USEI2C
+      */
       case 'u': // verbose version of the "example user-defined function" command
         verbose_command = 1;
       case 'U': // "example user-defined function" command

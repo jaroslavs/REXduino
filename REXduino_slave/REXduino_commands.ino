@@ -17,7 +17,7 @@ void commandC(byte ver, byte verbose) {
   {
     master_active = 1;
     Serial.print("C");
-    Serial.write(48+MAJORVERSION); //48 is the ASCII code of "0"
+    Serial.write(48 + MAJORVERSION); //48 is the ASCII code of "0"
     Serial.print(";");
 #ifdef ENABLE_WDT
     wdt_reset();
