@@ -81,8 +81,11 @@ void commandB(byte verbose) {
 
 // Perform M command - change pin mode ***************************************
 void commandM(byte pin, byte mode, byte verbose) {
+  //in M2M communication, analog inputs should be referred to as 14..19 on Arduino UNO (A0..A5), 54..69 on MEGA (A0..A15), etc.
+  //in verbose mode, analog inputs are numbered from 0
   if (verbose) {
     pin = pin - 48; //convert from ASCII to number
+    pin = NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS + pin; //e.g. 20-6+pin on Arduino UNO, i.e. 0..5 -> 14..19
     mode = uppercase(mode);
   }
   switch (mode) { //set the pin to the desired mode
@@ -292,9 +295,12 @@ void commandI(byte pin, byte verbose) {
 
 // Perform A command - read analog input ***************************************
 void commandA(byte pin, byte verbose) {
+  //in M2M communication, analog inputs should be referred to as 14..19 on Arduino UNO (A0..A5), 54..69 on MEGA (A0..A15), etc.
+  //in verbose mode, analog inputs are numbered from 0
   int value;
   if (verbose) {
     pin = pin - 48; //convert from ASCII to number
+    pin = NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS + pin; //e.g. 20-6+pin on Arduino UNO, i.e. 0..5 -> 14..19
   }
   pin = validatePinMode(pin, 'A');
   if  (pin < 255) //valid pin number

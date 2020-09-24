@@ -20,10 +20,7 @@ byte uppercase(byte str) {
 
 // Validate pin mode **********************************************************
 byte validatePinMode(byte pin, byte mode) {
-  if (mode == 'A') //analog inputs may be referred to as A0..A5 or 14..19 on Arduino UNO, 54..69 on MEGA, etc.
-  {
-    pin = NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS + pin; //e.g. 20-6+pin on Arduino UNO, i.e. 0..5 -> 14..19
-  }
+  //analog inputs should be referred to as 14..19 on Arduino UNO (A0..A5), 54..69 on MEGA (A0..A15), etc.
 #ifdef USEI2C
   if ( (pin == SDA) || (pin == SCL) ) // 2 pins are reserved for I2C communication
   {
