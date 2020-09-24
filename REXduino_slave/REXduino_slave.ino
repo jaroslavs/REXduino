@@ -130,10 +130,30 @@ long CNT2hld; //value of counter to hold
 long CNT3hld; //value of counter to hold
 
 #ifdef USE1WIRE
+
+#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
 OneWire  ds2(2), ds3(3), ds4(4), ds5(5), ds6(6), ds7(7), ds8(8), ds9(9);
 OneWire  ds10(10), ds11(11), ds12(12), ds14(14), ds15(15), ds16(16), ds17(17), ds18(18), ds19(19);
+OneWire* onewire[20] = {
+  0, 0, &ds2, &ds3, &ds4, &ds5, &ds6, &ds7, &ds8, &ds9,
+  &ds10, &ds11, &ds12, 0, &ds14, &ds15, &ds16, &ds17, &ds18, &ds19
+}; // e.g. ow_ptr[5]->reset is equivalent to ds5.reset
+#endif //Arduino UNO and the like
+
+#if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__)
+OneWire  ds2(2), ds3(3), ds4(4), ds5(5), ds6(6), ds7(7), ds8(8), ds9(9);
+OneWire  ds10(10), ds11(11), ds12(12);
+OneWire  ds18(18), ds19(19), ds20(20), ds21(21), ds22(22), ds23(23);
+OneWire* onewire[24] = {
+  0, 0, &ds2, &ds3, &ds4, &ds5, &ds6, &ds7, &ds8, &ds9,
+  &ds10, &ds11, &ds12, 0, 0, 0, 0, 0, &ds18, &ds19,
+  &ds20, &ds21, &ds22, &ds23
+}; // e.g. ow_ptr[5]->reset is equivalent to ds5.reset
+#endif //Arduino LEONARDO and the like
 
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+OneWire  ds2(2), ds3(3), ds4(4), ds5(5), ds6(6), ds7(7), ds8(8), ds9(9);
+OneWire  ds10(10), ds11(11), ds12(12), ds14(14), ds15(15), ds16(16), ds17(17), ds18(18), ds19(19);
 OneWire  ds20(20), ds21(21), ds22(22), ds23(23), ds24(24), ds25(25), ds26(26), ds27(27), ds28(28), ds29(29);
 OneWire  ds30(30), ds31(31), ds32(32), ds33(33), ds34(34), ds35(35), ds36(36), ds37(37), ds38(38), ds39(39);
 OneWire  ds40(40), ds41(41), ds42(42), ds43(43), ds44(44), ds45(45), ds46(46), ds47(47), ds48(48), ds49(49);
@@ -148,12 +168,7 @@ OneWire* onewire[70] = {
   &ds50, &ds51, &ds52, &ds53, &ds54, &ds55, &ds56, &ds57, &ds58, &ds59,
   &ds60, &ds61, &ds62, &ds63, &ds64, &ds65, &ds66, &ds67, &ds68, &ds69
 };
-#else
-OneWire* onewire[20] = {
-  0, 0, &ds2, &ds3, &ds4, &ds5, &ds6, &ds7, &ds8, &ds9,
-  &ds10, &ds11, &ds12, 0, &ds14, &ds15, &ds16, &ds17, &ds18, &ds19
-}; // e.g. ow_ptr[5]->reset is equivalent to ds5.reset
-#endif //board type
+#endif //Arduino MEGA and the like
 
 #endif //use 1-Wire
 
