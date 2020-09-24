@@ -506,12 +506,12 @@ int parchange(void)
 		pinModes_par[11] = param8;
 		pinModes_par[12] = PINMODE_DO;
 		pinModes_par[13] = PINMODE_DO;
-		pinModes_par[A0] = param9;
-		pinModes_par[A0 + 1] = param10;
-		pinModes_par[A0 + 2] = param11;
-		pinModes_par[A0 + 3] = param12;
-		pinModes_par[A0 + 4] = param13;
-		pinModes_par[A0 + 5] = param14;
+		pinModes_par[PIN_A0] = param9;
+		pinModes_par[PIN_A0 + 1] = param10;
+		pinModes_par[PIN_A0 + 2] = param11;
+		pinModes_par[PIN_A0 + 3] = param12;
+		pinModes_par[PIN_A0 + 4] = param13;
+		pinModes_par[PIN_A0 + 5] = param14;
 		break;
 	case MASKTYPE_ARD_UNOhex:
 		PIN_COUNT = 20; //digital+analog pins
@@ -549,12 +549,12 @@ int parchange(void)
 		pinModes_par[15] = PINMODE_NC; //pin in ICSP header
 		pinModes_par[16] = PINMODE_NC; //pin in ICSP header
 		pinModes_par[17] = PINMODE_NC; //pin not wired out
-		pinModes_par[A0] = param9;
-		pinModes_par[A0 + 1] = param10;
-		pinModes_par[A0 + 2] = param11;
-		pinModes_par[A0 + 3] = param12;
-		pinModes_par[A0 + 4] = param13;
-		pinModes_par[A0 + 5] = param14;
+		pinModes_par[PIN_A0] = param9;
+		pinModes_par[PIN_A0 + 1] = param10;
+		pinModes_par[PIN_A0 + 2] = param11;
+		pinModes_par[PIN_A0 + 3] = param12;
+		pinModes_par[PIN_A0 + 4] = param13;
+		pinModes_par[PIN_A0 + 5] = param14;
 		break;
 	case MASKTYPE_ARD_LEONARDOhex:
 		PIN_COUNT = 31; //digital+analog pins
@@ -589,14 +589,14 @@ int parchange(void)
 		pinModes_par[11] = param8;
 		pinModes_par[12] = PINMODE_DO;
 		pinModes_par[13] = PINMODE_DO;
-		pinModes_par[A0] = param9;
-		pinModes_par[A0 + 1] = param10;
-		pinModes_par[A0 + 2] = param11;
-		pinModes_par[A0 + 3] = param12;
-		pinModes_par[A0 + 4] = param13;
-		pinModes_par[A0 + 5] = param14;
-		pinModes_par[A0 + 6] = PINMODE_AI;
-		pinModes_par[A0 + 7] = PINMODE_AI;
+		pinModes_par[PIN_A0] = param9;
+		pinModes_par[PIN_A0 + 1] = param10;
+		pinModes_par[PIN_A0 + 2] = param11;
+		pinModes_par[PIN_A0 + 3] = param12;
+		pinModes_par[PIN_A0 + 4] = param13;
+		pinModes_par[PIN_A0 + 5] = param14;
+		pinModes_par[PIN_A0 + 6] = PINMODE_AI;
+		pinModes_par[PIN_A0 + 7] = PINMODE_AI;
 		break;
 	case MASKTYPE_ARD_MEGA2560hex:
 	case MASKTYPE_SEEED_MEGAV122hex:
@@ -617,8 +617,8 @@ int parchange(void)
 		pinModes_par[1] = PINMODE_NC;
 		for (i = 0; i < 8; i++)
 		{ //analog pins A0 to A15 must be in separate for cycle (pin A0 = pin 54, which is not a multiple of 8)
-			pinModes_par[i + A0] = (param8 & (15 << (4 * i))) >> 4 * i;
-			pinModes_par[i + A0 + 8] = (param9 & (15 << (4 * i))) >> 4 * i;
+			pinModes_par[i + PIN_A0] = (param8 & (15 << (4 * i))) >> 4 * i;
+			pinModes_par[i + PIN_A0 + 8] = (param9 & (15 << (4 * i))) >> 4 * i;
 		}
 		break;
 	default:
@@ -1254,8 +1254,8 @@ int main(void)
 		output10 = oneWire[4] | oneWire[5] << 16;
 		output11 = oneWire[6] | oneWire[9] << 16;
 		output12 = oneWire[10] | oneWire[11] << 16;
-		output13 = oneWire[A0] | oneWire[A0 + 1] << 16;
-		output14 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
+		output13 = oneWire[PIN_A0] | oneWire[PIN_A0 + 1] << 16;
+		output14 = oneWire[PIN_A0 + 2] | oneWire[PIN_A0 + 3] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
@@ -1269,9 +1269,9 @@ int main(void)
 		output9 = oneWire[8] | oneWire[9] << 16;
 		output10 = oneWire[10] | oneWire[11] << 16;
 		output11 = oneWire[12];
-		output12 = oneWire[A0] | oneWire[A0 + 1] << 16;
-		output13 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
-		output14 = oneWire[A0 + 4] | oneWire[A0 + 5] << 16;
+		output12 = oneWire[PIN_A0] | oneWire[PIN_A0 + 1] << 16;
+		output13 = oneWire[PIN_A0 + 2] | oneWire[PIN_A0 + 3] << 16;
+		output14 = oneWire[PIN_A0 + 4] | oneWire[PIN_A0 + 5] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
@@ -1285,8 +1285,8 @@ int main(void)
 		output10 = oneWire[4] | oneWire[5] << 16;
 		output11 = oneWire[6] | oneWire[9] << 16;
 		output12 = oneWire[10] | oneWire[11] << 16;
-		output13 = oneWire[A0] | oneWire[A0 + 1] << 16;
-		output14 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
+		output13 = oneWire[PIN_A0] | oneWire[PIN_A0 + 1] << 16;
+		output14 = oneWire[PIN_A0 + 2] | oneWire[PIN_A0 + 3] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
