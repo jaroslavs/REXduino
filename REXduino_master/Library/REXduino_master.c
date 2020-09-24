@@ -116,7 +116,7 @@ long connected = 0;
 long initialized = 0;
 long pinsSync = 0;
 long REXduinoError = 0;
-long PIN_COUNT, PINMASK_BYTESIZE;
+long PIN_COUNT, PIN_A0, PINMASK_BYTESIZE;
 long digitalIn[MAX_PIN_COUNT];
 long analogIn[MAX_PIN_COUNT];
 long oneWire[MAX_PIN_COUNT];
@@ -492,6 +492,7 @@ int parchange(void)
 	{
 	case MASKTYPE_ARD_UNO:
 		PIN_COUNT = 20; //digital+analog pins
+		PIN_A0 = 14;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		pinModes_par[2] = param1;
 		pinModes_par[3] = param2;
@@ -505,30 +506,32 @@ int parchange(void)
 		pinModes_par[11] = param8;
 		pinModes_par[12] = PINMODE_DO;
 		pinModes_par[13] = PINMODE_DO;
-		pinModes_par[14] = param9;
-		pinModes_par[15] = param10;
-		pinModes_par[16] = param11;
-		pinModes_par[17] = param12;
-		pinModes_par[18] = param13;
-		pinModes_par[19] = param14;
+		pinModes_par[A0] = param9;
+		pinModes_par[A0 + 1] = param10;
+		pinModes_par[A0 + 2] = param11;
+		pinModes_par[A0 + 3] = param12;
+		pinModes_par[A0 + 4] = param13;
+		pinModes_par[A0 + 5] = param14;
 		break;
 	case MASKTYPE_ARD_UNOhex:
 		PIN_COUNT = 20; //digital+analog pins
+		PIN_A0 = 14;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		for (i = 0; i < 8; i++)
 		{															   //
-			pinModes_par[i] = (param1 & (15 << (4 * i))) >> 4 * i;	 //pins 0 and 1 are overwritten below
+			pinModes_par[i] = (param1 & (15 << (4 * i))) >> 4 * i;	   //pins 0 and 1 are overwritten below
 			pinModes_par[i + 8] = (param2 & (15 << (4 * i))) >> 4 * i; //analog pins (14 and up) are overwritten below
 		}
 		pinModes_par[0] = PINMODE_NC;
 		pinModes_par[1] = PINMODE_NC;
 		for (i = 0; i < 8; i++)
 		{ //analog pins A0 to A5 must be in separate for cycle (pin A0 = pin 14, which is not a multiple of 8)
-			pinModes_par[i + 14] = (param3 & (15 << (4 * i))) >> 4 * i;
+			pinModes_par[i + PIN_A0] = (param3 & (15 << (4 * i))) >> 4 * i;
 		}
 		break;
 	case MASKTYPE_ARD_LEONARDO:
 		PIN_COUNT = 31; //digital+analog pins
+		PIN_A0 = 18;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		pinModes_par[2] = param1;
 		pinModes_par[3] = param2;
@@ -541,32 +544,38 @@ int parchange(void)
 		pinModes_par[10] = param7;
 		pinModes_par[11] = param8;
 		pinModes_par[12] = PINMODE_DO;
-		pinModes_par[13] = PINMODE_DO;
-		pinModes_par[14] = param9;
-		pinModes_par[15] = param10;
-		pinModes_par[16] = param11;
-		pinModes_par[17] = param12;
-		pinModes_par[18] = param13;
-		pinModes_par[19] = param14;
+		pinModes_par[13] = PINMODE_DO; //onboard LED
+		pinModes_par[14] = PINMODE_NC; //pin in ICSP header
+		pinModes_par[15] = PINMODE_NC; //pin in ICSP header
+		pinModes_par[16] = PINMODE_NC; //pin in ICSP header
+		pinModes_par[17] = PINMODE_NC; //pin not wired out
+		pinModes_par[A0] = param9;
+		pinModes_par[A0 + 1] = param10;
+		pinModes_par[A0 + 2] = param11;
+		pinModes_par[A0 + 3] = param12;
+		pinModes_par[A0 + 4] = param13;
+		pinModes_par[A0 + 5] = param14;
 		break;
 	case MASKTYPE_ARD_LEONARDOhex:
 		PIN_COUNT = 31; //digital+analog pins
+		PIN_A0 = 18;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		for (i = 0; i < 8; i++)
 		{															   //
-			pinModes_par[i] = (param1 & (15 << (4 * i))) >> 4 * i;	 //pins 0 and 1 are overwritten below
-			pinModes_par[i + 8] = (param2 & (15 << (4 * i))) >> 4 * i; //analog pins (14 and up) are overwritten below
+			pinModes_par[i] = (param1 & (15 << (4 * i))) >> 4 * i;	   //pins 0 and 1 are overwritten below
+			pinModes_par[i + 8] = (param2 & (15 << (4 * i))) >> 4 * i; //analog pins (A0 and up) are overwritten below
 		}
 		pinModes_par[0] = PINMODE_NC;
 		pinModes_par[1] = PINMODE_NC;
 		for (i = 0; i < 8; i++)
-		{ //analog pins A0 to A5 must be in separate for cycle (pin A0 = pin 14, which is not a multiple of 8)
-			pinModes_par[i + 14] = (param3 & (15 << (4 * i))) >> 4 * i;
+		{ //analog pins A0 to A5 must be in separate for cycle (pin A0 = pin 18, which is not a multiple of 8)
+			pinModes_par[i + PIN_A0] = (param3 & (15 << (4 * i))) >> 4 * i;
 		}
 		break;
 	case MASKTYPE_ARD_MEGA2560:
 	case MASKTYPE_SEEED_MEGAV122:
 		PIN_COUNT = 70; //digital+analog pins //the row of pins PE2 to to PH2 is not supported
+		PIN_A0 = 54;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		pinModes_par[2] = param1;
 		pinModes_par[3] = param2;
@@ -580,18 +589,19 @@ int parchange(void)
 		pinModes_par[11] = param8;
 		pinModes_par[12] = PINMODE_DO;
 		pinModes_par[13] = PINMODE_DO;
-		pinModes_par[54] = param9;
-		pinModes_par[55] = param10;
-		pinModes_par[56] = param11;
-		pinModes_par[57] = param12;
-		pinModes_par[58] = param13;
-		pinModes_par[59] = param14;
-		pinModes_par[60] = PINMODE_AI;
-		pinModes_par[61] = PINMODE_AI;
+		pinModes_par[A0] = param9;
+		pinModes_par[A0 + 1] = param10;
+		pinModes_par[A0 + 2] = param11;
+		pinModes_par[A0 + 3] = param12;
+		pinModes_par[A0 + 4] = param13;
+		pinModes_par[A0 + 5] = param14;
+		pinModes_par[A0 + 6] = PINMODE_AI;
+		pinModes_par[A0 + 7] = PINMODE_AI;
 		break;
 	case MASKTYPE_ARD_MEGA2560hex:
 	case MASKTYPE_SEEED_MEGAV122hex:
 		PIN_COUNT = 70; //digital+analog pins
+		PIN_A0 = 54;	//pin number of A0		
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		for (i = 0; i < 8; i++)
 		{														   //
@@ -607,8 +617,8 @@ int parchange(void)
 		pinModes_par[1] = PINMODE_NC;
 		for (i = 0; i < 8; i++)
 		{ //analog pins A0 to A15 must be in separate for cycle (pin A0 = pin 54, which is not a multiple of 8)
-			pinModes_par[i + 54] = (param8 & (15 << (4 * i))) >> 4 * i;
-			pinModes_par[i + 62] = (param9 & (15 << (4 * i))) >> 4 * i;
+			pinModes_par[i + A0] = (param8 & (15 << (4 * i))) >> 4 * i;
+			pinModes_par[i + A0 + 8] = (param9 & (15 << (4 * i))) >> 4 * i;
 		}
 		break;
 	} //end switch(maskType)
