@@ -62,7 +62,7 @@ byte validatePinMode(byte pin, byte mode) {
         }
         break;
       case 'A':
-        if (pin < (NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS))
+        if ((pin < A0) || (pin >= A0 + NUM_ANALOG_INPUTS))
         {
           pin = 255;
         }

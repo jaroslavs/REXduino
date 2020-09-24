@@ -61,6 +61,8 @@ void commandB(byte verbose) {
     Serial.println(NUM_DIGITAL_PINS);
     Serial.print("Num.AI: ");
     Serial.println(NUM_ANALOG_INPUTS);
+    Serial.print("A0: ");
+    Serial.println(A0);
     Serial.print("Lib: -");
 #ifdef USE1WIRE
     Serial.print("W");
@@ -85,7 +87,7 @@ void commandM(byte pin, byte mode, byte verbose) {
   //in verbose mode, analog inputs are numbered from 0
   if (verbose) {
     pin = pin - 48; //convert from ASCII to number
-    pin = NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS + pin; //e.g. 20-6+pin on Arduino UNO, i.e. 0..5 -> 14..19
+    pin = A0 + pin; //e.g. 14+pin on Arduino UNO, i.e. 0..5 -> 14..19
     mode = uppercase(mode);
   }
   switch (mode) { //set the pin to the desired mode
@@ -300,7 +302,7 @@ void commandA(byte pin, byte verbose) {
   int value;
   if (verbose) {
     pin = pin - 48; //convert from ASCII to number
-    pin = NUM_DIGITAL_PINS - NUM_ANALOG_INPUTS + pin; //e.g. 20-6+pin on Arduino UNO, i.e. 0..5 -> 14..19
+    pin = A0 + pin; //e.g. 14+pin on Arduino UNO, i.e. 0..5 -> 14..19
   }
   pin = validatePinMode(pin, 'A');
   if  (pin < 255) //valid pin number
