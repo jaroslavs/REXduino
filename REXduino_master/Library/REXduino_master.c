@@ -35,20 +35,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define COMMIT 0	   //
 
 #define COM_BAUDRATE 57600		  //change this line according to desired baudrate
-#define COMMAND_LENGTH_MAX 20	 //maximum length of command
+#define COMMAND_LENGTH_MAX 20	  //maximum length of command
 #define RESPONSE_BUFFER_LENGTH 30 //buffer for responses
-#define COMM_INIT_INTERVAL 2000   //period of communication re-initialization [ms]
+#define COMM_INIT_INTERVAL 2000	  //period of communication re-initialization [ms]
 #define COM_REOPEN_INTERVAL 5000  //period of re-opening the serial port [ms]
 #define TIMEOUT_FAC 5			  //timeout factor (timeout = TIMEOUT_FAC * task_period, task period is given by EXEC parameters)
 
 #define MASKTYPE_ARD_UNO 1			 //Arduino UNO
 #define MASKTYPE_ARD_UNOhex 2		 //Arduino UNO hexadecimal mask
 #define MASKTYPE_ARD_MEGA2560 3		 //Arduino MEGA 2560
-#define MASKTYPE_ARD_MEGA2560hex 4   //Arduino MEGA 2560 hexadecimal mask
-#define MASKTYPE_SEEED_MEGAV122 5	//Seeeduino Mega v1.22
+#define MASKTYPE_ARD_MEGA2560hex 4	 //Arduino MEGA 2560 hexadecimal mask
+#define MASKTYPE_SEEED_MEGAV122 5	 //Seeeduino Mega v1.22
 #define MASKTYPE_SEEED_MEGAV122hex 6 //Seeeduino Mega v1.22 hexadecimal mask
-#define MASKTYPE_ARD_LEONARDO 7 //Arduino Leonardo
-#define MASKTYPE_ARD_LEONARDOhex 8 //Arduino Leonardo hexadecimal mask
+#define MASKTYPE_ARD_LEONARDO 7		 //Arduino Leonardo
+#define MASKTYPE_ARD_LEONARDOhex 8	 //Arduino Leonardo hexadecimal mask
 
 #define STATUS_ONEWIRE_NOMOREDEVICES 50 //2 - must be the same as in REXduino_slave.ino
 #define STATUS_ONEWIRE_TEMPCONV 52		//4 - must be the same as in REXduino_slave.ino
@@ -75,22 +75,22 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define CON_COM15 47
 #define CON_SERIALDEVICE_FNAME 63
 
-#define PINMODE_NC0 0   //not connected (due to Simulink compatibility)
+#define PINMODE_NC0 0	//not connected (due to Simulink compatibility)
 #define PINMODE_NC 1	//not connected
 #define PINMODE_DO 2	//digital output
 #define PINMODE_DI 3	//digital input
-#define PINMODE_DIP 4   //digital input with internal 20k pull-up resistors
-#define PINMODE_PWM 5   //PWM output (analog output)
+#define PINMODE_DIP 4	//digital input with internal 20k pull-up resistors
+#define PINMODE_PWM 5	//PWM output (analog output)
 #define PINMODE_AI 6	//analog input
 #define PINMODE_OW 7	//1-wire bus gateway
-#define PINMODE_CNT 8   //counter input (counting falling edges by default)
-#define PINMODE_ENC 9   //encoder input, signal A (evaluated on both edges of the A signal)
+#define PINMODE_CNT 8	//counter input (counting falling edges by default)
+#define PINMODE_ENC 9	//encoder input, signal A (evaluated on both edges of the A signal)
 #define PINMODE_ENCB 10 //encoder input, signal B (digital input but no data is polled)
 
 #define S_PINMODE_NC0 "NC"								 //not connected (due to Simulink compatibility)
 #define S_PINMODE_NC "NC"								 //not connected
 #define S_PINMODE_DO_HIGH "Digital output, initial HIGH" //digital output
-#define S_PINMODE_DO_LOW "Digital output, initial LOW"   //digital output
+#define S_PINMODE_DO_LOW "Digital output, initial LOW"	 //digital output
 #define S_PINMODE_DI "Digital input"					 //digital input
 #define S_PINMODE_DIP "Digital input with pull-up"		 //digital input with internal 20k pull-up resistors
 #define S_PINMODE_PWM "PWM (Analog output)"				 //PWM output (analog output)
@@ -601,7 +601,7 @@ int parchange(void)
 	case MASKTYPE_ARD_MEGA2560hex:
 	case MASKTYPE_SEEED_MEGAV122hex:
 		PIN_COUNT = 70; //digital+analog pins
-		PIN_A0 = 54;	//pin number of A0		
+		PIN_A0 = 54;	//pin number of A0
 		PINMASK_BYTESIZE = (long)ceil(PIN_COUNT / 8.0);
 		for (i = 0; i < 8; i++)
 		{														   //
@@ -796,8 +796,8 @@ int main(void)
 			{
 				switch (responseData[0])
 				{
-				case 'C':											   //connection confirmation
-					if ((responseCnt == 3) && (responseData[1] == (48+MAJORVERSION) )) //48 is the ASCII value of '0'
+				case 'C':																//connection confirmation
+					if ((responseCnt == 3) && (responseData[1] == (48 + MAJORVERSION))) //48 is the ASCII value of '0'
 					{
 						Trace(0, "Received connection confirmation.");
 						initialized = 1;
