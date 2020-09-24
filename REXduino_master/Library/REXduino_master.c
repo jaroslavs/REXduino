@@ -621,6 +621,9 @@ int parchange(void)
 			pinModes_par[i + A0 + 8] = (param9 & (15 << (4 * i))) >> 4 * i;
 		}
 		break;
+	default:
+		TraceError(0, "Unknown board type (parameters)!");
+		break;
 	} //end switch(maskType)
 	for (i = 0; i < MAX_PIN_COUNT; i++)
 	{
@@ -1245,56 +1248,56 @@ int main(void)
 	{
 	case MASKTYPE_ARD_UNO:
 		//1-Wire branches on pins 2-6, 9-11, A0-A3
-		output3 = analogIn[14] | analogIn[15] << 10 | analogIn[16] << 20;
-		output4 = analogIn[17] | analogIn[18] << 10 | analogIn[19] << 20;
+		output3 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output4 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
 		output9 = oneWire[2] | oneWire[3] << 16;
 		output10 = oneWire[4] | oneWire[5] << 16;
 		output11 = oneWire[6] | oneWire[9] << 16;
 		output12 = oneWire[10] | oneWire[11] << 16;
-		output13 = oneWire[14] | oneWire[15] << 16;
-		output14 = oneWire[16] | oneWire[17] << 16;
+		output13 = oneWire[A0] | oneWire[A0 + 1] << 16;
+		output14 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
 	case MASKTYPE_ARD_UNOhex:
 		//1-Wire branches on pins 2-12, A0-A5
-		output1 = analogIn[14] | analogIn[15] << 10 | analogIn[16] << 20;
-		output2 = analogIn[17] | analogIn[18] << 10 | analogIn[19] << 20;
+		output1 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output2 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
 		output3 = oneWire[2] | oneWire[3] << 16;
 		output4 = oneWire[4] | oneWire[5] << 16;
 		output5 = oneWire[6] | oneWire[7] << 16;
 		output9 = oneWire[8] | oneWire[9] << 16;
 		output10 = oneWire[10] | oneWire[11] << 16;
 		output11 = oneWire[12];
-		output12 = oneWire[14] | oneWire[15] << 16;
-		output13 = oneWire[16] | oneWire[17] << 16;
-		output14 = oneWire[18] | oneWire[19] << 16;
+		output12 = oneWire[A0] | oneWire[A0 + 1] << 16;
+		output13 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
+		output14 = oneWire[A0 + 4] | oneWire[A0 + 5] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
 	case MASKTYPE_ARD_MEGA2560:
 	case MASKTYPE_SEEED_MEGAV122:
 		//1-Wire branches on pins 2-6, 9-11, A0-A3
-		output3 = analogIn[54] | analogIn[55] << 10 | analogIn[56] << 20;
-		output4 = analogIn[57] | analogIn[58] << 10 | analogIn[59] << 20;
-		output5 = analogIn[60] | analogIn[61] << 10;
+		output3 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output4 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
+		output5 = analogIn[PIN_A0 + 6] | analogIn[PIN_A0 + 7] << 10;
 		output9 = oneWire[2] | oneWire[3] << 16;
 		output10 = oneWire[4] | oneWire[5] << 16;
 		output11 = oneWire[6] | oneWire[9] << 16;
 		output12 = oneWire[10] | oneWire[11] << 16;
-		output13 = oneWire[54] | oneWire[55] << 16;
-		output14 = oneWire[56] | oneWire[57] << 16;
+		output13 = oneWire[A0] | oneWire[A0 + 1] << 16;
+		output14 = oneWire[A0 + 2] | oneWire[A0 + 3] << 16;
 		output6 = longArray[2]; //counter on pin 2
 		output7 = longArray[3]; //counter on pin 3
 		break;
 	case MASKTYPE_ARD_MEGA2560hex:
 	case MASKTYPE_SEEED_MEGAV122hex:
 		//analog inputs
-		output3 = analogIn[54] | analogIn[55] << 10 | analogIn[56] << 20;
-		output4 = analogIn[57] | analogIn[58] << 10 | analogIn[59] << 20;
-		output5 = analogIn[60] | analogIn[61] << 10 | analogIn[62] << 20;
-		output6 = analogIn[63] | analogIn[64] << 10 | analogIn[65] << 20;
-		output7 = analogIn[66] | analogIn[67] << 10 | analogIn[68] << 20;
+		output3 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output4 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
+		output5 = analogIn[PIN_A0 + 6] | analogIn[PIN_A0 + 7] << 10 | analogIn[PIN_A0 + 8] << 20;
+		output6 = analogIn[PIN_A0 + 9] | analogIn[PIN_A0 + 10] << 10 | analogIn[PIN_A0 + 11] << 20;
+		output7 = analogIn[PIN_A0 + 12] | analogIn[PIN_A0 + 13] << 10 | analogIn[PIN_A0 + 14] << 20;
 		// by default, 1-wire bus is on pins 22 to 33
 		output9 = oneWire[22] | oneWire[23] << 16;
 		output10 = oneWire[24] | oneWire[25] << 16;
@@ -1320,11 +1323,44 @@ int main(void)
 			output10 = longArray[3]; //counter on pin 3
 		}
 		break;
-	}
+	case MASKTYPE_ARD_LEONARDO:
+		//1-Wire branches on pins 2-6, 9-11, A0-A3
+		output3 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output4 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
+		output9 = oneWire[2] | oneWire[3] << 16;
+		output10 = oneWire[4] | oneWire[5] << 16;
+		output11 = oneWire[6] | oneWire[9] << 16;
+		output12 = oneWire[10] | oneWire[11] << 16;
+		output13 = oneWire[18] | oneWire[19] << 16;
+		output14 = oneWire[20] | oneWire[21] << 16;
+		output6 = longArray[2]; //counter on pin 2
+		output7 = longArray[3]; //counter on pin 3
+		break;
+	case MASKTYPE_ARD_LEONARDOhex:
+		//1-Wire branches on pins 2-12, A0-A5
+		output1 = analogIn[PIN_A0] | analogIn[PIN_A0 + 1] << 10 | analogIn[PIN_A0 + 2] << 20;
+		output2 = analogIn[PIN_A0 + 3] | analogIn[PIN_A0 + 4] << 10 | analogIn[PIN_A0 + 5] << 20;
+		output3 = oneWire[2] | oneWire[3] << 16;
+		output4 = oneWire[4] | oneWire[5] << 16;
+		output5 = oneWire[6] | oneWire[7] << 16;
+		output9 = oneWire[8] | oneWire[9] << 16;
+		output10 = oneWire[10] | oneWire[11] << 16;
+		output11 = oneWire[12];
+		output12 = oneWire[PIN_A0] | oneWire[PIN_A0 + 1] << 16;
+		output13 = oneWire[PIN_A0 + 2] | oneWire[PIN_A0 + 3] << 16;
+		output14 = oneWire[PIN_A0 + 4] | oneWire[PIN_A0 + 5] << 16;
+		output6 = longArray[2]; //counter on pin 2
+		output7 = longArray[3]; //counter on pin 3
+		break;
+	default:
+		TraceError(0, "Unknown board type (outputs)!");
+		break;
+	} //end switch(maskType)
+
 	userRecv = longArray[0]; //output available for user data
 
 	debugChange = inputDebug & ~debugLast; //detection of rising edge (bitwise)
-	if (debugChange & 1)			  //force reconnect by closing the serial port
+	if (debugChange & 1)				   //force reconnect by closing the serial port
 	{
 		hCom = closePort(hCom);
 	}
