@@ -57,6 +57,15 @@ void commandV(byte verbose) {
 void commandB(byte verbose) {
   if (verbose)
   {
+#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
+    Serial.println("U");
+#endif //Arduino UNO and the like
+#if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__)
+    Serial.println("L");
+#endif //Arduino LEONARDO and the like
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+    Serial.println("M");
+#endif //Arduino MEGA and the like
     Serial.print("Num.DI: ");
     Serial.println(NUM_DIGITAL_PINS);
     Serial.print("Num.AI: ");
