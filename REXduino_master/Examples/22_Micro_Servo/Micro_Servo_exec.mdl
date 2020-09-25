@@ -1,0 +1,98 @@
+Model {
+  Name                    "Micro_Servo_exec"
+  Version                 3.00
+  #RexVersion             "2.50.10 rev. 12481, Date 2020-09-03"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "Micro_Servo_exec"
+    Location                [11, 34, 223, 396]
+    #GUID                   0f377409-cc0c-422c-b05a-24944bf33a83
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [15, 15, 60, 275]
+      SourceBlock             "execlib/EXEC"
+      SourceType              "EXEC"
+      target                  "Generic target device"
+      tick                    "0.005"
+      ntick0                  10
+      ntick1                  12
+      ntick2                  15
+      ntick3                  20
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      FontSize                10
+      #GUID                   d3bd2d4e-ecc8-4bc4-a087-2024fc96b065
+    }
+    Block {
+      BlockType               Reference
+      Name                    "Micro_Servo_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 152, 155, 168]
+      SourceBlock             "execlib/TASK"
+      SourceType              "TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      bEdit                   off
+      FontSize                10
+      #RTFlags                5
+      #GUID                   57c61a94-6dde-4f97-8948-a87af8f6fd30
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PROJECT"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [15, 303, 60, 322]
+      SourceBlock             "execlib/PROJECT"
+      CompileParams           ""
+      SourcesOnTarget         off
+      TargetURL               ""
+      LibraryPath             "..\\..\\Library"
+      FontSize                10
+      #GUID                   6181d1f0-511f-4ddb-8d15-a7df0ba8c75e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "Micro_Servo_task"
+      DstPort                 1
+      #GUID                   45a78bea-1f37-4340-bc5c-6cfc41fdaa03
+    }
+  }
+}
