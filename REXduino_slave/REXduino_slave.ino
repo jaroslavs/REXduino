@@ -82,8 +82,8 @@
 #define ERROR_I2C                 53 //5
 #define ERROR_I2C_BAROMETER         49 //1
 #define ERROR_I2C_BAROMETERDATA     50 //2
-#define ERROR_I2C_RESISTOR          51 //3
-#define ERROR_I2C_RESISTORDATA      52 //4
+#define ERROR_I2C_POTENTIOMETER     51 //3
+#define ERROR_I2C_POTENTIOMETERDATA 52 //4
 
 #define WARNING_SERIAL               1
 #define WARNING_SERIAL_BUFFER_FULL      1
@@ -530,7 +530,7 @@ void loop()
         #ifdef ENABLE_WDT
                 wdt_reset();
         #endif
-                commandR(command_data[1], command_data[2], command_data[3], command_data[4], command_data[5], verbose_command); //execute the command
+                commandPotentiometer(command_data[1], command_data[2], command_data[3], command_data[4], command_data[5], verbose_command); //execute the command
                 command_data_length = 0;
               }
               else if (command_data_length > reqLength)

@@ -500,7 +500,7 @@ void command2(void) {
   }
 } // end of command 2
 
-// Perform command 4 - process 16-bytes of user data ***************************************
+// Perform command 4 - process 16 bytes of user data ***************************************
 void command4(void) {
   byte i;
   //user data is in global array command_data, LSB is in command_data[1], MSB is in command_data[16]
@@ -603,7 +603,7 @@ void command3(void) {
 #endif //USE1WIRE
 
 #ifdef USEI2C
-// Perform B command - read MPL115A2 barometer ***************************************
+// Perform Barometer command - read MPL115A2 barometer ***************************************
 void commandBarometer(byte verbose) {
   byte i = 0;
   byte data[12];
@@ -653,26 +653,28 @@ void commandBarometer(byte verbose) {
   }
   else reportError(ERROR_I2C, ERROR_I2C_BAROMETERDATA); //wrong number of bytes received from the barometer
 }
+#endif //USEI2C
 
-// Perform R command - set DS1844 digital potentiometer ***************************************
-void commandR(byte addr, byte pot0, byte pot1, byte pot2, byte pot3, byte verbose) {
+#ifdef USEI2C
+// Perform Potentiometer command - set DS1844 digital potentiometer ***************************************
+void commandPotentiometer(byte addr, byte pot0, byte pot1, byte pot2, byte pot3, byte verbose) {
   byte result = 0;
   if (verbose) {
     addr = addr - 48; //convert from ASCII to number
     Serial.println("DS1844: ");
   }
-  if ((pot0 > 63) || (pot0 > 63) || (pot0 > 63) || (pot0 > 63)) {
+  if ((pot0 > 63) || (pot1 > 63) || (pot2 > 63) || (pot3 > 63)) {
     if (verbose) {
       Serial.println("pot>63");
     }
-    reportError(ERROR_I2C, ERROR_I2C_RESISTORDATA);
+    reportError(ERROR_I2C, ERROR_I2C_POTENTIOMETERDATA);
     return;
   }
   Wire.beginTransmission(addr + 0x28); // talk to DS1844, addr is binary combination of "A2 A1 A0" (e.g. 3 for A2=LOW, A1=A0=HIGH)
-  Wire.write(pot0);            // value of pot0 (6-bit)
-  Wire.write(64 + pot1);          // selection of pot1 plus its value
-  Wire.write(128 + pot2);          // selection of pot2 plus its value
-  Wire.write(192 + pot3);          // selection of pot3 plus its value
+  Wire.write(pot0 & 0x3F);            // value of pot0 (6-bit)
+  Wire.write(0x40 | (pot1 & 0x3F));          // selection of pot1 plus its value
+  Wire.write(0x80 | (pot2 & 0x3F));          // selection of pot2 plus its value
+  Wire.write(0xC0 | (pot3 & 0x3F));          // selection of pot3 plus its value
   result = Wire.endTransmission();     // send the buffered data to I2C slave
   if (result) { //problem talking to ds1844
     if (verbose) {
@@ -680,7 +682,7 @@ void commandR(byte addr, byte pot0, byte pot1, byte pot2, byte pot3, byte verbos
       Serial.print(addr);
       Serial.println(")");
     }
-    reportError(ERROR_I2C, ERROR_I2C_RESISTOR);
+    reportError(ERROR_I2C, ERROR_I2C_POTENTIOMETER);
   }
   else { //talking to DS1844 OK
     if (verbose) {
