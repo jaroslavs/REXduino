@@ -30,8 +30,8 @@
 **************************************************************************/
 
 #define MAJORVERSION 2
-#define MINORVERSION 1 //even number = release, odd number = development
-#define REVISION 4 //for hotfixes, even number = hotfix applied, odd number = development
+#define MINORVERSION 2 //even number = release, odd number = development
+#define REVISION 0 //for hotfixes, even number = hotfix applied, odd number = development
 #define COMMIT 0 //
 
 //#define USE1WIRE //uncomment this line to use 1-Wire temperature sensors, OneWire library is required
