@@ -3,7 +3,7 @@
     REXduino slave
     REXYGEN and Arduino communication over serial port
  *                                                       *
-    Jaroslav SOBOTA, 2013-2020
+    Jaroslav SOBOTA, 2013-2021
     email: jsobota@ntis.zcu.cz
  *                                                       *
  *********************************************************/
