@@ -273,8 +273,7 @@ void readDigitalInputMulti(long mask[], long maskByteSize)
 		commandData[i + 1] = mask[i];
 	}
 	commandData[maskByteSize + 1] = ';';
-	sent = Send(hCom, commandData, maskByteSize + 2);
-	traceSentData(maskByteSize + 2);
+	sendData(maskByteSize + 2);
 	return;
 }
 
