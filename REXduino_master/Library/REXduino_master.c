@@ -204,14 +204,28 @@ void sendData(long count)
 	{
 		sent = Send(hCom, commandData, count);
 		if (sent <= 0)
+		{
+			TraceVerbose(0, "Waiting for serial line...");
 			busyWait(0.0005); //the serial line is not always ready (observed on Linux machines with non-FTDI devices, e.g. the original Arduino UNO) - we simply wait in such a case
-		if ((sent > 0) && (sent < count))
+		}
+		else if ((sent > 0) && (sent < count))
+		{
 			TraceError(0, "INCOMPLETE DATA SENT, " + long2str(i)); //so far not observed, it seems the serial line either accepts all or nothing
+		}
+		else if (i >= 15)
+		{
+			TraceWarning(0, "Difficulties while sending " + long2str(sent) + " bytes, attempt no. " + long2str(i) + ". OK in the end.");
+		}
+		else
+		{
+			TraceVerbose(0, "Successfully sent " + long2str(sent) + " bytes, attempt no. " + long2str(i));
+		}
 		i++;
 	}
-	//if (i>1) TraceError(0, "Sending data took " + long2str(i) + " attempts!!!.");
 	if (i == 20)
-		TraceError(0, "FAILED TO SEND COMMAND TO ARDUINO !!!.");
+	{
+		TraceError(0, "FAILED TO SEND COMMAND TO ARDUINO !!!");
+	}
 	sentCnt = sentCnt + count;
 	traceSentData(count);
 	return;
