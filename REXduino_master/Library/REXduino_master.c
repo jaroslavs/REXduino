@@ -233,7 +233,7 @@ void sendData(long count)
 
 void initCommunication(void)
 { //initialize communication with Arduino
-	Trace(0, "Sending initialization command.");
+	TraceVerbose(0, "Sending initialization command.");
 	commandData[0] = 'C';
 	commandData[1] = MAJORVERSION;
 	commandData[2] = ';';
@@ -243,7 +243,7 @@ void initCommunication(void)
 
 void setDigitalOutput(long pin, long data[])
 { //set digital output
-	Trace(0, "Setting digital output, pin " + long2str(pin) + ", value " + long2str(data[pin]) + ".");
+	TraceVerbose(0, "Setting digital output, pin " + long2str(pin) + ", value " + long2str(data[pin]) + ".");
 	commandData[0] = 'O';
 	commandData[1] = pin;
 	commandData[2] = data[pin];
@@ -255,7 +255,7 @@ void setDigitalOutput(long pin, long data[])
 void setDigitalOutputMulti(long mask[], long data[], long maskByteSize)
 { //multi-set digital output
 	long i;
-	Trace(0, "Setting multiple digital outputs.");
+	TraceVerbose(0, "Setting multiple digital outputs.");
 	commandData[0] = 1;
 	for (i = 0; i < maskByteSize; i++)
 	{
@@ -269,7 +269,7 @@ void setDigitalOutputMulti(long mask[], long data[], long maskByteSize)
 
 void readDigitalInput(long pin)
 { //read digital input
-	Trace(0, "Reading digital input, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Reading digital input, pin " + long2str(pin) + ".");
 	commandData[0] = 'I';
 	commandData[1] = pin;
 	commandData[2] = ';';
@@ -280,7 +280,7 @@ void readDigitalInput(long pin)
 void readDigitalInputMulti(long mask[], long maskByteSize)
 { //multi-read digital input
 	long i;
-	Trace(0, "Reading multiple digital inputs.");
+	TraceVerbose(0, "Reading multiple digital inputs.");
 	commandData[0] = 2;
 	for (i = 0; i < maskByteSize; i++)
 	{
@@ -293,7 +293,7 @@ void readDigitalInputMulti(long mask[], long maskByteSize)
 
 void setAnalogOutput(long pin, long data[])
 { //set PWM (analog) output
-	Trace(0, "Setting PWM output, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Setting PWM output, pin " + long2str(pin) + ".");
 	commandData[0] = 'P';
 	commandData[1] = pin;
 	commandData[2] = data[pin];
@@ -304,7 +304,7 @@ void setAnalogOutput(long pin, long data[])
 
 void readAnalogInput(long pin)
 { //read analog input
-	Trace(0, "Reading analog input, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Reading analog input, pin " + long2str(pin) + ".");
 	commandData[0] = 'A';
 	commandData[1] = pin;
 	commandData[2] = ';';
@@ -314,7 +314,7 @@ void readAnalogInput(long pin)
 
 void readOnewireTemp(long pin)
 { //read temperature from next 1-Wire device
-	Trace(0, "Reading 1-Wire temperature, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Reading 1-Wire temperature, pin " + long2str(pin) + ".");
 	commandData[0] = 'T';
 	commandData[1] = pin;
 	commandData[2] = ';';
@@ -325,7 +325,7 @@ void readOnewireTemp(long pin)
 void readOnewireTempMulti(long mask[], long maskByteSize)
 { //multi-read temperature from next 1-Wire device
 	long i;
-	Trace(0, "Reading multiple 1-Wire temperature sensors.");
+	TraceVerbose(0, "Reading multiple 1-Wire temperature sensors.");
 	commandData[0] = 3;
 	for (i = 0; i < maskByteSize; i++)
 	{
@@ -338,7 +338,7 @@ void readOnewireTempMulti(long mask[], long maskByteSize)
 
 void readCounter(long pin, long resetflag, long enableflag)
 { //read counter value
-	Trace(0, "Reading counter, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Reading counter, pin " + long2str(pin) + ".");
 	commandData[0] = 'N';
 	commandData[1] = pin;
 	commandData[2] = resetflag * 2 + enableflag;
@@ -349,7 +349,7 @@ void readCounter(long pin, long resetflag, long enableflag)
 
 void enableCounter(long pin)
 { //enable counter
-	Trace(0, "Enabling counter, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Enabling counter, pin " + long2str(pin) + ".");
 	commandData[0] = 'N';
 	commandData[1] = pin;
 	commandData[2] = 'E';
@@ -360,7 +360,7 @@ void enableCounter(long pin)
 
 void disableCounter(long pin)
 { //disable counter
-	Trace(0, "Disabling counter, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Disabling counter, pin " + long2str(pin) + ".");
 	commandData[0] = 'N';
 	commandData[1] = pin;
 	commandData[2] = 'D';
@@ -371,7 +371,7 @@ void disableCounter(long pin)
 
 void resetCounter(long pin)
 { //reset counter value
-	Trace(0, "Resetting counter, pin " + long2str(pin) + ".");
+	TraceVerbose(0, "Resetting counter, pin " + long2str(pin) + ".");
 	commandData[0] = 'N';
 	commandData[1] = pin;
 	commandData[2] = 'R';
@@ -382,7 +382,7 @@ void resetCounter(long pin)
 
 void setDigiPotentiometer(long addrI2C, long resistorValues)
 { //set DS1844 digital potentiometer
-	Trace(0, "Setting digital potentiometer, address " + long2str(addrI2C) + ", value " + long2str(resistorValues) + ".");
+	TraceVerbose(0, "Setting digital potentiometer, address " + long2str(addrI2C) + ", value " + long2str(resistorValues) + ".");
 	commandData[0] = 'R';
 	commandData[1] = addrI2C;
 	commandData[2] = resistorValues & 63;
@@ -396,7 +396,7 @@ void setDigiPotentiometer(long addrI2C, long resistorValues)
 
 void readBarometer(void)
 { //read barometer
-	Trace(0, "Reading barometer.");
+	TraceVerbose(0, "Reading barometer.");
 	commandData[0] = 'B';
 	commandData[1] = ';';
 	sendData(2);
@@ -406,7 +406,7 @@ void readBarometer(void)
 void userCommand4(long data[])
 { //user command
 	long j;
-	Trace(0, "Sending 4 bytes of user data.");
+	TraceVerbose(0, "Sending 4 bytes of user data.");
 	commandData[0] = 'U';
 	for (j = 0; j < 4; j++)
 	{
@@ -420,7 +420,7 @@ void userCommand4(long data[])
 void userCommand16(long data[])
 { //user command
 	long j;
-	Trace(0, "Sending 16 bytes of user data.");
+	TraceVerbose(0, "Sending 16 bytes of user data.");
 	commandData[0] = 4;
 	for (j = 0; j < 16; j++)
 	{
@@ -704,7 +704,7 @@ int initPort(void)
 	}
 	else
 	{
-		Trace(1, "Failed to open " + comPort + ".");
+		TraceWarning(1, "Failed to open " + comPort + ".");
 		REXduinoError = ERROR_OPENING_PORT;
 	}
 	parchange(); //read pinmodes from parameters
@@ -756,7 +756,7 @@ int main(void)
 	REXduinoError = 0;
 	sentCnt = 0; //counter of sent bytes
 
-	Trace(3, "=== REXduino master main loop START ===");
+	TraceVerbose(3, "=== REXduino master main loop START ===");
 	TRACE_INCOMING = (inputDebug >> 2) & 1;
 	TRACE_OUTGOING = (inputDebug >> 3) & 1;
 
@@ -799,7 +799,7 @@ int main(void)
 			lastSuccess = CurrentTime();
 		}
 		lastIn[0] = 0;
-		Trace(0, " = Processing incoming data =");
+		TraceVerbose(0, " = Processing incoming data =");
 		while ((Recv(hCom, lastIn, 1)) > 0)
 		{ // first we process incoming serial data
 			responseCnt++;
@@ -820,7 +820,7 @@ int main(void)
 					}
 					else
 					{
-						Trace(99, "Invalid confirmation. Maybe an incompatible REXduino slave device (version mismatch)?"); //incomplete or invalid response
+						TraceWarning(99, "Invalid confirmation. Maybe an incompatible REXduino slave device (version mismatch)?"); //incomplete or invalid response
 					}
 					break;
 				case 'E': //error or warning message
@@ -924,7 +924,7 @@ int main(void)
 				case 'I': //digital input
 					if (responseCnt == 4)
 					{
-						Trace(0, "Received status of digital input on pin " + long2str(responseData[1]) + ".");
+						TraceVerbose(0, "Received status of digital input on pin " + long2str(responseData[1]) + ".");
 						digitalIn[responseData[1]] = responseData[2];
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
@@ -937,7 +937,7 @@ int main(void)
 				case 'A': //analog input
 					if (responseCnt == 5)
 					{
-						Trace(0, "Received analog input reading from pin " + long2str(responseData[1]) + ".");
+						TraceVerbose(0, "Received analog input reading from pin " + long2str(responseData[1]) + ".");
 						analogIn[responseData[1]] = responseData[2] << 8 | responseData[3];
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
@@ -951,7 +951,7 @@ int main(void)
 				case 'P': //analog output (PWM)
 					if (responseCnt == 4)
 					{
-						Trace(0, "Setting of output on pin " + long2str(responseData[1]) + " succeeded.");
+						TraceVerbose(0, "Setting of output on pin " + long2str(responseData[1]) + " succeeded.");
 						lastSuccess = CurrentTime();
 						responseCnt = 0;
 					}
@@ -966,13 +966,13 @@ int main(void)
 						switch (responseData[2])
 						{
 						case STATUS_ONEWIRE_NOMOREDEVICES:
-							Trace(0, "There are no more 1-Wire devices on branch " + long2str(responseData[1]) + ". The pin will be reinitialized.");
+							TraceVerbose(0, "There are no more 1-Wire devices on branch " + long2str(responseData[1]) + ". The pin will be reinitialized.");
 							initPin(responseData[1]);
 							responseCnt = 0;
 							lastSuccess = CurrentTime();
 							break;
 						case STATUS_ONEWIRE_TEMPCONV:
-							Trace(0, "Temperature conversion started on branch " + long2str(responseData[1]) + ".");
+							TraceVerbose(0, "Temperature conversion started on branch " + long2str(responseData[1]) + ".");
 							responseCnt = 0;
 							lastSuccess = CurrentTime();
 							break;
@@ -982,7 +982,7 @@ int main(void)
 					}
 					else if (responseCnt == 7)
 					{
-						Trace(0, "Temperature reading received from branch " + long2str(responseData[1]) + ".");
+						TraceVerbose(0, "Temperature reading received from branch " + long2str(responseData[1]) + ".");
 						oneWire[responseData[1]] = (responseData[3] & 15) << 12 | (responseData[5] & 15) << 8 | responseData[4];
 						responseCnt = 0;
 						lastSuccess = CurrentTime();
@@ -998,13 +998,13 @@ int main(void)
 						switch (responseData[1])
 						{
 						case 2:
-							Trace(0, "Received counter value, pin " + long2str(responseData[1]) + ".");
+							TraceVerbose(0, "Received counter value, pin " + long2str(responseData[1]) + ".");
 							longArray[2] = responseData[3] << 0 | responseData[4] << 8 | responseData[5] << 16 | responseData[6] << 24;
 							responseCnt = 0;
 							lastSuccess = CurrentTime();
 							break;
 						case 3:
-							Trace(0, "Received counter value, pin " + long2str(responseData[1]) + ".");
+							TraceVerbose(0, "Received counter value, pin " + long2str(responseData[1]) + ".");
 							longArray[3] = responseData[3] << 0 | responseData[4] << 8 | responseData[5] << 16 | responseData[6] << 24;
 							responseCnt = 0;
 							lastSuccess = CurrentTime();
@@ -1050,7 +1050,7 @@ int main(void)
 				case 'U': //response to user-function call
 					if (responseCnt == 6)
 					{
-						Trace(0, "Received response to user command (4-byte version).");
+						TraceVerbose(0, "Received response to user command (4-byte version).");
 						for (i = 0; i < 4; i++)
 						{
 							SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":icn", responseData[i + 1]);
@@ -1066,7 +1066,7 @@ int main(void)
 				case 4: //response to 16-byte user-function
 					if (responseCnt == 18)
 					{
-						Trace(0, "Received response to user command (16-byte version).");
+						TraceVerbose(0, "Received response to user command (16-byte version).");
 						for (i = 0; i < 16; i++)
 						{
 							SetExt(".AUXdata_out.CNI_byte" + long2str(i) + ":icn", responseData[i + 1]);
@@ -1099,7 +1099,7 @@ int main(void)
 				responseCnt = 0;
 			}
 		} //while incoming data
-		Trace(0, " = Incoming data processed =");
+		TraceVerbose(0, " = Incoming data processed =");
 
 		//"Arduino disconnected" or no "valid response received within timeout period" or "opening of port succeeded but the communication initialization did not proceed"
 		if ((ElapsedTime(CurrentTime(), lastSuccess) > (TIMEOUT_FAC * GetPeriod())) || ((ElapsedTime(CurrentTime(), portOpenTime) > COM_REOPEN_INTERVAL * 0.001) && (!initialized)))
@@ -1107,7 +1107,7 @@ int main(void)
 			hCom = closePort(hCom);
 		}
 
-		Trace(0, " = Sending commands to REXduino slave device =");
+		TraceVerbose(0, " = Sending commands to REXduino slave device =");
 		if (initialized)
 		{ //if connection is established, we can initialize pins and/or send commands
 			for (i = 0; i < MAX_PINMASK_BYTESIZE; i++)
@@ -1120,12 +1120,12 @@ int main(void)
 			pinsSync = 1;
 			for (i = 2; i < PIN_COUNT; i++) //first we init and count pins
 			{
-				if (pinModes[i] != pinModes_par[i])
+				if (pinModes[i] != pinModes_par[i]) //pin has not been set to the desired mode yet
 				{
 					initPin(i);
 					pinsSync = 0;
 				}
-				else
+				else //pin mode is OK, we set a flag where needed
 				{
 					switch (pinModes[i])
 					{
@@ -1133,7 +1133,7 @@ int main(void)
 						k = (long)ceil(fmod(i, 8));
 						l = (long)floor(i / 8.0);
 						digitalOutMask[l] = digitalOutMask[l] | 1 << k; //only bit mask is created here
-						digitalOutMulti[l] = digitalOutMulti[l] | ((1 & digitalOut[i]) << k);
+						digitalOutMulti[l] = digitalOutMulti[l] | ((1 & digitalOut[i]) << k); //Boolean value from an array is converted into the corresponding bit
 						countDigitalOut++;
 						break;
 					case PINMODE_DI:
@@ -1231,7 +1231,7 @@ int main(void)
 				//no commands are sent, until all changes in pinmodes are confirmed by REXduino slave
 			}
 		}
-		Trace(0, " = Finished sending commands to REXduino slave device =");
+		TraceVerbose(0, " = Finished sending commands to REXduino slave device =");
 	} //if-else hCom<0
 
 	if (hCom >= 0)
@@ -1389,7 +1389,7 @@ int main(void)
 
 	debugLast = inputDebug;
 
-	Trace(3, "=== REXduino master main loop END ===");
+	TraceVerbose(3, "=== REXduino master main loop END ===");
 	return 0; //end main
 }
 
