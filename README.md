@@ -1,6 +1,6 @@
 # REXduino (REXYGEN master and Arduino slave) #
 
-*Last tested with:* [REXYGEN 2.50.9](http://www.rexygen.com) and [Arduino IDE 1.8.12](http://www.arduino.cc)
+*Last tested with:* [REXYGEN 2.50.10](http://www.rexygen.com) and [Arduino IDE 1.8.13](http://www.arduino.cc)
 
 The symbiosis of REXYGEN and an Arduino board is based on a simple communication protocol. The slave part is implemented in the Arduino. In fact, the Arduino serves only as an input/output unit. The master part is running in the REXYGEN-enabled target device (e.g. Raspberry Pi or your laptop or desktop PC running the RexCore runtime module). The master part is implemented using the REXLANG programmable function block which is encapsulated inside a library subsystem. 
 
@@ -25,7 +25,11 @@ The files REXduino_library.mdl and REXduino_master.c must be placed in one of th
 - the folder defined by the *LibraryPath* parameter of the PROJECT block included in the project
 - the folder defined in the *Global library path* in REXYGEN Studio (*Settings->Program Options*)  
 
+## Detailed documentation ##
+
+Detailed information can be found in the [REXduino User Guide](REXduino_User_Guide.pdf), which is part of this repository.
+
 ----------
 - Jaroslav SOBOTA
-- 2013-2020
+- 2013-2021
 - e-mail: jsobota@ntis.zcu.cz 
