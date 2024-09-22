@@ -50,22 +50,25 @@ void commandV(byte verbose) {
 // Perform B command - board info ***************************************
 void commandB(byte verbose) {
   if (verbose) {
-#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
-    Serial.println("U");
-#endif  //Arduino UNO and the like
-#if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__)
-    Serial.println("L");
-#endif  //Arduino LEONARDO and the like
-#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-    Serial.println("M");
-#endif  //Arduino MEGA and the like
+    Serial.println();
+    Serial.print("B: ");
+#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)  //Arduino UNO and the like
+    Serial.print("U");
+#endif
+#if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega16U4__)  //Arduino LEONARDO and the like
+    Serial.print("L");
+#endif
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)  //Arduino MEGA and the like
+    Serial.print("M");
+#endif
+    Serial.println();
     Serial.print("Num.DI: ");
     Serial.println(NUM_DIGITAL_PINS);
     Serial.print("Num.AI: ");
     Serial.println(NUM_ANALOG_INPUTS);
     Serial.print("A0: ");
     Serial.println(A0);
-    Serial.print("Lib: -");
+    Serial.print("Lib: +");
 #ifdef USE1WIRE
     Serial.print("W");
 #endif
