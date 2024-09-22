@@ -1,12 +1,12 @@
 /*********************************************************
- *                                                       *
-    Commands for REXduino slave
-    REXYGEN and Arduino communication over serial port
- *                                                       *
-    Jaroslav SOBOTA, 2013-2021
-    email: jsobota@ntis.zcu.cz
- *                                                       *
- *********************************************************/
+*                                                        *
+*  Commands for REXduino slave                           *
+*  REXYGEN and Arduino communication over serial port    *
+*                                                        *
+*  Jaroslav SOBOTA, 2013-2024                            *
+*  email: jaroslavsobota@centrum.cz                      *
+*                                                        *
+*********************************************************/
 
 // Perform C command - initialize communication ***************************************
 void commandC(byte ver, byte verbose) {

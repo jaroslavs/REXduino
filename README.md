@@ -31,5 +31,5 @@ Detailed information can be found in the [REXduino User Guide](REXduino_User_Gui
 
 ----------
 - Jaroslav SOBOTA
-- 2013-2021
-- e-mail: jsobota@ntis.zcu.cz 
+- 2013-2024
+- e-mail: jaroslavsobota@centrum.cz 

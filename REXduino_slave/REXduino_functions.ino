@@ -1,12 +1,12 @@
 /*********************************************************
- *                                                       *
-    Functions for REXduino slave
-    REXYGEN and Arduino communication over serial port
- *                                                       *
-    Jaroslav SOBOTA, 2013-2021
-    email: jsobota@ntis.zcu.cz
- *                                                       *
- *********************************************************/
+*                                                        *
+*  Functions for REXduino slave                          *
+*  REXYGEN and Arduino communication over serial port    *
+*                                                        *
+*  Jaroslav SOBOTA, 2013-2024                            *
+*  email: jaroslavsobota@centrum.cz                      *
+*                                                        *
+*********************************************************/
 
 // Convert an ASCII char to upper case ***************************************
 byte uppercase(byte str) {

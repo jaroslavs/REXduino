@@ -1,10 +1,10 @@
 /********************************************************
 *                                                       *
-*  REXduino master                                      *
+*  REXduino (master and slave)                          *
 *  REXYGEN and Arduino communication over serial port   *
 *                                                       *
-*  Jaroslav SOBOTA, 2013-2020                           *
-*  email: jsobota@ntis.zcu.cz                           *
+*  Jaroslav SOBOTA, 2013-2024                           *
+*  email: jaroslavsobota@centrum.cz                     *
 *                                                       *
 *********************************************************/
 

@@ -1,12 +1,12 @@
 /*********************************************************
- *                                                       *
-    REXduino slave
-    REXYGEN and Arduino communication over serial port
- *                                                       *
-    Jaroslav SOBOTA, 2013-2021
-    email: jsobota@ntis.zcu.cz
- *                                                       *
- *********************************************************/
+*                                                        *
+*  REXduino slave                                        *
+*  REXYGEN and Arduino communication over serial port    *
+*                                                        *
+*  Jaroslav SOBOTA, 2013-2024                            *
+*  email: jaroslavsobota@centrum.cz                      *
+*                                                        *
+*********************************************************/
 
 /*************************************************************************
   Permission is hereby granted, free of charge, to any person obtaining
