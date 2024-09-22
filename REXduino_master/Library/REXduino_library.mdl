@@ -1101,7 +1101,7 @@ Library {
       #GUID                   fa0d4298-a0ee-4a67-92fb-79053eb00ac4
       System {
         Name                    "Arduino_Leonardo"
-        Location                [311, 181, 1639, 926]
+        Location                [21, 67, 1349, 812]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -1469,36 +1469,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI0"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [425, 368, 445, 382]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     0
-          #GUID                   ada11a9e-6fae-4e3e-9210-6868edfbcd2c
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI1"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [450, 378, 470, 392]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     1
-          #GUID                   ae5d190b-92e2-4165-9e59-e2e38232745c
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI_comPortNo"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [490, 338, 515, 352]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     15
-          #GUID                   8d6b6c52-eaee-4d5c-b852-4263ebe09c0a
-        }
-        Block {
-          BlockType               Reference
           Name                    "CNI_userCmdType"
           Ports                   [0, 1, 0, 0, 0]
           Position                [55, 1243, 75, 1257]
@@ -1540,15 +1510,6 @@ Library {
           SourceType              "BMHEXD"
           shift                   0
           #GUID                   ac200a64-3c7a-42c5-88b2-541faeae0e28
-        }
-        Block {
-          BlockType               Reference
-          Name                    "ISSW"
-          Ports                   [3, 1, 0, 0, 0]
-          Position                [545, 368, 575, 402]
-          SourceBlock             "logiclib/ISSW"
-          SourceType              "ISSW"
-          #GUID                   276b9e53-bc25-4498-a5ca-5ff1f0dee9b8
         }
         Block {
           BlockType               Reference
@@ -1693,59 +1654,6 @@ Library {
           FontSize                10
           #RTFlags                1025
           #GUID                   62dca212-b87b-4a88-8125-6039351ca146
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "Simulation_Detector"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [475, 387, 490, 403]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   d48c5879-1e86-4563-8dc8-70cd234b8427
-          System {
-            Name                    "Simulation_Detector"
-            Location                [50, 69, 1224, 553]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "automatic"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   d48c5879-1e86-4563-8dc8-70cd234b8427
-            Block {
-              BlockType               Reference
-              Name                    "CNI3"
-              Ports                   [0, 1, 0, 0, 0]
-              Position                [20, 23, 40, 37]
-              SourceBlock             "mathlib/CNI"
-              SourceType              "CNI"
-              icn                     1
-              #GUID                   6bb5d111-0a02-45d6-8f08-fd6eff3682d1
-            }
-            Block {
-              BlockType               Outport
-              Name                    "Y"
-              Position                [65, 23, 95, 37]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   7ba87cfb-3cfb-4ef3-a2ba-195ff59c3fb4
-            }
-            Line {
-              SrcBlock                "CNI3"
-              SrcPort                 1
-              DstBlock                "Y"
-              DstPort                 1
-              #GUID                   4a0780b0-c2f8-42c8-a6c0-fc23e876876c
-            }
-          }
         }
         Block {
           BlockType               Outport
@@ -2159,28 +2067,6 @@ Library {
           #GUID                   59fbdf0f-eab4-4c0f-88f1-409890e5468d
         }
         Line {
-          SrcBlock                "CNI0"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 1
-          #GUID                   e62064e8-a3df-4cb6-86b0-758fb7078a12
-        }
-        Line {
-          SrcBlock                "CNI1"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 2
-          #GUID                   f1a39dc7-220a-427f-801c-33fde640e24b
-        }
-        Line {
-          SrcBlock                "CNI_comPortNo"
-          SrcPort                 1
-          Points                  [65, 0]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 12
-          #GUID                   466fd2e0-871e-4a89-b16e-90d4ee79bb1b
-        }
-        Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
           DstBlock                "BDOCT"
@@ -2491,13 +2377,6 @@ Library {
           #GUID                   d77593d5-ea03-433e-9c89-ebd8cf45ae60
         }
         Line {
-          SrcBlock                "ISSW"
-          SrcPort                 1
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 13
-          #GUID                   a1b300a0-f639-4352-821a-db1cf5e69be1
-        }
-        Line {
           SrcBlock                "MP_FORCE_RECONNECT"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
@@ -2714,13 +2593,6 @@ Library {
           #GUID                   eb1bff06-7aac-47de-b1f0-b77a6b96510f
         }
         Line {
-          SrcBlock                "Simulation_Detector"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 3
-          #GUID                   e3524dd3-2280-4515-a160-2d35692b4c10
-        }
-        Line {
           SrcBlock                "userSendV"
           SrcPort                 1
           DstBlock                "AUXdata_in"
@@ -2838,7 +2710,7 @@ Library {
       #GUID                   76129db7-01da-4a04-8215-d430238a64da
       System {
         Name                    "Arduino_MEGA2560"
-        Location                [85, 26, 1305, 793]
+        Location                [85, 26, 1305, 771]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -3229,36 +3101,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI0"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [440, 368, 460, 382]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     0
-          #GUID                   76e9cf8d-5540-4173-a01d-7c5575c1c4b7
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI1"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [465, 378, 485, 392]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     1
-          #GUID                   86e9c3aa-354c-4fcd-a664-67b7af20056c
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI_comPortNo"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [505, 343, 530, 357]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     15
-          #GUID                   27a71c06-7b42-4274-ae84-083230bad029
-        }
-        Block {
-          BlockType               Reference
           Name                    "CNI_userCmdType"
           Ports                   [0, 1, 0, 0, 0]
           Position                [40, 1178, 110, 1192]
@@ -3300,15 +3142,6 @@ Library {
           SourceType              "BMHEXD"
           shift                   0
           #GUID                   4e2d17a7-491d-46a7-8db5-03e20f4628d1
-        }
-        Block {
-          BlockType               Reference
-          Name                    "ISSW"
-          Ports                   [3, 1, 0, 0, 0]
-          Position                [560, 368, 590, 402]
-          SourceBlock             "logiclib/ISSW"
-          SourceType              "ISSW"
-          #GUID                   f22e60f1-8f8a-441a-8209-3c9992e1d9e1
         }
         Block {
           BlockType               Reference
@@ -3453,59 +3286,6 @@ Library {
           #RTFlags                1025
           FontSize                10
           #GUID                   95eadfeb-6116-4e9b-bdec-9124da0e2753
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "Simulation_Detector"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [490, 387, 505, 403]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   4ca8a3d7-5019-4588-b826-d3a4c5f8d6cf
-          System {
-            Name                    "Simulation_Detector"
-            Location                [50, 69, 1224, 553]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "automatic"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   4ca8a3d7-5019-4588-b826-d3a4c5f8d6cf
-            Block {
-              BlockType               Reference
-              Name                    "CNI3"
-              Ports                   [0, 1, 0, 0, 0]
-              Position                [20, 23, 40, 37]
-              SourceBlock             "mathlib/CNI"
-              SourceType              "CNI"
-              icn                     1
-              #GUID                   cb70522f-70fb-4330-b09e-a8554269c405
-            }
-            Block {
-              BlockType               Outport
-              Name                    "Y"
-              Position                [65, 23, 95, 37]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   0c1b3541-37ec-4577-a7c8-d87ae20f3878
-            }
-            Line {
-              SrcBlock                "CNI3"
-              SrcPort                 1
-              DstBlock                "Y"
-              DstPort                 1
-              #GUID                   4d5e7f42-5b66-493f-a861-9a192d525b7c
-            }
-          }
         }
         Block {
           BlockType               Outport
@@ -3952,28 +3732,6 @@ Library {
           #GUID                   b02f6801-f3e9-48ce-ace7-a2b80953f891
         }
         Line {
-          SrcBlock                "CNI0"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 1
-          #GUID                   91096f6d-81a6-4c1d-a915-1cd563631f33
-        }
-        Line {
-          SrcBlock                "CNI1"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 2
-          #GUID                   976a6287-3ec4-4ac4-aee8-18354e8d1cf2
-        }
-        Line {
-          SrcBlock                "CNI_comPortNo"
-          SrcPort                 1
-          Points                  [65, 0; 0, 25]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 12
-          #GUID                   58180e7b-8e79-4d29-8a0f-0f3b7d08a0a8
-        }
-        Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
           DstBlock                "BDOCT"
@@ -4318,13 +4076,6 @@ Library {
           #GUID                   82f11bc2-e4f6-4d08-ad10-58a178328b4b
         }
         Line {
-          SrcBlock                "ISSW"
-          SrcPort                 1
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 13
-          #GUID                   915b8094-030b-4455-a9ec-dd6f59ba2d06
-        }
-        Line {
           SrcBlock                "MP_FORCE_RECONNECT"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
@@ -4535,13 +4286,6 @@ Library {
           #GUID                   68c31780-05ce-48bf-9c1e-ca986bf03f0a
         }
         Line {
-          SrcBlock                "Simulation_Detector"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 3
-          #GUID                   0431cec0-a01a-49d3-845c-10b6aa5d8ac7
-        }
-        Line {
           SrcBlock                "userSendV"
           SrcPort                 1
           DstBlock                "AUXdata_in"
@@ -4621,7 +4365,7 @@ Library {
       #GUID                   55ca73f8-e5ae-4a17-87ef-509aa0176452
       System {
         Name                    "Arduino_MEGA2560hex"
-        Location                [691, 104, 1576, 975]
+        Location                [187, 77, 1072, 822]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -4872,36 +4616,6 @@ Library {
           SourceType              "CNB"
           YCN                     off
           #GUID                   81ff807f-5d90-44cf-9480-302a8bfffebc
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI0"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [175, 253, 195, 267]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     0
-          #GUID                   26b1e37e-4e5c-4e00-a5b7-86a07069eec1
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI1"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [200, 263, 220, 277]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     1
-          #GUID                   34561329-e3d8-4da1-bb33-1f36dcfe9f38
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI_comPortNo"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [230, 233, 255, 247]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     15
-          #GUID                   181191d9-476c-405c-bd89-7f8ce93d3489
         }
         Block {
           BlockType               Reference
@@ -5990,15 +5704,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "ISSW"
-          Ports                   [3, 1, 0, 0, 0]
-          Position                [295, 253, 325, 287]
-          SourceBlock             "logiclib/ISSW"
-          SourceType              "ISSW"
-          #GUID                   d12c1710-6bfd-41d6-9991-9a8009715b65
-        }
-        Block {
-          BlockType               Reference
           Name                    "MP_FORCE_RECONNECT"
           Ports                   [0, 1, 0, 0, 0]
           Position                [95, 558, 110, 572]
@@ -6075,59 +5780,6 @@ Library {
           #RTFlags                1025
           FontSize                10
           #GUID                   21b668df-b01d-4e6c-9c8c-614b0c326ea1
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "Simulation_Detector"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [225, 272, 240, 288]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   2a291c1d-c0e2-44ca-9207-4ca6924ca486
-          System {
-            Name                    "Simulation_Detector"
-            Location                [50, 69, 1224, 553]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "automatic"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   2a291c1d-c0e2-44ca-9207-4ca6924ca486
-            Block {
-              BlockType               Reference
-              Name                    "CNI3"
-              Ports                   [0, 1, 0, 0, 0]
-              Position                [20, 23, 40, 37]
-              SourceBlock             "mathlib/CNI"
-              SourceType              "CNI"
-              icn                     1
-              #GUID                   e15a0984-5b1a-42a9-93ae-45e1b1528941
-            }
-            Block {
-              BlockType               Outport
-              Name                    "Y"
-              Position                [65, 23, 95, 37]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   e494ee4a-c64d-4269-9031-6e232d3486c5
-            }
-            Line {
-              SrcBlock                "CNI3"
-              SrcPort                 1
-              DstBlock                "Y"
-              DstPort                 1
-              #GUID                   1b13933d-8e42-4f92-8185-13644f14d448
-            }
-          }
         }
         Block {
           BlockType               Outport
@@ -6371,28 +6023,6 @@ Library {
           #GUID                   c63d88fa-ec20-4bf9-b6f8-2c605846d80c
         }
         Line {
-          SrcBlock                "CNI0"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 1
-          #GUID                   354b71a6-ccee-4a7e-8190-fb279aa89699
-        }
-        Line {
-          SrcBlock                "CNI1"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 2
-          #GUID                   78441fc5-cfc1-4547-9112-36de5d05e20e
-        }
-        Line {
-          SrcBlock                "CNI_comPortNo"
-          SrcPort                 1
-          Points                  [75, 0; 0, 20]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 12
-          #GUID                   0325707b-fa7f-4042-80a3-049c4c36c1a9
-        }
-        Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
           DstBlock                "BDOCT"
@@ -6562,13 +6192,6 @@ Library {
           DstBlock                "AI15"
           DstPort                 1
           #GUID                   8e11a248-581a-4432-b2c5-d3d28dc6ec7c
-        }
-        Line {
-          SrcBlock                "ISSW"
-          SrcPort                 1
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 13
-          #GUID                   0a74af25-a83a-44cd-9d2a-9181b42f7bb2
         }
         Line {
           SrcBlock                "MP_FORCE_RECONNECT"
@@ -6758,13 +6381,6 @@ Library {
           #GUID                   10ee64f4-1810-449c-b0bc-942b904b63ae
         }
         Line {
-          SrcBlock                "Simulation_Detector"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 3
-          #GUID                   e571f565-6394-4b94-b53a-4a7f87359c2a
-        }
-        Line {
           SrcBlock                "userSendV"
           SrcPort                 1
           DstBlock                "AUXdata_in"
@@ -6838,8 +6454,6 @@ Library {
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
       usercmd                 "1: No data"
-      #LibraryFile            "D:\\01GIT\\REXduino\\REXduino_master\\Library\\"
-#"REXduino_library.mdl"
       #GUID                   da12c7cc-2804-4b2d-8db2-0eb92394925f
     }
     Block {
@@ -6867,8 +6481,6 @@ Library {
       pinmodeA4               "1: Not connected"
       pinmodeA5               "1: Not connected"
       usercmd                 "1: No data"
-      #LibraryFile            "D:\\01GIT\\REXduino\\REXduino_master\\Library\\"
-#"REXduino_library.mdl"
       #GUID                   7fe24df9-ab8c-452d-a5d1-a1d89ac7eb0f
     }
     Block {
@@ -6941,7 +6553,7 @@ Library {
       #GUID                   0139119e-66ff-4eb1-a2b1-d0168ce6c748
       System {
         Name                    "Arduino_UNO"
-        Location                [311, 181, 1639, 948]
+        Location                [10, 72, 1338, 817]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -7309,36 +6921,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI0"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [425, 368, 445, 382]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     0
-          #GUID                   2f942d8f-8561-472d-80d6-6f828dfcb300
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI1"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [450, 378, 470, 392]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     1
-          #GUID                   6ea2482c-e887-47d1-9db0-91a85df98658
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI_comPortNo"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [490, 338, 515, 352]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     15
-          #GUID                   36c64572-4dc8-4762-b8e9-105b6f528311
-        }
-        Block {
-          BlockType               Reference
           Name                    "CNI_userCmdType"
           Ports                   [0, 1, 0, 0, 0]
           Position                [55, 1243, 75, 1257]
@@ -7380,15 +6962,6 @@ Library {
           SourceType              "BMHEXD"
           shift                   0
           #GUID                   e2ae1a97-796c-4f42-9d3f-3e5a9e2c185b
-        }
-        Block {
-          BlockType               Reference
-          Name                    "ISSW"
-          Ports                   [3, 1, 0, 0, 0]
-          Position                [545, 368, 575, 402]
-          SourceBlock             "logiclib/ISSW"
-          SourceType              "ISSW"
-          #GUID                   63e0f264-9b95-4153-af4d-b5eb5bbd8521
         }
         Block {
           BlockType               Reference
@@ -7533,59 +7106,6 @@ Library {
           FontSize                10
           #RTFlags                1025
           #GUID                   9e639fd1-af35-43ee-9067-8484520f6b9d
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "Simulation_Detector"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [475, 387, 490, 403]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   4a0cc86e-cdec-46a1-9e10-f055c7fa4c3a
-          System {
-            Name                    "Simulation_Detector"
-            Location                [50, 69, 1224, 553]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "automatic"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   4a0cc86e-cdec-46a1-9e10-f055c7fa4c3a
-            Block {
-              BlockType               Reference
-              Name                    "CNI3"
-              Ports                   [0, 1, 0, 0, 0]
-              Position                [20, 23, 40, 37]
-              SourceBlock             "mathlib/CNI"
-              SourceType              "CNI"
-              icn                     1
-              #GUID                   b7494d7a-e15a-4659-baa7-dc3db003cbc2
-            }
-            Block {
-              BlockType               Outport
-              Name                    "Y"
-              Position                [65, 23, 95, 37]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   c7c47aa0-3298-44fa-9e20-e52563314412
-            }
-            Line {
-              SrcBlock                "CNI3"
-              SrcPort                 1
-              DstBlock                "Y"
-              DstPort                 1
-              #GUID                   7a24a8f6-26ec-48eb-b20a-7f4ecf90fc64
-            }
-          }
         }
         Block {
           BlockType               Outport
@@ -7999,28 +7519,6 @@ Library {
           #GUID                   db76271d-01d0-4153-a703-62008362a7fc
         }
         Line {
-          SrcBlock                "CNI0"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 1
-          #GUID                   82ca163f-8191-4802-912f-9e71893f1636
-        }
-        Line {
-          SrcBlock                "CNI1"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 2
-          #GUID                   f210ca9a-cd67-4a36-86ac-c3f0211bcd58
-        }
-        Line {
-          SrcBlock                "CNI_comPortNo"
-          SrcPort                 1
-          Points                  [65, 0]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 12
-          #GUID                   b16e0dc3-7b8e-44fa-a5e7-cfa55f3268b7
-        }
-        Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
           DstBlock                "BDOCT"
@@ -8345,13 +7843,6 @@ Library {
           #GUID                   4b1569f7-3c09-4a57-9863-d7f8b6cca54e
         }
         Line {
-          SrcBlock                "ISSW"
-          SrcPort                 1
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 13
-          #GUID                   132afe55-f60e-480c-b2bd-2e7c505a0773
-        }
-        Line {
           SrcBlock                "MP_FORCE_RECONNECT"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
@@ -8554,13 +8045,6 @@ Library {
           #GUID                   98886dcd-138a-4446-83f4-0be4b6f7c693
         }
         Line {
-          SrcBlock                "Simulation_Detector"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 3
-          #GUID                   494b33f3-fc21-41d0-a086-1a8d9f414540
-        }
-        Line {
           SrcBlock                "userSendV"
           SrcPort                 1
           DstBlock                "AUXdata_in"
@@ -8638,7 +8122,7 @@ Library {
       #GUID                   019cad75-96a3-4c92-b62c-be9f840fc5aa
       System {
         Name                    "Arduino_UNOhex"
-        Location                [355, 150, 1507, 869]
+        Location                [44, 68, 1196, 787]
         Open                    off
         ModelBrowserVisibility  off
         ModelBrowserWidth       200
@@ -9034,36 +8518,6 @@ Library {
         }
         Block {
           BlockType               Reference
-          Name                    "CNI0"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [420, 368, 440, 382]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     0
-          #GUID                   05993b22-5e05-49aa-9606-d31a8ed6476d
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI1"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [445, 378, 465, 392]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     1
-          #GUID                   379e09f3-0c14-4d64-a464-a3721badad86
-        }
-        Block {
-          BlockType               Reference
-          Name                    "CNI_comPortNo"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [485, 343, 510, 357]
-          SourceBlock             "mathlib/CNI"
-          SourceType              "CNI"
-          icn                     15
-          #GUID                   dea09f71-abec-4e20-8981-35bc22dc95a5
-        }
-        Block {
-          BlockType               Reference
           Name                    "CNI_userCmdType"
           Ports                   [0, 1, 0, 0, 0]
           Position                [45, 1158, 115, 1172]
@@ -9105,15 +8559,6 @@ Library {
           SourceType              "BMHEXD"
           shift                   0
           #GUID                   2ecc1298-a344-43a6-82ba-b192732e02bd
-        }
-        Block {
-          BlockType               Reference
-          Name                    "ISSW"
-          Ports                   [3, 1, 0, 0, 0]
-          Position                [540, 368, 570, 402]
-          SourceBlock             "logiclib/ISSW"
-          SourceType              "ISSW"
-          #GUID                   6f1094c8-5aa9-445e-a045-00e60173d062
         }
         Block {
           BlockType               Reference
@@ -9258,59 +8703,6 @@ Library {
           #RTFlags                1025
           FontSize                10
           #GUID                   5322da48-fa13-4e62-82fe-e7089994f505
-        }
-        Block {
-          BlockType               SubSystem
-          Name                    "Simulation_Detector"
-          Ports                   [0, 1, 0, 0, 0]
-          Position                [470, 387, 485, 403]
-          ShowPortLabels          on
-          MaskType                "REX sequence"
-          MaskIconFrame           on
-          MaskIconOpaque          on
-          MaskIconRotate          "none"
-          MaskIconUnits           "autoscale"
-          #GUID                   2cfccd27-5178-483d-b818-ee0e0add4e92
-          System {
-            Name                    "Simulation_Detector"
-            Location                [50, 69, 1224, 553]
-            Open                    off
-            ModelBrowserVisibility  off
-            ModelBrowserWidth       200
-            ScreenColor             "automatic"
-            PaperOrientation        "landscape"
-            PaperPositionMode       "auto"
-            PaperType               "usletter"
-            PaperUnits              "inches"
-            AutoZoom                on
-            #GUID                   2cfccd27-5178-483d-b818-ee0e0add4e92
-            Block {
-              BlockType               Reference
-              Name                    "CNI3"
-              Ports                   [0, 1, 0, 0, 0]
-              Position                [20, 23, 40, 37]
-              SourceBlock             "mathlib/CNI"
-              SourceType              "CNI"
-              icn                     1
-              #GUID                   c6626c01-6439-42ed-9e85-122d975cbfe8
-            }
-            Block {
-              BlockType               Outport
-              Name                    "Y"
-              Position                [65, 23, 95, 37]
-              Port                    1
-              OutputWhenDisabled      "held"
-              InitialOutput           []
-              #GUID                   2cdd5bd6-5643-4254-a2ba-2a8d1d4971a5
-            }
-            Line {
-              SrcBlock                "CNI3"
-              SrcPort                 1
-              DstBlock                "Y"
-              DstPort                 1
-              #GUID                   37630c89-0694-4ec1-a5ad-1237a2ff947b
-            }
-          }
         }
         Block {
           BlockType               Outport
@@ -9769,28 +9161,6 @@ Library {
           #GUID                   d83028dd-1e13-4897-a75a-60d94803866d
         }
         Line {
-          SrcBlock                "CNI0"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 1
-          #GUID                   743bd30f-93bd-4e0e-abb0-d32f51339621
-        }
-        Line {
-          SrcBlock                "CNI1"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 2
-          #GUID                   98b2bfed-3fe4-4f62-880b-e39e77458e7d
-        }
-        Line {
-          SrcBlock                "CNI_comPortNo"
-          SrcPort                 1
-          Points                  [65, 0; 0, 25]
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 12
-          #GUID                   043d52bc-21f3-4faa-96aa-f5ac6dc06fd6
-        }
-        Line {
           SrcBlock                "CNI_userCmdType"
           SrcPort                 1
           DstBlock                "BDOCT"
@@ -10143,13 +9513,6 @@ Library {
           #GUID                   4805e648-816f-4e8a-b2b6-bc8ed3d59b21
         }
         Line {
-          SrcBlock                "ISSW"
-          SrcPort                 1
-          DstBlock                "REXLANG_REXduino"
-          DstPort                 13
-          #GUID                   aa822ab7-d481-44b1-ad0d-c1c2d1661a41
-        }
-        Line {
           SrcBlock                "MP_FORCE_RECONNECT"
           SrcPort                 1
           DstBlock                "OCTBM_DEBUG"
@@ -10374,13 +9737,6 @@ Library {
           DstBlock                "AUXdata_out"
           DstPort                 1
           #GUID                   52935c6c-fbb0-403b-960d-c681a5051d20
-        }
-        Line {
-          SrcBlock                "Simulation_Detector"
-          SrcPort                 1
-          DstBlock                "ISSW"
-          DstPort                 3
-          #GUID                   26387b94-3327-4bf8-aecc-ceecf2cb6d53
         }
         Line {
           SrcBlock                "userSendV"
@@ -12787,7 +12143,7 @@ Library {
       System {
         Name                    "status"
         __CopyByReference       off
-        Location                [162, 149, 990, 826]
+        Location                [121, 80, 949, 757]
         #GUID                   60ec3d60-e904-45c2-8ae8-59114bd67ef8
         Block {
           BlockType               Inport

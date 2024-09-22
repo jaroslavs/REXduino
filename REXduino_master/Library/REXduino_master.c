@@ -58,23 +58,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define ERROR_ONEWIRE 52			 // 1-Wire-related error response from Arduino
 #define ERROR_ONEWIRE_BUSYBUS 50	 // 1-Wire bus busy
 
-#define CON_COM1 33
-#define CON_COM2 34
-#define CON_COM3 35
-#define CON_COM4 36
-#define CON_COM5 37
-#define CON_COM6 38
-#define CON_COM7 39
-#define CON_COM8 40
-#define CON_COM9 41
-#define CON_COM10 42
-#define CON_COM11 43
-#define CON_COM12 44
-#define CON_COM13 45
-#define CON_COM14 46
-#define CON_COM15 47
-#define CON_SERIALDEVICE_FNAME 63
-
 #define PINMODE_NC0 0	//not connected (due to Simulink compatibility)
 #define PINMODE_NC 1	//not connected
 #define PINMODE_DO 2	//digital output
@@ -110,7 +93,6 @@ long commandData[COMMAND_LENGTH_MAX];
 long responseData[RESPONSE_BUFFER_LENGTH];
 long pinModes[MAX_PIN_COUNT], pinModes_par[MAX_PIN_COUNT];
 long responseCnt = 0;
-long sentCnt = 0;
 double portOpenTime, initAttemptTime, lastSuccess, execTime;
 long connected = 0;
 long initialized = 0;
@@ -134,8 +116,6 @@ long input(4) input4;
 long input(5) input5;
 long input(6) input6;
 long input(7) input7;
-long input(9) comPortNo;
-long input(10) SimulinkDetector;
 long input(13) inputDebug;
 long input(14) AUXcmd;
 long input(15) userSend;
@@ -226,7 +206,6 @@ void sendData(long count)
 	{
 		TraceError(0, "FAILED TO SEND COMMAND TO ARDUINO !!!");
 	}
-	sentCnt = sentCnt + count;
 	traceSentData(count);
 	return;
 }
@@ -754,7 +733,6 @@ int main(void)
 	long userCmdData[20];
 
 	REXduinoError = 0;
-	sentCnt = 0; //counter of sent bytes
 
 	TraceVerbose(3, "=== REXduino master main loop START ===");
 	TRACE_INCOMING = (inputDebug >> 2) & 1;
@@ -790,7 +768,7 @@ int main(void)
 	else
 	{ //serial port open
 		if (!initialized)
-		{ //communication between REX and Arduino not established yet
+		{ //communication between REXYGEN and Arduino not established yet
 			if (ElapsedTime(CurrentTime(), initAttemptTime) > COMM_INIT_INTERVAL * 0.001)
 			{
 				initCommunication();
